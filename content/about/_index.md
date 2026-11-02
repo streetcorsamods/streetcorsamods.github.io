@@ -21,7 +21,7 @@ The game sends nothing over the network unless you turn on its optional AI write
 
 ## The name
 
-**Street Corsa** and its logo belong to Pablo Camardelli. Fork the game, change it, ship it, but give your version a
+**Street Corsa** and its logo belong to [Pablo Camardelli](https://github.com/pecamardelli). Fork the game, change it, ship it, but give your version a
 name of its own. Mods can say they are for Street Corsa.
 
 Street Corsa is an independent project, not made, endorsed or sponsored by Kunos Simulazioni or the makers of
