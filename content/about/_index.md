@@ -6,7 +6,7 @@ description: Who makes Street Corsa, and the licences.
 Street Corsa is a free, open source car career game on top of Assetto Corsa. It started as a love letter to
 **Street Rod**, the 1989 DOS game: buy a junker, build it in your garage, race it on the strip for cash and pink slips.
 
-It is made by **Pablo Camardelli**, with help from people who share their models, sounds and icons.
+It is made by **[Pablo Camardelli](https://github.com/pecamardelli)**, with help from people who share their models, sounds and icons.
 
 ## Open source
 
