@@ -1,0 +1,13 @@
+{{- /* A download item's link: its url, else its file in the game's release once it is out; "" for none yet. */ -}}
+{{- $href := "" -}}
+{{- with .url -}}
+  {{- $href = . -}}
+{{- else -}}
+  {{- with .file -}}
+    {{- if site.Params.released -}}
+      {{- $v := site.Params.release -}}
+      {{- $href = printf "%s/releases/download/v%s/%s" site.Params.repo $v (replace . "{v}" $v) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $href -}}

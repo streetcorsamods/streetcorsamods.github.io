@@ -1,0 +1,62 @@
+{
+  "id": "chevy_w_v8",
+  "name": "Chevrolet W V8 (348 / 409 / 427 Z11)",
+  "version": "1.0",
+  "description": "Chevrolet's W-series V8, 1958-65: the 348 (with the 1959 Tri-Power), the 409 (single and dual four-barrels, the 1961-64 Impala SS engines) and the 427 Z11, with the T-10, the Muncie M20 and the Powerglide. Every part ours, drawn from solids.",
+  "settings": [
+    "streetrod"
+  ],
+  "builds": [
+    {
+      "engine": "Chevrolet 348 Turbo-Thrust 4-bbl 250 hp (1958)",
+      "gearbox": "Powerglide",
+      "crate": false
+    },
+    {
+      "engine": "Chevrolet 348 Special Super Turbo-Thrust 3x2-bbl 335 hp (1959)",
+      "gearbox": "Borg-Warner T-10",
+      "crate": false
+    },
+    {
+      "engine": "Chevrolet 409 4-bbl 360 hp (1961)",
+      "gearbox": "Borg-Warner T-10",
+      "crate": false
+    },
+    {
+      "engine": "Chevrolet 409 4-bbl 380 hp (1962)",
+      "gearbox": "Borg-Warner T-10",
+      "crate": false
+    },
+    {
+      "engine": "Chevrolet 409 dual quad 409 hp (1962)",
+      "gearbox": "Borg-Warner T-10",
+      "crate": false
+    },
+    {
+      "engine": "Chevrolet 409 dual quad 425 hp (1963)",
+      "gearbox": "Muncie M20",
+      "crate": false
+    },
+    {
+      "engine": "Chevrolet 409 4-bbl 400 hp (1964)",
+      "gearbox": "Muncie M20",
+      "crate": false
+    },
+    {
+      "engine": "Chevrolet 409 4-bbl 340 hp (1963, hydraulic)",
+      "gearbox": "Powerglide",
+      "crate": false
+    },
+    {
+      "engine": "Chevrolet 427 Z11 dual quad 430 hp (1963)",
+      "gearbox": "Muncie M20",
+      "crate": false
+    },
+    {
+      "engine": "Chevrolet 409 dual-quad crate engine with headers",
+      "gearbox": "Muncie M20",
+      "crate": true
+    }
+  ],
+  "credits": []
+}

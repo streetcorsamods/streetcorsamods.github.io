@@ -1,0 +1,72 @@
+{
+  "id": "lincoln_v8",
+  "name": "Lincoln-Mercury V8 (Lincoln Y-block, MEL)",
+  "version": "1.0",
+  "description": "The Lincoln-Mercury division's V8s: the Lincoln Y-block of 1952-57 (317, 341, 368: the Continental Mark II's) with the Hydra-Matic and the Turbo-Drive, and the MEL big block of 1958-68 (Mercury 383 and 430 Super Marauder, Edsel 410, Lincoln 430 and 462). Every part ours, drawn from solids.",
+  "settings": [
+    "streetrod"
+  ],
+  "builds": [
+    {
+      "engine": "Lincoln 317 4-bbl 160 hp (1952 Cosmopolitan)",
+      "gearbox": "Hydra-Matic",
+      "crate": false
+    },
+    {
+      "engine": "Lincoln 317 4-bbl 205 hp (1953 Capri)",
+      "gearbox": "Hydra-Matic",
+      "crate": false
+    },
+    {
+      "engine": "Lincoln 341 4-bbl 225 hp (1955 Capri)",
+      "gearbox": "Turbo-Drive",
+      "crate": false
+    },
+    {
+      "engine": "Lincoln 368 4-bbl 285 hp (1956 Continental Mark II)",
+      "gearbox": "Turbo-Drive",
+      "crate": false
+    },
+    {
+      "engine": "Lincoln 368 4-bbl 300 hp (1957 Premiere)",
+      "gearbox": "Turbo-Drive",
+      "crate": false
+    },
+    {
+      "engine": "Mercury 383 Marauder 4-bbl 330 hp (1958 Montclair)",
+      "gearbox": "Merc-O-Matic",
+      "crate": false
+    },
+    {
+      "engine": "Edsel 410 E-475 4-bbl 345 hp (1958 Citation)",
+      "gearbox": "Mile-O-Matic",
+      "crate": false
+    },
+    {
+      "engine": "Mercury 430 Super Marauder 3x2-bbl 400 hp (1958)",
+      "gearbox": "Merc-O-Matic",
+      "crate": false
+    },
+    {
+      "engine": "Lincoln 430 4-bbl 375 hp (1958 Continental Mark III)",
+      "gearbox": "Turbo-Drive",
+      "crate": false
+    },
+    {
+      "engine": "Lincoln 430 2-bbl 300 hp (1961-65 Continental)",
+      "gearbox": "Turbo-Drive",
+      "crate": false
+    },
+    {
+      "engine": "Lincoln 462 4-bbl 340 hp (1966 Continental)",
+      "gearbox": "C6",
+      "crate": false
+    },
+    {
+      "engine": "Mercury 430 Super Marauder crate engine with headers",
+      "gearbox": "Merc-O-Matic",
+      "crate": true
+    }
+  ],
+  "credits": []
+}

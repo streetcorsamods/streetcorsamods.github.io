@@ -1,0 +1,67 @@
+{
+  "id": "ford_cleveland",
+  "name": "Ford 335 V8 (351 Cleveland, 351M / 400)",
+  "version": "1.0",
+  "description": "Ford's 335-series V8 with its canted-valve heads: the 351 Cleveland of 1970-74 (2V, 4V, Cobra Jet, Boss 351) and the tall-deck 400 and 351M of 1971-82; the Toploader 4-speed, the FMX and the C6. Every part ours, drawn from solids.",
+  "settings": [
+    "streetrod"
+  ],
+  "builds": [
+    {
+      "engine": "Ford 351 Cleveland 2V 250 hp (1970 Mustang)",
+      "gearbox": "FMX",
+      "crate": false
+    },
+    {
+      "engine": "Ford 351 Cleveland 2V 250 hp (1970 Cougar / Montego)",
+      "gearbox": "wide-ratio Toploader",
+      "crate": false
+    },
+    {
+      "engine": "Ford 351 Cleveland 2V 250 hp (1971 Falcon XY)",
+      "gearbox": "wide-ratio Toploader",
+      "crate": false
+    },
+    {
+      "engine": "Ford 351 Cleveland 4V 300 hp (1970 Mustang Mach 1)",
+      "gearbox": "close-ratio Toploader",
+      "crate": false
+    },
+    {
+      "engine": "Ford 351 Cobra Jet 248 hp net (1972 Gran Torino Sport)",
+      "gearbox": "wide-ratio Toploader",
+      "crate": false
+    },
+    {
+      "engine": "Ford 351 Cobra Jet 255 hp net (1974 Gran Torino Sport)",
+      "gearbox": "wide-ratio Toploader",
+      "crate": false
+    },
+    {
+      "engine": "Ford Boss 351 330 hp (1971 Mustang)",
+      "gearbox": "close-ratio Toploader",
+      "crate": false
+    },
+    {
+      "engine": "Ford Boss 351 crate engine with headers",
+      "gearbox": "close-ratio Toploader",
+      "crate": true
+    },
+    {
+      "engine": "Ford 400 2V 260 hp (1971 LTD / Galaxie)",
+      "gearbox": "C6",
+      "crate": false
+    },
+    {
+      "engine": "Ford 400 2V 169 hp net (1977 F-350)",
+      "gearbox": "New Process 435 4-speed",
+      "crate": false
+    },
+    {
+      "engine": "Ford 351M 2V 161 hp net (1977 LTD II)",
+      "gearbox": "FMX",
+      "crate": false
+    }
+  ],
+  "credits": []
+}

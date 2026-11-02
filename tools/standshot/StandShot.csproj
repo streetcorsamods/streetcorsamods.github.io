@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <PlatformTarget>x64</PlatformTarget>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!-- The game repository, beside this site repository; build the game in Release first -->
+    <GameRepo Condition="'$(GameRepo)' == ''">$(MSBuildThisFileDirectory)..\..\..\Street Corsa</GameRepo>
+    <NoWarn>$(NoWarn);CS8002</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Street Corsa"><HintPath>$(GameRepo)\Street Corsa\bin\Release\net10.0-windows\Street Corsa.dll</HintPath></Reference>
+    <Reference Include="AcTools"><HintPath>$(GameRepo)\lib\actools\AcTools.dll</HintPath></Reference>
+    <Reference Include="AcTools.Render"><HintPath>$(GameRepo)\lib\actools\AcTools.Render.dll</HintPath></Reference>
+    <Reference Include="SlimDX"><HintPath>$(GameRepo)\lib\actools\SlimDX.dll</HintPath></Reference>
+    <PackageReference Include="LiteDB" Version="5.0.21" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageReference Include="Serilog" Version="4.4.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
+    <PackageReference Include="Vortice.Direct3D9" Version="3.8.3" />
+  </ItemGroup>
+</Project>

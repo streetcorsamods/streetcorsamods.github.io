@@ -1,0 +1,87 @@
+{{ define "main" }}
+{{- /* A mod's page: its pictures (front matter shots, static/images/mods/<page>/), its text, its download
+       (data/downloads.yaml, the item whose id is front matter mod) and what its manifest holds (data/mods/<mod>.json,
+       written by tools/sync.py). */ -}}
+{{ $dir := printf "/images/mods/%s/" .File.ContentBaseName }}
+{{ $mod := index hugo.Data.mods .Params.mod }}
+{{ $item := false }}
+{{ range hugo.Data.downloads.groups }}{{ range .items }}{{ if eq .id $.Params.mod }}{{ $item = . }}{{ end }}{{ end }}{{ end }}
+{{ $href := cond (ne $item false) (partial "dl-href.html" $item) "" }}
+<div class="wrap page mod">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/downloads/">Downloads</a><span>/</span><a href="/mods/">Engine packs</a></nav>
+  <h1>{{ .Title }}</h1>
+  {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+
+  <div class="mod-top">
+    {{ with index .Params.shots 0 }}
+      <figure class="mod-hero">
+        <a href="{{ $dir }}{{ .img }}.jpg" target="_blank" rel="noopener"><img src="{{ $dir }}{{ .img }}.jpg" alt="{{ .caption }}" width="1600" height="900" fetchpriority="high"></a>
+        <figcaption>{{ .caption }}</figcaption>
+      </figure>
+    {{ end }}
+    <aside class="mod-get">
+      {{ if $href }}
+        <a class="btn" href="{{ $href }}"{{ if hasPrefix $href "http" }} target="_blank" rel="noopener"{{ end }}>Download</a>
+      {{ else }}
+        <span class="btn off" aria-disabled="true">Coming soon</span>
+      {{ end }}
+      <dl>
+        {{ with $item }}<dt>Kind</dt><dd>{{ .kind }}</dd>{{ end }}
+        {{ with $mod }}{{ with .version }}<dt>Version</dt><dd>{{ . }}</dd>{{ end }}{{ end }}
+        {{ with $item }}{{ with .size }}<dt>Size</dt><dd>{{ . }}</dd>{{ end }}{{ end }}
+        {{ with $mod }}{{ with .settings }}<dt>For</dt><dd>{{ range $i, $s := . }}{{ if $i }}, {{ end }}{{ if eq $s "streetrod" }}Street Rod{{ else }}{{ $s }}{{ end }}{{ end }}</dd>{{ end }}{{ end }}
+        {{ with $mod }}<dt>Builds</dt><dd>{{ len .builds }}</dd>{{ end }}
+        <dt>Licence</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></dd>
+      </dl>
+      <p class="muted small">Install: on the main screen, <strong>Mod Manager → Install mods</strong>, pick the zip. <a href="/tutorials/playing/install/">Full steps</a></p>
+    </aside>
+  </div>
+
+  <div class="prose">
+    {{ .Content }}
+  </div>
+
+  {{ with after 1 .Params.shots }}
+  <h2>Pictures</h2>
+  <div class="gallery">
+    {{ range . }}
+      <figure>
+        <a href="{{ $dir }}{{ .img }}.jpg" target="_blank" rel="noopener"><img src="{{ $dir }}{{ .img }}-sm.jpg" alt="{{ .caption }}" loading="lazy" decoding="async" width="640" height="360"></a>
+        <figcaption>{{ .caption }}</figcaption>
+      </figure>
+    {{ end }}
+  </div>
+  <p class="muted small">On the engine stand in the Street Rod garage, drawn by the game.</p>
+  {{ end }}
+
+  {{ with $mod }}
+    {{ $gearbox := where .builds "gearbox" "ne" "" }}
+    <h2>The builds</h2>
+    <p class="muted">Every build comes apart and goes back together on the stand, part by part.{{ if where .builds "crate" true }} The crate engines are sold at the speed shops.{{ end }}</p>
+    <div class="table-wrap">
+      <table class="builds">
+        <thead><tr><th>Engine</th>{{ if $gearbox }}<th>Gearbox</th>{{ end }}</tr></thead>
+        <tbody>
+          {{ range .builds }}
+            <tr><td>{{ .engine }}{{ if .crate }} <span class="badge quiet">Crate</span>{{ end }}</td>{{ if $gearbox }}<td>{{ .gearbox }}</td>{{ end }}</tr>
+          {{ end }}
+        </tbody>
+      </table>
+    </div>
+
+    {{ with .credits }}
+      <h2>Credits</h2>
+      <ul class="credits-list">
+        {{ range . }}<li>{{ . }}</li>{{ end }}
+      </ul>
+      <p class="muted small">The rest of the pack is Street Corsa's own. The game's Settings list every credit too.</p>
+    {{ end }}
+  {{ end }}
+
+  {{ $pages := .CurrentSection.Pages.ByWeight }}
+  <nav class="pager">
+    {{ with $pages.Prev . }}<a href="{{ .RelPermalink }}">← {{ .Title }}</a>{{ else }}<span></span>{{ end }}
+    {{ with $pages.Next . }}<a href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}
+  </nav>
+</div>
+{{ end }}

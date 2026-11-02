@@ -1,0 +1,49 @@
+{
+  "id": "olds_v8",
+  "name": "Oldsmobile V8 (400 / 455)",
+  "version": "1.0",
+  "description": "The Oldsmobile big-block V8: the 1965-67 and 1968-69 400s and the 455, with their factory builds (the L69 Tri-Carb, the 4-4-2, the W-30 with Force-Air, the Hurst/Olds) and a 455 crate engine. Every part ours, drawn from solids; the Turbo Hydra-Matic from Jorma Rysky's \"Naturally Aspirated 454 cid V8\" (Sketchfab, CC BY 4.0).",
+  "settings": [
+    "streetrod"
+  ],
+  "builds": [
+    {
+      "engine": "Oldsmobile 400 L69 Tri-Carb 360 hp (1966)",
+      "gearbox": "Muncie M21",
+      "crate": false
+    },
+    {
+      "engine": "Oldsmobile 400 4-4-2 350 hp (1967)",
+      "gearbox": "Turbo Hydra-Matic",
+      "crate": false
+    },
+    {
+      "engine": "Oldsmobile 400 W-30 360 hp (1969, Force-Air)",
+      "gearbox": "Muncie M21",
+      "crate": false
+    },
+    {
+      "engine": "Oldsmobile 455 Hurst/Olds 380 hp (1969)",
+      "gearbox": "Turbo Hydra-Matic",
+      "crate": false
+    },
+    {
+      "engine": "Oldsmobile 455 W-30 370 hp (1970, aluminium intake)",
+      "gearbox": "Muncie M21",
+      "crate": false
+    },
+    {
+      "engine": "Oldsmobile 455 4-4-2 365 hp (1970)",
+      "gearbox": "Turbo Hydra-Matic",
+      "crate": false
+    },
+    {
+      "engine": "Oldsmobile 455 W-30 crate engine with headers",
+      "gearbox": "Muncie M21",
+      "crate": true
+    }
+  ],
+  "credits": [
+    "\"Naturally Aspirated 454 cid V8\" by Jorma Rysky (sketchfab.com/Rysky), CC BY 4.0 (the Turbo Hydra-Matic)"
+  ]
+}

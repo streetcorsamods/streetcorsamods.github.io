@@ -20,6 +20,7 @@ hugo --minify      # build into public/
 | Home page text and feature boxes | `content/_index.md` |
 | News | `content/news/` (one file per post, `date` in the front matter) |
 | Downloads | `data/downloads.yaml` |
+| A mod's page | `content/mods/<page>.md` (text, `mod` id, `shots`), pictures in `static/images/mods/<page>/` |
 | Tutorials | `content/tutorials/` |
 | About, credits | `content/about/` |
 
@@ -34,6 +35,7 @@ python tools/sync.py
 - `tutorials/playing/*`: the game repo's `docs/player/`
 - `tutorials/street-rod/*`: the Street Rod setting's player docs
 - `assets/credits/*.csv`: the game's icon and sound credits
+- `data/mods/<id>.json`: a released mod's name, version, builds and credits, from its `mod.json` (`MODS` in sync.py)
 
 ## A release
 
@@ -41,3 +43,20 @@ python tools/sync.py
 2. In `hugo.toml`, set `release` to its version and `released = true`.
 3. Add a news post.
 4. A download hosted elsewhere: give its item a `url` in `data/downloads.yaml`.
+
+## A mod's page
+
+1. Give its item in `data/downloads.yaml` the mod's `id`, and add the id to `MODS` in `tools/sync.py`; run the sync.
+2. Pictures: `tools/standshot` draws every build on the garage's engine stand with the game's own renderer. Build the
+   game in Release, then:
+
+   ```
+   dotnet build tools/standshot -c Release
+   # once, the game's Content beside the tool: see mklink.txt in tools/standshot
+   tools/standshot/bin/Release/net10.0-windows/StandShot.exe <out> <mod id> [build id part ...]
+   ```
+
+   Four views a build (front, side, rear, top), 1600x900 PNG. `publish.py` (its `PICKS`) turns the chosen ones into
+   the site's JPGs and prints the page's `shots`.
+3. Write `content/mods/<page>.md`: title, `mod`, `weight`, `description`, `shots`, a paragraph. The download card
+   links to it from then on.

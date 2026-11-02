@@ -1,0 +1,57 @@
+{
+  "id": "ford_385",
+  "name": "Ford 385 V8 (429 / 460, Boss 429)",
+  "version": "1.0",
+  "description": "Ford's 385-series big block, 1968-78: the 429 Thunder Jet, Cobra Jet and Super Cobra Jet, the 460, and the Boss 429 with its aluminium semi-hemi heads; the Toploader 4-speed and the C6. Every part ours, drawn from solids.",
+  "settings": [
+    "streetrod"
+  ],
+  "builds": [
+    {
+      "engine": "Ford 429 Thunder Jet 4V 360 hp (1968 Thunderbird)",
+      "gearbox": "C6",
+      "crate": false
+    },
+    {
+      "engine": "Ford 429 Cobra Jet 370 hp (1971 Mustang Mach 1)",
+      "gearbox": "close-ratio Toploader",
+      "crate": false
+    },
+    {
+      "engine": "Ford 429 Cobra Jet 370 hp (1970 Torino Cobra)",
+      "gearbox": "C6",
+      "crate": false
+    },
+    {
+      "engine": "Ford 429 Super Cobra Jet 375 hp (1971, Drag Pack)",
+      "gearbox": "close-ratio Toploader",
+      "crate": false
+    },
+    {
+      "engine": "Ford 429 4V 205 hp net (1972 Gran Torino Sport)",
+      "gearbox": "C6",
+      "crate": false
+    },
+    {
+      "engine": "Ford 460 4V 365 hp (1968 Lincoln Continental)",
+      "gearbox": "C6",
+      "crate": false
+    },
+    {
+      "engine": "Ford 429 Super Cobra Jet crate engine with headers",
+      "gearbox": "close-ratio Toploader",
+      "crate": true
+    },
+    {
+      "engine": "Ford Boss 429 375 hp (1969-70 Mustang)",
+      "gearbox": "close-ratio Toploader",
+      "crate": false
+    },
+    {
+      "engine": "Ford Boss 429 crate engine with headers",
+      "gearbox": "close-ratio Toploader",
+      "crate": true
+    }
+  ],
+  "credits": []
+}

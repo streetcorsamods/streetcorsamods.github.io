@@ -1,0 +1,34 @@
+{
+  "id": "ford_six",
+  "name": "Ford Falcon six",
+  "version": "2.0",
+  "description": "The Ford 188 and 221 pushrod inline six of the Argentine Falcon, the Sprint's 221 SP and Oreste Berta's racing 221, with the factory engines of the cars that came with a six of its kind. Every model by Pablo Camardelli, made in 3ds Max.",
+  "settings": [
+    "streetrod"
+  ],
+  "builds": [
+    {
+      "engine": "Ford 188, 116 hp",
+      "gearbox": "",
+      "crate": false
+    },
+    {
+      "engine": "Ford 221, 132 hp",
+      "gearbox": "",
+      "crate": false
+    },
+    {
+      "engine": "Ford 221 SP, 203 hp",
+      "gearbox": "",
+      "crate": false
+    },
+    {
+      "engine": "Oreste Berta Racing 221",
+      "gearbox": "",
+      "crate": false
+    }
+  ],
+  "credits": [
+    "Modelled by Pablo Camardelli (pecamardelli) in 3ds Max"
+  ]
+}

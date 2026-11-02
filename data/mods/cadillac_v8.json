@@ -1,0 +1,89 @@
+{
+  "id": "cadillac_v8",
+  "name": "Cadillac V8 (331 / 365 / 390, 390 / 429, 472 / 500)",
+  "version": "1.0",
+  "description": "The Cadillac V8s: the 1949-62 overhead-valve V8 (331, 365, 390) with the 1949 Series 62's, the four-barrels and the Eldorados' dual quads and 3x2s, the 1963-67 390 / 429 with a 429 crate engine, and the 472 / 500 of 1968-76 with a 500 crate engine. Every part ours, drawn from solids; the Turbo Hydra-Matic from Jorma Rysky's \"Naturally Aspirated 454 cid V8\" (Sketchfab, CC BY 4.0).",
+  "settings": [
+    "streetrod"
+  ],
+  "builds": [
+    {
+      "engine": "Cadillac 331 2-bbl 160 hp (1949)",
+      "gearbox": "Hydra-Matic",
+      "crate": false
+    },
+    {
+      "engine": "Cadillac 331 4-bbl 210 hp (1953)",
+      "gearbox": "Hydra-Matic",
+      "crate": false
+    },
+    {
+      "engine": "Cadillac 331 Eldorado dual quad 270 hp (1955)",
+      "gearbox": "Hydra-Matic",
+      "crate": false
+    },
+    {
+      "engine": "Cadillac 365 4-bbl 285 hp (1956)",
+      "gearbox": "Hydra-Matic",
+      "crate": false
+    },
+    {
+      "engine": "Cadillac 365 Eldorado dual quad 305 hp (1956)",
+      "gearbox": "Hydra-Matic",
+      "crate": false
+    },
+    {
+      "engine": "Cadillac 365 Eldorado 3x2-bbl 335 hp (1958)",
+      "gearbox": "Hydra-Matic",
+      "crate": false
+    },
+    {
+      "engine": "Cadillac 390 4-bbl 325 hp (1959)",
+      "gearbox": "Hydra-Matic",
+      "crate": false
+    },
+    {
+      "engine": "Cadillac 390 Eldorado 3x2-bbl 345 hp (1959)",
+      "gearbox": "Hydra-Matic",
+      "crate": false
+    },
+    {
+      "engine": "Cadillac 331 2-bbl 160 hp (1949)",
+      "gearbox": "Synchromesh 3-speed",
+      "crate": false
+    },
+    {
+      "engine": "Cadillac 390 325 hp (1963)",
+      "gearbox": "Hydra-Matic",
+      "crate": false
+    },
+    {
+      "engine": "Cadillac 429 340 hp (1964)",
+      "gearbox": "Turbo Hydra-Matic 400",
+      "crate": false
+    },
+    {
+      "engine": "Cadillac 429 crate engine with headers",
+      "gearbox": "Turbo Hydra-Matic 400",
+      "crate": true
+    },
+    {
+      "engine": "Cadillac 472 375 hp (1968)",
+      "gearbox": "Turbo Hydra-Matic 400",
+      "crate": false
+    },
+    {
+      "engine": "Cadillac 500 Eldorado 400 hp (1970)",
+      "gearbox": "Turbo Hydra-Matic 400",
+      "crate": false
+    },
+    {
+      "engine": "Cadillac 500 crate engine with headers",
+      "gearbox": "Turbo Hydra-Matic 400",
+      "crate": true
+    }
+  ],
+  "credits": [
+    "\"Naturally Aspirated 454 cid V8\" by Jorma Rysky (sketchfab.com/Rysky), CC BY 4.0 (the Turbo Hydra-Matic)"
+  ]
+}

@@ -1,0 +1,7 @@
+{{- /* The page of a download item (its id = a page's front matter mod), or nil. */ -}}
+{{- $page := false -}}
+{{- with .id -}}
+  {{- $id := . -}}
+  {{- range where (site.GetPage "/mods").Pages "Params.mod" $id -}}{{- $page = . -}}{{- end -}}
+{{- end -}}
+{{- return $page -}}

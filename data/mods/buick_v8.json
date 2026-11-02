@@ -1,0 +1,74 @@
+{
+  "id": "buick_v8",
+  "name": "Buick V8 (Nailhead 364 / 401 / 425, 400 / 430 / 455)",
+  "version": "1.0",
+  "description": "The Buick V8s: the Nailhead (364, 401, 425) with its 1958 Special, Century and Roadmaster builds, the Wildcat 445 and 465 and the dual-quad Super Wildcat, and the big block (400, 430, 455) with the GS 400, the Wildcat, the GS 455 and its Stage 1, the Riviera and a Stage 1 crate engine. Every part ours, drawn from solids; the Super Turbine 400 from Jorma Rysky's \"Naturally Aspirated 454 cid V8\" (Sketchfab, CC BY 4.0).",
+  "settings": [
+    "streetrod"
+  ],
+  "builds": [
+    {
+      "engine": "Buick 400 GS 400 340 hp (1967)",
+      "gearbox": "Super Turbine 400",
+      "crate": false
+    },
+    {
+      "engine": "Buick 400 GS 400 Stage 1 345 hp (1969)",
+      "gearbox": "Muncie M21",
+      "crate": false
+    },
+    {
+      "engine": "Buick 430 Wildcat 360 hp (1967)",
+      "gearbox": "Super Turbine 400",
+      "crate": false
+    },
+    {
+      "engine": "Buick 455 GS 455 350 hp (1970)",
+      "gearbox": "Muncie M21",
+      "crate": false
+    },
+    {
+      "engine": "Buick 455 GS 455 Stage 1 360 hp (1970)",
+      "gearbox": "Muncie M21",
+      "crate": false
+    },
+    {
+      "engine": "Buick 455 Riviera 370 hp (1970)",
+      "gearbox": "Super Turbine 400",
+      "crate": false
+    },
+    {
+      "engine": "Buick 455 Stage 1 crate engine with headers",
+      "gearbox": "Muncie M21",
+      "crate": true
+    },
+    {
+      "engine": "Buick 364 Nailhead 2-bbl 250 hp (1958 Special)",
+      "gearbox": "Synchromesh 3-speed",
+      "crate": false
+    },
+    {
+      "engine": "Buick 364 Nailhead 4-bbl 300 hp (1958 Century, Roadmaster)",
+      "gearbox": "Dynaflow",
+      "crate": false
+    },
+    {
+      "engine": "Buick 401 Nailhead Wildcat 445 325 hp (1962)",
+      "gearbox": "Dynaflow",
+      "crate": false
+    },
+    {
+      "engine": "Buick 425 Nailhead Wildcat 465 340 hp (1965)",
+      "gearbox": "Super Turbine 400",
+      "crate": false
+    },
+    {
+      "engine": "Buick 425 Nailhead Super Wildcat dual quad 360 hp (1965)",
+      "gearbox": "Super Turbine 400",
+      "crate": false
+    }
+  ],
+  "credits": [
+    "\"Naturally Aspirated 454 cid V8\" by Jorma Rysky (sketchfab.com/Rysky), CC BY 4.0 (the Turbo Hydra-Matic)"
+  ]
+}

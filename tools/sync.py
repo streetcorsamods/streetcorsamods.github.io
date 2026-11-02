@@ -1,11 +1,13 @@
 """Copy the player docs and the credits from the game into the site, so the site never drifts from them.
 
-    python tools/sync.py [--game <game repo>] [--setting-docs <folder>]
+    python tools/sync.py [--game <game repo>] [--setting-docs <folder>] [--mods <folder>]
 
 The copied pages say where they come from (front matter `source`): edit the source, then sync again.
 Links between the docs (`install.md`) are rewritten to site paths; render-link.html turns them into page links.
+The released mods' manifests become data/mods/<id>.json (name, version, builds, credits) for their pages (content/mods).
 """
 import argparse
+import json
 import pathlib
 import re
 import shutil
@@ -26,6 +28,19 @@ CREDITS = {
     "sfx.csv": "Street Corsa/Content/streetcorsa/sfx/credits.csv",
 }
 WHERE = {**CORE_DOCS, **STREET_ROD_DOCS}
+
+# The released mods with a page of their own: id -> its folder under the mods folder
+MODS = {
+    "buick_v8": "engines/buick_v8",
+    "cadillac_v8": "engines/cadillac_v8",
+    "chevy_w_v8": "engines/chevy_w_v8",
+    "ford_385": "engines/ford_385",
+    "ford_cleveland": "engines/ford_cleveland",
+    "ford_six": "engines/ford_six",
+    "lincoln_v8": "engines/lincoln_v8",
+    "olds_v8": "engines/olds_v8",
+    "pontiac_v8": "engines/pontiac_v8",
+}
 
 # Screenshots the site adds to the synced pages (static/images/tutorials). Each goes right under a heading
 # ("" = the top of the page), or just before one with "before:". The docs themselves stay text only.
@@ -100,10 +115,53 @@ def page(src: pathlib.Path, dest_dir: str, source_label: str) -> None:
     print(f"  {source_label} -> content/{dest_dir}/{src.name}")
 
 
+def read_jsonc(path: pathlib.Path) -> dict:
+    """A mod's .json, which may have whole-line // comments"""
+    text = path.read_text(encoding="utf-8-sig")
+    return json.loads(re.sub(r"^\s*//.*$", "", text, flags=re.M))
+
+
+def tidy(name: str) -> str:
+    """A build name written all in capitals (an older pack's: "FORD 221 SP - 203 HP") as the others are written"""
+    if name != name.upper():
+        return name
+    words = []
+    for w in name.replace(" - ", ", ").split():
+        bare = w.rstrip(",")
+        if bare == "HP":
+            w = w.replace("HP", "hp")
+        elif bare.isalpha() and len(bare) > 2:
+            w = w.capitalize()
+        words.append(w)
+    return " ".join(words)
+
+
+def mod_data(folder: pathlib.Path) -> dict:
+    """What a mod's page shows of its manifest: the builds (the rated ones when a mod has both kinds), the credits"""
+    m = read_jsonc(folder / "mod.json")
+    builds = m.get("builds", [])
+    if any(b.get("origin") == "rated" for b in builds):
+        builds = [b for b in builds if b.get("origin") == "rated"]
+    rows = []
+    for b in builds:
+        engine, _, gearbox = tidy(b["name"]).partition(" + ")
+        rows.append({"engine": engine, "gearbox": gearbox, "crate": b.get("origin") == "kit"})
+    credits = set()
+    for part in sorted((folder / "parts").rglob("*.json")) if (folder / "parts").is_dir() else []:
+        credit = read_jsonc(part).get("credit")
+        if credit:
+            credits.add(str(credit))
+    return {
+        "id": m["id"], "name": m["name"], "version": m.get("version", ""), "description": m.get("description", ""),
+        "settings": m.get("settings", []), "builds": rows, "credits": sorted(credits),
+    }
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--game", default=str(SITE.parent / "Street Corsa"))
     ap.add_argument("--setting-docs", default=r"D:\JUEGOS\STREET CORSA\docs\player")
+    ap.add_argument("--mods", default=r"D:\JUEGOS\STREET CORSA\mods")
     a = ap.parse_args()
     game, setting_docs = pathlib.Path(a.game), pathlib.Path(a.setting_docs)
 
@@ -119,6 +177,16 @@ def main() -> None:
         out.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(game / rel, out)
         print(f"  {rel} -> assets/credits/{name}")
+    mods = pathlib.Path(a.mods)
+    if mods.is_dir():
+        out_dir = SITE / "data" / "mods"
+        out_dir.mkdir(parents=True, exist_ok=True)
+        for mod_id, rel in MODS.items():
+            data = mod_data(mods / rel)
+            (out_dir / f"{mod_id}.json").write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
+            print(f"  mods/{rel}/mod.json -> data/mods/{mod_id}.json ({len(data['builds'])} builds)")
+    else:
+        print(f"  {mods} not found: mod data left as it is")
 
 
 if __name__ == "__main__":

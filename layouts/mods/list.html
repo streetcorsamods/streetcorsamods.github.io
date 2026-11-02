@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div class="wrap page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/downloads/">Downloads</a></nav>
+  <div class="prose">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+  </div>
+  <div class="mod-cards">
+    {{ range .Pages.ByWeight }}
+      {{ $page := . }}
+      <a class="mod-card" href="{{ .RelPermalink }}">
+        {{ with index .Params.shots 0 }}<img src="/images/mods/{{ $page.File.ContentBaseName }}/{{ .img }}-sm.jpg" alt="" loading="lazy" decoding="async" width="640" height="360">{{ end }}
+        <span class="mod-card-text">
+          <strong>{{ .Title }}</strong>
+          {{ with .Description }}<span>{{ . }}</span>{{ end }}
+        </span>
+      </a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

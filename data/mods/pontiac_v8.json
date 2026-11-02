@@ -1,0 +1,69 @@
+{
+  "id": "pontiac_v8",
+  "name": "Pontiac V8 (389 / 400 / 455)",
+  "version": "1.0",
+  "description": "The Pontiac V8: 389, 400 and 455 with their factory builds (GTO 4-bbl and Tri-Power, Ram Air II, III and IV, the 455 and the 1977 Trans Am's W72) and a Tri-Power crate engine. Every part ours, drawn from solids; the Turbo Hydra-Matic from Jorma Rysky's \"Naturally Aspirated 454 cid V8\" (Sketchfab, CC BY 4.0).",
+  "settings": [
+    "streetrod"
+  ],
+  "builds": [
+    {
+      "engine": "Pontiac 389 GTO 335 hp (Carter 4-bbl)",
+      "gearbox": "Muncie M20",
+      "crate": false
+    },
+    {
+      "engine": "Pontiac 389 GTO Tri-Power 360 hp",
+      "gearbox": "Muncie M20",
+      "crate": false
+    },
+    {
+      "engine": "Pontiac 389 GTO Tri-Power 360 hp",
+      "gearbox": "Turbo Hydra-Matic",
+      "crate": false
+    },
+    {
+      "engine": "Pontiac 400 GTO 350 hp",
+      "gearbox": "Muncie M21",
+      "crate": false
+    },
+    {
+      "engine": "Pontiac 400 H.O. Ram Air II 340 hp",
+      "gearbox": "Muncie M21",
+      "crate": false
+    },
+    {
+      "engine": "Pontiac 400 Ram Air III 366 hp (GTO Judge)",
+      "gearbox": "Muncie M21",
+      "crate": false
+    },
+    {
+      "engine": "Pontiac 400 Ram Air III 335 hp (Firebird)",
+      "gearbox": "Muncie M21",
+      "crate": false
+    },
+    {
+      "engine": "Pontiac 400 Ram Air IV 370 hp",
+      "gearbox": "Muncie M21",
+      "crate": false
+    },
+    {
+      "engine": "Pontiac 455 GTO 360 hp",
+      "gearbox": "Turbo Hydra-Matic",
+      "crate": false
+    },
+    {
+      "engine": "Pontiac 400 W72 (1977 Trans Am 6.6, 200 hp net)",
+      "gearbox": "Turbo Hydra-Matic",
+      "crate": false
+    },
+    {
+      "engine": "1965 Pontiac GTO 389 Tri-Power turn-key crate engine (headers)",
+      "gearbox": "Muncie M20",
+      "crate": true
+    }
+  ],
+  "credits": [
+    "\"Naturally Aspirated 454 cid V8\" by Jorma Rysky (sketchfab.com/Rysky), CC BY 4.0 (the Turbo Hydra-Matic)"
+  ]
+}

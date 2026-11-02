@@ -1,0 +1,5 @@
+StandShot reads the mods from a Content folder beside it. Once, after the first build, in cmd from the site repository:
+
+mklink /J tools\standshot\bin\Release\net10.0-windows\Content "..\Street Corsa\Street Corsa\bin\Release\net10.0-windows\Content"
+
+That Content folder must hold the mods to draw (the game's git-ignored copies of D:\JUEGOS\STREET CORSA\mods).

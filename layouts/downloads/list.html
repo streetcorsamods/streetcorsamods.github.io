@@ -1,6 +1,5 @@
 {{ define "main" }}
 {{ $v := site.Params.release }}
-{{ $base := printf "%s/releases/download/v%s/" site.Params.repo $v }}
 <div class="wrap page">
   <div class="prose">
     <h1>{{ .Title }}</h1>
@@ -16,10 +15,34 @@
   <section class="dl-group" id="{{ .id }}">
     <h2>{{ .title }}</h2>
     {{ with .text }}<p class="muted">{{ . }}</p>{{ end }}
+    {{ $paged := slice }}{{ $plain := slice }}
+    {{ range .items }}{{ if partial "mod-page.html" . }}{{ $paged = $paged | append . }}{{ else }}{{ $plain = $plain | append . }}{{ end }}{{ end }}
+    {{ with $paged }}
+    <div class="dl-cards">
+      {{ range . }}
+        {{ $href := partial "dl-href.html" . }}
+        {{ $page := partial "mod-page.html" . }}
+        <div class="dl-card">
+          {{ with index $page.Params.shots 0 }}
+            <a class="dl-thumb" href="{{ $page.RelPermalink }}" tabindex="-1" aria-hidden="true"><img src="/images/mods/{{ $page.File.ContentBaseName }}/{{ .img }}-sm.jpg" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+          {{ end }}
+          <div class="dl-card-body">
+            <h3><a href="{{ $page.RelPermalink }}">{{ .name }}</a>{{ with .badge }} <span class="badge">{{ . }}</span>{{ end }}</h3>
+            {{ with .text }}<p>{{ . }}</p>{{ end }}
+            <div class="dl-card-foot">
+              <p class="meta">{{ .kind }}{{ with .size }} · {{ . }}{{ end }}<br><a href="{{ $page.RelPermalink }}">Builds and pictures</a></p>
+              {{ if $href }}<a class="btn" href="{{ $href }}"{{ if hasPrefix $href "http" }} target="_blank" rel="noopener"{{ end }}>Download</a>{{ else }}<span class="btn off" aria-disabled="true">Coming soon</span>{{ end }}
+            </div>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+    {{ end }}
+    {{ with $plain }}
+    {{ if $paged }}<h3 class="dl-sub">Coming soon</h3>{{ end }}
     <div class="dl-list">
-      {{ range .items }}
-        {{ $href := "" }}
-        {{ with .url }}{{ $href = . }}{{ else }}{{ with .file }}{{ if site.Params.released }}{{ $href = printf "%s%s" $base (replace . "{v}" $v) }}{{ end }}{{ end }}{{ end }}
+      {{ range . }}
+        {{ $href := partial "dl-href.html" . }}
         <div class="dl">
           <div class="dl-text">
             <h3>{{ .name }}{{ with .badge }} <span class="badge">{{ . }}</span>{{ end }}</h3>
@@ -34,6 +57,7 @@
         </div>
       {{ end }}
     </div>
+    {{ end }}
   </section>
   {{ end }}
 </div>
