@@ -13,5 +13,5 @@
     {{- warnf "%s: link to %q finds no page" .Page.File.Path $u.Path -}}
   {{- end -}}
 {{- end -}}
-<a href="{{ $dest | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $ext }} rel="noopener"{{ end }}>{{ .Text | safeHTML }}</a>
+<a href="{{ $dest | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $ext }} target="_blank" rel="noopener"{{ end }}>{{ .Text | safeHTML }}</a>
 {{- /* */ -}}

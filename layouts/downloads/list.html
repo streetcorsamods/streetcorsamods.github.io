@@ -6,7 +6,7 @@
     <h1>{{ .Title }}</h1>
     {{ .Content }}
     {{ if site.Params.released }}
-      <p class="muted">Version {{ $v }} · <a href="{{ site.Params.repo }}/releases/tag/v{{ $v }}">release notes</a></p>
+      <p class="muted">Version {{ $v }} · <a href="{{ site.Params.repo }}/releases/tag/v{{ $v }}" target="_blank" rel="noopener">release notes</a></p>
     {{ else }}
       <p class="note">The first release is on its way. The buttons light up when it is out.</p>
     {{ end }}
@@ -27,7 +27,7 @@
             <p class="meta">{{ .kind }}{{ with .for }} · for {{ . }}{{ end }}{{ with .size }} · {{ . }}{{ end }}</p>
           </div>
           {{ if $href }}
-            <a class="btn" href="{{ $href }}">Download</a>
+            <a class="btn" href="{{ $href }}"{{ if hasPrefix $href "http" }} target="_blank" rel="noopener"{{ end }}>Download</a>
           {{ else }}
             <span class="btn off" aria-disabled="true">Coming soon</span>
           {{ end }}
