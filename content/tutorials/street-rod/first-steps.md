@@ -7,6 +7,8 @@ source: streetrod docs/player/first-steps.md
 
 ## New game
 
+![New Game](/images/tutorials/new-game.jpg "New Game: your name, then a setting")
+
 1. **NEW GAME**, type your name.
 2. Pick a setting. Install one first: see [Install](/tutorials/playing/install.md).
 3. Pick a difficulty: **Easy**, **Normal** or **Hard**.
@@ -15,6 +17,8 @@ source: streetrod docs/player/first-steps.md
 The game saves as you go.
 
 ## Your first day
+
+![The garage](/images/tutorials/garage.jpg "The garage: every place is a button round your car")
 
 You start with $10,000 (on Normal) and no car.
 
@@ -31,6 +35,8 @@ You start with $10,000 (on Normal) and no car.
 - Overnight, shops restock, rivals race each other and new races are posted.
 
 ## Winning
+
+![Career](/images/tutorials/career.jpg "Career: pick a victory path")
 
 Open **Career** (top right) and press **Pursue** on a victory path, for example:
 

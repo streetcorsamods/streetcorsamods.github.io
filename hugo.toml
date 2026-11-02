@@ -39,6 +39,10 @@ disableKinds = ["taxonomy", "term"]
 [markup.goldmark.renderer]
   unsafe = false
 
+# A picture on a line of its own is a figure (render-image.html), not a picture in a paragraph
+[markup.goldmark.parser]
+  wrapStandAloneImageWithinParagraph = false
+
 [outputs]
   home = ["HTML", "RSS"]
   section = ["HTML", "RSS"]

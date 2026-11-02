@@ -5,6 +5,8 @@ weight: 3
 source: streetrod docs/player/around-town.md
 ---
 
+![Car dealers](/images/tutorials/car-dealers.jpg "Car dealers: pick a lot and drive out")
+
 Everything starts in your garage. Trips take time: far places can't be done in one day.
 
 | Place | What for |
@@ -17,6 +19,10 @@ Everything starts in your garage. Trips take time: far places can't be done in o
 | **Paint booth** | New colour. Fix rust and dents first (**Repairs**). |
 | **Go race!** | Diners, the street, invitations, Free Run, Test & Tune. |
 | **Your cars** | Your warehouse. **TAKE THIS CAR** brings one into the garage. |
+
+![The Newspaper](/images/tutorials/newspaper.jpg "The Newspaper: private sellers, rivals, parts")
+
+![A parts shop](/images/tutorials/parts-shop.jpg "A parts shop: what's on the shelves, the clerk at the counter")
 
 ## Selling a car
 

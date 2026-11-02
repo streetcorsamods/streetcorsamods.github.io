@@ -155,6 +155,10 @@ h1, h2, h3 {
 .prose pre code { background: none; padding: 0; }
 .prose li { margin: 4px 0; }
 .prose table { display: block; overflow-x: auto; }
+.shot { margin: 16px 0 28px; }
+.shot img { display: block; width: 100%; border: 1px solid var(--line); border-radius: 4px; }
+.shot a:hover img { border-color: var(--accent); }
+.shot figcaption { color: var(--muted); font-size: 14px; margin-top: 6px; }
 .date { color: var(--muted); margin-top: -8px; }
 .note { background: var(--panel); border-left: 3px solid var(--accent); padding: 10px 16px; }
 table { border-collapse: collapse; width: 100%; font-size: 15px; }

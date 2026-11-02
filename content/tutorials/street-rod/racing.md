@@ -5,9 +5,13 @@ weight: 5
 source: streetrod docs/player/racing.md
 ---
 
+![Go race](/images/tutorials/go-race.jpg "Go race: invitations, Free Run, Test & Tune and the streets")
+
 Press **Go race!** in the garage.
 
 ## Where
+
+![The diners](/images/tutorials/diners.jpg "The diners: each has its regulars and a horsepower class")
 
 - **Diners**: pick a racer, a race and a bet. Each diner has a horsepower class; the fast ones won't race a slow car.
 - **The street** (**CRUISE THE STREETS** at a diner): wait at the curb, someone pulls up and offers a race.

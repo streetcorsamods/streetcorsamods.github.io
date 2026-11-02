@@ -1,0 +1,10 @@
+{{- /* Screenshots: a figure with the title as its caption, lazily loaded, a click opens it full size. */ -}}
+{{- $src := .Destination | safeURL -}}
+{{- if .IsBlock -}}
+<figure class="shot">
+  <a href="{{ $src }}" target="_blank" rel="noopener"><img src="{{ $src }}" alt="{{ .PlainText }}" loading="lazy" decoding="async" width="1600" height="900"></a>
+  {{- with .Title }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>
+{{- else -}}
+<img src="{{ $src }}" alt="{{ .PlainText }}" loading="lazy"{{ with .Title }} title="{{ . }}"{{ end }}>
+{{- end -}}

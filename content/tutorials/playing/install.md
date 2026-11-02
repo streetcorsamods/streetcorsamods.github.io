@@ -23,7 +23,11 @@ The installer tells you which of these it found.
 
 Windows may warn that the installer is unknown. Click **More info → Run anyway**.
 
+![The main screen](/images/tutorials/main-menu.jpg "The main screen")
+
 ## A setting
+
+![The Mod Manager](/images/tutorials/mod-manager.jpg "The Mod Manager: install, switch off and delete mods")
 
 The installer is the core. The career you play is a setting, a download of its own:
 

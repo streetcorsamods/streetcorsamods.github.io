@@ -7,10 +7,14 @@ source: streetrod docs/player/garage.md
 
 ## Moving around
 
+![Your car in the garage](/images/tutorials/garage.jpg "Your car in the garage")
+
 - **Drag** to walk round the car, **scroll** to get closer.
 - **Key** starts the engine. Hold **W** or **Space** to rev.
 
 ## Working on parts
+
+![Parts view](/images/tutorials/parts-view.jpg "Parts view: the car turns see-through, the shelf on the left, the engine on the right")
 
 1. Press **Parts**. The car turns see-through.
 2. Click a part, then **Take it off**. It goes to your **PARTS SHELF**.
