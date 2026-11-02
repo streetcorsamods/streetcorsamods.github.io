@@ -17,7 +17,29 @@ It is made by **[Pablo Camardelli](https://github.com/pecamardelli)**, with help
 
 ## Privacy
 
-The game sends nothing over the network unless you turn on its optional AI writer. No telemetry, no account.
+The game sends nothing over the network unless you ask it to: no telemetry, no update check, no account.
+
+The one exception is the optional **AI writer** (Settings, off by default). Once you turn it on, the game sends the
+provider you pick what it needs to write the newspaper's and the people's lines: what you type to the people you talk
+to, your offers when you haggle, and the parts of your career the talk is about (cars, racers, places, money, parts,
+prices, earlier talks). Settings' talk detail sends less.
+
+That provider is Ollama or ComfyUI on your own computer or network, or a cloud service you sign up to yourself, under
+that service's own privacy policy and with your own key. With a cloud one, what you type leaves your computer.
+The installer shows this note too.
+
+## Code signing policy
+
+Free code signing provided by [SignPath.io](https://about.signpath.io/), certificate by
+[SignPath Foundation](https://signpath.org/).
+
+- **Committers and reviewers:** [streetcorsamods](https://github.com/streetcorsamods) (Pablo Camardelli)
+- **Approvers:** [streetcorsamods](https://github.com/streetcorsamods) (Pablo Camardelli)
+
+Every signed release is built by GitHub Actions from the [source](https://github.com/streetcorsamods/street-corsa),
+and each signing is approved by hand. Only Street Corsa's own files are signed: `Street Corsa.exe`,
+`Street Corsa.dll` and the installer. Libraries made by others keep their makers' signatures, or none.
+Signing is being set up: until then, the releases are unsigned and Windows may warn about the installer.
 
 ## The name
 
