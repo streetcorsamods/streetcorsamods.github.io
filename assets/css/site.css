@@ -214,3 +214,15 @@ th { font-family: var(--display); font-weight: 400; text-transform: uppercase; l
 .foot-links { display: flex; gap: 16px; align-items: flex-start; }
 .foot-links a { color: var(--muted); }
 .foot-links a:hover { color: var(--text); }
+
+/* PayPal donate badge, in PayPal's own button colours */
+.paypal {
+  display: inline-block; vertical-align: middle;
+  background: #ffc439; color: #111; border-radius: 999px;
+  font: 600 14px/1 var(--body); padding: 8px 18px; white-space: nowrap;
+}
+.paypal:hover { background: #f2ba36; color: #111; text-decoration: none; }
+.paypal b { font-style: italic; font-weight: 800; color: #009cde; }
+.paypal b i { color: #003087; }
+.donate-line { color: var(--muted); }
+.donate-line .paypal { margin-left: 8px; font-size: 13px; padding: 6px 14px; }

@@ -2,6 +2,7 @@
   <div class="wrap foot-in">
     <div>
       <p><strong>{{ site.Title }}</strong> is free and open source. Code MIT, content CC BY 4.0.</p>
+      {{ with site.Params.donate }}<p class="donate-line">Free, and always will be. If it gave you a good evening, buy me a beer. {{ partial "donate.html" . }}</p>{{ end }}
       <p class="fine">An independent project, not made, endorsed or sponsored by Kunos Simulazioni or the makers of Assetto Corsa.</p>
     </div>
     <nav class="foot-links">

@@ -10,6 +10,9 @@ disableKinds = ["taxonomy", "term"]
   # The game's release the Downloads page points at. Set released = true once the tag and its files are up.
   release = "0.1.0"
   released = false
+  # PayPal donate link (https://www.paypal.com/donate/?hosted_button_id=... or https://paypal.me/...).
+  # Empty hides every donate badge on the site.
+  donate = "https://www.paypal.com/donate/?hosted_button_id=BBLVSCJBKK3Q6"
 
 [menus]
   [[menus.main]]

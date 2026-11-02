@@ -26,3 +26,5 @@ name of its own. Mods can say they are for Street Corsa.
 
 Street Corsa is an independent project, not made, endorsed or sponsored by Kunos Simulazioni or the makers of
 Assetto Corsa. Nothing of Kunos' ships with it.
+
+{{< donate >}}
