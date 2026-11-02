@@ -1,0 +1,40 @@
+{{ define "main" }}
+{{ $v := site.Params.release }}
+{{ $base := printf "%s/releases/download/v%s/" site.Params.repo $v }}
+<div class="wrap page">
+  <div class="prose">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+    {{ if site.Params.released }}
+      <p class="muted">Version {{ $v }} · <a href="{{ site.Params.repo }}/releases/tag/v{{ $v }}">release notes</a></p>
+    {{ else }}
+      <p class="note">The first release is on its way. The buttons light up when it is out.</p>
+    {{ end }}
+  </div>
+
+  {{ range hugo.Data.downloads.groups }}
+  <section class="dl-group" id="{{ .id }}">
+    <h2>{{ .title }}</h2>
+    {{ with .text }}<p class="muted">{{ . }}</p>{{ end }}
+    <div class="dl-list">
+      {{ range .items }}
+        {{ $href := "" }}
+        {{ with .url }}{{ $href = . }}{{ else }}{{ with .file }}{{ if site.Params.released }}{{ $href = printf "%s%s" $base (replace . "{v}" $v) }}{{ end }}{{ end }}{{ end }}
+        <div class="dl">
+          <div class="dl-text">
+            <h3>{{ .name }}{{ with .badge }} <span class="badge">{{ . }}</span>{{ end }}</h3>
+            {{ with .text }}<p>{{ . }}</p>{{ end }}
+            <p class="meta">{{ .kind }}{{ with .for }} · for {{ . }}{{ end }}{{ with .size }} · {{ . }}{{ end }}</p>
+          </div>
+          {{ if $href }}
+            <a class="btn" href="{{ $href }}">Download</a>
+          {{ else }}
+            <span class="btn off" aria-disabled="true">Coming soon</span>
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+</div>
+{{ end }}

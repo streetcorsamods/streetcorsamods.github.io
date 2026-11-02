@@ -1,0 +1,42 @@
+{{ define "main" }}
+<div class="wrap page">
+  {{ partial "crumbs.html" . }}
+  <div class="prose">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+  </div>
+
+  {{ if eq .Section "news" }}
+    <div class="news-list">
+      {{ range .Pages.ByDate.Reverse }}
+        <a class="news-card" href="{{ .RelPermalink }}">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+          <h2>{{ .Title }}</h2>
+          <p>{{ .Summary | plainify | truncate 180 }}</p>
+        </a>
+      {{ end }}
+    </div>
+  {{ else }}
+    {{ with .Sections.ByWeight }}
+      <div class="cards">
+        {{ range . }}
+          <section class="card">
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            {{ with .Description }}<p class="muted">{{ . }}</p>{{ end }}
+            <ol>
+              {{ range .Pages.ByWeight }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
+            </ol>
+          </section>
+        {{ end }}
+      </div>
+    {{ end }}
+    {{ with .RegularPages.ByWeight }}
+      <ul class="links">
+        {{ range . }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ with .Description }}<span class="muted"> {{ . }}</span>{{ end }}</li>
+        {{ end }}
+      </ul>
+    {{ end }}
+  {{ end }}
+</div>
+{{ end }}

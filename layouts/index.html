@@ -1,0 +1,41 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="hero-in wrap">
+    <h1 class="sr">{{ site.Title }}</h1>
+    <img class="logo" src="{{ "images/logo.png" | relURL }}" alt="Street Corsa" width="720" height="153">
+    <p class="tag">{{ .Params.tagline }}</p>
+    <div class="cta">
+      <a class="btn" href="{{ "downloads/" | relURL }}">Download</a>
+      <a class="btn ghost" href="{{ "tutorials/playing/install/" | relURL }}">How to install</a>
+    </div>
+    <p class="needs">Free. Needs Assetto Corsa and Custom Shaders Patch.</p>
+  </div>
+</section>
+
+<section class="wrap features">
+  {{ range .Params.features }}
+  <div class="feature">
+    <h3>{{ .title }}</h3>
+    <p>{{ .text }}</p>
+  </div>
+  {{ end }}
+</section>
+
+<section class="wrap split">
+  <div class="prose">
+    {{ .Content }}
+  </div>
+  <aside class="latest">
+    <h2>News</h2>
+    {{ range first 3 (where site.RegularPages "Section" "news") }}
+      <a class="news-item" href="{{ .RelPermalink }}">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+        <span>{{ .Title }}</span>
+      </a>
+    {{ else }}
+      <p class="muted">Nothing yet.</p>
+    {{ end }}
+    <a class="more" href="{{ "news/" | relURL }}">All news →</a>
+  </aside>
+</section>
+{{ end }}

@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="wrap page">
+  {{ partial "crumbs.html" . }}
+  <article class="prose">
+    <h1>{{ .Title }}</h1>
+    {{ if eq .Section "news" }}<p class="date"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time></p>{{ end }}
+    {{ .Content }}
+  </article>
+  {{ if and .Parent (eq .Section "tutorials") }}
+    {{ $pages := .Parent.Pages.ByWeight }}
+    <nav class="pager">
+      {{ with $pages.Prev . }}<a href="{{ .RelPermalink }}">← {{ .Title }}</a>{{ else }}<span></span>{{ end }}
+      {{ with $pages.Next . }}<a href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}
+    </nav>
+  {{ end }}
+</div>
+{{ end }}

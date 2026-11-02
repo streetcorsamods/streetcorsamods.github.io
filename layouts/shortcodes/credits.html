@@ -1,0 +1,27 @@
+{{- /* {{< credits file="icons" >}}: a table from assets/credits/<file>.csv (synced from the game repo). */ -}}
+{{- $rows := slice -}}
+{{- with resources.Get (printf "credits/%s.csv" (.Get "file")) }}{{ $rows = . | transform.Unmarshal (dict "delimiter" ",") }}{{ end -}}
+{{- with $rows -}}
+{{- $head := index . 0 -}}
+{{- $col := dict -}}
+{{- range $i, $h := $head }}{{ $col = merge $col (dict $h $i) }}{{ end -}}
+{{- $what := cond (isset $col "icon") "icon" "title" -}}
+{{- $lic := cond (isset $col "licence") "licence" "license" -}}
+{{- $link := cond (isset $col "link") "link" "source" -}}
+<div class="table-wrap"><table class="credits">
+  <thead><tr><th>What</th><th>By</th><th>Licence</th></tr></thead>
+  <tbody>
+  {{- range after 1 . }}
+    {{- $url := index . (index $col $link) -}}
+    {{- $l := index . (index $col $lic) -}}
+    <tr>
+      <td>{{ if hasPrefix $url "http" }}<a href="{{ $url }}" rel="noopener">{{ index . (index $col $what) }}</a>{{ else }}{{ index . (index $col $what) }}{{ end }}</td>
+      <td>{{ index . (index $col "author") }}</td>
+      <td>{{ index (split $l ",") 0 }}</td>
+    </tr>
+  {{- end }}
+  </tbody>
+</table></div>
+{{- else -}}
+{{- warnf "credits: no assets/credits/%s.csv" (.Get "file") -}}
+{{- end -}}

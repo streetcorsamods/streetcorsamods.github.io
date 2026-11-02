@@ -1,0 +1,17 @@
+{{- /* Links between synced docs are plain .md file links (they read right on GitHub); here they become page links. */ -}}
+{{- $dest := .Destination -}}
+{{- $u := urls.Parse $dest -}}
+{{- $ext := false -}}
+{{- if $u.IsAbs -}}
+  {{- $ext = true -}}
+{{- else if strings.HasSuffix $u.Path ".md" -}}
+  {{- $target := .Page.GetPage (strings.TrimSuffix ".md" $u.Path) -}}
+  {{- with $target -}}
+    {{- $dest = .RelPermalink -}}
+    {{- with $u.Fragment -}}{{- $dest = printf "%s#%s" $dest . -}}{{- end -}}
+  {{- else -}}
+    {{- warnf "%s: link to %q finds no page" .Page.File.Path $u.Path -}}
+  {{- end -}}
+{{- end -}}
+<a href="{{ $dest | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $ext }} rel="noopener"{{ end }}>{{ .Text | safeHTML }}</a>
+{{- /* */ -}}

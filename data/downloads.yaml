@@ -1,0 +1,60 @@
+# The Downloads page. Each item is one file.
+# file: an asset of the game's GitHub release (hugo.toml params.release); {v} becomes that version.
+#       Shown as a download only once params.released is true.
+# url:  a download hosted anywhere else (wins over file).
+# Neither: listed as "Coming soon".
+
+groups:
+  - id: game
+    title: The game
+    text: Install this first. On its own it is the garage and the races, with no town yet.
+    items:
+      - name: Street Corsa
+        file: StreetCorsa-{v}.msi
+        size: 121 MB
+        kind: Installer
+        text: The game. Windows 10/11, 64-bit. No admin rights needed.
+
+  - id: settings
+    title: Settings
+    text: A setting is the career you play. Install at least one. Mod Manager → Install mods.
+    items:
+      - name: Street Rod
+        file: StreetCorsa-streetrod-{v}.zip
+        size: 279 MB
+        kind: Setting
+        badge: Default
+        text: Los Angeles, 1970. Buy a tired old car, build its engine on the stand and race Main Street at night for cash and pink slips, until the King will race you.
+      - name: Touge Nights
+        file: StreetCorsa-touge_nights-{v}.zip
+        size: 68 MB
+        kind: Setting
+        text: Gunma, 2002. A tired AE86, turbo coupes on the passes after dark. Touge runs and drift battles. Needs Assetto Corsa's Japanese Pack.
+
+  - id: engines
+    title: Engine packs
+    text: Real engines to build, part by part, for Street Rod. Without one, a car runs on its own Assetto Corsa engine.
+    items:
+      - { name: "Chrysler V8 (318 to 426 Hemi)", kind: Engine pack }
+      - { name: "Chevrolet small block (265 to 350)", kind: Engine pack }
+      - { name: "Chevrolet big block (396 to 454)", kind: Engine pack }
+      - { name: "Chevrolet W (348 / 409 / 427 Z11)", kind: Engine pack }
+      - { name: "Chevrolet inline six (235 / 250)", kind: Engine pack }
+      - { name: "Pontiac V8 (389 / 400 / 455)", kind: Engine pack }
+      - { name: "Oldsmobile V8 (400 / 455)", kind: Engine pack }
+      - { name: "Buick V8 (Nailhead, 400 to 455)", kind: Engine pack }
+      - { name: "Cadillac V8 (331 to 500)", kind: Engine pack }
+      - { name: "Ford flathead V8", kind: Engine pack }
+      - { name: "Ford Y-block (239 to 312)", kind: Engine pack }
+      - { name: "Ford Windsor (260 to 351W)", kind: Engine pack }
+      - { name: "Ford FE (332 to 428)", kind: Engine pack }
+      - { name: "Ford Cleveland (351C, 351M / 400)", kind: Engine pack }
+      - { name: "Ford 385 (429 / 460, Boss 429)", kind: Engine pack }
+      - { name: "Ford Falcon six (188 / 221)", kind: Engine pack }
+      - { name: "Lincoln-Mercury V8 (Y-block, MEL)", kind: Engine pack }
+
+  - id: addons
+    title: Add-ons
+    text: Small extras for the garage.
+    items:
+      - { name: Bush DAC10 radio, kind: Add-on, text: "A 1950 radio on the garage's welder." }

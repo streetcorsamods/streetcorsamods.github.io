@@ -1,0 +1,18 @@
+<header class="bar">
+  <div class="wrap bar-in">
+    <a class="brand" href="{{ "/" | relURL }}" aria-label="{{ site.Title }} home">
+      <img src="{{ "images/roundel.png" | relURL }}" alt="" width="40" height="40">
+      <span>{{ site.Title }}</span>
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Menu">
+    <label for="nav-toggle" class="nav-burger" aria-hidden="true"><span></span></label>
+    <nav class="nav">
+      {{ $here := . }}
+      {{ range site.Menus.main }}
+        {{ $active := or ($here.IsMenuCurrent "main" .) ($here.HasMenuCurrent "main" .) }}
+        {{ if and (eq .Name "Home") (not $here.IsHome) }}{{ $active = false }}{{ end }}
+        <a href="{{ .URL }}"{{ if $active }} class="on" aria-current="page"{{ end }}>{{ .Name }}</a>
+      {{ end }}
+    </nav>
+  </div>
+</header>
