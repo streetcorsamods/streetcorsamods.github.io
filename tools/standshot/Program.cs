@@ -41,7 +41,10 @@ static class Program
         System.Globalization.CultureInfo.DefaultThreadCurrentCulture = en;
         System.Globalization.CultureInfo.CurrentCulture = en;
         AppLoggerFactory.Initialize();
-        var mods = ModSet.PlayedIn("streetrod");
+        var setting = Environment.GetEnvironmentVariable("SHOT_SETTING") ?? "streetrod";
+        // SHOT_ONLY=a,b: those mods alone with the core (what is published, without whatever else is installed)
+        var only = Environment.GetEnvironmentVariable("SHOT_ONLY")?.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+        var mods = only == null ? ModSet.PlayedIn(setting) : ModSet.Load(ModSet.DefaultRoot, setting: setting, exactSetting: true, only: only.Append(setting).ToList());
         ModSet.Play(mods);
         Console.WriteLine($"Mods: {string.Join(", ", mods.Mods.Select(m => m.Id))}");
 
@@ -87,6 +90,35 @@ static class Program
         renderer.SetDressing(props.Select(p => (models[p.Model], ToSlim((System.Numerics.Matrix4x4)placement.Invoke(null, [p, models[p.Model]])!))));
         foreach (var p in problems) Console.WriteLine($"  props: {p}");
 
+        // "radio": the garage's radio where the garage has it, from a few sides, and nothing else
+        if (modId == "radio")
+        {
+            var radio = StreetCorsa.Services.Garage.GarageProps.Find(mods, "radio", showroom, problems);
+            if (radio == null) { Console.WriteLine("No radio in this garage"); return 1; }
+            renderer.SetFixture(AcTools.Kn5File.Kn5.FromFile(radio.Model), ToSlim(radio.Placement));
+            var at = radio.Placement.Translation;
+            var radioViews = new (string Name, float Alpha, float Beta, float Radius, float Up)[]
+            {
+                ("close", 0.55f, 0.15f, 0.7f, 0.12f),
+                ("left", 0.3f, 0.22f, 0.85f, 0.12f),
+                ("right", 0.8f, 0.30f, 0.9f, 0.12f),
+                ("wide", 0.6f, 0.28f, 2.2f, 0.05f),
+            };
+            foreach (var v in radioViews)
+            {
+                var orbit = renderer.CameraOrbit;
+                orbit.Target = new Vector3(at.X, at.Y + v.Up, at.Z);
+                orbit.Alpha = v.Alpha + float.Parse(Environment.GetEnvironmentVariable("SHOT_TURN") ?? "0"); orbit.Beta = v.Beta; orbit.Radius = v.Radius;
+                renderer.RefreshShadows();
+                for (var i = 0; i < 8; i++) renderer.Draw();
+                var file = Path.Combine(outDir, $"radio_{v.Name}.png");
+                using (var stream = File.Create(file))
+                    renderer.Shot(width, height, 1d, 1d, stream, RendererShotFormat.Png, null, CancellationToken.None);
+                Console.WriteLine($"  {file}");
+            }
+            return 0;
+        }
+
         var views = new (string Name, float Alpha, float Beta, float Radius)[]
         {
             ("front", 0.95f, 0.30f, 2.25f),
@@ -114,7 +146,9 @@ static class Program
             var spot = EngineStandLayout.Spot;
             var orbit = renderer.CameraOrbit;
             orbit.Target = new Vector3(spot.X, EngineStandLayout.Spindle.Y - 0.05f, spot.Z - 0.1f) + new Vector3(0f, 0.14f, 0f);
-            var name = build.Build.Id.Split('/').Last();
+            // The build's last id part, or its last two where another build of the lot ends the same
+            var parts2 = build.Build.Id.Split('/');
+            var name = builds.Count(b => b.Build.Id.Split('/').Last() == parts2[^1]) > 1 ? string.Join("-", parts2.TakeLast(2)) : parts2[^1];
             foreach (var v in views)
             {
                 orbit.Alpha = v.Alpha; orbit.Beta = v.Beta; orbit.Radius = v.Radius;

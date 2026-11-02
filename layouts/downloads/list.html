@@ -30,7 +30,7 @@
             <h3><a href="{{ $page.RelPermalink }}">{{ .name }}</a>{{ with .badge }} <span class="badge">{{ . }}</span>{{ end }}</h3>
             {{ with .text }}<p>{{ . }}</p>{{ end }}
             <div class="dl-card-foot">
-              <p class="meta">{{ .kind }}{{ with .size }} · {{ . }}{{ end }}<br><a href="{{ $page.RelPermalink }}">Builds and pictures</a></p>
+              <p class="meta">{{ .kind }}{{ with .size }} · {{ . }}{{ end }}<br><a href="{{ $page.RelPermalink }}">Details and pictures</a></p>
               {{ if $href }}<a class="btn" href="{{ $href }}"{{ if hasPrefix $href "http" }} target="_blank" rel="noopener"{{ end }}>Download</a>{{ else }}<span class="btn off" aria-disabled="true">Coming soon</span>{{ end }}
             </div>
           </div>

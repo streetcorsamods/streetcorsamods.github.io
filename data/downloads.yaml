@@ -21,12 +21,14 @@ groups:
     text: A setting is the career you play. Install at least one. Mod Manager → Install mods.
     items:
       - name: Street Rod
+        id: streetrod
         file: StreetCorsa-streetrod-{v}.zip
         size: 277 MB
         kind: Setting
         badge: Default
         text: Los Angeles, 1970. Buy a tired old car, build its engine on the stand and race Main Street at night for cash and pink slips, until the King will race you.
       - name: Touge Nights
+        id: touge_nights
         file: StreetCorsa-touge_nights-{v}.zip
         size: 68 MB
         kind: Setting
@@ -103,4 +105,4 @@ groups:
     title: Add-ons
     text: Small extras for the garage.
     items:
-      - { name: Bush DAC10 radio, kind: Add-on, file: StreetCorsa-bushradio-1.0.zip, size: 2 MB, text: "A 1950 radio on the garage's welder." }
+      - { name: Bush DAC10 radio, id: bushradio, kind: Add-on, file: StreetCorsa-bushradio-1.0.zip, size: 2 MB, text: "A 1950 radio on the garage's welder." }

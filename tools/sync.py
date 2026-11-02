@@ -40,6 +40,9 @@ MODS = {
     "lincoln_v8": "engines/lincoln_v8",
     "olds_v8": "engines/olds_v8",
     "pontiac_v8": "engines/pontiac_v8",
+    "streetrod": "settings/streetrod",
+    "touge_nights": "settings/touge_nights",
+    "bushradio": "addons/bushradio",
 }
 
 # Screenshots the site adds to the synced pages (static/images/tutorials). Each goes right under a heading
@@ -147,7 +150,8 @@ def mod_data(folder: pathlib.Path) -> dict:
         engine, _, gearbox = tidy(b["name"]).partition(" + ")
         rows.append({"engine": engine, "gearbox": gearbox, "crate": b.get("origin") == "kit"})
     credits = set()
-    for part in sorted((folder / "parts").rglob("*.json")) if (folder / "parts").is_dir() else []:
+    # The parts' credits of an engine pack (a setting's are too many for its page: the game's Settings list them)
+    for part in sorted((folder / "parts").rglob("*.json")) if folder.parent.name == "engines" and (folder / "parts").is_dir() else []:
         credit = read_jsonc(part).get("credit")
         if credit:
             credits.add(str(credit))

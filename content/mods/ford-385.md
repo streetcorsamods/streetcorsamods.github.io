@@ -3,6 +3,8 @@ title: "Ford 385"
 mod: ford_385
 weight: 50
 description: "The 429 Thunder Jet, Cobra Jet and Super Cobra Jet, the 460, and the Boss 429 on its semi-hemi heads."
+group: engines
+models_note: true
 shots:
   - { img: boss-429-375-toploader-3-91, caption: "Ford Boss 429 375 hp (1969-70 Mustang)" }
   - { img: boss-429-375-toploader-3-91-side, caption: "The same from the other side" }

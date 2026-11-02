@@ -1,7 +1,8 @@
 ---
-title: Engine packs
-description: Real engines to build, part by part, for Street Rod.
+title: Mods
+description: The settings, engine packs and add-ons for Street Corsa.
 ---
 
-Real engines to build, part by part, for the **Street Rod** setting. Without one, a car runs on its own Assetto Corsa
-engine. More packs are on the [downloads](/downloads/#engines) page as they come out.
+The settings you play, the engine packs that give their cars real engines to build part by part, and a few extras for
+the garage. Each installs from the main screen: **Mod Manager → Install mods**. Everything that's coming is on the
+[downloads](/downloads/) page.

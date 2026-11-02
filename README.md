@@ -56,7 +56,11 @@ python tools/sync.py
    tools/standshot/bin/Release/net10.0-windows/StandShot.exe <out> <mod id> [build id part ...]
    ```
 
-   Four views a build (front, side, rear, top), 1600x900 PNG. `publish.py` (its `PICKS`) turns the chosen ones into
+   Four views a build (front, side, rear, top), 1600x900 PNG. `SHOT_ONLY=<mod id>` loads that mod alone with the core
+   and the setting (what is published, not whatever else is installed); `SHOT_SETTING=<id>` another setting's garage;
+   the mod id `radio` draws the garage's radio instead. `publish.py` (its `PICKS`) turns the chosen ones into
    the site's JPGs and prints the page's `shots`.
-3. Write `content/mods/<page>.md`: title, `mod`, `weight`, `description`, `shots`, a paragraph. The download card
-   links to it from then on.
+3. Write `content/mods/<page>.md`: title, `mod`, `group` (its downloads group: settings, engines, addons), `weight`,
+   `description`, `shots` (a name in its pictures folder, or a site path such as a tutorial's screenshot), a paragraph.
+   Optional: `shots_note`, `licence`, `credits` (over the synced ones), `models_note: true` (the word on the models
+   drawn for the game, `layouts/partials/models-note.html`). The download card links to it from then on.

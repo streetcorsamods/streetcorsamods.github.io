@@ -3,6 +3,7 @@ title: "Ford Falcon six"
 mod: ford_six
 weight: 70
 description: "The Argentine Falcon's 188 and 221, the Sprint's 221 SP and Oreste Berta's racing 221."
+group: engines
 shots:
   - { img: oreste-berta-racing-221, caption: "Oreste Berta's racing 221" }
   - { img: oreste-berta-racing-221-side, caption: "The same from the other side" }

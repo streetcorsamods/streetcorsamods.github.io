@@ -3,6 +3,8 @@ title: "Cadillac V8"
 mod: cadillac_v8
 weight: 30
 description: "From the 1949 331 to the 472 and 500, with the Eldorados' dual quads and 3x2s."
+group: engines
+models_note: true
 shots:
   - { img: 365-eldorado-335-hydra-matic, caption: "Cadillac 365 Eldorado 3x2-bbl 335 hp (1958)" }
   - { img: 365-eldorado-335-hydra-matic-side, caption: "The same from the other side" }
