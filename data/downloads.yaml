@@ -38,20 +38,56 @@ groups:
       - { name: "Chrysler V8 (318 to 426 Hemi)", kind: Engine pack }
       - { name: "Chevrolet small block (265 to 350)", kind: Engine pack }
       - { name: "Chevrolet big block (396 to 454)", kind: Engine pack }
-      - { name: "Chevrolet W (348 / 409 / 427 Z11)", kind: Engine pack }
+      - name: "Chevrolet W (348 / 409 / 427 Z11)"
+        file: StreetCorsa-chevy_w_v8-1.0.zip
+        size: 30 MB
+        kind: Engine pack
+        text: "1958-65: the 348 with the Tri-Power, the Impala SS 409s on one and two four-barrels, the 427 Z11."
       - { name: "Chevrolet inline six (235 / 250)", kind: Engine pack }
-      - { name: "Pontiac V8 (389 / 400 / 455)", kind: Engine pack }
-      - { name: "Oldsmobile V8 (400 / 455)", kind: Engine pack }
-      - { name: "Buick V8 (Nailhead, 400 to 455)", kind: Engine pack }
-      - { name: "Cadillac V8 (331 to 500)", kind: Engine pack }
+      - name: "Pontiac V8 (389 / 400 / 455)"
+        file: StreetCorsa-pontiac_v8-1.0.zip
+        size: 28 MB
+        kind: Engine pack
+        text: "The GTO's 389 and Tri-Power, Ram Air II to IV, the 455 and the '77 Trans Am's W72."
+      - name: "Oldsmobile V8 (400 / 455)"
+        file: StreetCorsa-olds_v8-1.0.zip
+        size: 26 MB
+        kind: Engine pack
+        text: "The 400s and the 455: the L69 Tri-Carb, the 4-4-2, the W-30 with Force-Air, the Hurst/Olds."
+      - name: "Buick V8 (Nailhead, 400 to 455)"
+        file: StreetCorsa-buick_v8-1.0.zip
+        size: 45 MB
+        kind: Engine pack
+        text: "The Nailhead 364 to 425 with the dual-quad Super Wildcat, and the big block: GS 400, GS 455 and its Stage 1."
+      - name: "Cadillac V8 (331 to 500)"
+        file: StreetCorsa-cadillac_v8-1.0.zip
+        size: 43 MB
+        kind: Engine pack
+        text: "From the 1949 331 to the 472 and 500, with the Eldorados' dual quads and 3x2s."
       - { name: "Ford flathead V8", kind: Engine pack }
       - { name: "Ford Y-block (239 to 312)", kind: Engine pack }
       - { name: "Ford Windsor (260 to 351W)", kind: Engine pack }
       - { name: "Ford FE (332 to 428)", kind: Engine pack }
-      - { name: "Ford Cleveland (351C, 351M / 400)", kind: Engine pack }
-      - { name: "Ford 385 (429 / 460, Boss 429)", kind: Engine pack }
-      - { name: "Ford Falcon six (188 / 221)", kind: Engine pack }
-      - { name: "Lincoln-Mercury V8 (Y-block, MEL)", kind: Engine pack }
+      - name: "Ford Cleveland (351C, 351M / 400)"
+        file: StreetCorsa-ford_cleveland-1.0.zip
+        size: 35 MB
+        kind: Engine pack
+        text: "The 351 Cleveland (2V, 4V, Cobra Jet, Boss 351) and the tall-deck 400 and 351M."
+      - name: "Ford 385 (429 / 460, Boss 429)"
+        file: StreetCorsa-ford_385-1.0.zip
+        size: 32 MB
+        kind: Engine pack
+        text: "The 429 Thunder Jet, Cobra Jet and Super Cobra Jet, the 460, and the Boss 429 on its semi-hemi heads."
+      - name: "Ford Falcon six (188 / 221)"
+        file: StreetCorsa-ford_six-2.0.zip
+        size: 18 MB
+        kind: Engine pack
+        text: "The Argentine Falcon's 188 and 221, the Sprint's 221 SP and Oreste Berta's racing 221."
+      - name: "Lincoln-Mercury V8 (Y-block, MEL)"
+        file: StreetCorsa-lincoln_v8-1.0.zip
+        size: 36 MB
+        kind: Engine pack
+        text: "The Lincoln Y-block of the Continental Mark II, and the MEL big block up to the 462."
 
   - id: addons
     title: Add-ons
