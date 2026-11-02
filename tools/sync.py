@@ -16,7 +16,7 @@ import sys
 SITE = pathlib.Path(__file__).resolve().parent.parent
 
 # file name -> where it goes on the site (content/<dir>/<file>)
-CORE_DOCS = {"install.md": "tutorials/playing", "help.md": "tutorials/playing"}
+CORE_DOCS = {"install.md": "tutorials/playing", "help.md": "tutorials/playing", "changelog.md": "about"}
 STREET_ROD_DOCS = {
     "first-steps.md": "tutorials/street-rod",
     "around-town.md": "tutorials/street-rod",

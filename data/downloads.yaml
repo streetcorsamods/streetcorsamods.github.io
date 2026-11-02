@@ -22,14 +22,14 @@ groups:
     items:
       - name: Street Rod
         id: streetrod
-        file: StreetCorsa-streetrod-{v}.zip
+        file: StreetCorsa-streetrod-0.1.0.zip
         size: 277 MB
         kind: Setting
         badge: Default
         text: Los Angeles, 1970. Buy a tired old car, build its engine on the stand and race Main Street at night for cash and pink slips, until the King will race you.
       - name: Touge Nights
         id: touge_nights
-        file: StreetCorsa-touge_nights-{v}.zip
+        file: StreetCorsa-touge_nights-0.1.0.zip
         size: 68 MB
         kind: Setting
         text: Gunma, 2002. A tired AE86, turbo coupes on the passes after dark. Touge runs and drift battles. Needs Assetto Corsa's Japanese Pack.

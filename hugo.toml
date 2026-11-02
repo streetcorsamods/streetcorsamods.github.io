@@ -8,7 +8,7 @@ disableKinds = ["taxonomy", "term"]
   description = "A car career on top of Assetto Corsa: buy a tired car, build it in your garage, race it for cash and pink slips."
   repo = "https://github.com/streetcorsamods/street-corsa"
   # The game's release the Downloads page points at. Set released = true once the tag and its files are up.
-  release = "0.1.0"
+  release = "0.1.1"
   released = true
   # PayPal donate link (https://www.paypal.com/donate/?hosted_button_id=... or https://paypal.me/...).
   # Empty hides every donate badge on the site.
