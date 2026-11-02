@@ -11,7 +11,7 @@ groups:
     items:
       - name: Street Corsa
         file: StreetCorsa-{v}.msi
-        size: 121 MB
+        size: 125 MB
         kind: Installer
         text: The game. Windows 10/11, 64-bit. No admin rights needed.
 
@@ -21,7 +21,7 @@ groups:
     items:
       - name: Street Rod
         file: StreetCorsa-streetrod-{v}.zip
-        size: 279 MB
+        size: 277 MB
         kind: Setting
         badge: Default
         text: Los Angeles, 1970. Buy a tired old car, build its engine on the stand and race Main Street at night for cash and pink slips, until the King will race you.
@@ -57,4 +57,4 @@ groups:
     title: Add-ons
     text: Small extras for the garage.
     items:
-      - { name: Bush DAC10 radio, kind: Add-on, text: "A 1950 radio on the garage's welder." }
+      - { name: Bush DAC10 radio, kind: Add-on, file: StreetCorsa-bushradio-1.0.zip, size: 2 MB, text: "A 1950 radio on the garage's welder." }
