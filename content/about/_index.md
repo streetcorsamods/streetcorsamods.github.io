@@ -19,6 +19,9 @@ It is made by **[Pablo Camardelli](https://github.com/pecamardelli)**, with help
 
 The game sends nothing over the network unless you ask it to: no telemetry, no update check, no account.
 
+This site loads nothing from other sites, with one exception: the trailer on the home page plays from YouTube
+(youtube-nocookie.com), and only once you press play. From then on, YouTube's privacy policy applies.
+
 The one exception is the optional **AI writer** (Settings, off by default). Once you turn it on, the game sends the
 provider you pick what it needs to write the newspaper's and the people's lines: what you type to the people you talk
 to, your offers when you haggle, and the parts of your career the talk is about (cars, racers, places, money, parts,

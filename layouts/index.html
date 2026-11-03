@@ -13,6 +13,8 @@
   </div>
 </section>
 
+{{ with site.Params.trailer }}{{ partial "trailer.html" . }}{{ end }}
+
 <section class="wrap features">
   {{ range .Params.features }}
   <div class="feature">
