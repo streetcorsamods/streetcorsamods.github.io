@@ -1,0 +1,4 @@
+{{- /* What the Downloads search box matches for an item. Context: dict item (a downloads.yaml item), group (its group). */ -}}
+{{- $i := .item -}}
+{{- $soon := cond (partial "dl-href.html" $i) "" "coming soon" -}}
+{{- return (delimit (slice $i.name ($i.text | default "") $i.kind ($i.badge | default "") ($i.for | default "") .group.title $soon) " ") -}}
