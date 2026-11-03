@@ -1,5 +1,9 @@
 {{ define "main" }}
+{{- /* The Downloads page, from data/downloads.yaml. A group is a category: the chips filter by it (the URL hash is the
+       group id, so /downloads/#engines opens on the engine packs) and the search box matches an item's name, text,
+       kind, badge and "for". Without JavaScript the toolbar stays hidden and the page is the full list. */ -}}
 {{ $v := site.Params.release }}
+{{ $groups := hugo.Data.downloads.groups }}
 <div class="wrap page">
   <div class="prose">
     <h1>{{ .Title }}</h1>
@@ -11,18 +15,33 @@
     {{ end }}
   </div>
 
-  {{ range hugo.Data.downloads.groups }}
-  <section class="dl-group" id="{{ .id }}">
+  <div class="dl-tools" id="dl-tools" hidden>
+    <div class="dl-search">
+      <label class="sr" for="dl-q">Search downloads</label>
+      <input type="search" id="dl-q" placeholder="Search: Hemi, 455, radio…" autocomplete="off" spellcheck="false">
+    </div>
+    <div class="dl-chips" role="group" aria-label="Category">
+      {{ $all := 0 }}{{ range $groups }}{{ $all = add $all (len .items) }}{{ end }}
+      <button type="button" class="chip" data-cat="" aria-pressed="true">All <span class="n">{{ $all }}</span></button>
+      {{ range $groups }}
+      <button type="button" class="chip" data-cat="{{ .id }}" aria-pressed="false">{{ .title }} <span class="n">{{ len .items }}</span></button>
+      {{ end }}
+    </div>
+    <p class="dl-status muted" id="dl-status" role="status" aria-live="polite"></p>
+  </div>
+
+  {{ range $groups }}
+  {{ $g := . }}
+  <section class="dl-group" id="{{ .id }}" data-group="{{ .id }}">
     <h2>{{ .title }}</h2>
     {{ with .text }}<p class="muted">{{ . }}</p>{{ end }}
     {{ $paged := slice }}{{ $plain := slice }}
     {{ range .items }}{{ if partial "mod-page.html" . }}{{ $paged = $paged | append . }}{{ else }}{{ $plain = $plain | append . }}{{ end }}{{ end }}
     {{ with $paged }}
-    <div class="dl-cards">
+    <div class="dl-cards" data-block>
       {{ range . }}
-        {{ $href := partial "dl-href.html" . }}
         {{ $page := partial "mod-page.html" . }}
-        <div class="dl-card">
+        <div class="dl-card" data-item data-text="{{ partial "dl-search-text.html" (dict "item" . "group" $g) }}">
           {{ with index $page.Params.shots 0 }}
             <a class="dl-thumb" href="{{ $page.RelPermalink }}" tabindex="-1" aria-hidden="true"><img src="/images/mods/{{ $page.File.ContentBaseName }}/{{ .img }}-sm.jpg" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
           {{ end }}
@@ -31,7 +50,7 @@
             {{ with .text }}<p>{{ . }}</p>{{ end }}
             <div class="dl-card-foot">
               <p class="meta">{{ .kind }}{{ with .size }} · {{ . }}{{ end }}<br><a href="{{ $page.RelPermalink }}">Details and pictures</a></p>
-              {{ if $href }}<a class="btn" href="{{ $href }}"{{ if hasPrefix $href "http" }} target="_blank" rel="noopener"{{ end }}>Download</a>{{ else }}<span class="btn off" aria-disabled="true">Coming soon</span>{{ end }}
+              {{ partial "dl-button.html" . }}
             </div>
           </div>
         </div>
@@ -39,26 +58,99 @@
     </div>
     {{ end }}
     {{ with $plain }}
-    {{ if $paged }}<h3 class="dl-sub">Coming soon</h3>{{ end }}
-    <div class="dl-list">
-      {{ range . }}
-        {{ $href := partial "dl-href.html" . }}
-        <div class="dl">
-          <div class="dl-text">
-            <h3>{{ .name }}{{ with .badge }} <span class="badge">{{ . }}</span>{{ end }}</h3>
-            {{ with .text }}<p>{{ . }}</p>{{ end }}
-            <p class="meta">{{ .kind }}{{ with .for }} · for {{ . }}{{ end }}{{ with .size }} · {{ . }}{{ end }}</p>
+    <div data-block>
+      {{ if $paged }}<h3 class="dl-sub">Coming soon</h3>{{ end }}
+      <div class="dl-list">
+        {{ range . }}
+          <div class="dl" data-item data-text="{{ partial "dl-search-text.html" (dict "item" . "group" $g) }}">
+            <div class="dl-text">
+              <h3>{{ .name }}{{ with .badge }} <span class="badge">{{ . }}</span>{{ end }}</h3>
+              {{ with .text }}<p>{{ . }}</p>{{ end }}
+              <p class="meta">{{ .kind }}{{ with .for }} · for {{ . }}{{ end }}{{ with .size }} · {{ . }}{{ end }}</p>
+            </div>
+            {{ partial "dl-button.html" . }}
           </div>
-          {{ if $href }}
-            <a class="btn" href="{{ $href }}"{{ if hasPrefix $href "http" }} target="_blank" rel="noopener"{{ end }}>Download</a>
-          {{ else }}
-            <span class="btn off" aria-disabled="true">Coming soon</span>
-          {{ end }}
-        </div>
-      {{ end }}
+        {{ end }}
+      </div>
     </div>
     {{ end }}
   </section>
   {{ end }}
+
+  <div class="dl-none" id="dl-none" hidden>
+    <p>Nothing matches <strong id="dl-none-q"></strong>.</p>
+    <button type="button" class="btn ghost" id="dl-reset">Show everything</button>
+  </div>
 </div>
+
+<script>
+(function () {
+  var tools = document.getElementById("dl-tools");
+  var q = document.getElementById("dl-q");
+  var chips = tools.querySelectorAll(".chip");
+  var groups = document.querySelectorAll(".dl-group[data-group]");
+  var status = document.getElementById("dl-status");
+  var none = document.getElementById("dl-none");
+  var cat = "";
+
+  // Lower case, accents off, so "berta" finds "Berta" and "cafe" finds "café".
+  function fold(s) { return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""); }
+
+  groups.forEach(function (g) {
+    g.querySelectorAll("[data-item]").forEach(function (it) { it._text = fold(it.dataset.text); });
+  });
+
+  function apply() {
+    var terms = fold(q.value.trim()).split(/\s+/).filter(Boolean);
+    var shown = 0;
+    groups.forEach(function (g) {
+      var inCat = !cat || g.dataset.group === cat;
+      var gShown = 0;
+      g.querySelectorAll("[data-block]").forEach(function (b) {
+        var bShown = 0;
+        b.querySelectorAll("[data-item]").forEach(function (it) {
+          var ok = inCat && terms.every(function (t) { return it._text.indexOf(t) !== -1; });
+          it.hidden = !ok;
+          if (ok) bShown++;
+        });
+        b.hidden = !bShown;
+        gShown += bShown;
+      });
+      g.hidden = !gShown;
+      shown += gShown;
+    });
+    chips.forEach(function (c) {
+      var on = c.dataset.cat === cat;
+      c.setAttribute("aria-pressed", String(on));
+      // On a phone the chips scroll sideways: keep the chosen one in view.
+      if (on) c.parentNode.scrollLeft = Math.max(0, c.offsetLeft - c.parentNode.offsetLeft - 16);
+    });
+    none.hidden = shown > 0;
+    document.getElementById("dl-none-q").textContent = q.value.trim() ? "“" + q.value.trim() + "”" : "here";
+    status.textContent = (terms.length || cat) ? shown + (shown === 1 ? " download" : " downloads") : "";
+  }
+
+  function setCat(c, push) {
+    cat = c;
+    if (push) history.replaceState(null, "", c ? "#" + c : location.pathname + location.search);
+    apply();
+  }
+
+  chips.forEach(function (c) {
+    c.addEventListener("click", function () { setCat(c.dataset.cat, true); });
+  });
+  q.addEventListener("input", apply);
+  document.getElementById("dl-reset").addEventListener("click", function () { q.value = ""; setCat("", true); q.focus(); });
+
+  // A link to /downloads/#engines opens on that category.
+  function fromHash() {
+    var h = decodeURIComponent(location.hash.slice(1));
+    setCat(document.querySelector('.dl-group[data-group="' + CSS.escape(h) + '"]') ? h : "", false);
+  }
+  window.addEventListener("hashchange", fromHash);
+
+  tools.hidden = false;
+  fromHash();
+})();
+</script>
 {{ end }}
