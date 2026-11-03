@@ -13,6 +13,8 @@ disableKinds = ["taxonomy", "term"]
   # PayPal donate link (https://www.paypal.com/donate/?hosted_button_id=... or https://paypal.me/...).
   # Empty hides every donate badge on the site.
   donate = "https://www.paypal.com/donate/?hosted_button_id=BBLVSCJBKK3Q6"
+  # Permanent Discord invite; empty hides the footer link.
+  discord = "https://discord.gg/x5HXNqjq9N"
 
 [menus]
   [[menus.main]]

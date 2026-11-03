@@ -30,8 +30,9 @@ The installer shows this note too.
 
 ## Code signing policy
 
-Free code signing provided by [SignPath.io](https://about.signpath.io/), certificate by
-[SignPath Foundation](https://signpath.org/).
+The releases are unsigned for now, so Windows may warn about the installer. Street Corsa will apply again for free
+code signing by [SignPath.io](https://about.signpath.io/), certificate by [SignPath Foundation](https://signpath.org/),
+under this policy:
 
 - **Committers and reviewers:** [streetcorsamods](https://github.com/streetcorsamods) (Pablo Camardelli)
 - **Approvers:** [streetcorsamods](https://github.com/streetcorsamods) (Pablo Camardelli)
@@ -39,7 +40,6 @@ Free code signing provided by [SignPath.io](https://about.signpath.io/), certifi
 Every signed release is built by GitHub Actions from the [source](https://github.com/streetcorsamods/street-corsa),
 and each signing is approved by hand. Only Street Corsa's own files are signed: `Street Corsa.exe`,
 `Street Corsa.dll` and the installer. Libraries made by others keep their makers' signatures, or none.
-Signing is being set up: until then, the releases are unsigned and Windows may warn about the installer.
 
 ## The name
 
