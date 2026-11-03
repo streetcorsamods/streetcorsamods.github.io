@@ -15,6 +15,8 @@ disableKinds = ["taxonomy", "term"]
   donate = "https://www.paypal.com/donate/?hosted_button_id=BBLVSCJBKK3Q6"
   # YouTube id of the trailer on the home page (poster: static/images/trailer.jpg). Empty hides it.
   trailer = "7cYqSJmkBtc"
+  # Permanent Discord invite; empty hides the footer link.
+  discord = "https://discord.gg/x5HXNqjq9N"
 
 [menus]
   [[menus.main]]

@@ -7,6 +7,7 @@
     </div>
     <nav class="foot-links">
       <a href="{{ site.Params.repo }}" target="_blank" rel="noopener">GitHub</a>
+      {{ with site.Params.discord }}<a href="{{ . }}" target="_blank" rel="noopener">Discord</a>{{ end }}
       <a href="{{ "about/credits/" | relURL }}">Credits</a>
       <a href="{{ "about/#code-signing-policy" | relURL }}">Code signing policy</a>
       <a href="{{ "about/#privacy" | relURL }}">Privacy</a>
