@@ -12,7 +12,7 @@ disableKinds = ["taxonomy", "term"]
   released = true
   # PayPal donate link (https://www.paypal.com/donate/?hosted_button_id=... or https://paypal.me/...).
   # Empty hides every donate badge on the site.
-  donate = "https://www.paypal.com/donate/?hosted_button_id=BBLVSCJBKK3Q6"
+  donate = "https://paypal.me/streetcorsamods"
   # YouTube id of the trailer on the home page (poster: static/images/trailer.jpg). Empty hides it.
   trailer = "7cYqSJmkBtc"
   # Permanent Discord invite; empty hides the footer link.
