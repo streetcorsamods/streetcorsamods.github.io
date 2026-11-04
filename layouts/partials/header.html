@@ -17,8 +17,8 @@
     <label for="nav-toggle" class="nav-burger" aria-hidden="true"><span></span></label>
     <nav class="nav">
       {{ range site.Menus.main }}
-        {{- /* An untranslated page has no address in this language (.URL is empty): its English */}}
-        {{ $to := .Page | default (partial "page.html" .PageRef) }}
+        {{- /* The page in this language, else its English (page.html) */}}
+        {{ $to := partial "page.html" .PageRef }}
         {{ $active := or ($here.IsMenuCurrent "main" .) ($here.HasMenuCurrent "main" .) }}
         {{ if and (eq .Identifier "home") (not $here.IsHome) }}{{ $active = false }}{{ end }}
         <a href="{{ with $to }}{{ .RelPermalink }}{{ else }}{{ .URL }}{{ end }}"{{ partial "hreflang.html" (dict "page" $here "to" $to) }}{{ if $active }} class="on" aria-current="page"{{ end }}>{{ T .Identifier | default .Name }}</a>

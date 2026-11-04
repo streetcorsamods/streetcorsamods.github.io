@@ -6,12 +6,16 @@
     {{ .Content }}
   </div>
 
+  {{- /* What's in this section: the English section's pages (every page is in English), each in this language, else
+         the English (tr.html); a translated section alone holds only its translated pages. */}}
+  {{ $here := . }}
+  {{ $src := . }}{{ range where .AllTranslations "Language.Lang" hugo.Sites.Default.Language.Lang }}{{ $src = . }}{{ end }}
   {{ if eq .Section "news" }}
     {{- /* A post's thumbnail is its `image` (a path under static/, 16:9 reads best), else the site's og.jpg. */ -}}
-    {{ $posts := .Pages.ByDate.Reverse }}
+    {{ $posts := slice }}{{ range $src.Pages.ByDate.Reverse }}{{ $posts = $posts | append (partial "tr.html" .) }}{{ end }}
     <div class="news-list">
       {{ range $posts }}
-        <a class="news-card" href="{{ .RelPermalink }}">
+        <a class="news-card" href="{{ .RelPermalink }}"{{ partial "hreflang.html" (dict "page" $here "to" .) }}>
           <img class="news-thumb" src="{{ .Params.image | default "/images/og.jpg" | relURL }}" alt="" loading="lazy" decoding="async" width="640" height="360">
           <span class="news-text">
             <time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format ":date_long" .Date }}</time>
@@ -22,23 +26,25 @@
       {{ end }}
     </div>
   {{ else }}
-    {{ with .Sections.ByWeight }}
+    {{ with $src.Sections.ByWeight }}
       <div class="cards">
         {{ range . }}
+          {{ $s := partial "tr.html" . }}
           <section class="card">
-            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-            {{ with .Description }}<p class="muted">{{ . }}</p>{{ end }}
+            <h2><a href="{{ $s.RelPermalink }}"{{ partial "hreflang.html" (dict "page" $here "to" $s) }}>{{ $s.Title }}</a></h2>
+            {{ with $s.Description }}<p class="muted">{{ . }}</p>{{ end }}
             <ol>
-              {{ range .Pages.ByWeight }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
+              {{ range .Pages.ByWeight }}{{ $p := partial "tr.html" . }}<li><a href="{{ $p.RelPermalink }}"{{ partial "hreflang.html" (dict "page" $here "to" $p) }}>{{ $p.Title }}</a></li>{{ end }}
             </ol>
           </section>
         {{ end }}
       </div>
     {{ end }}
-    {{ with .RegularPages.ByWeight }}
+    {{ with $src.RegularPages.ByWeight }}
       <ul class="links">
         {{ range . }}
-          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ with .Description }}<span class="muted"> {{ . }}</span>{{ end }}</li>
+          {{ $p := partial "tr.html" . }}
+          <li><a href="{{ $p.RelPermalink }}"{{ partial "hreflang.html" (dict "page" $here "to" $p) }}>{{ $p.Title }}</a>{{ with $p.Description }}<span class="muted"> {{ . }}</span>{{ end }}</li>
         {{ end }}
       </ul>
     {{ end }}

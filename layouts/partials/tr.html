@@ -1,0 +1,6 @@
+{{- /* A page in this site's language: its translation, else the page itself (not every page is translated). A section
+       Hugo made up on its own (no _index file, only because one page in it is translated) is no translation: it holds
+       only the translated pages, so the English one stands in for it. Context: the page. */ -}}
+{{- $p := . -}}
+{{- range where .AllTranslations "Language.Lang" site.Language.Lang -}}{{- if .File -}}{{- $p = . -}}{{- end -}}{{- end -}}
+{{- return $p -}}

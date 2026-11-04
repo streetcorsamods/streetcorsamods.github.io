@@ -1,0 +1,20 @@
+{{- /* A link to a site page ("/about/#privacy", "/downloads/?q=hemi", "install.md"): dict href (the page's address in
+       this language, else the English page's, with the link's query and fragment kept) and to (the page, or false).
+       An address that is no site page (another site, a file, a feed, "#x") stays as it is, with to = false and
+       page = false; page = true and to = false is a link to a page that isn't there.
+       Context: the address, or dict dest, from (the linking page, for relative links). */ -}}
+{{- $dest := . -}}{{- $from := false -}}
+{{- if reflect.IsMap . -}}{{- $dest = .dest -}}{{- $from = .from -}}{{- end -}}
+{{- $u := urls.Parse $dest -}}
+{{- $href := $dest -}}
+{{- $to := false -}}
+{{- $isPage := and (not $u.IsAbs) (or (strings.HasSuffix $u.Path ".md") (and (hasPrefix $u.Path "/") (not (path.Ext $u.Path)))) -}}
+{{- if $isPage -}}
+  {{- with partial "page.html" (dict "path" (strings.TrimSuffix ".md" $u.Path) "from" $from) -}}
+    {{- $to = . -}}
+    {{- $href = .RelPermalink -}}
+    {{- with $u.RawQuery -}}{{- $href = printf "%s?%s" $href . -}}{{- end -}}
+    {{- with $u.EscapedFragment -}}{{- $href = printf "%s#%s" $href . -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return (dict "href" $href "to" $to "page" $isPage) -}}

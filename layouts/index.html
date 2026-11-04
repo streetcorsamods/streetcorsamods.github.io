@@ -5,8 +5,8 @@
     <img class="logo" src="{{ "images/logo.png" | relURL }}" alt="Street Corsa" width="720" height="153">
     <p class="tag">{{ .Params.tagline }}</p>
     <div class="cta">
-      <a class="btn" href="{{ partial "href.html" "/downloads/" }}">{{ T "download" }}</a>
-      <a class="btn ghost" href="{{ partial "href.html" "/tutorials/playing/install/" }}">{{ T "how_to_install" }}</a>
+      <a class="btn" href="{{ (partial "link.html" "/downloads/").href }}">{{ T "download" }}</a>
+      <a class="btn ghost" href="{{ (partial "link.html" "/tutorials/playing/install/").href }}">{{ T "how_to_install" }}</a>
     </div>
     <p class="needs">{{ T "home_needs" (dict "v" site.Params.release) }}</p>
     {{ with site.Params.donate }}<p class="needs">{{ partial "donate.html" . }}</p>{{ end }}
@@ -61,21 +61,20 @@
   </div>
   <aside class="latest">
     <h2>{{ T "news" }}</h2>
-    {{- /* This language's news, else the English */}}
+    {{- /* The latest news, each in this language, else in English (tr.html). Every post is in English. */}}
     {{ $here := . }}
-    {{ $news := where site.RegularPages "Section" "news" }}
-    {{ $en := not $news }}
-    {{ if $en }}{{ $news = where hugo.Sites.Default.RegularPages "Section" "news" }}{{ end }}
-    {{ if and $en $news }}<p class="muted small">{{ T "in_english" }}</p>{{ end }}
-    {{ range first 3 $news }}
+    {{ $news := slice }}
+    {{ range first 3 (where hugo.Sites.Default.RegularPages "Section" "news") }}{{ $news = $news | append (partial "tr.html" .) }}{{ end }}
+    {{ if and $news (not (where $news "Language.Lang" site.Language.Lang)) }}<p class="muted small">{{ T "in_english" }}</p>{{ end }}
+    {{ range $news }}
       <a class="news-item" href="{{ .RelPermalink }}"{{ partial "hreflang.html" (dict "page" $here "to" .) }}>
         <time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format ":date_medium" .Date }}</time>
-        <span{{ if $en }} lang="{{ .Language.Lang }}"{{ end }}>{{ .Title }}</span>
+        <span{{ if ne .Language.Lang site.Language.Lang }} lang="{{ .Language.Lang }}"{{ end }}>{{ .Title }}</span>
       </a>
     {{ else }}
       <p class="muted">{{ T "nothing_yet" }}</p>
     {{ end }}
-    <a class="more" href="{{ partial "href.html" "/news/" }}">{{ T "all_news" }}</a>
+    <a class="more" href="{{ (partial "link.html" "/news/").href }}">{{ T "all_news" }}</a>
   </aside>
 </section>
 {{ end }}

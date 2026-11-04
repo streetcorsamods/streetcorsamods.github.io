@@ -2,6 +2,7 @@
 title: Primeros pasos
 description: Empieza una carrera y pasa tu primer día.
 weight: 2
+translated_from: 1cd857851eea
 ---
 
 ## Partida nueva

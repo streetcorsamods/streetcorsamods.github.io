@@ -3,7 +3,7 @@
 <section class="wrap trailer">
   <h2>{{ T "trailer" }}</h2>
   <a class="video" href="https://www.youtube.com/watch?v={{ . }}" data-id="{{ . }}" target="_blank" rel="noopener"
-     aria-label="{{ T "trailer_play" }}">
+     aria-label="{{ T "trailer_play" }}" data-title="{{ T "trailer_title" }}">
     <img src="{{ "images/trailer.jpg" | relURL }}" alt="" width="1280" height="720" loading="lazy">
     <span class="play" aria-hidden="true"></span>
   </a>
@@ -15,7 +15,7 @@ document.querySelectorAll(".video[data-id]").forEach(function (a) {
     e.preventDefault();
     var f = document.createElement("iframe");
     f.src = "https://www.youtube-nocookie.com/embed/" + a.dataset.id + "?autoplay=1&rel=0";
-    f.title = a.getAttribute("aria-label");
+    f.title = a.dataset.title;
     f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
     f.allowFullscreen = true;
     var box = document.createElement("div");

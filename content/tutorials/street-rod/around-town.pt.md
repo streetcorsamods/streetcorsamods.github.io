@@ -2,6 +2,7 @@
 title: Pela cidade
 description: Os lugares aonde você pode ir, todos a partir da garagem.
 weight: 3
+translated_from: 32cd67a5958c
 ---
 
 ![Car dealers](/images/tutorials/car-dealers.jpg "Car dealers: escolha uma revenda e saia dirigindo")

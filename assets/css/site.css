@@ -76,15 +76,22 @@ h1, h2, h3 {
 .langs a.on { color: var(--text); background: var(--panel-2); }
 .nav { order: 1; }
 .nav a, .brand span { white-space: nowrap; }
-/* Narrower: tighter menu; the other languages' longer words also drop the name beside the logo below 960 */
+/* The name beside the logo gives way first: it shrinks (and is cut short) rather than run under the menu */
+.brand { min-width: 0; }
+.brand span { overflow: hidden; text-overflow: ellipsis; }
+.nav, .langs, .nav-burger { flex-shrink: 0; }
+/* Narrower: tighter menu, then no name beside the logo: below 960 in the other languages (longer words), below 800 in
+   English */
 @media (max-width: 1000px) { .nav a { padding: 8px 7px; font-size: 16px; } }
 @media (max-width: 960px) and (min-width: 721px) { html:not(:lang(en)) .brand span { display: none; } html:not(:lang(en)) .bar-in { gap: 8px; } }
+@media (max-width: 800px) and (min-width: 721px) { .brand span { display: none; } .bar-in { gap: 8px; } }
 
 @media (max-width: 720px) {
   .nav-burger {
     display: block; width: 40px; height: 40px; cursor: pointer; position: relative; order: 3;
   }
   .langs { order: 1; }
+  .bar-in { gap: 8px; }
   .nav-burger span, .nav-burger span::before, .nav-burger span::after {
     content: ""; position: absolute; left: 8px; right: 8px; height: 2px; background: var(--text);
   }
@@ -99,6 +106,8 @@ h1, h2, h3 {
   .nav a { border-bottom: 0; border-left: 3px solid transparent; }
   .nav a.on { border-left-color: var(--accent); }
 }
+/* Small phones: the logo alone, so the languages and the menu button keep their room */
+@media (max-width: 420px) { .brand span { display: none; } }
 
 /* Buttons */
 .btn {
@@ -260,7 +269,7 @@ th { font-family: var(--display); font-weight: 400; text-transform: uppercase; l
 .dl-group h2 { font-size: 30px; margin-bottom: 4px; }
 .dl-group > .muted { margin-top: 0; }
 .dl-list { display: grid; gap: 10px; }
-#engines .dl-list { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+#engines .dl-list { grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); }
 .dl {
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
   background: var(--panel); border: 1px solid var(--line); padding: 14px 18px;
@@ -370,7 +379,7 @@ th { font-family: var(--display); font-weight: 400; text-transform: uppercase; l
 .foot p { margin: 0 0 6px; }
 .foot strong { color: var(--text); }
 .fine { font-size: 12px; }
-.foot-links { display: flex; gap: 16px; align-items: flex-start; }
+.foot-links { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: flex-start; }
 .foot-links a { color: var(--muted); }
 .foot-links a:hover { color: var(--text); }
 

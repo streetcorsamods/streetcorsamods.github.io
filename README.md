@@ -36,15 +36,16 @@ English at `/`, Spanish at `/es/`, Portuguese (Brazil) at `/pt/` (`[languages]` 
 | Downloads text | `data/downloads.yaml`: a group's or item's `es:` / `pt:` |
 
 A page with no translation has none in that language: the menu, the footer and links in the text go to the English
-page instead (`layouts/partials/page.html`). In a translation, link to site pages as the English does
+page instead (`layouts/partials/page.html`, `link.html`). In a translation, link to site pages as the English does
 (`/downloads/`, `install.md`): they go to the page in the same language. In-game names (**Mod Manager**, **Go race!**)
 stay in English, as the game shows them.
 
 Translated so far: home, Downloads, Contact, and the Getting started and Street Rod tutorials (but not the AI guide).
 News, About, the mods' pages and the modding guide are English only.
 
-The synced tutorials' translations are the site's own: when the sync changes an English page, it says which
-translations to update.
+The synced tutorials' translations are the site's own. Each says which English it was made from (front matter
+`translated_from`, a hash of the English page). Every sync, and `python tools/sync.py --check` on its own, lists the
+translations whose English has changed since, with the new hash to set once the translation is up to date.
 
 ## Synced pages
 

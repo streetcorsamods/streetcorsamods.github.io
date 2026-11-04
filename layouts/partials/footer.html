@@ -7,10 +7,10 @@
     </div>
     <nav class="foot-links">
       <a href="{{ site.Params.repo }}" target="_blank" rel="noopener">GitHub</a>
-      <a href="{{ partial "href.html" "/contact/" }}">{{ T "contact" }}</a>
-      <a href="{{ partial "href.html" "/about/credits/" }}">{{ T "credits" }}</a>
-      <a href="{{ partial "href.html" "/about/#code-signing-policy" }}">{{ T "code_signing" }}</a>
-      <a href="{{ partial "href.html" "/about/#privacy" }}">{{ T "privacy" }}</a>
+      {{ $here := . }}
+      {{ range slice (slice "/contact/" "contact") (slice "/about/credits/" "credits") (slice "/about/#code-signing-policy" "code_signing") (slice "/about/#privacy" "privacy") }}
+        {{ $l := partial "link.html" (index . 0) }}<a href="{{ $l.href }}"{{ partial "hreflang.html" (dict "page" $here "to" $l.to) }}>{{ T (index . 1) }}</a>
+      {{ end }}
       {{- /* The news feed: this language's, else the English */}}
       <a href="{{ with partial "page.html" "/news" }}{{ with .OutputFormats.Get "rss" }}{{ .RelPermalink }}{{ end }}{{ end }}">RSS</a>
     </nav>

@@ -2,6 +2,7 @@
 title: Por la ciudad
 description: Los lugares a los que puedes ir, todos desde el taller.
 weight: 3
+translated_from: 32cd67a5958c
 ---
 
 ![Car dealers](/images/tutorials/car-dealers.jpg "Car dealers: elige un lote y sal manejando")

@@ -21,7 +21,7 @@
     {{ end }}
   </div>
 
-  <div class="dl-tools" id="dl-tools" hidden data-one="{{ T "dl_one" }}" data-many="{{ T "dl_many" }}" data-here="{{ T "dl_none_here" }}">
+  <div class="dl-tools" id="dl-tools" hidden data-single="{{ T "dl_one" }}" data-many="{{ T "dl_many" }}" data-here="{{ T "dl_none_here" }}">
     <div class="dl-search">
       <label class="sr" for="dl-q">{{ T "dl_search" }}</label>
       <input type="search" id="dl-q" placeholder="{{ T "dl_placeholder" }}" autocomplete="off" spellcheck="false">
@@ -133,7 +133,7 @@
     });
     none.hidden = shown > 0;
     document.getElementById("dl-none-q").textContent = q.value.trim() ? "“" + q.value.trim() + "”" : tools.dataset.here;
-    status.textContent = (terms.length || cat) ? shown + " " + (shown === 1 ? tools.dataset.one : tools.dataset.many) : "";
+    status.textContent = (terms.length || cat) ? shown + " " + (shown === 1 ? tools.dataset.single : tools.dataset.many) : "";
   }
 
   function setCat(c, push) {

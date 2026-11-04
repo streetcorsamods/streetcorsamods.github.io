@@ -12,7 +12,7 @@
         <span class="contact-text">
           <strong>{{ .name }}</strong>
           {{ with .show }}<span class="contact-show">{{ . }}</span>{{ end }}
-          <span>{{ T (printf "social_%s" (replaceRE "[^a-z]" "" (lower .name))) | default .text }}</span>
+          <span>{{ T (printf "social_%s" (replaceRE "[^a-z]" "" (lower .name))) }}</span>
         </span>
       </a>
     {{ end }}{{ end }}

@@ -2,6 +2,7 @@
 title: Corridas
 description: Os diners, a rua, as apostas, a polícia.
 weight: 5
+translated_from: 4d3c41f3c42f
 ---
 
 ![Go race](/images/tutorials/go-race.jpg "Go race: convites, Free Run, Test & Tune e as ruas")

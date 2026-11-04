@@ -2,6 +2,7 @@
 title: Correr
 description: Los diners, la calle, las apuestas, la policía.
 weight: 5
+translated_from: 4d3c41f3c42f
 ---
 
 ![Go race](/images/tutorials/go-race.jpg "Go race: invitaciones, Free Run, Test & Tune y las calles")

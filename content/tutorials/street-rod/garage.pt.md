@@ -2,6 +2,7 @@
 title: A garagem
 description: Trabalhando no seu carro, peça por peça.
 weight: 4
+translated_from: ae3ce9ef1255
 ---
 
 ## Andando por aí

@@ -2,6 +2,7 @@
 title: Instalar
 description: Qué necesitas y cómo instalar Street Corsa.
 weight: 1
+translated_from: 54ac4b4472a0
 ---
 
 ## Necesitas

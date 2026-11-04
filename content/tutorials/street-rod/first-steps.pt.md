@@ -2,6 +2,7 @@
 title: Primeiros passos
 description: Comece uma carreira e passe pelo primeiro dia.
 weight: 2
+translated_from: 1cd857851eea
 ---
 
 ## Novo jogo

@@ -1,10 +1,10 @@
-{{- /* The page of a download item (its id = a page's front matter mod), or false. Not every mod page is translated:
-       a missing one is the English. */ -}}
+{{- /* The page of a download item (its id = a page's front matter mod), in this language, else the English (tr.html),
+       or false. Looked up among the English mod pages, where every mod's page is. */ -}}
 {{- $page := false -}}
 {{- with .id -}}
   {{- $id := . -}}
-  {{- with partial "page.html" "/mods" -}}
-    {{- range where .Pages "Params.mod" $id -}}{{- $page = . -}}{{- end -}}
+  {{- with hugo.Sites.Default.GetPage "/mods" -}}
+    {{- range where .Pages "Params.mod" $id -}}{{- $page = partial "tr.html" . -}}{{- end -}}
   {{- end -}}
 {{- end -}}
 {{- return $page -}}

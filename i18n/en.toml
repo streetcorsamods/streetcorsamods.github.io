@@ -31,6 +31,7 @@ in_english = "In English"
 # Trailer
 trailer = "Trailer"
 trailer_play = "Play the Street Corsa trailer"
+trailer_title = "Street Corsa trailer"
 trailer_note = "Plays from YouTube once you press play."
 trailer_watch = "Watch on YouTube"
 

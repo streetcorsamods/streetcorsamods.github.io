@@ -2,6 +2,7 @@
 title: El taller
 description: Trabajar en tu auto, pieza por pieza.
 weight: 4
+translated_from: ae3ce9ef1255
 ---
 
 ## Moverse

@@ -2,6 +2,7 @@
 title: Ayuda
 description: Problemas comunes y cómo resolverlos.
 weight: 6
+translated_from: b64be855e494
 ---
 
 | Problema | Solución |
