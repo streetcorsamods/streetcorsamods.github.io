@@ -49,6 +49,7 @@ donate_with = "Donate with"
 # Contact cards (hugo.toml params.social: social_ and the name, letters only, in lower case)
 social_discord = "Questions, help with an install, your builds and race stories. The quickest answer."
 social_github = "Found a bug, or want something in the game? Open an issue. Say what you did and what happened."
+social_sourceforge = "For modders: the mods' files, one SVN repository per engine pack, with the modding wiki and tickets. Ask there for access to improve a pack."
 social_youtube = "Trailers and videos of the game."
 social_itchio = "The game's page on itch.io. Rate it, leave a comment, follow it for updates."
 social_email = "Licensing, press, and anything private. Questions and bugs get a quicker answer on Discord."

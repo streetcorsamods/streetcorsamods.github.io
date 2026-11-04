@@ -5,6 +5,7 @@ weight: 80
 description: "The Lincoln Y-block of the Continental Mark II, and the MEL big block up to the 462."
 group: engines
 models_note: true
+source: lincoln-v8
 shots:
   - { img: mercury-430-super-marauder-400-merc-o-matic, caption: "Mercury 430 Super Marauder 3x2-bbl 400 hp (1958)" }
   - { img: mercury-430-super-marauder-400-merc-o-matic-side, caption: "The same from the other side" }

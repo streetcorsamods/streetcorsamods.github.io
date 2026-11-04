@@ -5,6 +5,7 @@ weight: 20
 description: "The Nailhead 364 to 425 with the dual-quad Super Wildcat, and the big block: GS 400, GS 455 and its Stage 1."
 group: engines
 models_note: true
+source: buick-v8
 shots:
   - { img: nailhead-425-super-wildcat-360-st400, caption: "Buick 425 Nailhead Super Wildcat dual quad 360 hp (1965)" }
   - { img: nailhead-425-super-wildcat-360-st400-side, caption: "The same from the other side" }

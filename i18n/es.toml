@@ -48,6 +48,7 @@ donate_with = "Donar con"
 # Tarjetas de contacto
 social_discord = "Preguntas, ayuda con la instalación, tus autos y tus historias de carreras. La respuesta más rápida."
 social_github = "¿Encontraste un error o quieres algo en el juego? Abre un issue. Cuenta qué hiciste y qué pasó."
+social_sourceforge = "Para modders: los archivos de los mods, un repositorio SVN por paquete de motores, con la wiki de modding y los tickets. Pide ahí acceso para mejorar un paquete."
 social_youtube = "Tráileres y videos del juego."
 social_itchio = "La página del juego en itch.io. Califícalo, deja un comentario, síguelo para enterarte de las novedades."
 social_email = "Licencias, prensa y todo lo privado. Las preguntas y los errores tienen respuesta más rápida en Discord."

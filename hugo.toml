@@ -50,6 +50,12 @@ disableKinds = ["taxonomy", "term"]
   url = "https://github.com/streetcorsamods/street-corsa/issues"
   icon = "github"
   foot = false
+# The mods' source for modders (one SVN repository per mod, the modding wiki, tickets): not for players, so off the footer
+[[params.social]]
+  name = "SourceForge"
+  url = "https://sourceforge.net/p/streetcorsa-mods/"
+  icon = "sourceforge"
+  foot = false
 [[params.social]]
   name = "YouTube"
   url = "https://www.youtube.com/@StreetCorsa-d5c"
