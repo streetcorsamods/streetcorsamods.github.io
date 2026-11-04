@@ -15,8 +15,42 @@ disableKinds = ["taxonomy", "term"]
   donate = "https://paypal.me/streetcorsamods"
   # YouTube id of the trailer on the home page (poster: static/images/trailer.jpg). Empty hides it.
   trailer = "7cYqSJmkBtc"
-  # Permanent Discord invite; empty hides the footer link.
-  discord = "https://discord.gg/x5HXNqjq9N"
+
+# Where to find us: the Contact page's cards, in this order, and the footer's icons (foot = false keeps one off the
+# footer). An empty url hides it everywhere. icon: a name in layouts/partials/icon.html.
+[[params.social]]
+  name = "Discord"
+  url = "https://discord.gg/uebqRhN6w"
+  icon = "discord"
+  text = "Questions, help with an install, your builds and race stories. The quickest answer."
+[[params.social]]
+  name = "GitHub"
+  url = "https://github.com/streetcorsamods/street-corsa/issues"
+  icon = "github"
+  foot = false
+  text = "Found a bug, or want something in the game? Open an issue. Say what you did and what happened."
+[[params.social]]
+  name = "YouTube"
+  url = "https://www.youtube.com/@StreetCorsa-d5c"
+  icon = "youtube"
+  text = "Trailers and videos of the game."
+[[params.social]]
+  name = "Itch.io"
+  url = "https://streetcorsamods.itch.io/street-corsa"
+  icon = "itch"
+  text = "The game's page on itch.io. Rate it, leave a comment, follow it for updates."
+[[params.social]]
+  name = "Email"
+  url = "mailto:streetcorsa.mods@gmail.com"
+  icon = "mail"
+  show = "streetcorsa.mods@gmail.com"
+  text = "Licensing, press, and anything private. Questions and bugs get a quicker answer on Discord."
+# Still in review there; give it its url once it is up.
+[[params.social]]
+  name = "Overtake"
+  url = ""
+  icon = ""
+  text = "The game on Overtake, with its comments."
 
 [menus]
   [[menus.main]]
@@ -39,6 +73,10 @@ disableKinds = ["taxonomy", "term"]
     name = "About"
     pageRef = "/about"
     weight = 5
+  [[menus.main]]
+    name = "Contact"
+    pageRef = "/contact"
+    weight = 6
 
 [markup.goldmark.renderer]
   unsafe = false
