@@ -2,6 +2,7 @@
 title: "Street Corsa 0.1.0: early access"
 date: 2026-11-02
 description: The first public version is out. Early access, with work ahead.
+image: /images/mods/street-rod/preview-sm.jpg
 ---
 
 Street Corsa 0.1.0 is out. Grab it on the [downloads](/downloads/) page.

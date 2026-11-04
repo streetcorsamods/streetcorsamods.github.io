@@ -2,6 +2,7 @@
 title: "Nine engine packs for Street Rod"
 date: 2026-11-02T12:00:00
 description: Buick, Cadillac, Chevrolet W, Ford 385, Cleveland and Falcon six, Lincoln-Mercury, Oldsmobile and Pontiac.
+image: /images/mods/pontiac-v8/389-gto-tri-power-360-m20-sm.jpg
 ---
 
 The first engine packs are out, for the **Street Rod** setting. Grab them on the [downloads](/downloads/) page.

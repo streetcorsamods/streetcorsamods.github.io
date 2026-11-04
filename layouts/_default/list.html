@@ -7,12 +7,17 @@
   </div>
 
   {{ if eq .Section "news" }}
+    {{- /* A post's thumbnail is its `image` (a path under static/, 16:9 reads best), else the site's og.jpg. */ -}}
+    {{ $posts := .Pages.ByDate.Reverse }}
     <div class="news-list">
-      {{ range .Pages.ByDate.Reverse }}
+      {{ range $posts }}
         <a class="news-card" href="{{ .RelPermalink }}">
-          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
-          <h2>{{ .Title }}</h2>
-          <p>{{ .Summary | plainify | truncate 180 }}</p>
+          <img class="news-thumb" src="{{ .Params.image | default "/images/og.jpg" | relURL }}" alt="" loading="lazy" decoding="async" width="640" height="360">
+          <span class="news-text">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+            <h2>{{ .Title }}</h2>
+            <p>{{ .Summary | plainify | truncate 180 }}</p>
+          </span>
         </a>
       {{ end }}
     </div>
