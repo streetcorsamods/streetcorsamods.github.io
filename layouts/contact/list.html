@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div class="wrap page">
+  <div class="prose">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+  </div>
+  {{/* The cards: params.social in hugo.toml. Plain links, so the page loads nothing from these sites. */}}
+  <div class="contact-cards">
+    {{ range site.Params.social }}{{ if .url }}
+      <a class="contact-card" href="{{ .url }}"{{ if not (hasPrefix .url "mailto:") }} target="_blank" rel="noopener"{{ end }}>
+        {{ partial "icon.html" .icon }}
+        <span class="contact-text">
+          <strong>{{ .name }}</strong>
+          {{ with .show }}<span class="contact-show">{{ . }}</span>{{ end }}
+          <span>{{ .text }}</span>
+        </span>
+      </a>
+    {{ end }}{{ end }}
+  </div>
+</div>
+{{ end }}

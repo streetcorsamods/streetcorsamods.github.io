@@ -383,3 +383,17 @@ th { font-family: var(--display); font-weight: 400; text-transform: uppercase; l
 .models-note .sig { margin-top: 6px; color: var(--muted); font-style: italic; }
 .mod-group { margin-top: 36px; }
 .mod-group h2 { font-size: 30px; margin: 0 0 4px; }
+
+/* Contact: a card a place (params.social), and the footer's icons */
+.contact-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; margin-top: 24px; }
+.contact-card { display: flex; gap: 16px; align-items: flex-start; background: var(--panel); border: 1px solid var(--line); padding: 16px 20px; color: var(--text); }
+.contact-card:hover { border-color: var(--accent); text-decoration: none; }
+.contact-card .icon { flex: none; width: 36px; height: 36px; color: var(--muted); margin-top: 2px; }
+.contact-card:hover .icon { color: var(--accent-hover); }
+.contact-text strong { display: block; font-family: var(--display); font-weight: 400; text-transform: uppercase; letter-spacing: .02em; font-size: 22px; }
+.contact-text span { display: block; color: var(--muted); font-size: 15px; }
+.contact-text .contact-show { color: var(--text); overflow-wrap: anywhere; }
+.foot-social { display: flex; gap: 14px; align-items: flex-start; }
+.foot-social a { color: var(--muted); }
+.foot-social a:hover { color: var(--text); }
+.foot-social .icon { display: block; width: 22px; height: 22px; }

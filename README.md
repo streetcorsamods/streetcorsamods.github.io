@@ -23,6 +23,7 @@ hugo --minify      # build into public/
 | A mod's page | `content/mods/<page>.md` (text, `mod` id, `shots`), pictures in `static/images/mods/<page>/` |
 | Tutorials | `content/tutorials/` |
 | About, credits | `content/about/` |
+| Contact page, footer icons (Discord, YouTube, itch.io, email...) | `hugo.toml` (`params.social`; empty `url` hides one), icons in `layouts/partials/icon.html` |
 
 ## Synced pages
 
