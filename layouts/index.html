@@ -25,10 +25,10 @@
       {{ range .points }}<li><h3>{{ .title }}</h3><p>{{ .text }}</p></li>{{ end }}
     </ul>
     <p class="talk-note">{{ .note }}</p>
-    <a class="btn ghost" href="{{ "tutorials/playing/ai/" | relURL }}">Set it up</a>
+    {{ with site.GetPage "/tutorials/playing/ai" }}<a class="btn ghost" href="{{ .RelPermalink }}">Set it up</a>{{ else }}{{ errorf "home: the AI talk links to /tutorials/playing/ai, which is missing" }}{{ end }}
   </div>
   {{ with .image }}
-  <img class="talk-shot" src="{{ .src | relURL }}" alt="{{ .alt }}" loading="lazy">
+  <img class="talk-shot" src="{{ .src | relURL }}" alt="{{ .alt }}" width="{{ .width }}" height="{{ .height }}" loading="lazy">
   {{ else }}
   {{/* No screenshot yet: a talk drawn in the game's colours. The words are an example; the AI writes its own each time. */}}
   <figure class="talk-demo" aria-label="An example haggle">

@@ -9,8 +9,9 @@
   {{ if and .Parent (eq .Section "tutorials") }}
     {{ $pages := .Parent.Pages.ByWeight }}
     <nav class="pager">
-      {{ with $pages.Prev . }}<a href="{{ .RelPermalink }}">← {{ .Title }}</a>{{ else }}<span></span>{{ end }}
-      {{ with $pages.Next . }}<a href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}
+      {{/* Hugo's Next is the page before this one in the list, Prev the one after */}}
+      {{ with $pages.Next . }}<a href="{{ .RelPermalink }}">← {{ .Title }}</a>{{ else }}<span></span>{{ end }}
+      {{ with $pages.Prev . }}<a href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}
     </nav>
   {{ end }}
 </div>

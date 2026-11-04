@@ -29,7 +29,11 @@ prices, earlier talks). Settings' talk detail sends less. [How it works](/tutori
 
 That provider is Ollama or LM Studio on your own computer or network, or a cloud service you sign up to yourself, under
 that service's own privacy policy and with your own key. With a cloud one, what you type leaves your computer.
-The installer shows this note too.
+
+If you also tick **ComfyUI portraits**, each new rival's look, name, nickname, age and short story go to the ComfyUI
+address you set, to paint their picture. On your own computer, that stays there too.
+
+The installer shows a short version of this note.
 
 ## Code signing policy
 
