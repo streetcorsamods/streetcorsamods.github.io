@@ -4,15 +4,30 @@
       <img src="{{ "images/icon.png" | relURL }}" alt="" width="40" height="40">
       <span>{{ site.Title }}</span>
     </a>
-    {{- /* The languages: this page in each, else that language's home */}}
+    {{- /* The languages, in a dropdown: this page in each, else that language's home. Each one's flag: hugo.toml
+         languages.<lang>.params.flag (flag.html). No script needed; the one below closes it on a click elsewhere. */}}
     {{ $here := . }}
     <nav class="langs" aria-label="{{ T "language" }}">
-      {{ range hugo.Sites }}
-        {{ $lang := .Language }}
-        {{ $to := .Home }}{{ range where $here.AllTranslations "Language.Lang" $lang.Lang }}{{ $to = . }}{{ end }}
-        <a href="{{ $to.RelPermalink }}" hreflang="{{ $lang.Lang }}" lang="{{ $lang.Lang }}" title="{{ $lang.Label }}"{{ if eq $lang.Lang $here.Language.Lang }} class="on" aria-current="true"{{ end }}>{{ upper $lang.Lang }}</a>
-      {{ end }}
+      <details>
+        <summary title="{{ T "language" }}">{{ partial "flag.html" site.Params.flag }}<span>{{ upper site.Language.Lang }}</span><span class="sr"> · {{ site.Language.Label }}</span></summary>
+        <ul>
+          {{ range hugo.Sites }}
+            {{ $lang := .Language }}
+            {{ $to := .Home }}{{ range where $here.AllTranslations "Language.Lang" $lang.Lang }}{{ $to = . }}{{ end }}
+            <li><a href="{{ $to.RelPermalink }}" hreflang="{{ $lang.Lang }}" lang="{{ $lang.Lang }}"{{ if eq $lang.Lang $here.Language.Lang }} class="on" aria-current="true"{{ end }}>{{ partial "flag.html" .Params.flag }}<span>{{ $lang.Label }}</span></a></li>
+          {{ end }}
+        </ul>
+      </details>
     </nav>
+    <script>
+    (function () {
+      var d = document.querySelector(".langs details"), t = document.getElementById("nav-toggle");
+      document.addEventListener("click", function (e) { if (d.open && !d.contains(e.target)) d.open = false; });
+      document.addEventListener("keydown", function (e) { if (e.key === "Escape" && d.open) { d.open = false; d.querySelector("summary").focus(); } });
+      d.addEventListener("toggle", function () { if (d.open && t) t.checked = false; });
+      document.addEventListener("change", function (e) { if (e.target === t && t.checked) d.open = false; });
+    })();
+    </script>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="{{ T "menu" }}">
     <label for="nav-toggle" class="nav-burger" aria-hidden="true"><span></span></label>
     <nav class="nav">

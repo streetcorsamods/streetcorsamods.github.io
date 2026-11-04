@@ -69,11 +69,29 @@ h1, h2, h3 {
 .nav a:hover { color: var(--text); text-decoration: none; }
 .nav a.on { color: var(--text); border-bottom-color: var(--accent); }
 .nav-toggle, .nav-burger { display: none; }
-/* The languages: after the menu, small */
-.langs { order: 2; display: flex; gap: 2px; font-size: 13px; letter-spacing: .06em; }
-.langs a { color: var(--muted); padding: 4px 6px; border-radius: 3px; }
-.langs a:hover { color: var(--text); text-decoration: none; }
-.langs a.on { color: var(--text); background: var(--panel-2); }
+/* The languages: after the menu, a dropdown (flag, code, caret) */
+.langs { order: 2; position: relative; font-size: 13px; letter-spacing: .06em; }
+.langs summary {
+  display: flex; align-items: center; gap: 6px; padding: 6px 8px; border-radius: 3px;
+  color: var(--muted); cursor: pointer; list-style: none; user-select: none;
+}
+.langs summary::-webkit-details-marker { display: none; }
+.langs summary::after {
+  content: ""; width: 0; height: 0; margin-left: 1px;
+  border: 4px solid transparent; border-top-color: currentColor; border-bottom: 0; transition: transform .15s;
+}
+.langs summary:hover, .langs details[open] summary { color: var(--text); background: var(--panel-2); }
+.langs details[open] summary::after { transform: rotate(180deg); }
+.langs ul {
+  position: absolute; right: 0; top: calc(100% + 6px); z-index: 20; min-width: 160px;
+  margin: 0; padding: 4px; list-style: none;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 4px; box-shadow: 0 8px 24px rgba(0, 0, 0, .5);
+  letter-spacing: normal; font-size: 15px;
+}
+.langs li a { display: flex; align-items: center; gap: 10px; padding: 7px 10px; border-radius: 3px; color: var(--muted); }
+.langs li a:hover { color: var(--text); background: var(--panel-2); text-decoration: none; }
+.langs li a.on { color: var(--text); box-shadow: inset 3px 0 var(--accent); }
+.flag { display: block; flex-shrink: 0; border-radius: 2px; box-shadow: 0 0 0 1px rgba(255, 255, 255, .15); }
 .nav { order: 1; }
 .nav a, .brand span { white-space: nowrap; }
 /* The name beside the logo gives way first: it shrinks (and is cut short) rather than run under the menu */
