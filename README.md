@@ -17,7 +17,7 @@ hugo --minify      # build into public/
 | What | Where |
 |---|---|
 | Menu, release version | `hugo.toml` (`params.release`, `params.released`) |
-| Home page text and feature boxes | `content/_index.md` |
+| Home page text, feature boxes, the AI talk section | `content/_index.md` (`talk`; a screenshot for it: `talk.image` with `src`, `alt`, `width`, `height`, else an example talk is drawn) |
 | News | `content/news/` (one file per post, `date` in the front matter) |
 | Downloads | `data/downloads.yaml` |
 | A mod's page | `content/mods/<page>.md` (text, `mod` id, `shots`), pictures in `static/images/mods/<page>/` |
@@ -32,7 +32,7 @@ Some pages are copies, marked `source:` in their front matter. Edit the source, 
 python tools/sync.py
 ```
 
-- `tutorials/playing/*`: the game repo's `docs/player/`
+- `tutorials/playing/*`: the game repo's `docs/player/` (`CORE_DOCS` in sync.py)
 - `tutorials/street-rod/*`: the Street Rod setting's player docs
 - `assets/credits/*.csv`: the game's icon and sound credits
 - `data/mods/<id>.json`: a released mod's name, version, builds and credits, from its `mod.json` (`MODS` in sync.py)

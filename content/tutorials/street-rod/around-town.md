@@ -34,5 +34,7 @@ Press **Sell** next to the car's name:
 
 ## Talking (optional)
 
-With the AI on (see [Install](/tutorials/playing/install.md)) you can call sellers, chat with rivals at the diner and haggle over prices.
-Without it the game plays the same, prices are just fixed.
+With the AI on (see [People who talk back](/tutorials/playing/ai.md)) sellers and salesmen talk to you, you can chat with rivals at the
+diner and haggle over prices.
+Without it the game plays the same, only nobody talks back: the junkyard's **Haggle** and the buyers who answer
+your ad still bargain.
