@@ -5,6 +5,7 @@ weight: 10
 description: "The GTO's 389 and Tri-Power, Ram Air II to IV, the 455 and the '77 Trans Am's W72."
 group: engines
 models_note: true
+source: pontiac-v8
 shots:
   - { img: 389-gto-tri-power-360-m20, caption: "Pontiac 389 GTO Tri-Power 360 hp" }
   - { img: 389-gto-tri-power-360-m20-side, caption: "The same from the other side" }

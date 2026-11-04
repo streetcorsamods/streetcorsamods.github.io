@@ -1,7 +1,8 @@
 {{ define "main" }}
 {{- /* A mod's page: its pictures (front matter shots: a name in static/images/mods/<page>/, or a site path of its own),
        its text, its download (data/downloads.yaml, the item whose id is front matter mod), what its manifest holds
-       (data/mods/<mod>.json, written by tools/sync.py). group: the downloads group it is in (settings, engines, addons). */ -}}
+       (data/mods/<mod>.json, written by tools/sync.py). group: the downloads group it is in (settings, engines, addons).
+       source: its SVN repository's mount point on SourceForge (sourceforge.net/p/streetcorsa-mods/<source>/), for modders. */ -}}
 {{ $dir := printf "/images/mods/%s/" .File.ContentBaseName }}
 {{ $mod := index hugo.Data.mods .Params.mod }}
 {{ $item := false }}
@@ -35,6 +36,7 @@
         {{ with $mod }}{{ with .settings }}<dt>For</dt><dd>{{ range $i, $s := . }}{{ if $i }}, {{ end }}{{ if eq $s "streetrod" }}Street Rod{{ else }}{{ $s }}{{ end }}{{ end }}</dd>{{ end }}{{ end }}
         {{ with $mod }}{{ with .builds }}<dt>Builds</dt><dd>{{ len . }}</dd>{{ end }}{{ end }}
         <dt>Licence</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">{{ .Params.licence | default "CC BY 4.0" }}</a></dd>
+        {{ with .Params.source }}<dt>Source</dt><dd><a href="https://sourceforge.net/p/streetcorsa-mods/{{ . }}/" target="_blank" rel="noopener">SourceForge</a></dd>{{ end }}
         <dt>Made by</dt><dd><a href="https://github.com/pecamardelli" target="_blank" rel="noopener">Pablo Camardelli</a></dd>
       </dl>
       {{ with $credits }}

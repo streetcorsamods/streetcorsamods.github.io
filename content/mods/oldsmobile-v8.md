@@ -5,6 +5,7 @@ weight: 90
 description: "The 400s and the 455: the L69 Tri-Carb, the 4-4-2, the W-30 with Force-Air, the Hurst/Olds."
 group: engines
 models_note: true
+source: olds-v8
 shots:
   - { img: 455-w30-370-m21, caption: "Oldsmobile 455 W-30 370 hp (1970, aluminium intake)" }
   - { img: 455-w30-370-m21-side, caption: "The same from the other side" }

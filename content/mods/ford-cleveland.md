@@ -5,6 +5,7 @@ weight: 60
 description: "The 351 Cleveland (2V, 4V, Cobra Jet, Boss 351) and the tall-deck 400 and 351M."
 group: engines
 models_note: true
+source: ford-cleveland-v8
 shots:
   - { img: boss-351-330-toploader-close-3-91, caption: "Ford Boss 351 330 hp (1971 Mustang)" }
   - { img: boss-351-330-toploader-close-3-91-side, caption: "The same from the other side" }

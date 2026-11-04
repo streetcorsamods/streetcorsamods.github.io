@@ -5,6 +5,7 @@ weight: 40
 description: "1958-65: the 348 with the Tri-Power, the Impala SS 409s on one and two four-barrels, the 427 Z11."
 group: engines
 models_note: true
+source: chevrolet-w-v8
 shots:
   - { img: 409-dual-quad-409-t10, caption: "Chevrolet 409 dual quad 409 hp (1962)" }
   - { img: 409-dual-quad-409-t10-side, caption: "The same from the other side" }
