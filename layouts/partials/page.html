@@ -1,0 +1,18 @@
+{{- /* A site page by its path ("/downloads", "/about/credits"), in this language, else the English (tr.html), else false.
+       Context: the path, or dict path, from (the linking page: a relative path, "../playing/ai", is from it). The path
+       is looked up among the English pages, where every page is; the translation is picked after. */ -}}
+{{- $path := . -}}{{- $from := false -}}
+{{- if reflect.IsMap . -}}{{- $path = .path -}}{{- $from = .from -}}{{- end -}}
+{{- $path = strings.TrimSuffix "/" $path | default "/" -}}
+{{- $p := false -}}
+{{- with $from -}}
+  {{- $base := . -}}
+  {{- range where .AllTranslations "Language.Lang" hugo.Sites.Default.Language.Lang -}}{{- $base = . -}}{{- end -}}
+  {{- $p = $base.GetPage $path -}}
+  {{- if not $p -}}{{- $p = .GetPage $path -}}{{- end -}}
+{{- else -}}
+  {{- $p = hugo.Sites.Default.GetPage $path -}}
+  {{- if not $p -}}{{- $p = site.GetPage $path -}}{{- end -}}
+{{- end -}}
+{{- with $p -}}{{- $p = partial "tr.html" . -}}{{- end -}}
+{{- return ($p | default false) -}}

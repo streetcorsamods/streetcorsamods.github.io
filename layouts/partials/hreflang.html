@@ -1,0 +1,5 @@
+{{- /* ` hreflang="en"` on a link to a page in another language than this one (an untranslated page's English), else "".
+       Context: dict page (this page), to (the linked page). */ -}}
+{{- $out := "" -}}
+{{- with .to -}}{{- if ne .Language.Lang $.page.Language.Lang -}}{{- $out = printf " hreflang=%q" .Language.Lang -}}{{- end -}}{{- end -}}
+{{- return ($out | safeHTMLAttr) -}}

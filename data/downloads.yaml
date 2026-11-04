@@ -4,21 +4,29 @@
 # url:  a download hosted anywhere else (wins over file).
 # Neither: listed as "Coming soon".
 # id:   the mod's id: its page (content/mods, front matter mod) links here and the card links to the page.
+# es:, pt: the group's or item's words in that language (title, text, name, for); what they leave out stays English.
+#       kind and badge: i18n/<lang>.toml (kind_..., badge_...).
 
 groups:
   - id: game
     title: The game
     text: Install this first. On its own it is the garage and the races, with no town yet.
+    es: { title: El juego, text: "Instálalo primero. Solo, es el taller y las carreras, todavía sin ciudad." }
+    pt: { title: O jogo, text: "Instale primeiro. Sozinho, ele é a garagem e as corridas, ainda sem cidade." }
     items:
       - name: Street Corsa
         file: StreetCorsa-{v}.msi
         size: 125 MB
         kind: Installer
         text: The game. Windows 10/11, 64-bit. No admin rights needed.
+        es: { text: "El juego. Windows 10/11, 64 bits. No necesita permisos de administrador." }
+        pt: { text: "O jogo. Windows 10/11, 64 bits. Não precisa de permissão de administrador." }
 
   - id: settings
     title: Settings
     text: A setting is the career you play. Install at least one. Mod Manager → Install mods.
+    es: { title: Ambientaciones, text: "Una ambientación es la carrera que juegas. Instala al menos una. Mod Manager → Install mods." }
+    pt: { title: Cenários, text: "Um cenário é a carreira que você joga. Instale pelo menos um. Mod Manager → Install mods." }
     items:
       - name: Street Rod
         id: streetrod
@@ -27,82 +35,111 @@ groups:
         kind: Setting
         badge: Default
         text: Los Angeles, 1970. Buy a tired old car, build its engine on the stand and race Main Street at night for cash and pink slips, until the King will race you.
+        es: { text: "Los Ángeles, 1970. Compra un auto viejo y cansado, arma su motor en el soporte y corre en Main Street de noche por dinero o apostando el auto, hasta que el King acepte correr contigo." }
+        pt: { text: "Los Angeles, 1970. Compre um carro velho e cansado, monte o motor no cavalete e corra na Main Street à noite por dinheiro ou valendo o carro, até o King aceitar correr com você." }
       - name: Touge Nights
         id: touge_nights
         file: StreetCorsa-touge_nights-0.1.0.zip
         size: 68 MB
         kind: Setting
         text: Gunma, 2002. A tired AE86, turbo coupes on the passes after dark. Touge runs and drift battles. Needs Assetto Corsa's Japanese Pack.
+        es: { text: "Gunma, 2002. Un AE86 cansado, cupés turbo en los pasos de montaña de noche. Carreras de touge y batallas de drift. Necesita el Japanese Pack de Assetto Corsa." }
+        pt: { text: "Gunma, 2002. Um AE86 cansado, cupês turbo nas serras depois que escurece. Corridas de touge e batalhas de drift. Precisa do Japanese Pack do Assetto Corsa." }
 
   - id: engines
     title: Engine packs
     text: Real engines to build, part by part, for Street Rod. Without one, a car runs on its own Assetto Corsa engine.
+    es: { title: Packs de motores, text: "Motores reales para armar, pieza por pieza, para Street Rod. Sin uno, el auto usa su propio motor de Assetto Corsa." }
+    pt: { title: Pacotes de motores, text: "Motores reais para montar, peça por peça, para o Street Rod. Sem um, o carro usa o próprio motor do Assetto Corsa." }
     items:
-      - { name: "Chrysler V8 (318 to 426 Hemi)", kind: Engine pack }
-      - { name: "Chevrolet small block (265 to 350)", kind: Engine pack }
-      - { name: "Chevrolet big block (396 to 454)", kind: Engine pack }
+      - { name: "Chrysler V8 (318 to 426 Hemi)", kind: Engine pack, es: { name: "Chrysler V8 (318 a 426 Hemi)" }, pt: { name: "Chrysler V8 (318 a 426 Hemi)" } }
+      - { name: "Chevrolet small block (265 to 350)", kind: Engine pack, es: { name: "Chevrolet small block (265 a 350)" }, pt: { name: "Chevrolet small block (265 a 350)" } }
+      - { name: "Chevrolet big block (396 to 454)", kind: Engine pack, es: { name: "Chevrolet big block (396 a 454)" }, pt: { name: "Chevrolet big block (396 a 454)" } }
       - name: "Chevrolet W (348 / 409 / 427 Z11)"
         id: chevy_w_v8
         file: StreetCorsa-chevy_w_v8-1.0.zip
         size: 30 MB
         kind: Engine pack
         text: "1958-65: the 348 with the Tri-Power, the Impala SS 409s on one and two four-barrels, the 427 Z11."
-      - { name: "Chevrolet inline six (235 / 250)", kind: Engine pack }
+        es: { text: "1958-65: el 348 con Tri-Power, los 409 del Impala SS con uno y dos carburadores de cuatro bocas, el 427 Z11." }
+        pt: { text: "1958-65: o 348 com Tri-Power, os 409 do Impala SS com um e dois carburadores quádruplos, o 427 Z11." }
+      - { name: "Chevrolet inline six (235 / 250)", kind: Engine pack, es: { name: "Chevrolet seis en línea (235 / 250)" },
+          pt: { name: "Chevrolet seis em linha (235 / 250)" } }
       - name: "Pontiac V8 (389 / 400 / 455)"
         id: pontiac_v8
         file: StreetCorsa-pontiac_v8-1.0.zip
         size: 28 MB
         kind: Engine pack
         text: "The GTO's 389 and Tri-Power, Ram Air II to IV, the 455 and the '77 Trans Am's W72."
+        es: { text: "El 389 del GTO y el Tri-Power, Ram Air II a IV, el 455 y el W72 del Trans Am del '77." }
+        pt: { text: "O 389 do GTO e o Tri-Power, Ram Air II a IV, o 455 e o W72 do Trans Am 77." }
       - name: "Oldsmobile V8 (400 / 455)"
         id: olds_v8
         file: StreetCorsa-olds_v8-1.0.zip
         size: 26 MB
         kind: Engine pack
         text: "The 400s and the 455: the L69 Tri-Carb, the 4-4-2, the W-30 with Force-Air, the Hurst/Olds."
+        es: { text: "Los 400 y el 455: el L69 Tri-Carb, el 4-4-2, el W-30 con Force-Air, el Hurst/Olds." }
+        pt: { text: "Os 400 e o 455: o L69 Tri-Carb, o 4-4-2, o W-30 com Force-Air, o Hurst/Olds." }
       - name: "Buick V8 (Nailhead, 400 to 455)"
         id: buick_v8
         file: StreetCorsa-buick_v8-1.0.zip
         size: 45 MB
         kind: Engine pack
         text: "The Nailhead 364 to 425 with the dual-quad Super Wildcat, and the big block: GS 400, GS 455 and its Stage 1."
+        es: { text: "El Nailhead de 364 a 425 con el Super Wildcat de dos cuatro bocas, y el big block: GS 400, GS 455 y su Stage 1." }
+        pt: { text: "O Nailhead de 364 a 425 com o Super Wildcat de dois quádruplos, e o big block: GS 400, GS 455 e o Stage 1." }
       - name: "Cadillac V8 (331 to 500)"
         id: cadillac_v8
         file: StreetCorsa-cadillac_v8-1.0.zip
         size: 43 MB
         kind: Engine pack
         text: "From the 1949 331 to the 472 and 500, with the Eldorados' dual quads and 3x2s."
+        es: { text: "Del 331 de 1949 al 472 y el 500, con los dos cuatro bocas y los 3x2 de los Eldorado." }
+        pt: { text: "Do 331 de 1949 ao 472 e ao 500, com os dois quádruplos e os 3x2 dos Eldorado." }
       - { name: "Ford flathead V8", kind: Engine pack }
-      - { name: "Ford Y-block (239 to 312)", kind: Engine pack }
-      - { name: "Ford Windsor (260 to 351W)", kind: Engine pack }
-      - { name: "Ford FE (332 to 428)", kind: Engine pack }
+      - { name: "Ford Y-block (239 to 312)", kind: Engine pack, es: { name: "Ford Y-block (239 a 312)" }, pt: { name: "Ford Y-block (239 a 312)" } }
+      - { name: "Ford Windsor (260 to 351W)", kind: Engine pack, es: { name: "Ford Windsor (260 a 351W)" }, pt: { name: "Ford Windsor (260 a 351W)" } }
+      - { name: "Ford FE (332 to 428)", kind: Engine pack, es: { name: "Ford FE (332 a 428)" }, pt: { name: "Ford FE (332 a 428)" } }
       - name: "Ford Cleveland (351C, 351M / 400)"
         id: ford_cleveland
         file: StreetCorsa-ford_cleveland-1.0.zip
         size: 35 MB
         kind: Engine pack
         text: "The 351 Cleveland (2V, 4V, Cobra Jet, Boss 351) and the tall-deck 400 and 351M."
+        es: { text: "El 351 Cleveland (2V, 4V, Cobra Jet, Boss 351) y los de bloque alto, el 400 y el 351M." }
+        pt: { text: "O 351 Cleveland (2V, 4V, Cobra Jet, Boss 351) e os de bloco alto, o 400 e o 351M." }
       - name: "Ford 385 (429 / 460, Boss 429)"
         id: ford_385
         file: StreetCorsa-ford_385-1.0.zip
         size: 32 MB
         kind: Engine pack
         text: "The 429 Thunder Jet, Cobra Jet and Super Cobra Jet, the 460, and the Boss 429 on its semi-hemi heads."
+        es: { text: "El 429 Thunder Jet, Cobra Jet y Super Cobra Jet, el 460, y el Boss 429 con sus tapas semi-hemi." }
+        pt: { text: "O 429 Thunder Jet, Cobra Jet e Super Cobra Jet, o 460, e o Boss 429 com seus cabeçotes semi-hemi." }
       - name: "Ford Falcon six (188 / 221)"
         id: ford_six
         file: StreetCorsa-ford_six-2.0.zip
         size: 18 MB
         kind: Engine pack
         text: "The Argentine Falcon's 188 and 221, the Sprint's 221 SP and Oreste Berta's racing 221."
+        es: { text: "El 188 y el 221 del Falcon argentino, el 221 SP del Sprint y el 221 de competición de Oreste Berta." }
+        pt: { text: "O 188 e o 221 do Falcon argentino, o 221 SP do Sprint e o 221 de competição de Oreste Berta." }
       - name: "Lincoln-Mercury V8 (Y-block, MEL)"
         id: lincoln_v8
         file: StreetCorsa-lincoln_v8-1.0.zip
         size: 36 MB
         kind: Engine pack
         text: "The Lincoln Y-block of the Continental Mark II, and the MEL big block up to the 462."
+        es: { text: "El Y-block Lincoln del Continental Mark II, y el big block MEL hasta el 462." }
+        pt: { text: "O Y-block Lincoln do Continental Mark II, e o big block MEL até o 462." }
 
   - id: addons
     title: Add-ons
     text: Small extras for the garage.
+    es: { title: Complementos, text: Pequeños extras para el taller. }
+    pt: { title: Complementos, text: Pequenos extras para a garagem. }
     items:
-      - { name: Bush DAC10 radio, id: bushradio, kind: Add-on, file: StreetCorsa-bushradio-1.0.zip, size: 2 MB, text: "A 1950 radio on the garage's welder." }
+      - { name: Bush DAC10 radio, id: bushradio, kind: Add-on, file: StreetCorsa-bushradio-1.0.zip, size: 2 MB, text: "A 1950 radio on the garage's welder.",
+          es: { name: Radio Bush DAC10, text: "Una radio de 1950 sobre la soldadora del taller." },
+          pt: { name: Rádio Bush DAC10, text: "Um rádio de 1950 em cima da máquina de solda da garagem." } }

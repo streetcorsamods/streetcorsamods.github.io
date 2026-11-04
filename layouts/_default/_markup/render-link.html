@@ -1,17 +1,8 @@
-{{- /* Links between synced docs are plain .md file links (they read right on GitHub); here they become page links. */ -}}
-{{- $dest := .Destination -}}
-{{- $u := urls.Parse $dest -}}
-{{- $ext := false -}}
-{{- if $u.IsAbs -}}
-  {{- $ext = true -}}
-{{- else if strings.HasSuffix $u.Path ".md" -}}
-  {{- $target := .Page.GetPage (strings.TrimSuffix ".md" $u.Path) -}}
-  {{- with $target -}}
-    {{- $dest = .RelPermalink -}}
-    {{- with $u.Fragment -}}{{- $dest = printf "%s#%s" $dest . -}}{{- end -}}
-  {{- else -}}
-    {{- warnf "%s: link to %q finds no page" .Page.File.Path $u.Path -}}
-  {{- end -}}
-{{- end -}}
-<a href="{{ $dest | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $ext }} target="_blank" rel="noopener"{{ end }}>{{ .Text | safeHTML }}</a>
+{{- /* Links between synced docs are plain .md file links (they read right on GitHub); here they become page links.
+       A link to a site page (/downloads/, install.md, ../playing/ai.md) goes to that page in this page's language,
+       else to the English one (link.html). */ -}}
+{{- $l := partial "link.html" (dict "dest" .Destination "from" .Page) -}}
+{{- if and $l.page (not $l.to) -}}{{- warnf "%s: link to %q finds no page" .Page.File.Path .Destination -}}{{- end -}}
+{{- $ext := (urls.Parse .Destination).IsAbs -}}
+<a href="{{ $l.href | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ partial "hreflang.html" (dict "page" .Page "to" $l.to) }}{{ if $ext }} target="_blank" rel="noopener"{{ end }}>{{ .Text | safeHTML }}</a>
 {{- /* */ -}}

@@ -1,0 +1,7 @@
+{{- /* A downloads.yaml group or item in this page's language: its English, with what its "es:" or "pt:" says over it.
+       The kind and badge come from i18n (kind_<kind>, badge_<badge>). Context: the group or item. */ -}}
+{{- $x := . -}}
+{{- with index . site.Language.Lang -}}{{- $x = merge $x . -}}{{- end -}}
+{{- with $x.kind -}}{{- $x = merge $x (dict "kind" (T (printf "kind_%s" (anchorize .)) | default .)) -}}{{- end -}}
+{{- with $x.badge -}}{{- $x = merge $x (dict "badge" (T (printf "badge_%s" (anchorize .)) | default .)) -}}{{- end -}}
+{{- return $x -}}

@@ -2,10 +2,25 @@ baseURL = "https://streetcorsamods.github.io/"
 locale = "en-US"
 title = "Street Corsa"
 enableRobotsTXT = true
+defaultContentLanguage = "en"
 disableKinds = ["taxonomy", "term"]
 
+# English at /, the others under /es/ and /pt/. A page is translated by a file beside it: install.md -> install.es.md.
+# A page with no translation has none in that language: links to it go to the English page (layouts/partials/page.html).
+# The templates' words: i18n/<lang>.toml.
+[languages.en]
+  weight = 1
+  label = "English"
+[languages.es]
+  weight = 2
+  locale = "es"
+  label = "Español"
+[languages.pt]
+  weight = 3
+  locale = "pt-BR"
+  label = "Português"
+
 [params]
-  description = "A car career on top of Assetto Corsa: buy a tired car, build it in your garage, race it for cash and pink slips."
   repo = "https://github.com/streetcorsamods/street-corsa"
   # The game's release the Downloads page points at. Set released = true once the tag and its files are up.
   release = "0.1.2"
@@ -14,67 +29,63 @@ disableKinds = ["taxonomy", "term"]
   # Empty hides every donate badge on the site.
   donate = "https://paypal.me/streetcorsamods"
   # YouTube id of the trailer on the home page (poster: static/images/trailer.jpg). Empty hides it.
-  trailer = "7cYqSJmkBtc"
+  trailer = "RplpUJnWvow"
 
 # Where to find us: the Contact page's cards, in this order, and the footer's icons (foot = false keeps one off the
-# footer). An empty url hides it everywhere. icon: a name in layouts/partials/icon.html.
+# footer). An empty url hides it everywhere. icon: a name in layouts/partials/icon.html. A card's words, in every
+# language, English too: i18n/<lang>.toml, social_<the name, letters only, in lower case>.
 [[params.social]]
   name = "Discord"
   url = "https://discord.gg/uebqRhN6w"
   icon = "discord"
-  text = "Questions, help with an install, your builds and race stories. The quickest answer."
 [[params.social]]
   name = "GitHub"
   url = "https://github.com/streetcorsamods/street-corsa/issues"
   icon = "github"
   foot = false
-  text = "Found a bug, or want something in the game? Open an issue. Say what you did and what happened."
 [[params.social]]
   name = "YouTube"
   url = "https://www.youtube.com/@StreetCorsa-d5c"
   icon = "youtube"
-  text = "Trailers and videos of the game."
 [[params.social]]
   name = "Itch.io"
   url = "https://streetcorsamods.itch.io/street-corsa"
   icon = "itch"
-  text = "The game's page on itch.io. Rate it, leave a comment, follow it for updates."
 [[params.social]]
   name = "Email"
   url = "mailto:streetcorsa.mods@gmail.com"
   icon = "mail"
   show = "streetcorsa.mods@gmail.com"
-  text = "Licensing, press, and anything private. Questions and bugs get a quicker answer on Discord."
 # Still in review there; give it its url once it is up.
 [[params.social]]
   name = "Overtake"
   url = ""
   icon = ""
-  text = "The game on Overtake, with its comments."
 
+# The names, in every language, English too: i18n/<lang>.toml, by identifier.
 [menus]
   [[menus.main]]
-    name = "Home"
+    identifier = "home"
     pageRef = "/"
     weight = 1
   [[menus.main]]
-    name = "News"
+    identifier = "news"
     pageRef = "/news"
     weight = 2
   [[menus.main]]
-    name = "Downloads"
+    identifier = "downloads"
     pageRef = "/downloads"
     weight = 3
   [[menus.main]]
-    name = "Tutorials"
+    identifier = "tutorials"
     pageRef = "/tutorials"
     weight = 4
   [[menus.main]]
-    name = "About"
+    identifier = "about"
     pageRef = "/about"
     weight = 5
   [[menus.main]]
-    name = "Contact"
+    identifier = "contact"
     pageRef = "/contact"
     weight = 6
 

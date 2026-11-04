@@ -1,12 +1,18 @@
 """Copy the player docs and the credits from the game into the site, so the site never drifts from them.
 
     python tools/sync.py [--game <game repo>] [--setting-docs <folder>] [--mods <folder>]
+    python tools/sync.py --check     (only: which translations are behind their English)
 
 The copied pages say where they come from (front matter `source`): edit the source, then sync again.
 Links between the docs (`install.md`) are rewritten to site paths; render-link.html turns them into page links.
 The released mods' manifests become data/mods/<id>.json (name, version, builds, credits) for their pages (content/mods).
+
+The site's own translations of the synced pages (install.es.md) say which English they were made from: front matter
+`translated_from`, the English page's hash. Every run lists the ones whose English has changed since, with the hash to
+set once the translation is brought up to date.
 """
 import argparse
+import hashlib
 import json
 import pathlib
 import re
@@ -118,6 +124,28 @@ def page(src: pathlib.Path, dest_dir: str, source_label: str) -> None:
     print(f"  {source_label} -> content/{dest_dir}/{src.name}")
 
 
+def english_hash(en: pathlib.Path) -> str:
+    """What a translation of this English page records as `translated_from`"""
+    return hashlib.sha256(en.read_text(encoding="utf-8").replace("\r\n", "\n").encode()).hexdigest()[:12]
+
+
+def stale_translations() -> int:
+    """Warn about each translation of a synced page made from an older English (or not saying which); how many"""
+    n = 0
+    for name, dest in WHERE.items():
+        en = SITE / "content" / dest / name
+        if not en.is_file():
+            continue
+        want = english_hash(en)
+        for tr in sorted(en.parent.glob(f"{en.stem}.*.md")):
+            m = re.search(r"^translated_from:[ \t]*(\S*)", tr.read_text(encoding="utf-8"), re.M)
+            if not m or m.group(1) != want:
+                n += 1
+                print(f"  warning: content/{dest}/{tr.name} is behind content/{dest}/{name}: bring it up to date, "
+                      f"then set its translated_from: {want}")
+    return n
+
+
 def read_jsonc(path: pathlib.Path) -> dict:
     """A mod's .json, which may have whole-line // comments"""
     text = path.read_text(encoding="utf-8-sig")
@@ -166,7 +194,10 @@ def main() -> None:
     ap.add_argument("--game", default=str(SITE.parent / "Street Corsa"))
     ap.add_argument("--setting-docs", default=r"D:\JUEGOS\STREET CORSA\docs\player")
     ap.add_argument("--mods", default=r"D:\JUEGOS\STREET CORSA\mods")
+    ap.add_argument("--check", action="store_true", help="only list the translations behind their English; exit 1 if any")
     a = ap.parse_args()
+    if a.check:
+        sys.exit(1 if stale_translations() else 0)
     game, setting_docs = pathlib.Path(a.game), pathlib.Path(a.setting_docs)
 
     for name, dest in CORE_DOCS.items():
@@ -191,6 +222,7 @@ def main() -> None:
             print(f"  mods/{rel}/mod.json -> data/mods/{mod_id}.json ({len(data['builds'])} builds)")
     else:
         print(f"  {mods} not found: mod data left as it is")
+    stale_translations()
 
 
 if __name__ == "__main__":
