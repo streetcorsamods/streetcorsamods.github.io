@@ -69,11 +69,22 @@ h1, h2, h3 {
 .nav a:hover { color: var(--text); text-decoration: none; }
 .nav a.on { color: var(--text); border-bottom-color: var(--accent); }
 .nav-toggle, .nav-burger { display: none; }
+/* The languages: after the menu, small */
+.langs { order: 2; display: flex; gap: 2px; font-size: 13px; letter-spacing: .06em; }
+.langs a { color: var(--muted); padding: 4px 6px; border-radius: 3px; }
+.langs a:hover { color: var(--text); text-decoration: none; }
+.langs a.on { color: var(--text); background: var(--panel-2); }
+.nav { order: 1; }
+.nav a, .brand span { white-space: nowrap; }
+/* Narrower: tighter menu; the other languages' longer words also drop the name beside the logo below 960 */
+@media (max-width: 1000px) { .nav a { padding: 8px 7px; font-size: 16px; } }
+@media (max-width: 960px) and (min-width: 721px) { html:not(:lang(en)) .brand span { display: none; } html:not(:lang(en)) .bar-in { gap: 8px; } }
 
 @media (max-width: 720px) {
   .nav-burger {
-    display: block; width: 40px; height: 40px; cursor: pointer; position: relative;
+    display: block; width: 40px; height: 40px; cursor: pointer; position: relative; order: 3;
   }
+  .langs { order: 1; }
   .nav-burger span, .nav-burger span::before, .nav-burger span::after {
     content: ""; position: absolute; left: 8px; right: 8px; height: 2px; background: var(--text);
   }

@@ -1,0 +1,6 @@
+{{- /* A page by its path ("/downloads", "/about/credits") in this page's language, else the English one (not every page
+       is translated), else false. Context: the path. */ -}}
+{{- $path := strings.TrimSuffix "/" . | default "/" -}}
+{{- $p := site.GetPage $path -}}
+{{- if not $p -}}{{- $p = hugo.Sites.Default.GetPage $path -}}{{- end -}}
+{{- return ($p | default false) -}}

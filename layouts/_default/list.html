@@ -14,7 +14,7 @@
         <a class="news-card" href="{{ .RelPermalink }}">
           <img class="news-thumb" src="{{ .Params.image | default "/images/og.jpg" | relURL }}" alt="" loading="lazy" decoding="async" width="640" height="360">
           <span class="news-text">
-            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format ":date_long" .Date }}</time>
             <h2>{{ .Title }}</h2>
             <p>{{ .Summary | plainify | truncate 180 }}</p>
           </span>

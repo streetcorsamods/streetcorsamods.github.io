@@ -1,13 +1,13 @@
 {{/* Home trailer. Context: the YouTube video id. Shows our own poster; YouTube (nocookie) loads only when the visitor
      presses play, so the page itself loads nothing from YouTube. Without JavaScript the poster is a plain link. */}}
 <section class="wrap trailer">
-  <h2>Trailer</h2>
+  <h2>{{ T "trailer" }}</h2>
   <a class="video" href="https://www.youtube.com/watch?v={{ . }}" data-id="{{ . }}" target="_blank" rel="noopener"
-     aria-label="Play the Street Corsa trailer">
+     aria-label="{{ T "trailer_play" }}">
     <img src="{{ "images/trailer.jpg" | relURL }}" alt="" width="1280" height="720" loading="lazy">
     <span class="play" aria-hidden="true"></span>
   </a>
-  <p class="trailer-note">Plays from YouTube once you press play. <a href="https://www.youtube.com/watch?v={{ . }}" target="_blank" rel="noopener">Watch on YouTube</a></p>
+  <p class="trailer-note">{{ T "trailer_note" }} <a href="https://www.youtube.com/watch?v={{ . }}" target="_blank" rel="noopener">{{ T "trailer_watch" }}</a></p>
 </section>
 <script>
 document.querySelectorAll(".video[data-id]").forEach(function (a) {
@@ -15,7 +15,7 @@ document.querySelectorAll(".video[data-id]").forEach(function (a) {
     e.preventDefault();
     var f = document.createElement("iframe");
     f.src = "https://www.youtube-nocookie.com/embed/" + a.dataset.id + "?autoplay=1&rel=0";
-    f.title = "Street Corsa trailer";
+    f.title = a.getAttribute("aria-label");
     f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
     f.allowFullscreen = true;
     var box = document.createElement("div");

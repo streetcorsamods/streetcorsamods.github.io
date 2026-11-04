@@ -3,7 +3,7 @@
   {{ partial "crumbs.html" . }}
   <article class="prose">
     <h1>{{ .Title }}</h1>
-    {{ if eq .Section "news" }}<p class="date"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time></p>{{ end }}
+    {{ if eq .Section "news" }}<p class="date"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format ":date_long" .Date }}</time></p>{{ end }}
     {{ .Content }}
   </article>
   {{ if and .Parent (eq .Section "tutorials") }}

@@ -1,7 +1,7 @@
 {{- /* A download item's button: Download when it has a link (dl-href.html), Coming soon when not. */ -}}
 {{- $href := partial "dl-href.html" . -}}
 {{- if $href -}}
-  <a class="btn" href="{{ $href }}"{{ if hasPrefix $href "http" }} target="_blank" rel="noopener"{{ end }}>Download</a>
+  <a class="btn" href="{{ $href }}"{{ if hasPrefix $href "http" }} target="_blank" rel="noopener"{{ end }}>{{ T "download" }}</a>
 {{- else -}}
-  <span class="btn off" aria-disabled="true">Coming soon</span>
+  <span class="btn off" aria-disabled="true">{{ T "coming_soon" }}</span>
 {{- end -}}

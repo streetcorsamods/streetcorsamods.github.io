@@ -1,0 +1,78 @@
+# The templates' words. Each language has its own file, with the same keys: es.toml, pt.toml.
+# {{ .x }} is filled in by the template. A key missing from a language shows the English.
+
+site_description = "A car career on top of Assetto Corsa: buy a tired car, build it in your garage, race it for cash and pink slips."
+
+# Menu (hugo.toml menus.main, by identifier)
+home = "Home"
+news = "News"
+downloads = "Downloads"
+tutorials = "Tutorials"
+about = "About"
+contact = "Contact"
+
+# Header
+brand_home = "{{ .title }} home"
+menu = "Menu"
+language = "Language"
+
+# Home
+download = "Download"
+how_to_install = "How to install"
+home_needs = "Free, early access (version {{ .v }}). Needs Assetto Corsa and Custom Shaders Patch."
+optional = "Optional"
+set_it_up = "Set it up"
+talk_demo = "An example haggle"
+talk_demo_note = "An example. The AI writes its own lines every time; the game sets the price."
+nothing_yet = "Nothing yet."
+all_news = "All news →"
+in_english = "In English"
+
+# Trailer
+trailer = "Trailer"
+trailer_play = "Play the Street Corsa trailer"
+trailer_note = "Plays from YouTube once you press play."
+trailer_watch = "Watch on YouTube"
+
+# Footer
+foot_free = "<strong>{{ .title }}</strong> is free and open source. Code MIT, content CC BY 4.0."
+foot_donate = "Free, and always will be. If it gave you a good evening, buy me a beer."
+foot_fine = "An independent project, not made, endorsed or sponsored by Kunos Simulazioni or the makers of Assetto Corsa."
+credits = "Credits"
+code_signing = "Code signing policy"
+privacy = "Privacy"
+elsewhere = "Street Corsa elsewhere"
+donate_label = "Donate with PayPal"
+donate_with = "Donate with"
+
+# Contact cards (hugo.toml params.social: social_ and the name, letters only, in lower case)
+social_discord = "Questions, help with an install, your builds and race stories. The quickest answer."
+social_github = "Found a bug, or want something in the game? Open an issue. Say what you did and what happened."
+social_youtube = "Trailers and videos of the game."
+social_itchio = "The game's page on itch.io. Rate it, leave a comment, follow it for updates."
+social_email = "Licensing, press, and anything private. Questions and bugs get a quicker answer on Discord."
+social_overtake = "The game on Overtake, with its comments."
+
+# Downloads
+dl_version = "Version {{ .v }}, early access"
+release_notes = "release notes"
+dl_not_yet = "The first release is on its way. The buttons light up when it is out."
+dl_search = "Search downloads"
+dl_placeholder = "Search: Hemi, 455, radio…"
+dl_category = "Category"
+dl_all = "All"
+dl_details = "Details and pictures"
+coming_soon = "Coming soon"
+dl_for = "for {{ .x }}"
+dl_none = "Nothing matches {{ .q }}."
+dl_none_here = "here"
+dl_reset = "Show everything"
+dl_one = "download"
+dl_many = "downloads"
+
+# Downloads: an item's kind and badge (data/downloads.yaml), kind_/badge_ and the word anchorized
+kind_installer = "Installer"
+kind_setting = "Setting"
+kind_engine-pack = "Engine pack"
+kind_add-on = "Add-on"
+badge_default = "Default"

@@ -114,8 +114,14 @@ def page(src: pathlib.Path, dest_dir: str, source_label: str) -> None:
     body = add_shots(src.name, body)
     out = SITE / "content" / dest_dir / src.name
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(f"---\n{front}\nsource: {source_label}\n---\n\n{body.lstrip()}", encoding="utf-8", newline="\n")
+    new = f"---\n{front}\nsource: {source_label}\n---\n\n{body.lstrip()}"
+    old = out.read_text(encoding="utf-8").replace("\r\n", "\n") if out.is_file() else None
+    out.write_text(new, encoding="utf-8", newline="\n")
     print(f"  {source_label} -> content/{dest_dir}/{src.name}")
+    # The site's own translations of the page (install.es.md): the English changed under them
+    if old is not None and old != new:
+        for tr in sorted(out.parent.glob(f"{out.stem}.*.md")):
+            print(f"  warning: content/{dest_dir}/{src.name} changed: update its translation {tr.name}")
 
 
 def read_jsonc(path: pathlib.Path) -> dict:

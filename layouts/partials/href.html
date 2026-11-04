@@ -1,0 +1,9 @@
+{{- /* A link to a site page ("/about/#privacy"): its address in this language, else the English page's (page.html).
+       An address that is no page (a file, an RSS feed) stays as it is. Context: the address. */ -}}
+{{- $u := urls.Parse . -}}
+{{- $href := . -}}
+{{- with partial "page.html" $u.Path -}}
+  {{- $href = .RelPermalink -}}
+  {{- with $u.Fragment -}}{{- $href = printf "%s#%s" $href . -}}{{- end -}}
+{{- end -}}
+{{- return $href -}}

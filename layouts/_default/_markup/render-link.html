@@ -1,17 +1,23 @@
-{{- /* Links between synced docs are plain .md file links (they read right on GitHub); here they become page links. */ -}}
+{{- /* Links between synced docs are plain .md file links (they read right on GitHub); here they become page links.
+       A link to a site page (/downloads/, install.md) goes to that page in this page's language, else to the English
+       one (not every page is translated). */ -}}
 {{- $dest := .Destination -}}
 {{- $u := urls.Parse $dest -}}
 {{- $ext := false -}}
+{{- $to := false -}}
+{{- $isPage := or (strings.HasSuffix $u.Path ".md") (and (hasPrefix $u.Path "/") (not (path.Ext $u.Path))) -}}
 {{- if $u.IsAbs -}}
   {{- $ext = true -}}
-{{- else if strings.HasSuffix $u.Path ".md" -}}
-  {{- $target := .Page.GetPage (strings.TrimSuffix ".md" $u.Path) -}}
-  {{- with $target -}}
+{{- else if $isPage -}}
+  {{- $path := strings.TrimSuffix "/" (strings.TrimSuffix ".md" $u.Path) | default "/" -}}
+  {{- $to = .Page.GetPage $path -}}
+  {{- if not $to }}{{ $to = hugo.Sites.Default.GetPage $path }}{{ end -}}
+  {{- with $to -}}
     {{- $dest = .RelPermalink -}}
     {{- with $u.Fragment -}}{{- $dest = printf "%s#%s" $dest . -}}{{- end -}}
   {{- else -}}
     {{- warnf "%s: link to %q finds no page" .Page.File.Path $u.Path -}}
   {{- end -}}
 {{- end -}}
-<a href="{{ $dest | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $ext }} target="_blank" rel="noopener"{{ end }}>{{ .Text | safeHTML }}</a>
+<a href="{{ $dest | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ partial "hreflang.html" (dict "page" .Page "to" $to) }}{{ if $ext }} target="_blank" rel="noopener"{{ end }}>{{ .Text | safeHTML }}</a>
 {{- /* */ -}}

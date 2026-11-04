@@ -1,0 +1,76 @@
+# As palavras dos templates, em português (do Brasil). Mesmas chaves que en.toml; uma que falte aparece em inglês.
+
+site_description = "Uma carreira automobilística sobre o Assetto Corsa: compre um carro cansado, monte na sua garagem e corra com ele por dinheiro ou valendo o carro."
+
+# Menu
+home = "Início"
+news = "Notícias"
+downloads = "Downloads"
+tutorials = "Tutoriais"
+about = "Sobre"
+contact = "Contato"
+
+# Cabeçalho
+brand_home = "Início de {{ .title }}"
+menu = "Menu"
+language = "Idioma"
+
+# Início
+download = "Baixar"
+how_to_install = "Como instalar"
+home_needs = "Grátis, em acesso antecipado (versão {{ .v }}). Precisa do Assetto Corsa e do Custom Shaders Patch."
+optional = "Opcional"
+set_it_up = "Configurar"
+talk_demo = "Um exemplo de pechincha"
+talk_demo_note = "Um exemplo. A IA escreve as próprias falas toda vez; o preço é o jogo que define."
+nothing_yet = "Nada ainda."
+all_news = "Todas as notícias →"
+in_english = "Em inglês"
+
+# Trailer
+trailer = "Trailer"
+trailer_play = "Assistir ao trailer de Street Corsa"
+trailer_note = "Toca pelo YouTube só quando você aperta o play."
+trailer_watch = "Assistir no YouTube"
+
+# Rodapé
+foot_free = "<strong>{{ .title }}</strong> é livre e de código aberto. Código MIT, conteúdo CC BY 4.0."
+foot_donate = "Grátis, e sempre vai ser. Se ele te rendeu uma boa noite, me paga uma cerveja."
+foot_fine = "Um projeto independente, não feito, endossado nem patrocinado pela Kunos Simulazioni nem pelos criadores do Assetto Corsa."
+credits = "Créditos"
+code_signing = "Política de assinatura de código"
+privacy = "Privacidade"
+elsewhere = "Street Corsa em outros lugares"
+donate_label = "Doar com PayPal"
+donate_with = "Doar com"
+
+# Cartões de contato
+social_discord = "Dúvidas, ajuda com a instalação, seus carros e suas histórias de corrida. A resposta mais rápida."
+social_github = "Achou um bug ou quer algo no jogo? Abra uma issue. Conte o que você fez e o que aconteceu."
+social_youtube = "Trailers e vídeos do jogo."
+social_itchio = "A página do jogo no itch.io. Avalie, deixe um comentário, siga para receber as novidades."
+social_email = "Licenciamento, imprensa e tudo o que for particular. Dúvidas e bugs têm resposta mais rápida no Discord."
+social_overtake = "O jogo no Overtake, com os comentários."
+
+# Downloads
+dl_version = "Versão {{ .v }}, acesso antecipado"
+release_notes = "notas da versão"
+dl_not_yet = "A primeira versão está a caminho. Os botões acendem quando ela sair."
+dl_search = "Buscar downloads"
+dl_placeholder = "Buscar: Hemi, 455, rádio…"
+dl_category = "Categoria"
+dl_all = "Tudo"
+dl_details = "Detalhes e fotos (em inglês)"
+coming_soon = "Em breve"
+dl_for = "para {{ .x }}"
+dl_none = "Nada corresponde a {{ .q }}."
+dl_none_here = "aqui"
+dl_reset = "Mostrar tudo"
+dl_one = "download"
+dl_many = "downloads"
+
+kind_installer = "Instalador"
+kind_setting = "Cenário"
+kind_engine-pack = "Pacote de motores"
+kind_add-on = "Complemento"
+badge_default = "Padrão"

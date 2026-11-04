@@ -5,10 +5,10 @@
     <img class="logo" src="{{ "images/logo.png" | relURL }}" alt="Street Corsa" width="720" height="153">
     <p class="tag">{{ .Params.tagline }}</p>
     <div class="cta">
-      <a class="btn" href="{{ "downloads/" | relURL }}">Download</a>
-      <a class="btn ghost" href="{{ "tutorials/playing/install/" | relURL }}">How to install</a>
+      <a class="btn" href="{{ partial "href.html" "/downloads/" }}">{{ T "download" }}</a>
+      <a class="btn ghost" href="{{ partial "href.html" "/tutorials/playing/install/" }}">{{ T "how_to_install" }}</a>
     </div>
-    <p class="needs">Free, early access (version {{ site.Params.release }}). Needs Assetto Corsa and Custom Shaders Patch.</p>
+    <p class="needs">{{ T "home_needs" (dict "v" site.Params.release) }}</p>
     {{ with site.Params.donate }}<p class="needs">{{ partial "donate.html" . }}</p>{{ end }}
   </div>
 </section>
@@ -18,28 +18,29 @@
 {{ with .Params.talk }}
 <section class="wrap talk">
   <div class="talk-text">
-    <p class="kicker">Optional</p>
+    <p class="kicker">{{ T "optional" }}</p>
     <h2>{{ .title }}</h2>
     <p class="talk-lead">{{ .lead }}</p>
     <ul class="talk-points">
       {{ range .points }}<li><h3>{{ .title }}</h3><p>{{ .text }}</p></li>{{ end }}
     </ul>
     <p class="talk-note">{{ .note }}</p>
-    {{ with site.GetPage "/tutorials/playing/ai" }}<a class="btn ghost" href="{{ .RelPermalink }}">Set it up</a>{{ else }}{{ errorf "home: the AI talk links to /tutorials/playing/ai, which is missing" }}{{ end }}
+    {{ $here := $ }}{{ with partial "page.html" "/tutorials/playing/ai" }}<a class="btn ghost" href="{{ .RelPermalink }}"{{ partial "hreflang.html" (dict "page" $here "to" .) }}>{{ T "set_it_up" }}</a>{{ else }}{{ errorf "home: the AI talk links to /tutorials/playing/ai, which is missing" }}{{ end }}
   </div>
   {{ with .image }}
   <img class="talk-shot" src="{{ .src | relURL }}" alt="{{ .alt }}" width="{{ .width }}" height="{{ .height }}" loading="lazy">
   {{ else }}
-  {{/* No screenshot yet: a talk drawn in the game's colours. The words are an example; the AI writes its own each time. */}}
-  <figure class="talk-demo" aria-label="An example haggle">
-    <div class="talk-head"><strong>Ray</strong><span>'68 Chevelle · asking $2,400</span></div>
-    <p class="said them">Runs strong, new tires last spring. Twenty-four hundred and she's yours.</p>
-    <p class="said you">I'll give you $1,900. The paint's shot.</p>
-    <p class="said them">Paint don't make it go. Tell you what: $2,150.</p>
-    <p class="said you">$2,000 cash, today.</p>
-    <p class="said them">...Alright. You got a deal, kid.</p>
-    <p class="talk-buy"><span class="btn">Buy it for $2,000</span></p>
-    <figcaption>An example. The AI writes its own lines every time; the game sets the price.</figcaption>
+  {{/* No screenshot yet: a talk drawn in the game's colours. The words are an example; the AI writes its own each time.
+       The game is in English, so the talk is too. */}}
+  <figure class="talk-demo" aria-label="{{ T "talk_demo" }}">
+    <div class="talk-head" lang="en"><strong>Ray</strong><span>'68 Chevelle · asking $2,400</span></div>
+    <p class="said them" lang="en">Runs strong, new tires last spring. Twenty-four hundred and she's yours.</p>
+    <p class="said you" lang="en">I'll give you $1,900. The paint's shot.</p>
+    <p class="said them" lang="en">Paint don't make it go. Tell you what: $2,150.</p>
+    <p class="said you" lang="en">$2,000 cash, today.</p>
+    <p class="said them" lang="en">...Alright. You got a deal, kid.</p>
+    <p class="talk-buy" lang="en"><span class="btn">Buy it for $2,000</span></p>
+    <figcaption>{{ T "talk_demo_note" }}</figcaption>
   </figure>
   {{ end }}
 </section>
@@ -59,16 +60,22 @@
     {{ .Content }}
   </div>
   <aside class="latest">
-    <h2>News</h2>
-    {{ range first 3 (where site.RegularPages "Section" "news") }}
-      <a class="news-item" href="{{ .RelPermalink }}">
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-        <span>{{ .Title }}</span>
+    <h2>{{ T "news" }}</h2>
+    {{- /* This language's news, else the English */}}
+    {{ $here := . }}
+    {{ $news := where site.RegularPages "Section" "news" }}
+    {{ $en := not $news }}
+    {{ if $en }}{{ $news = where hugo.Sites.Default.RegularPages "Section" "news" }}{{ end }}
+    {{ if and $en $news }}<p class="muted small">{{ T "in_english" }}</p>{{ end }}
+    {{ range first 3 $news }}
+      <a class="news-item" href="{{ .RelPermalink }}"{{ partial "hreflang.html" (dict "page" $here "to" .) }}>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format ":date_medium" .Date }}</time>
+        <span{{ if $en }} lang="{{ .Language.Lang }}"{{ end }}>{{ .Title }}</span>
       </a>
     {{ else }}
-      <p class="muted">Nothing yet.</p>
+      <p class="muted">{{ T "nothing_yet" }}</p>
     {{ end }}
-    <a class="more" href="{{ "news/" | relURL }}">All news →</a>
+    <a class="more" href="{{ partial "href.html" "/news/" }}">{{ T "all_news" }}</a>
   </aside>
 </section>
 {{ end }}

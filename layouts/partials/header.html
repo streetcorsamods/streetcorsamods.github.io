@@ -1,17 +1,27 @@
 <header class="bar">
   <div class="wrap bar-in">
-    <a class="brand" href="{{ "/" | relURL }}" aria-label="{{ site.Title }} home">
+    <a class="brand" href="{{ site.Home.RelPermalink }}" aria-label="{{ T "brand_home" (dict "title" site.Title) }}">
       <img src="{{ "images/icon.png" | relURL }}" alt="" width="40" height="40">
       <span>{{ site.Title }}</span>
     </a>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Menu">
+    {{- /* The languages: this page in each, else that language's home */}}
+    {{ $here := . }}
+    <nav class="langs" aria-label="{{ T "language" }}">
+      {{ range hugo.Sites }}
+        {{ $lang := .Language }}
+        {{ $to := .Home }}{{ range where $here.AllTranslations "Language.Lang" $lang.Lang }}{{ $to = . }}{{ end }}
+        <a href="{{ $to.RelPermalink }}" hreflang="{{ $lang.Lang }}" lang="{{ $lang.Lang }}" title="{{ $lang.Label }}"{{ if eq $lang.Lang $here.Language.Lang }} class="on" aria-current="true"{{ end }}>{{ upper $lang.Lang }}</a>
+      {{ end }}
+    </nav>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="{{ T "menu" }}">
     <label for="nav-toggle" class="nav-burger" aria-hidden="true"><span></span></label>
     <nav class="nav">
-      {{ $here := . }}
       {{ range site.Menus.main }}
+        {{- /* An untranslated page has no address in this language (.URL is empty): its English */}}
+        {{ $to := .Page | default (partial "page.html" .PageRef) }}
         {{ $active := or ($here.IsMenuCurrent "main" .) ($here.HasMenuCurrent "main" .) }}
-        {{ if and (eq .Name "Home") (not $here.IsHome) }}{{ $active = false }}{{ end }}
-        <a href="{{ .URL }}"{{ if $active }} class="on" aria-current="page"{{ end }}>{{ .Name }}</a>
+        {{ if and (eq .Identifier "home") (not $here.IsHome) }}{{ $active = false }}{{ end }}
+        <a href="{{ with $to }}{{ .RelPermalink }}{{ else }}{{ .URL }}{{ end }}"{{ partial "hreflang.html" (dict "page" $here "to" $to) }}{{ if $active }} class="on" aria-current="page"{{ end }}>{{ T .Identifier | default .Name }}</a>
       {{ end }}
     </nav>
   </div>

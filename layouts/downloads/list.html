@@ -1,28 +1,34 @@
 {{ define "main" }}
 {{- /* The Downloads page, from data/downloads.yaml. A group is a category: the chips filter by it (the URL hash is the
        group id, so /downloads/#engines opens on the engine packs) and the search box matches an item's name, text,
-       kind, badge and "for". Without JavaScript the toolbar stays hidden and the page is the full list. */ -}}
+       kind, badge and "for". Without JavaScript the toolbar stays hidden and the page is the full list.
+       Its words in another language: each group's and item's "es:"/"pt:" (dl-tr.html), and i18n. */ -}}
 {{ $v := site.Params.release }}
-{{ $groups := hugo.Data.downloads.groups }}
+{{ $groups := slice }}
+{{ range hugo.Data.downloads.groups }}
+  {{ $items := slice }}{{ range .items }}{{ $items = $items | append (partial "dl-tr.html" .) }}{{ end }}
+  {{ $groups = $groups | append (merge (partial "dl-tr.html" .) (dict "items" $items)) }}
+{{ end }}
+{{ $here := . }}
 <div class="wrap page">
   <div class="prose">
     <h1>{{ .Title }}</h1>
     {{ .Content }}
     {{ if site.Params.released }}
-      <p class="muted">Version {{ $v }}, early access · <a href="{{ site.Params.repo }}/releases/tag/v{{ $v }}" target="_blank" rel="noopener">release notes</a></p>
+      <p class="muted">{{ T "dl_version" (dict "v" $v) }} · <a href="{{ site.Params.repo }}/releases/tag/v{{ $v }}" target="_blank" rel="noopener">{{ T "release_notes" }}</a></p>
     {{ else }}
-      <p class="note">The first release is on its way. The buttons light up when it is out.</p>
+      <p class="note">{{ T "dl_not_yet" }}</p>
     {{ end }}
   </div>
 
-  <div class="dl-tools" id="dl-tools" hidden>
+  <div class="dl-tools" id="dl-tools" hidden data-one="{{ T "dl_one" }}" data-many="{{ T "dl_many" }}" data-here="{{ T "dl_none_here" }}">
     <div class="dl-search">
-      <label class="sr" for="dl-q">Search downloads</label>
-      <input type="search" id="dl-q" placeholder="Search: Hemi, 455, radio…" autocomplete="off" spellcheck="false">
+      <label class="sr" for="dl-q">{{ T "dl_search" }}</label>
+      <input type="search" id="dl-q" placeholder="{{ T "dl_placeholder" }}" autocomplete="off" spellcheck="false">
     </div>
-    <div class="dl-chips" role="group" aria-label="Category">
+    <div class="dl-chips" role="group" aria-label="{{ T "dl_category" }}">
       {{ $all := 0 }}{{ range $groups }}{{ $all = add $all (len .items) }}{{ end }}
-      <button type="button" class="chip" data-cat="" aria-pressed="true">All <span class="n">{{ $all }}</span></button>
+      <button type="button" class="chip" data-cat="" aria-pressed="true">{{ T "dl_all" }} <span class="n">{{ $all }}</span></button>
       {{ range $groups }}
       <button type="button" class="chip" data-cat="{{ .id }}" aria-pressed="false">{{ .title }} <span class="n">{{ len .items }}</span></button>
       {{ end }}
@@ -43,13 +49,13 @@
         {{ $page := partial "mod-page.html" . }}
         <div class="dl-card" data-item data-text="{{ partial "dl-search-text.html" (dict "item" . "group" $g) }}">
           {{ with index $page.Params.shots 0 }}
-            <a class="dl-thumb" href="{{ $page.RelPermalink }}" tabindex="-1" aria-hidden="true"><img src="/images/mods/{{ $page.File.ContentBaseName }}/{{ .img }}-sm.jpg" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+            <a class="dl-thumb" href="{{ $page.RelPermalink }}"{{ partial "hreflang.html" (dict "page" $here "to" $page) }} tabindex="-1" aria-hidden="true"><img src="/images/mods/{{ $page.File.ContentBaseName }}/{{ .img }}-sm.jpg" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
           {{ end }}
           <div class="dl-card-body">
-            <h3><a href="{{ $page.RelPermalink }}">{{ .name }}</a>{{ with .badge }} <span class="badge">{{ . }}</span>{{ end }}</h3>
+            <h3><a href="{{ $page.RelPermalink }}"{{ partial "hreflang.html" (dict "page" $here "to" $page) }}>{{ .name }}</a>{{ with .badge }} <span class="badge">{{ . }}</span>{{ end }}</h3>
             {{ with .text }}<p>{{ . }}</p>{{ end }}
             <div class="dl-card-foot">
-              <p class="meta">{{ .kind }}{{ with .size }} · {{ . }}{{ end }}<br><a href="{{ $page.RelPermalink }}">Details and pictures</a></p>
+              <p class="meta">{{ .kind }}{{ with .size }} · {{ . }}{{ end }}<br><a href="{{ $page.RelPermalink }}"{{ partial "hreflang.html" (dict "page" $here "to" $page) }}>{{ T "dl_details" }}</a></p>
               {{ partial "dl-button.html" . }}
             </div>
           </div>
@@ -59,14 +65,14 @@
     {{ end }}
     {{ with $plain }}
     <div data-block>
-      {{ if $paged }}<h3 class="dl-sub">Coming soon</h3>{{ end }}
+      {{ if $paged }}<h3 class="dl-sub">{{ T "coming_soon" }}</h3>{{ end }}
       <div class="dl-list">
         {{ range . }}
           <div class="dl" data-item data-text="{{ partial "dl-search-text.html" (dict "item" . "group" $g) }}">
             <div class="dl-text">
               <h3>{{ .name }}{{ with .badge }} <span class="badge">{{ . }}</span>{{ end }}</h3>
               {{ with .text }}<p>{{ . }}</p>{{ end }}
-              <p class="meta">{{ .kind }}{{ with .for }} · for {{ . }}{{ end }}{{ with .size }} · {{ . }}{{ end }}</p>
+              <p class="meta">{{ .kind }}{{ with .for }} · {{ T "dl_for" (dict "x" .) }}{{ end }}{{ with .size }} · {{ . }}{{ end }}</p>
             </div>
             {{ partial "dl-button.html" . }}
           </div>
@@ -78,8 +84,8 @@
   {{ end }}
 
   <div class="dl-none" id="dl-none" hidden>
-    <p>Nothing matches <strong id="dl-none-q"></strong>.</p>
-    <button type="button" class="btn ghost" id="dl-reset">Show everything</button>
+    <p>{{ T "dl_none" (dict "q" (safeHTML "<strong id=\"dl-none-q\"></strong>")) | safeHTML }}</p>
+    <button type="button" class="btn ghost" id="dl-reset">{{ T "dl_reset" }}</button>
   </div>
 </div>
 
@@ -126,8 +132,8 @@
       if (on) c.parentNode.scrollLeft = Math.max(0, c.offsetLeft - c.parentNode.offsetLeft - 16);
     });
     none.hidden = shown > 0;
-    document.getElementById("dl-none-q").textContent = q.value.trim() ? "“" + q.value.trim() + "”" : "here";
-    status.textContent = (terms.length || cat) ? shown + (shown === 1 ? " download" : " downloads") : "";
+    document.getElementById("dl-none-q").textContent = q.value.trim() ? "“" + q.value.trim() + "”" : tools.dataset.here;
+    status.textContent = (terms.length || cat) ? shown + " " + (shown === 1 ? tools.dataset.one : tools.dataset.many) : "";
   }
 
   function setCat(c, push) {

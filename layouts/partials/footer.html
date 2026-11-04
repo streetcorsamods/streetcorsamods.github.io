@@ -1,19 +1,20 @@
 <footer class="foot">
   <div class="wrap foot-in">
     <div>
-      <p><strong>{{ site.Title }}</strong> is free and open source. Code MIT, content CC BY 4.0.</p>
-      {{ with site.Params.donate }}<p class="donate-line">Free, and always will be. If it gave you a good evening, buy me a beer. {{ partial "donate.html" . }}</p>{{ end }}
-      <p class="fine">An independent project, not made, endorsed or sponsored by Kunos Simulazioni or the makers of Assetto Corsa.</p>
+      <p>{{ T "foot_free" (dict "title" site.Title) | safeHTML }}</p>
+      {{ with site.Params.donate }}<p class="donate-line">{{ T "foot_donate" }} {{ partial "donate.html" . }}</p>{{ end }}
+      <p class="fine">{{ T "foot_fine" }}</p>
     </div>
     <nav class="foot-links">
       <a href="{{ site.Params.repo }}" target="_blank" rel="noopener">GitHub</a>
-      <a href="{{ "contact/" | relURL }}">Contact</a>
-      <a href="{{ "about/credits/" | relURL }}">Credits</a>
-      <a href="{{ "about/#code-signing-policy" | relURL }}">Code signing policy</a>
-      <a href="{{ "about/#privacy" | relURL }}">Privacy</a>
-      <a href="{{ "news/index.xml" | relURL }}">RSS</a>
+      <a href="{{ partial "href.html" "/contact/" }}">{{ T "contact" }}</a>
+      <a href="{{ partial "href.html" "/about/credits/" }}">{{ T "credits" }}</a>
+      <a href="{{ partial "href.html" "/about/#code-signing-policy" }}">{{ T "code_signing" }}</a>
+      <a href="{{ partial "href.html" "/about/#privacy" }}">{{ T "privacy" }}</a>
+      {{- /* The news feed: this language's, else the English */}}
+      <a href="{{ with partial "page.html" "/news" }}{{ with .OutputFormats.Get "rss" }}{{ .RelPermalink }}{{ end }}{{ end }}">RSS</a>
     </nav>
-    <nav class="foot-social" aria-label="Street Corsa elsewhere">
+    <nav class="foot-social" aria-label="{{ T "elsewhere" }}">
       {{ range site.Params.social }}{{ if and .url (ne .foot false) }}<a href="{{ .url }}"{{ if not (hasPrefix .url "mailto:") }} target="_blank" rel="noopener"{{ end }} aria-label="{{ .name }}" title="{{ .name }}">{{ partial "icon.html" .icon }}</a>{{ end }}{{ end }}
     </nav>
   </div>

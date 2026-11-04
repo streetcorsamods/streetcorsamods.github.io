@@ -1,7 +1,10 @@
-{{- /* The page of a download item (its id = a page's front matter mod), or nil. */ -}}
+{{- /* The page of a download item (its id = a page's front matter mod), or false. Not every mod page is translated:
+       a missing one is the English. */ -}}
 {{- $page := false -}}
 {{- with .id -}}
   {{- $id := . -}}
-  {{- range where (site.GetPage "/mods").Pages "Params.mod" $id -}}{{- $page = . -}}{{- end -}}
+  {{- with partial "page.html" "/mods" -}}
+    {{- range where .Pages "Params.mod" $id -}}{{- $page = . -}}{{- end -}}
+  {{- end -}}
 {{- end -}}
 {{- return $page -}}
