@@ -11,6 +11,20 @@ features:
     text: Dealers open and close, rivals build their cars, the paper sells used cars and parts. The police come at night.
   - title: Make it yours
     text: Everything is a mod. Settings, engines, places, words and rules. Make your own and share it.
+talk:
+  title: People who talk back
+  lead: >-
+    Turn on your own AI and the people of the town talk to you. Type what you say, in your own words.
+  points:
+    - title: Haggle for real
+      text: Call the seller about the car in the paper and talk the price down. Every seller has their own limit, some won't move at all, and a lowball offer gets you nowhere.
+    - title: They remember you
+      text: The rival you beat last week brings it up. The salesman you insulted is still sore. Sellers, buyers and racers remember what you said, bought and won.
+    - title: Everyone has a voice
+      text: Salesmen pitch their lot as you walk in, rivals size up your car part by part, and the clerk at the counter finds the parts that fit.
+    - title: Runs on your PC
+      text: Free and private with Ollama on your own graphics card. LM Studio, OpenRouter, OpenAI and Claude work too.
+  note: Optional and off by default. The game decides every price and every fact; the AI only speaks. Without it the game plays the same, prices are just fixed.
 ---
 
 ## What it is

@@ -25,9 +25,9 @@ This site loads nothing from other sites, with one exception: the trailer on the
 The one exception is the optional **AI writer** (Settings, off by default). Once you turn it on, the game sends the
 provider you pick what it needs to write the newspaper's and the people's lines: what you type to the people you talk
 to, your offers when you haggle, and the parts of your career the talk is about (cars, racers, places, money, parts,
-prices, earlier talks). Settings' talk detail sends less.
+prices, earlier talks). Settings' talk detail sends less. [How it works](/tutorials/playing/ai/)
 
-That provider is Ollama or ComfyUI on your own computer or network, or a cloud service you sign up to yourself, under
+That provider is Ollama or LM Studio on your own computer or network, or a cloud service you sign up to yourself, under
 that service's own privacy policy and with your own key. With a cloud one, what you type leaves your computer.
 The installer shows this note too.
 

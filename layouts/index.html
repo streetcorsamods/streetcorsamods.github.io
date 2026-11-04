@@ -15,6 +15,36 @@
 
 {{ with site.Params.trailer }}{{ partial "trailer.html" . }}{{ end }}
 
+{{ with .Params.talk }}
+<section class="wrap talk">
+  <div class="talk-text">
+    <p class="kicker">Optional</p>
+    <h2>{{ .title }}</h2>
+    <p class="talk-lead">{{ .lead }}</p>
+    <ul class="talk-points">
+      {{ range .points }}<li><h3>{{ .title }}</h3><p>{{ .text }}</p></li>{{ end }}
+    </ul>
+    <p class="talk-note">{{ .note }}</p>
+    <a class="btn ghost" href="{{ "tutorials/playing/ai/" | relURL }}">Set it up</a>
+  </div>
+  {{ with .image }}
+  <img class="talk-shot" src="{{ .src | relURL }}" alt="{{ .alt }}" loading="lazy">
+  {{ else }}
+  {{/* No screenshot yet: a talk drawn in the game's colours. The words are an example; the AI writes its own each time. */}}
+  <figure class="talk-demo" aria-label="An example haggle">
+    <div class="talk-head"><strong>Ray</strong><span>'68 Chevelle · asking $2,400</span></div>
+    <p class="said them">Runs strong, new tires last spring. Twenty-four hundred and she's yours.</p>
+    <p class="said you">I'll give you $1,900. The paint's shot.</p>
+    <p class="said them">Paint don't make it go. Tell you what: $2,150.</p>
+    <p class="said you">$2,000 cash, today.</p>
+    <p class="said them">...Alright. You got a deal, kid.</p>
+    <p class="talk-buy"><span class="btn">Buy it for $2,000</span></p>
+    <figcaption>An example. The AI writes its own lines every time; the game sets the price.</figcaption>
+  </figure>
+  {{ end }}
+</section>
+{{ end }}
+
 <section class="wrap features">
   {{ range .Params.features }}
   <div class="feature">
