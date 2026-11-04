@@ -7,18 +7,25 @@ disableKinds = ["taxonomy", "term"]
 
 # English at /, the others under /es/ and /pt/. A page is translated by a file beside it: install.md -> install.es.md.
 # A page with no translation has none in that language: links to it go to the English page (layouts/partials/page.html).
-# The templates' words: i18n/<lang>.toml.
+# The templates' words: i18n/<lang>.toml. params.flag: the language switcher's flag, a country in
+# layouts/partials/flag.html (us, es, ar, br, pt).
 [languages.en]
   weight = 1
   label = "English"
+  [languages.en.params]
+    flag = "us"
 [languages.es]
   weight = 2
   locale = "es"
   label = "Español"
+  [languages.es.params]
+    flag = "es"
 [languages.pt]
   weight = 3
   locale = "pt-BR"
   label = "Português"
+  [languages.pt.params]
+    flag = "br"
 
 [params]
   repo = "https://github.com/streetcorsamods/street-corsa"
