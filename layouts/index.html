@@ -15,6 +15,28 @@
 
 {{ with site.Params.trailer }}{{ partial "trailer.html" . }}{{ end }}
 
+{{/* What it is: the game, then one race from the garage into Assetto Corsa and back, then what it touches in AC. */}}
+{{ with .Params.about }}
+<section class="wrap about">
+  <h2>{{ .title }}</h2>
+  <div class="about-intro">{{ .intro | markdownify }}</div>
+  <h3 class="about-sub">{{ .steps_title }}</h3>
+  <ol class="steps">
+    {{ range .steps }}<li class="step"><h4>{{ .title }}</h4><p>{{ .text | markdownify }}</p></li>{{ end }}
+  </ol>
+  <p class="about-promise">{{ .promise | markdownify }}</p>
+  {{ with .files }}
+  <details class="touch">
+    <summary>{{ .summary }}</summary>
+    <dl>
+      {{ range .rows }}<div><dt>{{ range .paths }}<code>{{ . }}</code>{{ end }}</dt><dd>{{ .text | markdownify }}</dd></div>{{ end }}
+    </dl>
+    <p class="touch-note">{{ .note | markdownify }}</p>
+  </details>
+  {{ end }}
+</section>
+{{ end }}
+
 {{ with .Params.talk }}
 <section class="wrap talk">
   <div class="talk-text">

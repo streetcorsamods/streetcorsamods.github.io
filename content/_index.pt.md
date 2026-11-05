@@ -25,17 +25,42 @@ talk:
     - title: Roda no seu PC
       text: Grátis e privada com o Ollama na sua própria placa de vídeo. LM Studio, OpenRouter, OpenAI e Claude também funcionam.
   note: Opcional e desligada por padrão. O jogo decide cada preço e cada fato; a IA só fala. Sem ela o jogo é o mesmo, só que ninguém responde.
+about:
+  title: O que é
+  intro: |-
+    Street Corsa é um jogo de carreira gratuito. Você joga numa janela própria: compra carros, mexe neles, escolhe as suas corridas.
+    As corridas em si rodam no **Assetto Corsa**, com os carros que você tem instalados.
+
+    A carreira que você joga é um **cenário**. **Street Rod** é Los Angeles em 1970, muscle cars e a Main Street à noite.
+    **Touge Nights** é Gunma em 2002, estradas de serra e batalhas de drift.
+
+    O jogo está em inglês por enquanto: nestas páginas os botões aparecem com o nome em inglês, do jeito que você vê.
+  steps_title: Uma corrida, do começo ao fim
+  steps:
+    - title: Sua garagem
+      text: Cada peça que você coloca muda o carro. Antes de uma corrida, o jogo transforma as suas peças nos dados do próprio carro no Assetto Corsa.
+    - title: Para o Assetto Corsa
+      text: O jogo monta a corrida e abre o AC para você, com dano, desgaste de pneus e consumo de combustível ligados. Os seus amassados e o tanque pela metade vão junto.
+    - title: Na pista
+      text: Quem roda a corrida é o nosso próprio modo de corrida. A árvore da arrancada, batidas e queimadas de largada, um pneu que estoura, um eixo que quebra.
+    - title: De volta à garagem
+      text: O tempo, o dano e o desgaste voltam para a sua garagem. O motor que você correu é o motor que você conserta.
+  promise: "**O seu Assetto Corsa continua seu.** Cada arquivo que o jogo muda é guardado antes e devolvido depois da corrida. Uma sessão normal no AC ou no Content Manager não percebe nada."
+  files:
+    summary: "Para os curiosos: o que o jogo mexe no Assetto Corsa"
+    rows:
+      - paths: ['content\cars\<car>\data']
+        text: As suas peças viram os dados do carro para a corrida (motor, curva de potência, câmbio, suspensão, pneus). Um `data.acd` empacotado é desempacotado. Guardado antes, devolvido depois.
+      - paths: ['content\cars\<car>__sr_opponent']
+        text: Quando um rival corre com o mesmo modelo que você, uma cópia marcada desse carro com os próprios dados. Apagada depois da corrida.
+      - paths: ['Documents\Assetto Corsa\cfg\race.ini', 'Documents\Assetto Corsa\cfg\assists.ini']
+        text: A corrida em si (pista, carros, o nosso modo de corrida), e dano em 100% com desgaste de pneus e consumo de combustível. Guardados antes, devolvidos depois.
+      - paths: ['extension\lua\new-modes\sc_race']
+        text: O nosso modo de corrida para o Custom Shaders Patch. Roda a corrida e coloca no carro os seus amassados, ferrugem, sujeira, combustível, pintura e peças. Só uma corrida do Street Corsa usa.
+      - paths: ['Documents\Assetto Corsa\out\sc_race']
+        text: O que o modo escreve quando a corrida acaba. Quem ganhou, os tempos e o que a corrida deixou de cada carro (vida do motor, câmbio, pneus, carroceria, combustível, temperaturas). O jogo lê.
+    note: "Os originais esperam em `%AppData%\\StreetCorsa\\AcRestore` até voltarem. Depois de um travamento ou uma queda de luz, a próxima abertura devolve. Modelos, texturas e skins nunca são escritos."
 ---
-
-## O que é
-
-Street Corsa é um jogo de carreira gratuito. Você joga numa janela própria: compra carros, mexe neles, escolhe as suas corridas.
-As corridas em si rodam no **Assetto Corsa**.
-
-A carreira que você joga é um **cenário**. **Street Rod** é Los Angeles em 1970, muscle cars e a Main Street à noite.
-**Touge Nights** é Gunma em 2002, estradas de serra e batalhas de drift.
-
-O jogo está em inglês por enquanto: nestas páginas os botões aparecem com o nome em inglês, do jeito que você vê.
 
 ## Do que você precisa
 
