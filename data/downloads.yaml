@@ -55,7 +55,7 @@ groups:
       - { name: "Chrysler V8 (318 to 426 Hemi)", kind: Engine pack, es: { name: "Chrysler V8 (318 a 426 Hemi)" }, pt: { name: "Chrysler V8 (318 a 426 Hemi)" } }
       - name: "Chevrolet small block (265 to 350)"
         id: chevy_small_block
-        file: StreetCorsa-chevy_small_block-1.2.zip
+        file: StreetCorsa-chevy_small_block-1.3.zip
         size: 96 MB
         kind: Engine pack
         text: "1955-70: the 265 and 283, the L79 and L76 327s, the Z/28 302, the 350 L48 and LT-1, a T56 restomod and the detailed SBC 350."
