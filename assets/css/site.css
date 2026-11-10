@@ -452,6 +452,28 @@ th { font-family: var(--display); font-weight: 400; text-transform: uppercase; l
 .mod-credits .label { margin: 0 0 4px; color: var(--text); font-size: 14px; }
 .mod-credits ul { margin: 0; padding-left: 16px; }
 .mod-credits li { margin: 2px 0; }
+.mod-credits p:not(.label) { margin: 0 0 4px; }
+.link-btn { background: none; border: 0; padding: 0; font: inherit; color: var(--accent-hover); cursor: pointer; }
+.link-btn:hover { text-decoration: underline; }
+
+/* A dialog (partials/mod-credits.html): a box over a dimmed page, its body scrolling on its own */
+.modal {
+  width: min(640px, calc(100vw - 32px)); max-height: min(80vh, 720px); padding: 0;
+  background: var(--panel); color: var(--text); border: 1px solid var(--line); border-top: 3px solid var(--accent);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, .6);
+}
+.modal[open] { display: flex; flex-direction: column; }
+.modal::backdrop { background: rgba(0, 0, 0, .7); }
+.modal-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 20px; border-bottom: 1px solid var(--line); }
+.modal-head h2 { margin: 0; font-size: 26px; }
+.modal-head form { margin: 0; }
+.modal-x { background: none; border: 0; color: var(--muted); font-size: 28px; line-height: 1; cursor: pointer; padding: 0 4px; }
+.modal-x:hover { color: var(--text); }
+ul.modal-body { overflow-y: auto; margin: 0; padding: 14px 20px 18px 38px; font-size: 14px; color: var(--muted); overscroll-behavior: contain; }
+ul.modal-body li { margin: 0 0 10px; overflow-wrap: anywhere; }
+ul.modal-body a, .mod-credits li a { color: var(--muted); text-decoration: underline; text-decoration-color: var(--line-strong); text-underline-offset: 2px; }
+ul.modal-body a:hover, .mod-credits li a:hover { color: var(--accent-hover); text-decoration-color: currentColor; }
+body:has(.modal[open]) { overflow: hidden; }
 .models-note { background: var(--panel); border-left: 3px solid var(--accent); padding: 12px 18px; margin: 20px 0; }
 .models-note p { margin: 0; }
 .models-note .sig { margin-top: 6px; color: var(--muted); font-style: italic; }

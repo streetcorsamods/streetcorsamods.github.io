@@ -39,12 +39,7 @@
         {{ with .Params.source }}<dt>Source</dt><dd><a href="https://sourceforge.net/p/streetcorsa-mods/{{ . }}/" target="_blank" rel="noopener">SourceForge</a></dd>{{ end }}
         <dt>Made by</dt><dd><a href="https://github.com/pecamardelli" target="_blank" rel="noopener">Pablo Camardelli</a></dd>
       </dl>
-      {{ with $credits }}
-        <div class="mod-credits">
-          <p class="label">Credits</p>
-          <ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
-        </div>
-      {{ end }}
+      {{ partial "mod-credits.html" $credits }}
       <p class="muted small">Install: on the main screen, <strong>Mod Manager → Install mods</strong>, pick the zip. <a href="/tutorials/playing/install/">Full steps</a></p>
     </aside>
   </div>
