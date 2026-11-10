@@ -1,0 +1,28 @@
+{{- /* A mod's credits in its card: a short list as it is; a long one (more than $inline) behind a button that opens
+       them in a dialog with a scroll of its own, so the card stays short. Takes the list of credits. */ -}}
+{{- $inline := 3 -}}
+{{- with . }}
+<div class="mod-credits">
+  <p class="label">Credits</p>
+  {{- if le (len .) $inline }}
+  <ul>{{ range . }}<li>{{ partial "credit.html" . }}</li>{{ end }}</ul>
+  {{- else }}
+  <button type="button" class="link-btn" data-opens="credits-dialog" aria-haspopup="dialog">See all {{ len . }} credits</button>
+  <dialog id="credits-dialog" class="modal" aria-labelledby="credits-dialog-title">
+    <header class="modal-head">
+      <h2 id="credits-dialog-title">Credits</h2>
+      <form method="dialog"><button class="modal-x" aria-label="Close">×</button></form>
+    </header>
+    <ul class="modal-body">{{ range . }}<li>{{ partial "credit.html" . }}</li>{{ end }}</ul>
+  </dialog>
+  <script>
+  (function () {
+    var d = document.getElementById("credits-dialog");
+    document.querySelector('[data-opens="credits-dialog"]').addEventListener("click", function () { d.showModal(); });
+    // A click on the backdrop (the dialog itself, outside its box) closes it
+    d.addEventListener("click", function (e) { if (e.target === d) d.close(); });
+  })();
+  </script>
+  {{- end }}
+</div>
+{{- end }}

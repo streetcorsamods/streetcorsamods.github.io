@@ -1,0 +1,6 @@
+{{- /* One credit's text, its bare addresses (grabcad.com/..., sketchfab.com/...) made links. Escaped first: the text is plain. */ -}}
+{{- $text := htmlEscape . -}}
+{{- $text = replaceRE `\b((?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}/[^\s()<>,;&]*[^\s()<>,;&.])` `<a href="https://${1}" target="_blank" rel="noopener">${1}</a>` $text -}}
+{{- /* Pablo's own parts ("Modelled by Pablo Camardelli (pecamardelli)"): the handle to his GitHub, as "Made by" */ -}}
+{{- $text = replace $text "(pecamardelli)" `(<a href="https://github.com/pecamardelli" target="_blank" rel="noopener">pecamardelli</a>)` -}}
+{{- $text | safeHTML -}}
