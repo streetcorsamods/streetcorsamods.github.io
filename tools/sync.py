@@ -39,6 +39,7 @@ WHERE = {**CORE_DOCS, **STREET_ROD_DOCS}
 MODS = {
     "buick_v8": "engines/buick_v8",
     "cadillac_v8": "engines/cadillac_v8",
+    "chevy_small_block": "engines/chevy_small_block",
     "chevy_w_v8": "engines/chevy_w_v8",
     "ford_385": "engines/ford_385",
     "ford_cleveland": "engines/ford_cleveland",
