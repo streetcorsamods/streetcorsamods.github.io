@@ -53,7 +53,14 @@ groups:
     pt: { title: Pacotes de motores, text: "Motores reais para montar, peça por peça, para o Street Rod. Sem um, o carro usa o próprio motor do Assetto Corsa." }
     items:
       - { name: "Chrysler V8 (318 to 426 Hemi)", kind: Engine pack, es: { name: "Chrysler V8 (318 a 426 Hemi)" }, pt: { name: "Chrysler V8 (318 a 426 Hemi)" } }
-      - { name: "Chevrolet small block (265 to 350)", kind: Engine pack, es: { name: "Chevrolet small block (265 a 350)" }, pt: { name: "Chevrolet small block (265 a 350)" } }
+      - name: "Chevrolet small block (265 to 350)"
+        id: chevy_small_block
+        file: StreetCorsa-chevy_small_block-1.0.zip
+        size: 95 MB
+        kind: Engine pack
+        text: "1955-70: the 265 and 283, the L79 and L76 327s, the Z/28 302, the 350 L48 and LT-1, a T56 restomod and the detailed SBC 350."
+        es: { name: "Chevrolet small block (265 a 350)", text: "1955-70: el 265 y el 283, los 327 L79 y L76, el 302 del Z/28, los 350 L48 y LT-1, un restomod con T56 y el SBC 350 detallado." }
+        pt: { name: "Chevrolet small block (265 a 350)", text: "1955-70: o 265 e o 283, os 327 L79 e L76, o 302 do Z/28, os 350 L48 e LT-1, um restomod com T56 e o SBC 350 detalhado." }
       - { name: "Chevrolet big block (396 to 454)", kind: Engine pack, es: { name: "Chevrolet big block (396 a 454)" }, pt: { name: "Chevrolet big block (396 a 454)" } }
       - name: "Chevrolet W (348 / 409 / 427 Z11)"
         id: chevy_w_v8

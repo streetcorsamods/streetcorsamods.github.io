@@ -1,0 +1,117 @@
+{
+  "id": "chevy_small_block",
+  "name": "Chevrolet small-block V8 (265 / 283 / 302 / 327 / 350)",
+  "version": "1.0",
+  "description": "The Chevrolet small block from the CAD models: the 1965 L79 327 and its 265, 283, 302 and 350 builds (Rochester Quadrajet, Delco 10SI, Powerglide, T56 swap, log manifolds), and the detailed SBC 350 with its TH350. The l79 and sbc350 mods in one. The L79 parts are made from \"L79 Chevrolet small block COMPLETE ENGINE COMPONENTS\" by Doug Broast (GrabCAD, grabcad.com/doug.broast-1), used with the author's permission.",
+  "settings": [
+    "streetrod"
+  ],
+  "builds": [
+    {
+      "engine": "Chevrolet L79 327",
+      "gearbox": "Super T-10 (detailed)",
+      "crate": false
+    },
+    {
+      "engine": "Chevrolet L79 327",
+      "gearbox": "Powerglide",
+      "crate": false
+    },
+    {
+      "engine": "Chevrolet L76 327 (Corvette)",
+      "gearbox": "4-speed",
+      "crate": false
+    },
+    {
+      "engine": "Chevrolet 265 V8 2-bbl (1955)",
+      "gearbox": "3-speed",
+      "crate": false
+    },
+    {
+      "engine": "Chevrolet 265 Power Pack 4-bbl",
+      "gearbox": "Powerglide",
+      "crate": false
+    },
+    {
+      "engine": "Chevrolet 283 V8 2-bbl",
+      "gearbox": "Powerglide",
+      "crate": false
+    },
+    {
+      "engine": "Chevrolet 283 4-bbl",
+      "gearbox": "4-speed",
+      "crate": false
+    },
+    {
+      "engine": "Chevrolet 302 Z/28",
+      "gearbox": "4-speed",
+      "crate": false
+    },
+    {
+      "engine": "Chevrolet 350 L48",
+      "gearbox": "Powerglide",
+      "crate": false
+    },
+    {
+      "engine": "Chevrolet 350 LT-1 (1970)",
+      "gearbox": "4-speed",
+      "crate": false
+    },
+    {
+      "engine": "Chevrolet 350 restomod",
+      "gearbox": "Tremec T56",
+      "crate": false
+    },
+    {
+      "engine": "Chevrolet 265 V8 2-bbl",
+      "gearbox": "Powerglide",
+      "crate": false
+    },
+    {
+      "engine": "Chevrolet 265 Power Pack 4-bbl",
+      "gearbox": "3-speed",
+      "crate": false
+    },
+    {
+      "engine": "Chevrolet 283 V8 2-bbl",
+      "gearbox": "3-speed",
+      "crate": false
+    },
+    {
+      "engine": "Chevrolet 283 4-bbl",
+      "gearbox": "3-speed",
+      "crate": false
+    },
+    {
+      "engine": "Chevrolet 283 4-bbl",
+      "gearbox": "Powerglide",
+      "crate": false
+    },
+    {
+      "engine": "Chevrolet 350 L48",
+      "gearbox": "4-speed",
+      "crate": false
+    },
+    {
+      "engine": "SBC 350",
+      "gearbox": "TH350 (detailed)",
+      "crate": false
+    }
+  ],
+  "credits": [
+    "\"Chevy Camaro LS1 T56 Transmission 98-02 Scan\" by rusty spoon (grabcad.com/rusty.spoon-1), GrabCAD (grabcad.com/library/chevy-camaro-ls1-t56-transmission-98-02-scan-1)",
+    "\"GM POWERGLIDE\" by Tim Toth (grabcad.com/tim.toth-1), GrabCAD (grabcad.com/library/gm-powerglide-1), tail housing ours",
+    "\"GM alternator\" by DAVE (grabcad.com/dave--117), GrabCAD (grabcad.com/library/gm-alternator-1)",
+    "\"L79 Chevrolet small block COMPLETE ENGINE COMPONENTS\" by Doug Broast (grabcad.com/doug.broast-1), GrabCAD (grabcad.com/library/l79-chevrolet-small-block-complete-engine-components-1), used with the author's permission",
+    "\"Small Block Chevy 350 with TH350 Auto Box\" by neil louw (grabcad.com/neil.louw), GrabCAD (grabcad.com/library/small-block-chevy-350-with-th350-auto-box)",
+    "\"Small Block Chevy 360\" by Scott Kelley (grabcad.com/scott.kelley-2), GrabCAD (grabcad.com/library/small-block-chevy-360-1)",
+    "\"Small Block Chevy 360\" by Scott Kelley (grabcad.com/scott.kelley-2), GrabCAD (grabcad.com/library/small-block-chevy-360-1); motor mounts from \"Small Block Chevy 350 with TH350 Auto Box\" by neil louw (grabcad.com/neil.louw), GrabCAD (grabcad.com/library/small-block-chevy-350-with-th350-auto-box)",
+    "\"Torque Converter\" by Guts Niireeji (grabcad.com/guts.niireeji-1), GrabCAD (grabcad.com/library/torque-converter-4)",
+    "Modelled by Pablo Camardelli (pecamardelli)",
+    "Rochester carburetor CAD model, GrabCAD (author unknown, no longer online)",
+    "Street Legal Racing: Redline community GM pack (author unknown), converted",
+    "adapted from \"Ford 5.0L V8 Camshaft\" by Justin (grabcad.com/justin-453), GrabCAD (grabcad.com/library/ford-5-0l-v8-camshaft-1)",
+    "adapted from \"Ford 5.0L V8 Timing Chain Set\" by Justin (grabcad.com/justin-453), GrabCAD (grabcad.com/library/ford-5-0l-v8-timing-chain-set-1)",
+    "re-spaced from \"Chevy LS3 OEM Cast Exhaust Manifolds Scan\" by rusty spoon (grabcad.com/rusty.spoon-1), GrabCAD (grabcad.com/library/chevy-ls3-oem-cast-exhaust-manifolds-scan-1)"
+  ]
+}

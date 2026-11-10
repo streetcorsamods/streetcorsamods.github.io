@@ -14,6 +14,7 @@ PICKS = {
     "pontiac_v8": ("pontiac-v8", "389-gto-tri-power-360-m20", ["400-ram-air-iv-370-m21", "389-gto-335-m20", "400-w72-1977-th400"]),
     "buick_v8": ("buick-v8", "nailhead-425-super-wildcat-360-st400", ["455-gs-stage-1-360-m21", "nailhead-364-300-dynaflow", "455-stage-1-headers-crate"]),
     "cadillac_v8": ("cadillac-v8", "365-eldorado-335-hydra-matic", ["331-eldorado-270-hydra-matic", "500-eldorado-400-th400", "500-headers-crate"]),
+    "chevy_small_block": ("chevrolet-small-block", "l79-327-4spd", ["302-z28-4spd", "350-lt1-4spd", "sbc-350-th350"]),
     "chevy_w_v8": ("chevrolet-w", "409-dual-quad-409-t10", ["348-tri-power-335-t10", "427-z11-430-m20", "409-360-t10"]),
     "ford_385": ("ford-385", "boss-429-375-toploader-3-91", ["429-cobra-jet-370-c6-3-50", "460-365-c6-2-80", "429-super-cobra-jet-headers-crate"]),
     "ford_cleveland": ("ford-cleveland", "boss-351-330-toploader-close-3-91", ["351c-4v-300-toploader-close-3-25", "351c-2v-250-fmx-3-00", "boss-351-headers-crate"]),
@@ -38,6 +39,8 @@ def save(src: pathlib.Path, dest: pathlib.Path) -> None:
 
 
 for mod_id, (slug, hero, others) in PICKS.items():
+    if not (out / mod_id).is_dir():                     # not rendered this time: its pictures stay as they are
+        continue
     builds = names(mod_id)
     shots = []
     for view, words in VIEWS.items():
