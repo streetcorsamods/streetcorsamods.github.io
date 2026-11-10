@@ -1,7 +1,7 @@
 {
   "id": "chevy_small_block",
   "name": "Chevrolet small-block V8 (265 / 283 / 302 / 327 / 350)",
-  "version": "1.1",
+  "version": "1.2",
   "description": "The Chevrolet small block from the CAD models: the 1965 L79 327 and its 265, 283, 302 and 350 builds (Rochester Quadrajet, Delco 10SI, Powerglide, T56 swap, log manifolds), and the detailed SBC 350 with its TH350. The l79 and sbc350 mods in one. The L79 parts are made from \"L79 Chevrolet small block COMPLETE ENGINE COMPONENTS\" by Doug Broast (GrabCAD, grabcad.com/doug.broast-1), used with the author's permission.",
   "settings": [
     "streetrod"
