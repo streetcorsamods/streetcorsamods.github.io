@@ -61,7 +61,14 @@ groups:
         text: "1955-70: the 265 and 283, the L79 and L76 327s, the Z/28 302, the 350 L48 and LT-1, a T56 restomod and the detailed SBC 350."
         es: { name: "Chevrolet small block (265 a 350)", text: "1955-70: el 265 y el 283, los 327 L79 y L76, el 302 del Z/28, los 350 L48 y LT-1, un restomod con T56 y el SBC 350 detallado." }
         pt: { name: "Chevrolet small block (265 a 350)", text: "1955-70: o 265 e o 283, os 327 L79 e L76, o 302 do Z/28, os 350 L48 e LT-1, um restomod com T56 e o SBC 350 detalhado." }
-      - { name: "Chevrolet big block (396 to 454)", kind: Engine pack, es: { name: "Chevrolet big block (396 a 454)" }, pt: { name: "Chevrolet big block (396 a 454)" } }
+      - name: "Chevrolet big block (396 to 454)"
+        id: chevy_big_block
+        file: StreetCorsa-chevy_big_block-1.2.zip
+        size: 35 MB
+        kind: Engine pack
+        text: "The Mark IV: L35 to L78 396s, the 427 L71 and aluminium ZL1, the 454 LS6, and a blown 454 drag engine."
+        es: { name: "Chevrolet big block (396 a 454)", text: "El Mark IV: los 396 del L35 al L78, el 427 L71 y el ZL1 de aluminio, el 454 LS6 y un 454 sobrealimentado de drag." }
+        pt: { name: "Chevrolet big block (396 a 454)", text: "O Mark IV: os 396 do L35 ao L78, o 427 L71 e o ZL1 de alumínio, o 454 LS6 e um 454 com blower de arrancada." }
       - name: "Chevrolet W (348 / 409 / 427 Z11)"
         id: chevy_w_v8
         file: StreetCorsa-chevy_w_v8-1.0.zip
@@ -105,9 +112,23 @@ groups:
         es: { text: "Del 331 de 1949 al 472 y el 500, con los dos cuatro bocas y los 3x2 de los Eldorado." }
         pt: { text: "Do 331 de 1949 ao 472 e ao 500, com os dois quádruplos e os 3x2 dos Eldorado." }
       - { name: "Ford flathead V8", kind: Engine pack }
-      - { name: "Ford Y-block (239 to 312)", kind: Engine pack, es: { name: "Ford Y-block (239 a 312)" }, pt: { name: "Ford Y-block (239 a 312)" } }
+      - name: "Ford Y-block (239 to 312)"
+        id: ford_y_block
+        file: StreetCorsa-ford_y_block-1.1.zip
+        size: 28 MB
+        kind: Engine pack
+        text: "1954-64: the 239 to the Thunderbird 312, the '57 E-code dual quad, and a 312 hot rod with a velocity stack."
+        es: { name: "Ford Y-block (239 a 312)", text: "1954-64: del 239 al 312 del Thunderbird, el E-code de doble cuádruple del '57 y un 312 hot rod con trompeta de admisión." }
+        pt: { name: "Ford Y-block (239 a 312)", text: "1954-64: do 239 ao 312 do Thunderbird, o E-code de dois quádruplos de 57 e um 312 hot rod com corneta de admissão." }
       - { name: "Ford Windsor (260 to 351W)", kind: Engine pack, es: { name: "Ford Windsor (260 a 351W)" }, pt: { name: "Ford Windsor (260 a 351W)" } }
-      - { name: "Ford FE (332 to 428)", kind: Engine pack, es: { name: "Ford FE (332 a 428)" }, pt: { name: "Ford FE (332 a 428)" } }
+      - name: "Ford FE (332 to 428)"
+        id: ford_fe
+        file: StreetCorsa-ford_fe-1.1.zip
+        size: 33 MB
+        kind: Engine pack
+        text: "1958-76: the 352 and 390s, the 406 and 427 with dual quads and 3x2s, the 428 Cobra Jet, the 427's Weber cross-ram."
+        es: { name: "Ford FE (332 a 428)", text: "1958-76: el 352 y los 390, el 406 y el 427 con dos cuádruples y 3x2, el 428 Cobra Jet, el cross-ram Weber del 427." }
+        pt: { name: "Ford FE (332 a 428)", text: "1958-76: o 352 e os 390, o 406 e o 427 com dois quádruplos e 3x2, o 428 Cobra Jet, o cross-ram Weber do 427." }
       - name: "Ford Cleveland (351C, 351M / 400)"
         id: ford_cleveland
         file: StreetCorsa-ford_cleveland-1.0.zip

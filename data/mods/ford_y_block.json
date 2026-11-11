@@ -1,0 +1,52 @@
+{
+  "id": "ford_y_block",
+  "name": "Ford Y-block V8 (239 / 256 / 272 / 292 / 312)",
+  "version": "1.1",
+  "description": "Ford's Y-block, 1954-64, with its deep skirt and shaft rockers: the 239, 256, 272, the Thunderbird 292 and 312 and the 1957 E-code dual quad, with the 3-speed, the overdrive and the Ford-O-Matic, and a hot-rod 312 with a velocity stack. All drawn from solids.",
+  "settings": [
+    "streetrod"
+  ],
+  "builds": [
+    {
+      "engine": "Ford 239 2V 130 hp (1954 Customline)",
+      "gearbox": "Ford-O-Matic",
+      "crate": false
+    },
+    {
+      "engine": "Ford 272 2V 167 hp (1956 F-100)",
+      "gearbox": "3-speed with overdrive",
+      "crate": false
+    },
+    {
+      "engine": "Ford 272 2V 167 hp (1956 F-100)",
+      "gearbox": "Synchro-Silent 3-speed",
+      "crate": false
+    },
+    {
+      "engine": "Ford 272 2V 162 hp (1955 Fairlane)",
+      "gearbox": "Ford-O-Matic",
+      "crate": false
+    },
+    {
+      "engine": "Ford 292 Thunderbird 4V 198 hp (1955 Thunderbird)",
+      "gearbox": "Ford-O-Matic",
+      "crate": false
+    },
+    {
+      "engine": "Ford 312 Thunderbird Special 4V 225 hp (1956)",
+      "gearbox": "3-speed",
+      "crate": false
+    },
+    {
+      "engine": "Ford 312 E-code dual quad 270 hp (1957 Thunderbird)",
+      "gearbox": "3-speed",
+      "crate": false
+    },
+    {
+      "engine": "Ford 312 hot rod (velocity stack, Isky cam, headers)",
+      "gearbox": "3-speed",
+      "crate": true
+    }
+  ],
+  "credits": []
+}

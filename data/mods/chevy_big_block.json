@@ -1,0 +1,100 @@
+{
+  "id": "chevy_big_block",
+  "name": "Chevrolet big-block V8 (396 / 402 / 427 / 454)",
+  "version": "1.2",
+  "description": "The Chevrolet Mark IV big block: 396, 402, 427 (and the aluminium ZL1) and 454, with their factory builds and a blown 454 drag engine. Block, heads, covers, intakes, Holley, manifolds, accessories, radiators and the Turbo Hydra-Matic from Jorma Rysky's \"Naturally Aspirated 454 cid V8\" and \"Blown 454 cid V8\" (Sketchfab, CC BY 4.0); internals, the Muncie 4-speed, the Quadrajet and the Tri-Power our own.",
+  "settings": [
+    "streetrod"
+  ],
+  "builds": [
+    {
+      "engine": "Chevy 396 L35 325 hp",
+      "gearbox": "Muncie M20",
+      "crate": false
+    },
+    {
+      "engine": "Chevy 396 L35 325 hp",
+      "gearbox": "Turbo Hydra-Matic",
+      "crate": false
+    },
+    {
+      "engine": "Chevy 396 L34 350 hp",
+      "gearbox": "Muncie M20",
+      "crate": false
+    },
+    {
+      "engine": "Chevy 396 L34 350 hp",
+      "gearbox": "Muncie M21",
+      "crate": false
+    },
+    {
+      "engine": "Chevy 396 L78 375 hp",
+      "gearbox": "Muncie M21",
+      "crate": false
+    },
+    {
+      "engine": "Chevy 396 Turbo-Jet 425 hp (Corvette)",
+      "gearbox": "Muncie M21",
+      "crate": false
+    },
+    {
+      "engine": "Chevy 402 L34 350 hp",
+      "gearbox": "Muncie M20",
+      "crate": false
+    },
+    {
+      "engine": "Chevy 402 L53 330 hp",
+      "gearbox": "Turbo Hydra-Matic",
+      "crate": false
+    },
+    {
+      "engine": "Chevy 427 L36 390 hp",
+      "gearbox": "Muncie M20",
+      "crate": false
+    },
+    {
+      "engine": "Chevy 427 L71 Tri-Power 435 hp",
+      "gearbox": "Muncie M21",
+      "crate": false
+    },
+    {
+      "engine": "Chevy 427 ZL1 430 hp",
+      "gearbox": "Muncie M21",
+      "crate": false
+    },
+    {
+      "engine": "Chevy 454 LS5 360 hp",
+      "gearbox": "Muncie M22",
+      "crate": false
+    },
+    {
+      "engine": "Chevy 454 LS5 360 hp",
+      "gearbox": "Turbo Hydra-Matic",
+      "crate": false
+    },
+    {
+      "engine": "Chevy 454 LS6 450 hp",
+      "gearbox": "Muncie M22",
+      "crate": false
+    },
+    {
+      "engine": "Chevy 454 LS6 450 hp",
+      "gearbox": "Muncie M22 (4.10 Positraction)",
+      "crate": false
+    },
+    {
+      "engine": "Chevy 454 LS6 425 hp (1971 Corvette)",
+      "gearbox": "Muncie M22",
+      "crate": false
+    },
+    {
+      "engine": "Blown Chevy 454 drag engine (Littlefield 6-71, twin Predators, zoomies)",
+      "gearbox": "Turbo Hydra-Matic",
+      "crate": true
+    }
+  ],
+  "credits": [
+    "\"Blown 454 cid V8\" by Jorma Rysky (sketchfab.com/Rysky), CC BY 4.0",
+    "\"Naturally Aspirated 454 cid V8\" by Jorma Rysky (sketchfab.com/Rysky), CC BY 4.0"
+  ]
+}

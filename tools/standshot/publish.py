@@ -1,5 +1,5 @@
 """Picks the renders for each pack, writes them as web JPGs into the site (static/images/mods/<slug>/) and prints the
-front matter `shots` for each page.  publish.py <out dir> <site dir> <mods dir>"""
+front matter `shots` for each page (the packs rendered into <out dir> only).  publish.py <out dir> <site dir> <mods dir>"""
 import json
 import pathlib
 import re
@@ -21,6 +21,9 @@ PICKS = {
     "ford_six": ("ford-falcon-six", "oreste-berta-racing-221", ["ford-221-sp-203-hp", "ford-188-116-hp"]),
     "lincoln_v8": ("lincoln-mercury-v8", "mercury-430-super-marauder-400-merc-o-matic", ["368-300-turbo-drive", "lincoln-462-340-c6", "edsel-410-345-merc-o-matic"]),
     "olds_v8": ("oldsmobile-v8", "455-w30-370-m21", ["400-l69-tri-carb-360-m21", "455-hurst-olds-380-th400", "455-headers-crate"]),
+    "chevy_big_block": ("chevrolet-big-block", "427-l71-m21", ["454-ls6-m22", "396-l78-m21", "454-blown-drag"]),
+    "ford_fe": ("ford-fe", "427-weber-cross-ram-race", ["428-cobra-jet-ram-air-335-toploader-close-3-50", "406-405-3x2-t10-3-50", "390-gt-335-toploader-close-3-25"]),
+    "ford_y_block": ("ford-y-block", "312-e-code-270-dual-quad-three-speed-3-73", ["312-hot-rod-velocity-stack-headers", "292-198-ford-o-matic", "272-167-three-speed-overdrive-4-09"]),
 }
 VIEWS = {"front": "", "side": "from the other side", "top": "from above", "rear": "from behind, with its gearbox"}
 
