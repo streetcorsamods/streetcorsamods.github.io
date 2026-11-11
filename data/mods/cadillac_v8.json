@@ -1,7 +1,7 @@
 {
   "id": "cadillac_v8",
   "name": "Cadillac V8 (331 / 365 / 390, 390 / 429, 472 / 500)",
-  "version": "1.0",
+  "version": "1.1",
   "description": "The Cadillac V8s: the 1949-62 overhead-valve V8 (331, 365, 390) with the 1949 Series 62's, the four-barrels and the Eldorados' dual quads and 3x2s, the 1963-67 390 / 429 with a 429 crate engine, and the 472 / 500 of 1968-76 with a 500 crate engine. Every part ours, drawn from solids; the Turbo Hydra-Matic from Jorma Rysky's \"Naturally Aspirated 454 cid V8\" (Sketchfab, CC BY 4.0).",
   "settings": [
     "streetrod"

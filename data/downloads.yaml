@@ -55,7 +55,7 @@ groups:
       - { name: "Chrysler V8 (318 to 426 Hemi)", kind: Engine pack, es: { name: "Chrysler V8 (318 a 426 Hemi)" }, pt: { name: "Chrysler V8 (318 a 426 Hemi)" } }
       - name: "Chevrolet small block (265 to 350)"
         id: chevy_small_block
-        file: StreetCorsa-chevy_small_block-1.4.zip
+        file: StreetCorsa-chevy_small_block-1.5.zip
         size: 96 MB
         kind: Engine pack
         text: "1955-70: the 265 and 283, the L79 and L76 327s, the Z/28 302, the 350 L48 and LT-1, a T56 restomod and the detailed SBC 350."
@@ -63,7 +63,7 @@ groups:
         pt: { name: "Chevrolet small block (265 a 350)", text: "1955-70: o 265 e o 283, os 327 L79 e L76, o 302 do Z/28, os 350 L48 e LT-1, um restomod com T56 e o SBC 350 detalhado." }
       - name: "Chevrolet big block (396 to 454)"
         id: chevy_big_block
-        file: StreetCorsa-chevy_big_block-1.2.zip
+        file: StreetCorsa-chevy_big_block-1.3.zip
         size: 35 MB
         kind: Engine pack
         text: "The Mark IV: L35 to L78 396s, the 427 L71 and aluminium ZL1, the 454 LS6, and a blown 454 drag engine."
@@ -71,7 +71,7 @@ groups:
         pt: { name: "Chevrolet big block (396 a 454)", text: "O Mark IV: os 396 do L35 ao L78, o 427 L71 e o ZL1 de alumínio, o 454 LS6 e um 454 com blower de arrancada." }
       - name: "Chevrolet W (348 / 409 / 427 Z11)"
         id: chevy_w_v8
-        file: StreetCorsa-chevy_w_v8-1.0.zip
+        file: StreetCorsa-chevy_w_v8-1.1.zip
         size: 30 MB
         kind: Engine pack
         text: "1958-65: the 348 with the Tri-Power, the Impala SS 409s on one and two four-barrels, the 427 Z11."
@@ -81,15 +81,15 @@ groups:
           pt: { name: "Chevrolet seis em linha (235 / 250)" } }
       - name: "Pontiac V8 (389 / 400 / 455)"
         id: pontiac_v8
-        file: StreetCorsa-pontiac_v8-1.0.zip
-        size: 28 MB
+        file: StreetCorsa-pontiac_v8-1.1.zip
+        size: 29 MB
         kind: Engine pack
         text: "The GTO's 389 and Tri-Power, Ram Air II to IV, the 455 and the '77 Trans Am's W72."
         es: { text: "El 389 del GTO y el Tri-Power, Ram Air II a IV, el 455 y el W72 del Trans Am del '77." }
         pt: { text: "O 389 do GTO e o Tri-Power, Ram Air II a IV, o 455 e o W72 do Trans Am 77." }
       - name: "Oldsmobile V8 (400 / 455)"
         id: olds_v8
-        file: StreetCorsa-olds_v8-1.0.zip
+        file: StreetCorsa-olds_v8-1.1.zip
         size: 26 MB
         kind: Engine pack
         text: "The 400s and the 455: the L69 Tri-Carb, the 4-4-2, the W-30 with Force-Air, the Hurst/Olds."
@@ -97,16 +97,16 @@ groups:
         pt: { text: "Os 400 e o 455: o L69 Tri-Carb, o 4-4-2, o W-30 com Force-Air, o Hurst/Olds." }
       - name: "Buick V8 (Nailhead, 400 to 455)"
         id: buick_v8
-        file: StreetCorsa-buick_v8-1.0.zip
-        size: 45 MB
+        file: StreetCorsa-buick_v8-1.1.zip
+        size: 46 MB
         kind: Engine pack
         text: "The Nailhead 364 to 425 with the dual-quad Super Wildcat, and the big block: GS 400, GS 455 and its Stage 1."
         es: { text: "El Nailhead de 364 a 425 con el Super Wildcat de dos cuatro bocas, y el big block: GS 400, GS 455 y su Stage 1." }
         pt: { text: "O Nailhead de 364 a 425 com o Super Wildcat de dois quádruplos, e o big block: GS 400, GS 455 e o Stage 1." }
       - name: "Cadillac V8 (331 to 500)"
         id: cadillac_v8
-        file: StreetCorsa-cadillac_v8-1.0.zip
-        size: 43 MB
+        file: StreetCorsa-cadillac_v8-1.1.zip
+        size: 44 MB
         kind: Engine pack
         text: "From the 1949 331 to the 472 and 500, with the Eldorados' dual quads and 3x2s."
         es: { text: "Del 331 de 1949 al 472 y el 500, con los dos cuatro bocas y los 3x2 de los Eldorado." }
@@ -114,7 +114,7 @@ groups:
       - { name: "Ford flathead V8", kind: Engine pack }
       - name: "Ford Y-block (239 to 312)"
         id: ford_y_block
-        file: StreetCorsa-ford_y_block-1.1.zip
+        file: StreetCorsa-ford_y_block-1.2.zip
         size: 28 MB
         kind: Engine pack
         text: "1954-64: the 239 to the Thunderbird 312, the '57 E-code dual quad, and a 312 hot rod with a velocity stack."
@@ -123,7 +123,7 @@ groups:
       - { name: "Ford Windsor (260 to 351W)", kind: Engine pack, es: { name: "Ford Windsor (260 a 351W)" }, pt: { name: "Ford Windsor (260 a 351W)" } }
       - name: "Ford FE (332 to 428)"
         id: ford_fe
-        file: StreetCorsa-ford_fe-1.1.zip
+        file: StreetCorsa-ford_fe-1.2.zip
         size: 33 MB
         kind: Engine pack
         text: "1958-76: the 352 and 390s, the 406 and 427 with dual quads and 3x2s, the 428 Cobra Jet, the 427's Weber cross-ram."
@@ -131,15 +131,15 @@ groups:
         pt: { name: "Ford FE (332 a 428)", text: "1958-76: o 352 e os 390, o 406 e o 427 com dois quádruplos e 3x2, o 428 Cobra Jet, o cross-ram Weber do 427." }
       - name: "Ford Cleveland (351C, 351M / 400)"
         id: ford_cleveland
-        file: StreetCorsa-ford_cleveland-1.0.zip
-        size: 35 MB
+        file: StreetCorsa-ford_cleveland-1.1.zip
+        size: 36 MB
         kind: Engine pack
         text: "The 351 Cleveland (2V, 4V, Cobra Jet, Boss 351) and the tall-deck 400 and 351M."
         es: { text: "El 351 Cleveland (2V, 4V, Cobra Jet, Boss 351) y los de bloque alto, el 400 y el 351M." }
         pt: { text: "O 351 Cleveland (2V, 4V, Cobra Jet, Boss 351) e os de bloco alto, o 400 e o 351M." }
       - name: "Ford 385 (429 / 460, Boss 429)"
         id: ford_385
-        file: StreetCorsa-ford_385-1.0.zip
+        file: StreetCorsa-ford_385-1.1.zip
         size: 32 MB
         kind: Engine pack
         text: "The 429 Thunder Jet, Cobra Jet and Super Cobra Jet, the 460, and the Boss 429 on its semi-hemi heads."
@@ -155,7 +155,7 @@ groups:
         pt: { text: "O 188 e o 221 do Falcon argentino, o 221 SP do Sprint e o 221 de competição de Oreste Berta." }
       - name: "Lincoln-Mercury V8 (Y-block, MEL)"
         id: lincoln_v8
-        file: StreetCorsa-lincoln_v8-1.0.zip
+        file: StreetCorsa-lincoln_v8-1.1.zip
         size: 36 MB
         kind: Engine pack
         text: "The Lincoln Y-block of the Continental Mark II, and the MEL big block up to the 462."

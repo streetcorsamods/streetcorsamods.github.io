@@ -1,7 +1,7 @@
 {
   "id": "olds_v8",
   "name": "Oldsmobile V8 (400 / 455)",
-  "version": "1.0",
+  "version": "1.1",
   "description": "The Oldsmobile big-block V8: the 1965-67 and 1968-69 400s and the 455, with their factory builds (the L69 Tri-Carb, the 4-4-2, the W-30 with Force-Air, the Hurst/Olds) and a 455 crate engine. Every part ours, drawn from solids; the Turbo Hydra-Matic from Jorma Rysky's \"Naturally Aspirated 454 cid V8\" (Sketchfab, CC BY 4.0).",
   "settings": [
     "streetrod"

@@ -1,7 +1,7 @@
 {
   "id": "ford_fe",
   "name": "Ford FE V8 (332 / 352 / 360 / 390 / 406 / 427 / 428)",
-  "version": "1.1",
+  "version": "1.2",
   "description": "Ford's FE big block, 1958-76: the Thunderbird 352 and 390s, the 406 and 427 high-performance engines with their dual quads and 3x2s, the 428 Police Interceptor and Cobra Jet, and the 427's Weber cross-ram race induction; the Toploader, the Borg-Warner T-10, the Cruise-O-Matic and the C6. All drawn from solids.",
   "settings": [
     "streetrod"

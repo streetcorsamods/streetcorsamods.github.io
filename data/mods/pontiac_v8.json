@@ -1,7 +1,7 @@
 {
   "id": "pontiac_v8",
   "name": "Pontiac V8 (389 / 400 / 455)",
-  "version": "1.0",
+  "version": "1.1",
   "description": "The Pontiac V8: 389, 400 and 455 with their factory builds (GTO 4-bbl and Tri-Power, Ram Air II, III and IV, the 455 and the 1977 Trans Am's W72) and a Tri-Power crate engine. Every part ours, drawn from solids; the Turbo Hydra-Matic from Jorma Rysky's \"Naturally Aspirated 454 cid V8\" (Sketchfab, CC BY 4.0).",
   "settings": [
     "streetrod"
