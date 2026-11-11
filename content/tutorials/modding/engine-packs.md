@@ -14,10 +14,13 @@ one Subversion (SVN) repository per pack, with the modding wiki and a tracker fo
 |---|---|
 | [Buick V8](/mods/buick-v8/) | [buick-v8](https://sourceforge.net/p/streetcorsa-mods/buick-v8/) |
 | [Cadillac V8](/mods/cadillac-v8/) | [cadillac-v8](https://sourceforge.net/p/streetcorsa-mods/cadillac-v8/) |
+| [Chevrolet big block](/mods/chevrolet-big-block/) | [chevrolet-big-block-v8](https://sourceforge.net/p/streetcorsa-mods/chevrolet-big-block-v8/) |
 | [Chevrolet W](/mods/chevrolet-w/) | [chevrolet-w-v8](https://sourceforge.net/p/streetcorsa-mods/chevrolet-w-v8/) |
 | [Ford 385](/mods/ford-385/) | [ford-385-v8](https://sourceforge.net/p/streetcorsa-mods/ford-385-v8/) |
 | [Ford Cleveland](/mods/ford-cleveland/) | [ford-cleveland-v8](https://sourceforge.net/p/streetcorsa-mods/ford-cleveland-v8/) |
 | [Ford Falcon six](/mods/ford-falcon-six/) | [ford-inline-six](https://sourceforge.net/p/streetcorsa-mods/ford-inline-six/) |
+| [Ford FE](/mods/ford-fe/) | [ford-fe-v8](https://sourceforge.net/p/streetcorsa-mods/ford-fe-v8/) |
+| [Ford Y-block](/mods/ford-y-block/) | [ford-y-block-v8](https://sourceforge.net/p/streetcorsa-mods/ford-y-block-v8/) |
 | [Lincoln-Mercury V8](/mods/lincoln-mercury-v8/) | [lincoln-v8](https://sourceforge.net/p/streetcorsa-mods/lincoln-v8/) |
 | [Oldsmobile V8](/mods/oldsmobile-v8/) | [olds-v8](https://sourceforge.net/p/streetcorsa-mods/olds-v8/) |
 | [Pontiac V8](/mods/pontiac-v8/) | [pontiac-v8](https://sourceforge.net/p/streetcorsa-mods/pontiac-v8/) |

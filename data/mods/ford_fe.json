@@ -1,0 +1,82 @@
+{
+  "id": "ford_fe",
+  "name": "Ford FE V8 (332 / 352 / 360 / 390 / 406 / 427 / 428)",
+  "version": "1.1",
+  "description": "Ford's FE big block, 1958-76: the Thunderbird 352 and 390s, the 406 and 427 high-performance engines with their dual quads and 3x2s, the 428 Police Interceptor and Cobra Jet, and the 427's Weber cross-ram race induction; the Toploader, the Borg-Warner T-10, the Cruise-O-Matic and the C6. All drawn from solids.",
+  "settings": [
+    "streetrod"
+  ],
+  "builds": [
+    {
+      "engine": "Ford 352 Interceptor Special 4V 300 hp (1958 Thunderbird)",
+      "gearbox": "Cruise-O-Matic",
+      "crate": false
+    },
+    {
+      "engine": "Ford 390 Thunderbird Special 4V 300 hp (1963 Galaxie)",
+      "gearbox": "Cruise-O-Matic",
+      "crate": false
+    },
+    {
+      "engine": "Ford 390 4V 315 hp (1967 Galaxie)",
+      "gearbox": "C6",
+      "crate": false
+    },
+    {
+      "engine": "Ford 390 GT 4V 335 hp (1966 Fairlane GT)",
+      "gearbox": "close-ratio Toploader",
+      "crate": false
+    },
+    {
+      "engine": "Ford 390 M-code 3x2-bbl 340 hp (1962 Thunderbird)",
+      "gearbox": "Cruise-O-Matic",
+      "crate": false
+    },
+    {
+      "engine": "Ford 390 2V 161 hp net (1973 F-350)",
+      "gearbox": "C6",
+      "crate": false
+    },
+    {
+      "engine": "Ford 406 High Performance 3x2-bbl 405 hp (1963 Galaxie)",
+      "gearbox": "Borg-Warner T-10",
+      "crate": false
+    },
+    {
+      "engine": "Ford 427 side-oiler dual quad 425 hp (1965 Shelby Cobra 427)",
+      "gearbox": "close-ratio Toploader",
+      "crate": false
+    },
+    {
+      "engine": "Ford 428 Police Interceptor dual quad 355 hp (1967 Shelby GT500)",
+      "gearbox": "close-ratio Toploader",
+      "crate": false
+    },
+    {
+      "engine": "Ford 428 Cobra Jet Ram Air 335 hp (1969 Shelby GT500)",
+      "gearbox": "close-ratio Toploader",
+      "crate": false
+    },
+    {
+      "engine": "Ford 428 Cobra Jet 335 hp (1970 Mustang Mach 1)",
+      "gearbox": "close-ratio Toploader",
+      "crate": false
+    },
+    {
+      "engine": "Ford 428 Super Cobra Jet 335 hp (1970, Drag Pack)",
+      "gearbox": "close-ratio Toploader",
+      "crate": false
+    },
+    {
+      "engine": "Ford 427 Weber cross-ram race engine with headers (GT40 Mk II)",
+      "gearbox": "race Toploader",
+      "crate": true
+    },
+    {
+      "engine": "Ford 428 Cobra Jet crate engine with headers",
+      "gearbox": "close-ratio Toploader",
+      "crate": true
+    }
+  ],
+  "credits": []
+}
