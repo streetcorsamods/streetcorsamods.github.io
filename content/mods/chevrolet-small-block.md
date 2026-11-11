@@ -19,7 +19,7 @@ Chevrolet's small block from 1955 to 1970: the 265 and its Power Pack, the 283 o
 solid-lifter L76 327s, the Z/28's 302, the 350 L48 and LT-1, a 350 restomod with a Tremec T56, and the detailed SBC 350
 with its TH350. With three-speeds, Powerglides, Super T-10s and log or ram's horn manifolds.
 
-Its heart is Doug Broast's "L79 Chevrolet small block COMPLETE ENGINE COMPONENTS"
+Its heart is Doug Broast's "[L79 Chevrolet small block COMPLETE ENGINE COMPONENTS](https://grabcad.com/library/l79-chevrolet-small-block-complete-engine-components-1)"
 ([GrabCAD](https://grabcad.com/doug.broast-1)), a CAD model of the 1965 L79 down to the valvetrain, used with Doug's
 permission: thanks, Doug! The other models come from the GrabCAD authors in the credits. If one of them is yours and
 you'd rather it weren't here, [open an issue](https://github.com/streetcorsamods/street-corsa/issues) and it comes out.
