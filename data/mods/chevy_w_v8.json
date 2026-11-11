@@ -1,7 +1,7 @@
 {
   "id": "chevy_w_v8",
   "name": "Chevrolet W V8 (348 / 409 / 427 Z11)",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Chevrolet's W-series V8, 1958-65: the 348 (with the 1959 Tri-Power), the 409 (single and dual four-barrels, the 1961-64 Impala SS engines) and the 427 Z11, with the T-10, the Muncie M20 and the Powerglide. Every part ours, drawn from solids.",
   "settings": [
     "streetrod"

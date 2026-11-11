@@ -1,7 +1,7 @@
 {
   "id": "ford_cleveland",
   "name": "Ford 335 V8 (351 Cleveland, 351M / 400)",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Ford's 335-series V8 with its canted-valve heads: the 351 Cleveland of 1970-74 (2V, 4V, Cobra Jet, Boss 351) and the tall-deck 400 and 351M of 1971-82; the Toploader 4-speed, the FMX and the C6. Every part ours, drawn from solids.",
   "settings": [
     "streetrod"

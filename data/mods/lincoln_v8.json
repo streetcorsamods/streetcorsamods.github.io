@@ -1,7 +1,7 @@
 {
   "id": "lincoln_v8",
   "name": "Lincoln-Mercury V8 (Lincoln Y-block, MEL)",
-  "version": "1.0",
+  "version": "1.1",
   "description": "The Lincoln-Mercury division's V8s: the Lincoln Y-block of 1952-57 (317, 341, 368: the Continental Mark II's) with the Hydra-Matic and the Turbo-Drive, and the MEL big block of 1958-68 (Mercury 383 and 430 Super Marauder, Edsel 410, Lincoln 430 and 462). Every part ours, drawn from solids.",
   "settings": [
     "streetrod"

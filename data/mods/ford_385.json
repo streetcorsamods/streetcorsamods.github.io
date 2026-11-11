@@ -1,7 +1,7 @@
 {
   "id": "ford_385",
   "name": "Ford 385 V8 (429 / 460, Boss 429)",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Ford's 385-series big block, 1968-78: the 429 Thunder Jet, Cobra Jet and Super Cobra Jet, the 460, and the Boss 429 with its aluminium semi-hemi heads; the Toploader 4-speed and the C6. Every part ours, drawn from solids.",
   "settings": [
     "streetrod"

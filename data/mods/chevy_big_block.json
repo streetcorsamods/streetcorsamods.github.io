@@ -1,7 +1,7 @@
 {
   "id": "chevy_big_block",
   "name": "Chevrolet big-block V8 (396 / 402 / 427 / 454)",
-  "version": "1.2",
+  "version": "1.3",
   "description": "The Chevrolet Mark IV big block: 396, 402, 427 (and the aluminium ZL1) and 454, with their factory builds and a blown 454 drag engine. Block, heads, covers, intakes, Holley, manifolds, accessories, radiators and the Turbo Hydra-Matic from Jorma Rysky's \"Naturally Aspirated 454 cid V8\" and \"Blown 454 cid V8\" (Sketchfab, CC BY 4.0); internals, the Muncie 4-speed, the Quadrajet and the Tri-Power our own.",
   "settings": [
     "streetrod"
