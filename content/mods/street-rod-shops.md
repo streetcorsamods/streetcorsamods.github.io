@@ -7,6 +7,10 @@ description: "Street Rod's rooms: the paint booth and its painter, the part shop
 source: street-rod-shops
 shots_note: "In Street Rod, drawn by the game."
 shots:
+  - { img: paint-booth, caption: "The painter at work: a '63 Galaxie going Silver Frost" }
+  - { img: paint-job, caption: "The paint job: the make's colours, or one of your own, seen on the car before he sprays it" }
+  - { img: machine-shop, caption: "Gardena Machine & Engine: a block on the stand, the work on the counter" }
+  - { img: warehouse, caption: "Your warehouse: a bay for each car, room for ten" }
   - { img: /images/tutorials/parts-shop.jpg, caption: "Inside a part shop: the shelves, the counter, the parts on show" }
 ---
 
