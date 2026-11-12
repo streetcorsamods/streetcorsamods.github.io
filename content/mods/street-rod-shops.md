@@ -5,6 +5,7 @@ group: addons
 weight: 3
 description: "Street Rod's rooms: the paint booth and its painter, the part shop, the machine shop, and the warehouse your cars are kept in."
 source: street-rod-shops
+comes_with: streetrod
 shots_note: "In Street Rod, drawn by the game."
 shots:
   - { img: paint-booth, caption: "The painter at work: a '63 Galaxie going Silver Frost" }
@@ -21,8 +22,8 @@ with its own air: the shop's hum, the machine shop's, the booth's fans and the g
 
 ## With Street Rod
 
-They're Street Rod's own rooms, and they play in Street Rod only. Up to Street Rod 0.1.1 they came inside the setting's
-download; from Street Rod 0.4.0 on they're a mod of their own, and the setting needs it installed. The shops
+They're Street Rod's own rooms, and they play in Street Rod only. Since Street Rod 0.4.0 they're a mod of their own, and
+they come inside Street Rod's download: installing Street Rod installs them too. The shops
 themselves, who sells what and at what price, stay Street Rod's: this is the rooms they're drawn in.
 
 ## Your own rooms

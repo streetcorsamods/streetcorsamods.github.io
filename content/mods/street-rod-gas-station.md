@@ -5,6 +5,7 @@ group: addons
 weight: 2
 description: "Crossroads Gas: the forecourt, the pumps under the canopy, the office by the road, and the attendant at the pump."
 source: street-rod-gas-station
+comes_with: streetrod
 shots_note: "At Crossroads Gas, drawn by the game."
 shots:
   - { img: /images/tutorials/gas-station.jpg, caption: "Pulling in at Crossroads Gas: the attendant waits at the pump" }
@@ -17,8 +18,8 @@ can't make it there on its own. The bell over the drive, the pump running and th
 
 ## With Street Rod
 
-It's Street Rod's own station, and it plays in Street Rod only. Up to Street Rod 0.1.1 it came inside the setting's
-download; from Street Rod 0.4.0 on it's a mod of its own, and the setting needs it installed. The attendant's
+It's Street Rod's own station, and it plays in Street Rod only. Since Street Rod 0.4.0 it's a mod of its own, and it
+comes inside Street Rod's download: installing Street Rod installs it too. The attendant's
 words stay Street Rod's, so another station still has him talking.
 
 ## Your own station

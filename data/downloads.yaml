@@ -31,12 +31,12 @@ groups:
       - name: Street Rod
         id: streetrod
         file: StreetCorsa-streetrod-0.4.0.zip
-        size: 70 MB
+        size: 278 MB
         kind: Setting
         badge: Default
-        text: Los Angeles, 1970. Buy a tired old car, build its engine on the stand and race Main Street at night for cash and pink slips, until the King will race you.
-        es: { text: "Los Ángeles, 1970. Compra un auto viejo y cansado, arma su motor en el soporte y corre en Main Street de noche por dinero o apostando el auto, hasta que el King acepte correr contigo." }
-        pt: { text: "Los Angeles, 1970. Compre um carro velho e cansado, monte o motor no cavalete e corra na Main Street à noite por dinheiro ou valendo o carro, até o King aceitar correr com você." }
+        text: Los Angeles, 1970. Buy a tired old car, build its engine on the stand and race Main Street at night for cash and pink slips, until the King will race you. Its garage, gas station, shops and Main Street come with it.
+        es: { text: "Los Ángeles, 1970. Compra un auto viejo y cansado, arma su motor en el soporte y corre en Main Street de noche por dinero o apostando el auto, hasta que el King acepte correr contigo. Trae su taller, su estación de servicio, sus locales y Main Street." }
+        pt: { text: "Los Angeles, 1970. Compre um carro velho e cansado, monte o motor no cavalete e corra na Main Street à noite por dinheiro ou valendo o carro, até o King aceitar correr com você. Traz a garagem, o posto, as lojas e a Main Street." }
       - name: Touge Nights
         id: touge_nights
         file: StreetCorsa-touge_nights-0.1.0.zip
@@ -168,38 +168,6 @@ groups:
     es: { title: Complementos, text: Pequeños extras para el taller. }
     pt: { title: Complementos, text: Pequenos extras para a garagem. }
     items:
-      - name: Street Rod garage
-        id: streetrod_garage
-        file: StreetCorsa-streetrod_garage-1.1.0.zip
-        size: 26 MB
-        kind: Add-on
-        text: "Street Rod's workshop and everything in it. Street Rod needs it."
-        es: { name: Taller de Street Rod, text: "El taller de Street Rod y todo lo que hay en él. Street Rod lo necesita." }
-        pt: { name: Garagem do Street Rod, text: "A oficina do Street Rod e tudo o que há nela. O Street Rod precisa dela." }
-      - name: Street Rod gas station
-        id: streetrod_gas_station
-        file: StreetCorsa-streetrod_gas_station-1.0.0.zip
-        size: 76 MB
-        kind: Add-on
-        text: "Crossroads Gas, its pumps, its office and the attendant. Street Rod needs it."
-        es: { name: Estación de servicio de Street Rod, text: "Crossroads Gas, sus surtidores, su oficina y el playero. Street Rod la necesita." }
-        pt: { name: Posto de gasolina do Street Rod, text: "O Crossroads Gas, suas bombas, seu escritório e o frentista. O Street Rod precisa dele." }
-      - name: Street Rod shops
-        id: streetrod_shops
-        file: StreetCorsa-streetrod_shops-1.0.0.zip
-        size: 13 MB
-        kind: Add-on
-        text: "The paint booth, the part shop, the machine shop and the warehouse. Street Rod needs them."
-        es: { name: Locales de Street Rod, text: "La cabina de pintura, la casa de repuestos, la rectificadora y el depósito. Street Rod los necesita." }
-        pt: { name: Lojas do Street Rod, text: "A cabine de pintura, a loja de peças, a retífica e o depósito. O Street Rod precisa delas." }
-      - name: Street Rod Main Street
-        id: streetrod_main_street
-        file: StreetCorsa-streetrod_main_street-1.0.0.zip
-        size: 93 MB
-        kind: Add-on
-        text: "Main Street, its diners' corner and the street kit it's laid out with. Street Rod needs it."
-        es: { name: Main Street de Street Rod, text: "Main Street, la esquina de sus diners y las piezas con que se arma. Street Rod la necesita." }
-        pt: { name: Main Street do Street Rod, text: "A Main Street, a esquina das lanchonetes e as peças com que é montada. O Street Rod precisa dela." }
       - { name: Bush DAC10 radio, id: bushradio, kind: Add-on, file: StreetCorsa-bushradio-1.0.zip, size: 2 MB, text: "A 1950 radio on the garage's welder.",
           es: { name: Radio Bush DAC10, text: "Una radio de 1950 sobre la soldadora del taller." },
           pt: { name: Rádio Bush DAC10, text: "Um rádio de 1950 em cima da máquina de solda da garagem." } }

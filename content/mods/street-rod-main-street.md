@@ -5,6 +5,7 @@ group: addons
 weight: 4
 description: "The street the racers meet on: Main Street and its diners, and the street kit it is laid out with."
 source: street-rod-main-street
+comes_with: streetrod
 shots_note: "On Main Street, drawn by the game."
 shots:
   - { img: /images/mods/street-rod/diner.jpg, caption: "Parked at the Main Street Diner: two racers in tonight" }
@@ -18,8 +19,8 @@ and every save lays the street out its own way. The street's air and the diners'
 
 ## With Street Rod
 
-It's Street Rod's own street, and it plays in Street Rod only. Up to Street Rod 0.1.1 it came inside the setting's
-download; from Street Rod 0.4.0 on it's a mod of its own, and the setting needs it installed.
+It's Street Rod's own street, and it plays in Street Rod only. Since Street Rod 0.4.0 it's a mod of its own, and it
+comes inside Street Rod's download: installing Street Rod installs it too.
 
 The four diners (the Main Street Diner, the Hi-Way Grill, the Surfside Coffee Shop and the Starlite) stay Street Rod's:
 who's a regular where, and what's at stake, is the career's. Each one dresses this street its own way, with pieces of
