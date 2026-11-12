@@ -1,27 +1,35 @@
 {{- /* A mod's credits in its card: a short list as it is; a long one (more than $inline credits, or more than $chars
        characters in all: a scene's credit can name a dozen models) behind a button that opens them in a dialog with a
-       scroll of its own, so the card stays short. Takes the list of credits. */ -}}
+       scroll of its own, so the card stays short. The list is in the card either way: the script moves it into the
+       dialog and shows the button, so without JavaScript (or printed) the credits still read inline.
+       Takes the list of credits, or a single one as a string. */ -}}
 {{- $inline := 3 -}}
 {{- $chars := 400 -}}
-{{- $total := 0 -}}{{- range . }}{{ $total = add $total (len .) }}{{ end -}}
 {{- with . }}
+{{- $list := cond (reflect.IsSlice .) . (slice .) -}}
+{{- $n := len $list -}}
 <div class="mod-credits">
   <p class="label">Credits</p>
-  {{- if and (le (len .) $inline) (le $total $chars) }}
-  <ul>{{ range . }}<li>{{ partial "credit.html" . }}</li>{{ end }}</ul>
+  {{- if and (le $n $inline) (le (strings.RuneCount (delimit $list "")) $chars) }}
+  <ul>{{ range $list }}<li>{{ partial "credit.html" . }}</li>{{ end }}</ul>
   {{- else }}
-  <button type="button" class="link-btn" data-opens="credits-dialog" aria-haspopup="dialog">{{ if eq (len .) 1 }}See the credits{{ else }}See all {{ len . }} credits{{ end }}</button>
+  <ul id="credits-list">{{ range $list }}<li>{{ partial "credit.html" . }}</li>{{ end }}</ul>
+  <button type="button" class="link-btn" data-opens="credits-dialog" aria-haspopup="dialog" hidden>{{ if eq $n 1 }}See the credits{{ else if eq $n 2 }}See both credits{{ else if le $n $inline }}See the {{ $n }} credits{{ else }}See all {{ $n }} credits{{ end }}</button>
   <dialog id="credits-dialog" class="modal" aria-labelledby="credits-dialog-title">
     <header class="modal-head">
       <h2 id="credits-dialog-title">Credits</h2>
       <form method="dialog"><button class="modal-x" aria-label="Close">×</button></form>
     </header>
-    <ul class="modal-body">{{ range . }}<li>{{ partial "credit.html" . }}</li>{{ end }}</ul>
   </dialog>
   <script>
   (function () {
-    var d = document.getElementById("credits-dialog");
-    document.querySelector('[data-opens="credits-dialog"]').addEventListener("click", function () { d.showModal(); });
+    var d = document.getElementById("credits-dialog"), list = document.getElementById("credits-list");
+    var btn = document.querySelector('[data-opens="credits-dialog"]');
+    if (!d.showModal) return; // no dialog support: the list stays in the card
+    list.className = "modal-body";
+    d.appendChild(list);
+    btn.hidden = false;
+    btn.addEventListener("click", function () { d.showModal(); });
     // A click on the backdrop (the dialog itself, outside its box) closes it
     d.addEventListener("click", function (e) { if (e.target === d) d.close(); });
   })();
