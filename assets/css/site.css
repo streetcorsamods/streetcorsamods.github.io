@@ -451,7 +451,7 @@ th { font-family: var(--display); font-weight: 400; text-transform: uppercase; l
 .mod-credits { border-top: 1px solid var(--line); margin: 0 0 14px; padding-top: 12px; font-size: 13px; color: var(--muted); }
 .mod-credits .label { margin: 0 0 4px; color: var(--text); font-size: 14px; }
 .mod-credits ul { margin: 0; padding-left: 16px; }
-.mod-credits li { margin: 2px 0; }
+.mod-credits li { margin: 2px 0; overflow-wrap: anywhere; }
 .mod-credits p:not(.label) { margin: 0 0 4px; }
 .link-btn { background: none; border: 0; padding: 0; font: inherit; color: var(--accent-hover); cursor: pointer; }
 .link-btn:hover { text-decoration: underline; }
