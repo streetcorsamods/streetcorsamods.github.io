@@ -14,7 +14,7 @@
         {{ range . }}
           {{ $page := . }}
           <a class="mod-card" href="{{ .RelPermalink }}">
-            {{ with index .Params.shots 0 }}<img src="{{ if hasPrefix .img "/" }}{{ .img }}{{ else }}/images/mods/{{ $page.File.ContentBaseName }}/{{ .img }}-sm.jpg{{ end }}" alt="" loading="lazy" decoding="async" width="640" height="360">{{ end }}
+            {{ with index .Params.shots 0 }}<img src="{{ if hasPrefix .img "/" }}{{ replace .img ".jpg" "-sm.jpg" }}{{ else }}/images/mods/{{ $page.File.ContentBaseName }}/{{ .img }}-sm.jpg{{ end }}" alt="" loading="lazy" decoding="async" width="640" height="360">{{ end }}
             <span class="mod-card-text">
               <strong>{{ .Title }}</strong>
               {{ with .Description }}<span>{{ . }}</span>{{ end }}
