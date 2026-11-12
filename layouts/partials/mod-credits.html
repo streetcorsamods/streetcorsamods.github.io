@@ -1,13 +1,16 @@
-{{- /* A mod's credits in its card: a short list as it is; a long one (more than $inline) behind a button that opens
-       them in a dialog with a scroll of its own, so the card stays short. Takes the list of credits. */ -}}
+{{- /* A mod's credits in its card: a short list as it is; a long one (more than $inline credits, or more than $chars
+       characters in all: a scene's credit can name a dozen models) behind a button that opens them in a dialog with a
+       scroll of its own, so the card stays short. Takes the list of credits. */ -}}
 {{- $inline := 3 -}}
+{{- $chars := 400 -}}
+{{- $total := 0 -}}{{- range . }}{{ $total = add $total (len .) }}{{ end -}}
 {{- with . }}
 <div class="mod-credits">
   <p class="label">Credits</p>
-  {{- if le (len .) $inline }}
+  {{- if and (le (len .) $inline) (le $total $chars) }}
   <ul>{{ range . }}<li>{{ partial "credit.html" . }}</li>{{ end }}</ul>
   {{- else }}
-  <button type="button" class="link-btn" data-opens="credits-dialog" aria-haspopup="dialog">See all {{ len . }} credits</button>
+  <button type="button" class="link-btn" data-opens="credits-dialog" aria-haspopup="dialog">{{ if eq (len .) 1 }}See the credits{{ else }}See all {{ len . }} credits{{ end }}</button>
   <dialog id="credits-dialog" class="modal" aria-labelledby="credits-dialog-title">
     <header class="modal-head">
       <h2 id="credits-dialog-title">Credits</h2>
