@@ -19,7 +19,7 @@ and every save lays the street out its own way. The street's air and the diners'
 ## With Street Rod
 
 It's Street Rod's own street, and it plays in Street Rod only. Up to Street Rod 0.1.1 it came inside the setting's
-download; from Street Rod's next version on it's a mod of its own, and the setting needs it installed.
+download; from Street Rod 0.4.0 on it's a mod of its own, and the setting needs it installed.
 
 The four diners (the Main Street Diner, the Hi-Way Grill, the Surfside Coffee Shop and the Starlite) stay Street Rod's:
 who's a regular where, and what's at stake, is the career's. Each one dresses this street its own way, with pieces of

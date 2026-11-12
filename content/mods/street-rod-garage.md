@@ -21,7 +21,7 @@ button round the car. The garage's air comes with it.
 ## With Street Rod
 
 It's Street Rod's own garage, and it plays in Street Rod only. Up to Street Rod 0.1.1 it came inside the setting's
-download; from Street Rod's next version on it's a mod of its own, and the setting needs it installed.
+download; from Street Rod 0.4.0 on it's a mod of its own, and the setting needs it installed.
 
 ## Your own garage
 
