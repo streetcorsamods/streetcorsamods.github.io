@@ -54,6 +54,9 @@ MODS = {
     "touge_nights": "settings/touge_nights",
     "bushradio": "addons/bushradio",
     "streetrod_garage": "addons/streetrod_garage",
+    "streetrod_gas_station": "addons/streetrod_gas_station",
+    "streetrod_shops": "addons/streetrod_shops",
+    "streetrod_main_street": "addons/streetrod_main_street",
 }
 
 # Screenshots the site adds to the synced pages (static/images/tutorials). Each goes right under a heading
@@ -188,8 +191,11 @@ def mod_data(folder: pathlib.Path) -> dict:
         credit = read_jsonc(part).get("credit")
         if credit:
             credits.add(str(credit))
-    # An add-on's garage and props (the Street Rod garage: its models and textures, one credit each)
-    places = [*folder.glob("garages/*/scene.json"), *folder.glob("props/*/prop.json")] if folder.parent.name == "addons" else []
+    # An add-on's places (Street Rod's garage, gas station, shops and Main Street): each scene's, prop's and street
+    # piece's models and textures, one credit each
+    kinds = ["garages/*/scene.json", "props/*/prop.json", "stations/*/station.json", "booths/*/booth.json",
+             "shopscenes/*/shop.json", "warehouses/*/warehouse.json", "streets/*/street.json", "streetkit/*/piece.json"]
+    places = [p for k in kinds for p in folder.glob(k)] if folder.parent.name == "addons" else []
     for place in sorted(places):
         credit = read_jsonc(place).get("credit")
         if credit:

@@ -16,7 +16,7 @@ shots:
 The workshop Street Rod is played from: a cinder-block garage with a lift in the middle, and everything standing
 round it. The benches and the tool chests, the welder and the compressor, the drill press and the vise, jerrycans,
 oil drums, old tyres, a creeper, the engine stand and the hoist. Your car sits on the lift; every place in it is a
-button round the car.
+button round the car. The garage's air comes with it.
 
 ## With Street Rod
 
