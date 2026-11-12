@@ -68,5 +68,5 @@ road races and time attacks, for cash or for pink slips, and the cops come out a
 
 ## Get it
 
-Install it first: it's the default setting. The [engine packs](/mods/#engines) give its cars their real engines to
+Install it first: it's the default setting. Its workshop is the [Street Rod garage](/mods/street-rod-garage/), a mod of its own from the setting's next version on. The [engine packs](/mods/#engines) give its cars their real engines to
 build. New to it? Start with the [Street Rod tutorials](/tutorials/street-rod/).

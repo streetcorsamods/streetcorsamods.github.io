@@ -53,6 +53,7 @@ MODS = {
     "streetrod": "settings/streetrod",
     "touge_nights": "settings/touge_nights",
     "bushradio": "addons/bushradio",
+    "streetrod_garage": "addons/streetrod_garage",
 }
 
 # Screenshots the site adds to the synced pages (static/images/tutorials). Each goes right under a heading
@@ -185,6 +186,12 @@ def mod_data(folder: pathlib.Path) -> dict:
     # The parts' credits of an engine pack (a setting's are too many for its page: the game's Settings list them)
     for part in sorted((folder / "parts").rglob("*.json")) if folder.parent.name == "engines" and (folder / "parts").is_dir() else []:
         credit = read_jsonc(part).get("credit")
+        if credit:
+            credits.add(str(credit))
+    # An add-on's garage and props (the Street Rod garage: its models and textures, one credit each)
+    places = [*folder.glob("garages/*/scene.json"), *folder.glob("props/*/prop.json")] if folder.parent.name == "addons" else []
+    for place in sorted(places):
+        credit = read_jsonc(place).get("credit")
         if credit:
             credits.add(str(credit))
     return {

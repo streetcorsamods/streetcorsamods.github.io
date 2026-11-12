@@ -2,7 +2,7 @@
 title: "Bush DAC10 radio"
 mod: bushradio
 group: addons
-weight: 1
+weight: 2
 description: "A 1950 radio on the garage's welder."
 credits:
   - '"1950 Bush DAC10 Vintage Radio" by Fishboe (sketchfab.com/ministephen), CC BY 4.0 (the model)'

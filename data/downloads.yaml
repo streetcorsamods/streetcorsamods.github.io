@@ -168,6 +168,12 @@ groups:
     es: { title: Complementos, text: Pequeños extras para el taller. }
     pt: { title: Complementos, text: Pequenos extras para a garagem. }
     items:
+      - name: Street Rod garage
+        id: streetrod_garage
+        kind: Add-on
+        text: "Street Rod's workshop and everything in it. In the Street Rod download for now; on its own with Street Rod's next version."
+        es: { name: Taller de Street Rod, text: "El taller de Street Rod y todo lo que hay en él. Por ahora viene en la descarga de Street Rod; aparte desde la próxima versión de Street Rod." }
+        pt: { name: Garagem do Street Rod, text: "A oficina do Street Rod e tudo o que há nela. Por enquanto vem no download do Street Rod; separada a partir da próxima versão do Street Rod." }
       - { name: Bush DAC10 radio, id: bushradio, kind: Add-on, file: StreetCorsa-bushradio-1.0.zip, size: 2 MB, text: "A 1950 radio on the garage's welder.",
           es: { name: Radio Bush DAC10, text: "Una radio de 1950 sobre la soldadora del taller." },
           pt: { name: Rádio Bush DAC10, text: "Um rádio de 1950 em cima da máquina de solda da garagem." } }
