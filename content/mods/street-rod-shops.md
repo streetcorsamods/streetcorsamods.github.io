@@ -22,7 +22,7 @@ with its own air: the shop's hum, the machine shop's, the booth's fans and the g
 ## With Street Rod
 
 They're Street Rod's own rooms, and they play in Street Rod only. Up to Street Rod 0.1.1 they came inside the setting's
-download; from Street Rod's next version on they're a mod of their own, and the setting needs it installed. The shops
+download; from Street Rod 0.4.0 on they're a mod of their own, and the setting needs it installed. The shops
 themselves, who sells what and at what price, stay Street Rod's: this is the rooms they're drawn in.
 
 ## Your own rooms

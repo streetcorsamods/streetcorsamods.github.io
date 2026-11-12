@@ -18,7 +18,7 @@ can't make it there on its own. The bell over the drive, the pump running and th
 ## With Street Rod
 
 It's Street Rod's own station, and it plays in Street Rod only. Up to Street Rod 0.1.1 it came inside the setting's
-download; from Street Rod's next version on it's a mod of its own, and the setting needs it installed. The attendant's
+download; from Street Rod 0.4.0 on it's a mod of its own, and the setting needs it installed. The attendant's
 words stay Street Rod's, so another station still has him talking.
 
 ## Your own station

@@ -3,7 +3,7 @@ title: Descargas
 description: El juego, sus ambientaciones, packs de motores y complementos.
 ---
 
-**Acceso anticipado:** versión 0.1.3, con trabajo por delante. Puede que las partidas guardadas no pasen a versiones futuras. Qué cambió: el [registro de cambios](/about/changelog/) (en inglés).
+**Acceso anticipado:** versión 0.1.4, con trabajo por delante. Puede que las partidas guardadas no pasen a versiones futuras. Qué cambió: el [registro de cambios](/about/changelog/) (en inglés).
 
 1. Instala **el juego**.
 2. Agrega una **ambientación**: en la pantalla principal, **Mod Manager → Install mods**, elige el zip.

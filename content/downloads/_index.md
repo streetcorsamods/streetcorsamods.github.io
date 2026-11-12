@@ -3,7 +3,7 @@ title: Downloads
 description: The game, its settings, engine packs and add-ons.
 ---
 
-**Early access:** version 0.1.3, with work ahead. Saves may not carry over to later versions. What changed: the [changelog](/about/changelog/).
+**Early access:** version 0.1.4, with work ahead. Saves may not carry over to later versions. What changed: the [changelog](/about/changelog/).
 
 1. Install **the game**.
 2. Add a **setting**: on the main screen, **Mod Manager → Install mods**, pick the zip.
