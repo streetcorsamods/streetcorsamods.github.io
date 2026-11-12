@@ -2,13 +2,20 @@
 {{- /* A mod's page: its pictures (front matter shots: a name in static/images/mods/<page>/, or a site path of its own),
        its text, its download (data/downloads.yaml, the item whose id is front matter mod), what its manifest holds
        (data/mods/<mod>.json, written by tools/sync.py). group: the downloads group it is in (settings, engines, addons).
-       source: its SVN repository's mount point on SourceForge (sourceforge.net/p/streetcorsa-mods/<source>/), for modders. */ -}}
+       source: its SVN repository's mount point on SourceForge (sourceforge.net/p/streetcorsa-mods/<source>/), for modders.
+       comes_with: the download item (its id) this mod comes inside when it has no download of its own (a setting's
+       places, in the setting's zip): its button downloads that one. */ -}}
 {{ $dir := printf "/images/mods/%s/" .File.ContentBaseName }}
 {{ $mod := index hugo.Data.mods .Params.mod }}
 {{ $item := false }}
 {{ $group := false }}
 {{ range hugo.Data.downloads.groups }}{{ $g := . }}{{ range .items }}{{ if eq .id $.Params.mod }}{{ $item = . }}{{ $group = $g }}{{ end }}{{ end }}{{ end }}
-{{ $href := cond (ne $item false) (partial "dl-href.html" $item) "" }}
+{{ $href := "" }}
+{{ with $item }}{{ $href = partial "dl-href.html" . }}{{ end }}
+{{ $with := false }}
+{{ if not $item }}{{ with .Params.comes_with }}{{ $w := . }}{{ range hugo.Data.downloads.groups }}{{ range .items }}{{ if eq .id $w }}{{ $with = . }}{{ end }}{{ end }}{{ end }}{{ end }}{{ end }}
+{{ with $with }}{{ $href = partial "dl-href.html" . }}{{ end }}
+{{ if not $group }}{{ range where hugo.Data.downloads.groups "id" $.Params.group }}{{ $group = . }}{{ end }}{{ end }}
 {{ $credits := .Params.credits | default (cond (ne $mod nil) $mod.credits slice) }}
 <div class="wrap page mod">
   <nav class="crumbs" aria-label="Breadcrumb"><a href="/downloads/">Downloads</a>{{ with $group }}<span>/</span><a href="/mods/#{{ .id }}">{{ .title }}</a>{{ end }}</nav>
@@ -25,12 +32,13 @@
     {{ end }}
     <aside class="mod-get">
       {{ if $href }}
-        <a class="btn" href="{{ $href }}"{{ if hasPrefix $href "http" }} target="_blank" rel="noopener"{{ end }}>Download</a>
+        <a class="btn" href="{{ $href }}"{{ if hasPrefix $href "http" }} target="_blank" rel="noopener"{{ end }}>{{ with $with }}Download {{ .name }}{{ else }}Download{{ end }}</a>
       {{ else }}
         <span class="btn off" aria-disabled="true">Coming soon</span>
       {{ end }}
       <dl>
         {{ with $item }}<dt>Kind</dt><dd>{{ .kind }}</dd>{{ end }}
+        {{ with $with }}<dt>Kind</dt><dd>Add-on</dd><dt>Comes with</dt><dd>{{ .name }}{{ with .size }} ({{ . }}){{ end }}</dd>{{ end }}
         {{ with $mod }}{{ with .version }}<dt>Version</dt><dd>{{ . }}</dd>{{ end }}{{ end }}
         {{ with $item }}{{ with .size }}<dt>Size</dt><dd>{{ . }}</dd>{{ end }}{{ end }}
         {{ with $mod }}{{ with .settings }}<dt>For</dt><dd>{{ range $i, $s := . }}{{ if $i }}, {{ end }}{{ if eq $s "streetrod" }}Street Rod{{ else }}{{ $s }}{{ end }}{{ end }}</dd>{{ end }}{{ end }}

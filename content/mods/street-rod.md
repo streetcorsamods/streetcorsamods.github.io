@@ -68,5 +68,5 @@ road races and time attacks, for cash or for pink slips, and the cops come out a
 
 ## Get it
 
-Install it first: it's the default setting. Its places are mods of their own since 0.4.0, each needed, so download them with it: the [garage](/mods/street-rod-garage/), the [gas station](/mods/street-rod-gas-station/), the [shops](/mods/street-rod-shops/) and [Main Street](/mods/street-rod-main-street/). The [engine packs](/mods/#engines) give its cars their real engines to
+Install it first: it's the default setting. Its places are mods of their own since 0.4.0, and its download brings them all: the [garage](/mods/street-rod-garage/), the [gas station](/mods/street-rod-gas-station/), the [shops](/mods/street-rod-shops/) and [Main Street](/mods/street-rod-main-street/). The [engine packs](/mods/#engines) give its cars their real engines to
 build. New to it? Start with the [Street Rod tutorials](/tutorials/street-rod/).
