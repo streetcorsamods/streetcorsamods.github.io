@@ -10,3 +10,5 @@ description: O jogo, os cenários, pacotes de motores e complementos.
 3. Pacotes de motores e complementos se instalam do mesmo jeito.
 
 Todos os passos: [Instalar](/tutorials/playing/install/). Assinatura e privacidade (em inglês): [Política de assinatura de código](/about/#code-signing-policy), [Privacidade](/about/#privacy).
+
+Nossos carros para o Assetto Corsa sozinho, que não precisam do Street Corsa, estão em [Mods de AC](/assetto-corsa/).
