@@ -20,6 +20,7 @@ hugo --minify      # build into public/
 | Home page text, feature boxes, the AI talk section | `content/_index.md` (`talk`; a screenshot for it: `talk.image` with `src`, `alt`, `width`, `height`, else an example talk is drawn) |
 | News | `content/news/` (one file per post, `date` in the front matter; `image`: the card thumbnail, a 640x360 `-sm` picture, else `og.jpg`) |
 | Downloads | `data/downloads.yaml` |
+| AC Mods (our Assetto Corsa cars, apart from the game) | `data/ac.yaml` (download links on SourceForge), a car's page `content/assetto-corsa/<page>.md`, its skins' previews in `static/images/assetto-corsa/<page>/` |
 | A mod's page | `content/mods/<page>.md` (text, `mod` id, `shots`), pictures in `static/images/mods/<page>/` |
 | Tutorials | `content/tutorials/` |
 | About, credits | `content/about/` |

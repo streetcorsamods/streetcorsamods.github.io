@@ -1,11 +1,14 @@
 {{ define "main" }}
-{{- /* The Downloads page, from data/downloads.yaml. A group is a category: the chips filter by it (the URL hash is the
+{{- /* The Downloads page, from data/downloads.yaml, and the AC Mods page (content/assetto-corsa, type: downloads),
+       from the data file its front matter names (data: ac -> data/ac.yaml). Its front matter placeholder: the search
+       box's hint, else i18n dl_placeholder. The game's version line shows on the Downloads page only.
+       From data/<file>.yaml. A group is a category: the chips filter by it (the URL hash is the
        group id, so /downloads/#engines opens on the engine packs) and the search box matches an item's name, text,
        kind, badge and "for". Without JavaScript the toolbar stays hidden and the page is the full list.
        Its words in another language: each group's and item's "es:"/"pt:" (dl-tr.html), and i18n. */ -}}
 {{ $v := site.Params.release }}
 {{ $groups := slice }}
-{{ range hugo.Data.downloads.groups }}
+{{ range (index hugo.Data (.Params.data | default "downloads")).groups }}
   {{ $items := slice }}{{ range .items }}{{ $items = $items | append (partial "dl-tr.html" .) }}{{ end }}
   {{ $groups = $groups | append (merge (partial "dl-tr.html" .) (dict "items" $items)) }}
 {{ end }}
@@ -14,7 +17,7 @@
   <div class="prose">
     <h1>{{ .Title }}</h1>
     {{ .Content }}
-    {{ if site.Params.released }}
+    {{ if .Params.data }}{{ else if site.Params.released }}
       <p class="muted">{{ T "dl_version" (dict "v" $v) }} · <a href="{{ site.Params.repo }}/releases/tag/v{{ $v }}" target="_blank" rel="noopener">{{ T "release_notes" }}</a></p>
     {{ else }}
       <p class="note">{{ T "dl_not_yet" }}</p>
@@ -24,7 +27,7 @@
   <div class="dl-tools" id="dl-tools" hidden data-single="{{ T "dl_one" }}" data-many="{{ T "dl_many" }}" data-here="{{ T "dl_none_here" }}">
     <div class="dl-search">
       <label class="sr" for="dl-q">{{ T "dl_search" }}</label>
-      <input type="search" id="dl-q" placeholder="{{ T "dl_placeholder" }}" autocomplete="off" spellcheck="false">
+      <input type="search" id="dl-q" placeholder="{{ .Params.placeholder | default (T "dl_placeholder") }}" autocomplete="off" spellcheck="false">
     </div>
     <div class="dl-chips" role="group" aria-label="{{ T "dl_category" }}">
       {{ $all := 0 }}{{ range $groups }}{{ $all = add $all (len .items) }}{{ end }}
@@ -49,7 +52,7 @@
         {{ $page := partial "mod-page.html" . }}
         <div class="dl-card" data-item data-text="{{ partial "dl-search-text.html" (dict "item" . "group" $g) }}">
           {{ with index $page.Params.shots 0 }}
-            <a class="dl-thumb" href="{{ $page.RelPermalink }}"{{ partial "hreflang.html" (dict "page" $here "to" $page) }} tabindex="-1" aria-hidden="true"><img src="{{ if hasPrefix .img "/" }}{{ replace .img ".jpg" "-sm.jpg" }}{{ else }}/images/mods/{{ $page.File.ContentBaseName }}/{{ .img }}-sm.jpg{{ end }}" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+            <a class="dl-thumb" href="{{ $page.RelPermalink }}"{{ partial "hreflang.html" (dict "page" $here "to" $page) }} tabindex="-1" aria-hidden="true"><img src="{{ if hasPrefix .img "/" }}{{ replace .img ".jpg" "-sm.jpg" }}{{ else }}/images/{{ $page.Section }}/{{ $page.File.ContentBaseName }}/{{ .img }}-sm.jpg{{ end }}" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
           {{ end }}
           <div class="dl-card-body">
             <h3><a href="{{ $page.RelPermalink }}"{{ partial "hreflang.html" (dict "page" $here "to" $page) }}>{{ .name }}</a>{{ with .badge }} <span class="badge">{{ . }}</span>{{ end }}</h3>

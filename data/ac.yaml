@@ -1,0 +1,60 @@
+# The AC Mods page (content/assetto-corsa): our mods for Assetto Corsa itself, apart from Street Corsa.
+# Same fields as downloads.yaml. url: the zip's SourceForge download
+# (https://sourceforge.net/projects/streetcorsa-mods/files/<folder>/<zip>/download); none: "Coming soon".
+# id: the car's AC folder name, and its page's front matter mod (content/assetto-corsa/<page>.md).
+
+groups:
+  - id: cars
+    title: Cars
+    text: Cars for Assetto Corsa on its own, no Street Corsa needed. Drag the zip onto Content Manager, or copy its content folder into your Assetto Corsa folder. Custom Shaders Patch recommended.
+    es: { title: Autos, text: "Autos para Assetto Corsa solo, sin Street Corsa. Arrastra el zip a Content Manager, o copia su carpeta content en la carpeta de Assetto Corsa. Se recomienda Custom Shaders Patch." }
+    pt: { title: Carros, text: "Carros para o Assetto Corsa sozinho, sem o Street Corsa. Arraste o zip para o Content Manager, ou copie a pasta content dele para a pasta do Assetto Corsa. Custom Shaders Patch recomendado." }
+    items:
+      - name: Ford V8 Pickup 1932
+        id: ford_v8_pickup_1932
+        url: https://sourceforge.net/projects/streetcorsa-mods/files/ford-v8-pickup-1932/ford_v8_pickup_1932_v1.2.zip/download
+        size: 101 MB
+        kind: AC car
+        text: The 1932 closed-cab pickup with the flathead V8, three-speed, wire wheels and an ahooga horn. Seven skins.
+        es: { text: "La pickup de cabina cerrada de 1932 con el V8 flathead, caja de tres marchas, ruedas de rayos y bocina ahooga. Siete pinturas." }
+        pt: { text: "A picape de cabine fechada de 1932 com o V8 flathead, câmbio de três marchas, rodas raiadas e buzina ahooga. Sete pinturas." }
+      - name: Chevrolet Master DeLuxe Coupe 1937
+        id: chevrolet_master_deluxe_1937
+        url: https://sourceforge.net/projects/streetcorsa-mods/files/chevrolet-master-deluxe-1937/chevrolet_master_deluxe_1937_v1.0.zip/download
+        size: 26 MB
+        kind: AC car
+        text: The 1937 business coupe with the Blue Flame six, floor shift and Knee-Action front end. Eleven skins in the 1937 Duco colours.
+        es: { text: "El cupé de 1937 con el seis cilindros Blue Flame, palanca al piso y suspensión delantera Knee-Action. Once pinturas en los colores Duco de 1937." }
+        pt: { text: "O cupê de 1937 com o seis cilindros Blue Flame, câmbio no assoalho e suspensão dianteira Knee-Action. Onze pinturas nas cores Duco de 1937." }
+      - name: Buick Roadmaster Skylark 1953
+        id: buick_skylark_1953
+        url: https://sourceforge.net/projects/streetcorsa-mods/files/buick-roadmaster-skylark-1953/buick_skylark_1953_v1.1.zip/download
+        size: 54 MB
+        kind: AC car
+        text: The 50th-anniversary convertible, 1,690 built. Chopped windscreen, 322 Nailhead, Dynaflow, Kelsey-Hayes wire wheels. Ten skins, each with its factory interior.
+        es: { text: "El convertible del 50.º aniversario, 1.690 fabricados. Parabrisas recortado, Nailhead 322, Dynaflow, ruedas de rayos Kelsey-Hayes. Diez pinturas, cada una con su interior de fábrica." }
+        pt: { text: "O conversível do 50º aniversário, 1.690 fabricados. Para-brisa rebaixado, Nailhead 322, Dynaflow, rodas raiadas Kelsey-Hayes. Dez pinturas, cada uma com o interior de fábrica." }
+      - name: Buick Roadmaster 1957
+        id: buick_roadmaster_1957
+        url: https://sourceforge.net/projects/streetcorsa-mods/files/buick-roadmaster-75-riviera-1957/buick_roadmaster_1957_v1.0.zip/download
+        size: 38 MB
+        kind: AC car
+        text: The Riviera two-door hardtop with the 364 Nailhead, 300 hp, and the horizontal speedometer. Eleven factory two-tones.
+        es: { text: "El hardtop de dos puertas Riviera con el Nailhead 364, 300 hp y el velocímetro horizontal. Once bicolores de fábrica." }
+        pt: { text: "O hardtop de duas portas Riviera com o Nailhead 364, 300 hp e o velocímetro horizontal. Onze saia-e-blusa de fábrica." }
+      - name: Buick Riviera 1963
+        id: buick_riviera_1963
+        url: https://sourceforge.net/projects/streetcorsa-mods/files/buick-riviera-1963/buick_riviera_1963_v1.1.zip/download
+        size: 46 MB
+        kind: AC car
+        text: The first-year Riviera. 401 Nailhead, 325 hp, Twin Turbine, brushed-aluminium dash and walnut console. Sixteen skins.
+        es: { text: "El Riviera del primer año. Nailhead 401, 325 hp, Twin Turbine, tablero de aluminio cepillado y consola de nogal. Dieciséis pinturas." }
+        pt: { text: "O Riviera do primeiro ano. Nailhead 401, 325 hp, Twin Turbine, painel de alumínio escovado e console de nogueira. Dezesseis pinturas." }
+      - name: Plymouth Satellite Sebring 1971
+        id: plymouth_satellite_sebring_1971
+        url: https://sourceforge.net/projects/streetcorsa-mods/files/plymouth-satellite-sebring-1971/plymouth_satellite_sebring_1971_v1.0.zip/download
+        size: 48 MB
+        kind: AC car
+        text: The two-door hardtop with the 383 four-barrel, 300 hp, TorqueFlite and the woodgrain Rallye cluster. Sixteen skins.
+        es: { text: "El hardtop de dos puertas con el 383 de cuatro bocas, 300 hp, TorqueFlite y el tablero Rallye imitación madera. Dieciséis pinturas." }
+        pt: { text: "O hardtop de duas portas com o 383 de quadrijet, 300 hp, TorqueFlite e o painel Rallye imitando madeira. Dezesseis pinturas." }

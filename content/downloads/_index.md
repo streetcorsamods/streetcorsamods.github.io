@@ -10,3 +10,5 @@ description: The game, its settings, engine packs and add-ons.
 3. Engine packs and add-ons install the same way.
 
 Full steps: [Install](/tutorials/playing/install/). Signing and privacy: [Code signing policy](/about/#code-signing-policy), [Privacy](/about/#privacy).
+
+Our cars for Assetto Corsa on its own, which don't need Street Corsa, are on [AC Mods](/assetto-corsa/).

@@ -1,0 +1,73 @@
+{{ define "main" }}
+{{- /* An Assetto Corsa mod's page (content/assetto-corsa/<page>.md). Like a Street Corsa mod's page (mods/single.html),
+       but its download is the data/ac.yaml item whose id is front matter mod, and it installs into Assetto Corsa.
+       shots: the skins' previews in static/images/assetto-corsa/<page>/ (<name>.jpg, 1022x575, and <name>-sm.jpg,
+       640x360), the first one the hero. version, folder (its content/cars folder), credits, licence and licence_url:
+       front matter. source: its SVN repository's mount point on SourceForge (sourceforge.net/p/streetcorsa-mods/<source>/). */ -}}
+{{ $dir := printf "/images/assetto-corsa/%s/" .File.ContentBaseName }}
+{{ $item := false }}
+{{ range hugo.Data.ac.groups }}{{ range .items }}{{ if eq .id $.Params.mod }}{{ $item = . }}{{ end }}{{ end }}{{ end }}
+{{ $href := "" }}
+{{ with $item }}{{ $href = partial "dl-href.html" . }}{{ end }}
+{{ $section := site.GetPage "/assetto-corsa" }}
+<div class="wrap page mod">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ $section.RelPermalink }}">{{ $section.Title }}</a></nav>
+  <h1>{{ .Title }}</h1>
+  {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+
+  <div class="mod-top">
+    {{ with index .Params.shots 0 }}
+      {{ $full := printf "%s%s.jpg" $dir .img }}
+      <figure class="mod-hero">
+        <a href="{{ $full }}" target="_blank" rel="noopener"><img src="{{ $full }}" alt="{{ $.Title }} in {{ .caption }}" width="1022" height="575" fetchpriority="high"></a>
+        <figcaption>{{ .caption }}</figcaption>
+      </figure>
+    {{ end }}
+    <aside class="mod-get">
+      {{ if $href }}
+        <a class="btn" href="{{ $href }}" target="_blank" rel="noopener">Download</a>
+      {{ else }}
+        <span class="btn off" aria-disabled="true">Coming soon</span>
+      {{ end }}
+      <dl>
+        <dt>Kind</dt><dd>Assetto Corsa car</dd>
+        {{ with .Params.version }}<dt>Version</dt><dd>{{ . }}</dd>{{ end }}
+        {{ with $item }}{{ with .size }}<dt>Size</dt><dd>{{ . }}</dd>{{ end }}{{ end }}
+        {{ with .Params.shots }}<dt>Skins</dt><dd>{{ len . }}</dd>{{ end }}
+        {{ with .Params.folder }}<dt>Folder</dt><dd><code>{{ . }}</code></dd>{{ end }}
+        <dt>Licence</dt><dd><a href="{{ .Params.licence_url | default "https://creativecommons.org/licenses/by-nc-sa/4.0/" }}" target="_blank" rel="noopener">{{ .Params.licence | default "CC BY-NC-SA 4.0" }}</a></dd>
+        {{ with .Params.source }}<dt>Source</dt><dd><a href="https://sourceforge.net/p/streetcorsa-mods/{{ . }}/" target="_blank" rel="noopener">SourceForge</a></dd>{{ end }}
+        <dt>Made by</dt><dd><a href="https://github.com/pecamardelli" target="_blank" rel="noopener">Pablo Camardelli</a></dd>
+      </dl>
+      {{ partial "mod-credits.html" .Params.credits }}
+      <p class="muted small">Install: drag the zip onto <a href="https://acstuff.club/app/" target="_blank" rel="noopener">Content Manager</a>, or copy its <code>content</code> folder into your Assetto Corsa folder. <a href="https://acstuff.club/patch/" target="_blank" rel="noopener">Custom Shaders Patch</a> recommended. No Street Corsa needed.</p>
+    </aside>
+  </div>
+
+  <div class="prose">
+    {{ .Content }}
+    {{ with .Params.source }}
+    <p>This car is open to anybody who wants to improve it: its <a href="https://sourceforge.net/p/streetcorsa-mods/{{ . }}/" target="_blank" rel="noopener">SVN repository on SourceForge</a> holds the installable car folder. Work directly in the KN5 model and the data files.</p>
+    {{ end }}
+  </div>
+
+  {{ with after 1 .Params.shots }}
+  <h2>The colours</h2>
+  <div class="gallery">
+    {{ range . }}
+      <figure>
+        <a href="{{ $dir }}{{ .img }}.jpg" target="_blank" rel="noopener"><img src="{{ $dir }}{{ .img }}-sm.jpg" alt="{{ $.Title }} in {{ .caption }}" loading="lazy" decoding="async" width="640" height="360"></a>
+        <figcaption>{{ .caption }}</figcaption>
+      </figure>
+    {{ end }}
+  </div>
+  <p class="muted small">{{ $.Params.shots_note | default "Every skin in the pack, in Assetto Corsa's showroom." }}</p>
+  {{ end }}
+
+  {{ $pages := .CurrentSection.Pages.ByWeight }}
+  <nav class="pager">
+    {{ with $pages.Prev . }}<a href="{{ .RelPermalink }}">← {{ .Title }}</a>{{ else }}<span></span>{{ end }}
+    {{ with $pages.Next . }}<a href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}
+  </nav>
+</div>
+{{ end }}
