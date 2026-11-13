@@ -54,6 +54,10 @@ social_youtube = "Trailers and videos of the game."
 social_itchio = "The game's page on itch.io. Rate it, leave a comment, follow it for updates."
 social_email = "Licensing, press, and anything private. Questions and bugs get a quicker answer on Discord."
 social_overtake = "The game on Overtake, with its comments."
+# A place's name where it isn't a brand (socialname_ and the name as above); without one, the name in hugo.toml
+socialname_email = "Email"
+# The breadcrumb trail's label for screen readers
+breadcrumb = "Breadcrumb"
 
 # Downloads
 dl_version = "Version {{ .v }}, early access"

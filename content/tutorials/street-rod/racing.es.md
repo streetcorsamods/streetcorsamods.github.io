@@ -26,7 +26,7 @@ Presiona **Go race!** en el taller.
 
 ## Apuestas
 
-- **Cash**: más grandes de noche y con corredores conocidos.
+- **Cash**: más altas de noche y con corredores conocidos.
 - **Pink slips**: el ganador se queda con el auto del perdedor.
 
 Salir antes de tiempo anula la carrera. Abandonar una carrera cuenta como derrota.

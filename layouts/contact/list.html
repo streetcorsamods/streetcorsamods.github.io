@@ -10,7 +10,7 @@
       <a class="contact-card" href="{{ .url }}"{{ if not (hasPrefix .url "mailto:") }} target="_blank" rel="noopener"{{ end }}>
         {{ partial "icon.html" .icon }}
         <span class="contact-text">
-          <strong>{{ .name }}</strong>
+          <strong>{{ or (T (printf "socialname_%s" (replaceRE "[^a-z]" "" (lower .name)))) .name }}</strong>
           {{ with .show }}<span class="contact-show">{{ . }}</span>{{ end }}
           <span>{{ T (printf "social_%s" (replaceRE "[^a-z]" "" (lower .name))) }}</span>
         </span>

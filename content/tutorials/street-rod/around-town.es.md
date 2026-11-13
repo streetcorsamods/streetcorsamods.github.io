@@ -14,7 +14,7 @@ Todo empieza en tu taller. Los viajes llevan tiempo: los lugares lejanos no se p
 | **Car dealers** | Comprar autos. Los lotes vienen y van; un lote que cierra tiene liquidación. |
 | **Newspaper** | Autos y piezas de vendedores particulares y rivales. Aquí vendes tu propio auto. |
 | **Part dealers** | Especialistas, tiendas de preparación, tiendas de neumáticos y desarmaderos. El stock es limitado. **Mail order** tiene de todo, tarda 3 días. |
-| **Machine shop** | En el mapa de los part dealers. Rectificar, pulir, portear: dejas la pieza y vuelve días después. |
+| **Machine shop** | En el mapa de los part dealers. Rectificar, pulir, trabajar los conductos: dejas la pieza y vuelve días después. |
 | **Gas station** | Combustible, aceite, un lavado. El empleado te dice qué está gastado. |
 | **Paint booth** | Color nuevo. Primero arregla el óxido y las abolladuras (**Repairs**). |
 | **Go race!** | Diners, la calle, invitaciones, Free Run, Test & Tune. |

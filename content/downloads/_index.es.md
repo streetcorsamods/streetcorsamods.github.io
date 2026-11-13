@@ -9,4 +9,4 @@ description: El juego, sus ambientaciones, packs de motores y complementos.
 2. Agrega una **ambientación**: en la pantalla principal, **Mod Manager → Install mods**, elige el zip.
 3. Los packs de motores y los complementos se instalan igual.
 
-Todos los pasos: [Instalar](/tutorials/playing/install/). Firma y privacidad: [Política de firma de código](/about/#code-signing-policy), [Privacidad](/about/#privacy) (en inglés).
+Todos los pasos: [Instalar](/tutorials/playing/install/). Firma y privacidad (en inglés): [Política de firma de código](/about/#code-signing-policy), [Privacidad](/about/#privacy).

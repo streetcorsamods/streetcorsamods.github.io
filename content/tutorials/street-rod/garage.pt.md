@@ -20,7 +20,7 @@ translated_from: ae3ce9ef1255
 2. Clique numa peça e depois em **Take it off**. Ela vai para a sua **PARTS SHELF** (a prateleira de peças).
 3. Para colocar uma peça, escolha ela na prateleira: os lugares onde ela encaixa ficam verdes. Clique num deles.
 
-As peças saem em ordem, como num carro de verdade: o jogo diz o que está no caminho.
+As peças saem em ordem, como num carro de verdade: o jogo diz o que está atrapalhando.
 
 - **Lift**: levanta o carro para chegar às rodas, aos freios e ao eixo traseiro.
 - **Pull the engine**: o motor vai para o **Stand** (o cavalete), onde ele é desmontado. **Turn over** vira o motor.

@@ -15,7 +15,7 @@
       <a href="{{ with partial "page.html" "/news" }}{{ with .OutputFormats.Get "rss" }}{{ .RelPermalink }}{{ end }}{{ end }}">RSS</a>
     </nav>
     <nav class="foot-social" aria-label="{{ T "elsewhere" }}">
-      {{ range site.Params.social }}{{ if and .url (ne .foot false) }}<a href="{{ .url }}"{{ if not (hasPrefix .url "mailto:") }} target="_blank" rel="noopener"{{ end }} aria-label="{{ .name }}" title="{{ .name }}">{{ partial "icon.html" .icon }}</a>{{ end }}{{ end }}
+      {{ range site.Params.social }}{{ if and .url (ne .foot false) }}{{ $n := or (T (printf "socialname_%s" (replaceRE "[^a-z]" "" (lower .name)))) .name }}<a href="{{ .url }}"{{ if not (hasPrefix .url "mailto:") }} target="_blank" rel="noopener"{{ end }} aria-label="{{ $n }}" title="{{ $n }}">{{ partial "icon.html" .icon }}</a>{{ end }}{{ end }}
     </nav>
   </div>
 </footer>

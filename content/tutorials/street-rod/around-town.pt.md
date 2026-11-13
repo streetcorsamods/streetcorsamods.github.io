@@ -7,7 +7,7 @@ translated_from: 32cd67a5958c
 
 ![Car dealers](/images/tutorials/car-dealers.jpg "Car dealers: escolha uma revenda e saia dirigindo")
 
-Tudo começa na sua garagem. As viagens levam tempo: os lugares longe não dá para fazer num dia só.
+Tudo começa na sua garagem. As viagens levam tempo: lugares distantes não dá para visitar num dia só.
 
 | Lugar | Para quê |
 |---|---|

@@ -1,6 +1,6 @@
 # Las palabras de las plantillas, en español. Mismas claves que en.toml; una que falte se muestra en inglés.
 
-site_description = "Una carrera de autos sobre Assetto Corsa: compra un auto cansado, ármalo en tu taller y córrelo por dinero o apostando el auto."
+site_description = "Un juego de modo carrera de autos sobre Assetto Corsa: compra un auto cansado, ármalo en tu taller y córrelo por dinero o apostando el auto."
 
 # Menú
 home = "Inicio"
@@ -48,11 +48,15 @@ donate_with = "Donar con"
 # Tarjetas de contacto
 social_discord = "Preguntas, ayuda con la instalación, tus autos y tus historias de carreras. La respuesta más rápida."
 social_github = "¿Encontraste un error o quieres algo en el juego? Abre un issue. Cuenta qué hiciste y qué pasó."
-social_sourceforge = "Para modders: los archivos de los mods, un repositorio SVN por paquete de motores, con la wiki de modding y los tickets. Pide ahí acceso para mejorar un paquete."
+social_sourceforge = "Para modders: los archivos de los mods, un repositorio SVN por pack de motores, con la wiki de modding y los tickets. Pide ahí acceso para mejorar un pack."
 social_youtube = "Tráileres y videos del juego."
 social_itchio = "La página del juego en itch.io. Califícalo, deja un comentario, síguelo para enterarte de las novedades."
 social_email = "Licencias, prensa y todo lo privado. Las preguntas y los errores tienen respuesta más rápida en Discord."
 social_overtake = "El juego en Overtake, con sus comentarios."
+# A place's name where it isn't a brand (socialname_ and the name as above); without one, the name in hugo.toml
+socialname_email = "Correo"
+# The breadcrumb trail's label for screen readers
+breadcrumb = "Ruta de navegación"
 
 # Descargas
 dl_version = "Versión {{ .v }}, acceso anticipado"
@@ -65,8 +69,8 @@ dl_all = "Todo"
 dl_details = "Detalles y fotos (en inglés)"
 coming_soon = "Próximamente"
 dl_for = "para {{ .x }}"
-dl_none = "Nada coincide con {{ .q }}."
-dl_none_here = "aquí"
+dl_none = "No hay resultados para {{ .q }}."
+dl_none_here = "esta categoría"
 dl_reset = "Mostrar todo"
 dl_one = "descarga"
 dl_many = "descargas"

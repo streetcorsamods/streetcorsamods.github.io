@@ -9,4 +9,4 @@ description: O jogo, os cenários, pacotes de motores e complementos.
 2. Adicione um **cenário**: na tela principal, **Mod Manager → Install mods**, escolha o zip.
 3. Pacotes de motores e complementos se instalam do mesmo jeito.
 
-Todos os passos: [Instalar](/tutorials/playing/install/). Assinatura e privacidade: [Política de assinatura de código](/about/#code-signing-policy), [Privacidade](/about/#privacy) (em inglês).
+Todos os passos: [Instalar](/tutorials/playing/install/). Assinatura e privacidade (em inglês): [Política de assinatura de código](/about/#code-signing-policy), [Privacidade](/about/#privacy).

@@ -4,7 +4,7 @@ description: Uma carreira automobilística sobre o Assetto Corsa. Compre um carr
 tagline: Uma carreira automobilística sobre o Assetto Corsa. Compre um carro cansado, monte peça por peça e corra com ele por dinheiro ou valendo o carro.
 features:
   - title: Sua garagem
-    text: Desmonte um carro peça por peça. Tire o motor para o cavalete, refaça, coloque peças de preparação.
+    text: Desmonte um carro peça por peça. Tire o motor para o cavalete, recondicione, coloque peças de preparação.
   - title: Corra no Assetto Corsa
     text: Arrancadas, corridas em circuito e time attacks rodam no AC, com os seus carros e as suas peças.
   - title: Uma cidade viva
@@ -42,12 +42,12 @@ about:
     - title: Para o Assetto Corsa
       text: O jogo monta a corrida e abre o AC para você, com dano, desgaste de pneus e consumo de combustível ligados. Os seus amassados e o tanque pela metade vão junto.
     - title: Na pista
-      text: Quem roda a corrida é o nosso próprio modo de corrida. A árvore da arrancada, batidas e queimadas de largada, um pneu que estoura, um eixo que quebra.
+      text: Quem roda a corrida é o nosso próprio modo de corrida. A árvore da arrancada, batidas e largadas queimadas, um pneu que estoura, um eixo que quebra.
     - title: De volta à garagem
-      text: O tempo, o dano e o desgaste voltam para a sua garagem. O motor que você correu é o motor que você conserta.
+      text: A ficha de tempo, o dano e o desgaste voltam para a sua garagem. O motor com que você correu é o motor que você conserta.
   promise: "**O seu Assetto Corsa continua seu.** Cada arquivo que o jogo muda é guardado antes e devolvido depois da corrida. Uma sessão normal no AC ou no Content Manager não percebe nada."
   files:
-    summary: "Para os curiosos: o que o jogo mexe no Assetto Corsa"
+    summary: "Para os curiosos: em que o jogo mexe no Assetto Corsa"
     rows:
       - paths: ['content\cars\<car>\data']
         text: As suas peças viram os dados do carro para a corrida (motor, curva de potência, câmbio, suspensão, pneus). Um `data.acd` empacotado é desempacotado. Guardado antes, devolvido depois.

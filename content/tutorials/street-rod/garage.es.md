@@ -20,7 +20,7 @@ translated_from: ae3ce9ef1255
 2. Haz clic en una pieza y después en **Take it off**. Va a tu **PARTS SHELF** (el estante de piezas).
 3. Para poner una pieza, elígela en el estante: los lugares donde va se iluminan en verde. Haz clic en uno.
 
-Las piezas salen en orden, como en un auto de verdad: el juego te dice qué está en el camino.
+Las piezas salen en orden, como en un auto de verdad: el juego te dice qué estorba.
 
 - **Lift**: levanta el auto para llegar a las ruedas, los frenos y el eje trasero.
 - **Pull the engine**: el motor va al **Stand** (el soporte), donde se desarma. **Turn over** lo da vuelta.

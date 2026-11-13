@@ -24,3 +24,8 @@ Thank you to everyone who shares their work.
 - **AcTools** (Ms-PL) and **SlimDX** (MIT) for the 3D garage.
 
 Settings, engine packs and add-ons carry their own credits, shown in the game's **Settings**.
+
+## This site
+
+- **Anton** by The Anton Project Authors (SIL Open Font License 1.1, [licence](/fonts/OFL-Anton.txt)): the headings'
+  face on phones and computers without Impact.

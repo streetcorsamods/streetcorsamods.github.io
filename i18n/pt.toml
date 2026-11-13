@@ -53,6 +53,10 @@ social_youtube = "Trailers e vídeos do jogo."
 social_itchio = "A página do jogo no itch.io. Avalie, deixe um comentário, siga para receber as novidades."
 social_email = "Licenciamento, imprensa e tudo o que for particular. Dúvidas e bugs têm resposta mais rápida no Discord."
 social_overtake = "O jogo no Overtake, com os comentários."
+# A place's name where it isn't a brand (socialname_ and the name as above); without one, the name in hugo.toml
+socialname_email = "E-mail"
+# The breadcrumb trail's label for screen readers
+breadcrumb = "Trilha de navegação"
 
 # Downloads
 dl_version = "Versão {{ .v }}, acesso antecipado"
@@ -65,8 +69,8 @@ dl_all = "Tudo"
 dl_details = "Detalhes e fotos (em inglês)"
 coming_soon = "Em breve"
 dl_for = "para {{ .x }}"
-dl_none = "Nada corresponde a {{ .q }}."
-dl_none_here = "aqui"
+dl_none = "Nenhum resultado para {{ .q }}."
+dl_none_here = "esta categoria"
 dl_reset = "Mostrar tudo"
 dl_one = "download"
 dl_many = "downloads"

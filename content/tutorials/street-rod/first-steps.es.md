@@ -1,6 +1,6 @@
 ---
 title: Primeros pasos
-description: Empieza una carrera y pasa tu primer día.
+description: Empieza tu partida y pasa tu primer día.
 weight: 2
 translated_from: 1cd857851eea
 ---
@@ -14,7 +14,7 @@ translated_from: 1cd857851eea
 3. Elige una dificultad: **Easy**, **Normal** o **Hard**.
 4. **Start Game**.
 
-El juego guarda solo a medida que avanzas.
+El juego guarda automáticamente a medida que avanzas.
 
 ## Tu primer día
 

@@ -2,7 +2,7 @@
 title: Instalar
 description: Qué necesitas y cómo instalar Street Corsa.
 weight: 1
-translated_from: 54ac4b4472a0
+translated_from: 451dd83710d2
 ---
 
 ## Necesitas
@@ -44,7 +44,6 @@ A mano: **New Game → Open the Content folder** y descomprímelo ahí.
 
 - **Gente que te contesta.** Instala [Ollama](https://ollama.com), ejecuta `ollama pull llama3.1:8b`, y en el juego, en
   **Settings → AI**, elige Ollama y presiona **Make the game's model**. Funciona mejor con una tarjeta gráfica de 12 GB.
-  Más en [People who talk back](/tutorials/playing/ai.md) (en inglés).
 - **Policía.** La policía solo aparece si hay un auto de policía instalado en Assetto Corsa: la ambientación dice cuál.
 - **Mods.** Pon la carpeta de un mod en la carpeta `Content` de la carpeta de instalación del juego
   (`%LocalAppData%\Programs\Street Corsa\Content`). Las ambientaciones (la carrera que juegas) y los packs de motores vienen como mods.

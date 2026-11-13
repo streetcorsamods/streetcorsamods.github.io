@@ -1,7 +1,7 @@
 ---
 title: Street Corsa
-description: Una carrera de autos sobre Assetto Corsa. Compra un auto cansado, ármalo en tu taller y córrelo por dinero o apostando el auto.
-tagline: Una carrera de autos sobre Assetto Corsa. Compra un auto cansado, ármalo pieza por pieza y córrelo por dinero o apostando el auto.
+description: Un juego de modo carrera de autos sobre Assetto Corsa. Compra un auto cansado, ármalo en tu taller y córrelo por dinero o apostando el auto.
+tagline: Un juego de modo carrera de autos sobre Assetto Corsa. Compra un auto cansado, ármalo pieza por pieza y córrelo por dinero o apostando el auto.
 features:
   - title: Tu taller
     text: Desarma un auto pieza por pieza. Pasa el motor al soporte, reconstrúyelo, ponle piezas de preparación.
@@ -19,9 +19,9 @@ talk:
     - title: Regatea de verdad
       text: Ve a ver el auto del diario y el vendedor sale a hablar. Baja el precio. Cada vendedor tiene su límite, algunos no se mueven nada, y una oferta ridícula no te lleva a ningún lado.
     - title: Se acuerdan de ti
-      text: El rival que le ganaste la semana pasada te lo saca en cara. El vendedor que insultaste sigue dolido. Vendedores, compradores y corredores recuerdan lo que dijiste, compraste y ganaste.
+      text: El rival al que le ganaste la semana pasada te lo echa en cara. El vendedor que insultaste sigue dolido. Vendedores, compradores y corredores recuerdan lo que dijiste, compraste y ganaste.
     - title: Todos tienen voz
-      text: Los vendedores te ofrecen su lote apenas entras, los rivales le miran el auto pieza por pieza y el empleado del mostrador encuentra las piezas que le van.
+      text: Los vendedores te ofrecen su lote apenas entras, los rivales te miran el auto pieza por pieza y el empleado del mostrador encuentra las piezas que le sirven a tu auto.
     - title: Funciona en tu PC
       text: Gratis y privada con Ollama en tu propia tarjeta gráfica. También funcionan LM Studio, OpenRouter, OpenAI y Claude.
   note: Opcional y desactivada por defecto. El juego decide cada precio y cada dato; la IA solo habla. Sin ella el juego es igual, solo que nadie te contesta.
@@ -44,7 +44,7 @@ about:
     - title: En la pista
       text: La corre nuestro propio modo de carrera. El árbol de drag, choques y largadas en falso, un neumático que revienta, un eje que se parte.
     - title: De vuelta al taller
-      text: La planilla de tiempos, los daños y el desgaste vuelven a tu taller. El motor que corriste es el motor que arreglas.
+      text: La planilla de tiempos, los daños y el desgaste vuelven a tu taller. El motor con el que corriste es el motor que arreglas.
   promise: "**Tu Assetto Corsa sigue siendo tuyo.** Cada archivo que el juego cambia se guarda primero y se devuelve después de la carrera. Una sesión normal en AC o Content Manager no nota nada."
   files:
     summary: "Para los curiosos: qué toca el juego en Assetto Corsa"
