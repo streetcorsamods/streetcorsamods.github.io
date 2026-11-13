@@ -55,7 +55,7 @@ h1, h2, h3 {
 .bar-in { display: flex; align-items: center; gap: 16px; min-height: 60px; }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--text); margin-right: auto; }
 .brand:hover { text-decoration: none; }
-.brand span { font-family: var(--display); font-size: 22px; letter-spacing: .04em; text-transform: uppercase; }
+.brand .wordmark { display: block; height: 30px; width: 147px; filter: drop-shadow(0 2px 4px rgba(0,0,0,.6)); }
 .nav { display: flex; gap: 4px; }
 .nav a {
   color: var(--muted);
@@ -93,16 +93,16 @@ h1, h2, h3 {
 .langs li a.on { color: var(--text); box-shadow: inset 3px 0 var(--accent); }
 .flag { display: block; flex-shrink: 0; border-radius: 2px; box-shadow: 0 0 0 1px rgba(255, 255, 255, .15); }
 .nav { order: 1; }
-.nav a, .brand span { white-space: nowrap; }
-/* The name beside the logo gives way first: it shrinks (and is cut short) rather than run under the menu */
+.nav a { white-space: nowrap; }
+/* The wordmark beside the logo gives way first: it shrinks rather than run under the menu */
 .brand { min-width: 0; }
-.brand span { overflow: hidden; text-overflow: ellipsis; }
+.brand .wordmark { min-width: 0; object-fit: contain; object-position: left center; }
 .nav, .langs, .nav-burger { flex-shrink: 0; }
-/* Narrower: tighter menu, then no name beside the logo: below 960 in the other languages (longer words), below 800 in
+/* Narrower: tighter menu, then no wordmark beside the logo: below 960 in the other languages (longer words), below 800 in
    English */
 @media (max-width: 1000px) { .nav a { padding: 8px 7px; font-size: 16px; } }
-@media (max-width: 960px) and (min-width: 721px) { html:not(:lang(en)) .brand span { display: none; } html:not(:lang(en)) .bar-in { gap: 8px; } }
-@media (max-width: 800px) and (min-width: 721px) { .brand span { display: none; } .bar-in { gap: 8px; } }
+@media (max-width: 960px) and (min-width: 721px) { html:not(:lang(en)) .brand .wordmark { display: none; } html:not(:lang(en)) .bar-in { gap: 8px; } }
+@media (max-width: 800px) and (min-width: 721px) { .brand .wordmark { display: none; } .bar-in { gap: 8px; } }
 
 @media (max-width: 720px) {
   .nav-burger {
@@ -125,7 +125,7 @@ h1, h2, h3 {
   .nav a.on { border-left-color: var(--accent); }
 }
 /* Small phones: the logo alone, so the languages and the menu button keep their room */
-@media (max-width: 420px) { .brand span { display: none; } }
+@media (max-width: 420px) { .brand .wordmark { display: none; } }
 
 /* Buttons */
 .btn {

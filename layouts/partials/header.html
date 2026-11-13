@@ -2,7 +2,9 @@
   <div class="wrap bar-in">
     <a class="brand" href="{{ site.Home.RelPermalink }}" aria-label="{{ T "brand_home" (dict "title" site.Title) }}">
       <img src="{{ "images/icon.png" | relURL }}" alt="" width="40" height="40">
-      <span>{{ site.Title }}</span>
+      {{- /* The hero's chrome wordmark (images/logo.png, cropped and at twice the size shown: logo-bar.png); the link's
+           aria-label names it */}}
+      <img class="wordmark" src="{{ "images/logo-bar.png" | relURL }}" alt="" width="147" height="30">
     </a>
     {{- /* The languages, in a dropdown: this page in each, else that language's home. Each one's flag: hugo.toml
          languages.<lang>.params.flag (flag.html). No script needed; the one below closes it on a click elsewhere. */}}
