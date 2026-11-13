@@ -1,6 +1,6 @@
 {{/* Home trailer. Context: the YouTube video id. Shows our own poster; YouTube (nocookie) loads only when the visitor
      presses play, so the page itself loads nothing from YouTube. Without JavaScript the poster is a plain link. */}}
-<section class="wrap trailer">
+<div class="trailer">
   <h2>{{ T "trailer" }}</h2>
   <a class="video" href="https://www.youtube.com/watch?v={{ . }}" data-id="{{ . }}" target="_blank" rel="noopener"
      aria-label="{{ T "trailer_play" }}" data-title="{{ T "trailer_title" }}">
@@ -8,7 +8,7 @@
     <span class="play" aria-hidden="true"></span>
   </a>
   <p class="trailer-note">{{ T "trailer_note" }} <a href="https://www.youtube.com/watch?v={{ . }}" target="_blank" rel="noopener">{{ T "trailer_watch" }}</a></p>
-</section>
+</div>
 <script>
 document.querySelectorAll(".video[data-id]").forEach(function (a) {
   a.addEventListener("click", function (e) {

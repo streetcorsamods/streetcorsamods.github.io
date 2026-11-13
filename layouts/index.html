@@ -13,7 +13,32 @@
   </div>
 </section>
 
-{{ with site.Params.trailer }}{{ partial "trailer.html" . }}{{ end }}
+{{/* The trailer, with the latest news beside it (under it on phones). Without a trailer the news stands alone. */}}
+<section class="wrap top-row{{ if not site.Params.trailer }} no-trailer{{ end }}">
+  {{ with site.Params.trailer }}{{ partial "trailer.html" . }}{{ end }}
+  <aside class="latest">
+    <h2>{{ T "news" }}</h2>
+    {{- /* The latest news, each in this language, else in English (tr.html). Every post is in English. */}}
+    {{ $here := . }}
+    {{ $news := slice }}
+    {{ range first 4 (where hugo.Sites.Default.RegularPages "Section" "news") }}{{ $news = $news | append (partial "tr.html" .) }}{{ end }}
+    <div class="news-items">
+    {{ if and $news (not (where $news "Language.Lang" site.Language.Lang)) }}<p class="muted small">{{ T "in_english" }}</p>{{ end }}
+    {{ range $news }}
+      <a class="news-item" href="{{ .RelPermalink }}"{{ partial "hreflang.html" (dict "page" $here "to" .) }}>
+        <img class="news-item-thumb" src="{{ .Params.image | default "/images/og.jpg" | relURL }}" alt="" loading="lazy" decoding="async" width="640" height="360">
+        <span class="news-item-text">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format ":date_medium" .Date }}</time>
+          <span{{ if ne .Language.Lang site.Language.Lang }} lang="{{ .Language.Lang }}"{{ end }}>{{ .Title }}</span>
+        </span>
+      </a>
+    {{ else }}
+      <p class="muted">{{ T "nothing_yet" }}</p>
+    {{ end }}
+    </div>
+    <a class="more" href="{{ (partial "link.html" "/news/").href }}">{{ T "all_news" }}</a>
+  </aside>
+</section>
 
 {{/* What it is: the game, then one race from the garage into Assetto Corsa and back, then what it touches in AC. */}}
 {{ with .Params.about }}
@@ -77,26 +102,9 @@
   {{ end }}
 </section>
 
-<section class="wrap split">
+<section class="wrap home-prose">
   <div class="prose">
     {{ .Content }}
   </div>
-  <aside class="latest">
-    <h2>{{ T "news" }}</h2>
-    {{- /* The latest news, each in this language, else in English (tr.html). Every post is in English. */}}
-    {{ $here := . }}
-    {{ $news := slice }}
-    {{ range first 3 (where hugo.Sites.Default.RegularPages "Section" "news") }}{{ $news = $news | append (partial "tr.html" .) }}{{ end }}
-    {{ if and $news (not (where $news "Language.Lang" site.Language.Lang)) }}<p class="muted small">{{ T "in_english" }}</p>{{ end }}
-    {{ range $news }}
-      <a class="news-item" href="{{ .RelPermalink }}"{{ partial "hreflang.html" (dict "page" $here "to" .) }}>
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format ":date_medium" .Date }}</time>
-        <span{{ if ne .Language.Lang site.Language.Lang }} lang="{{ .Language.Lang }}"{{ end }}>{{ .Title }}</span>
-      </a>
-    {{ else }}
-      <p class="muted">{{ T "nothing_yet" }}</p>
-    {{ end }}
-    <a class="more" href="{{ (partial "link.html" "/news/").href }}">{{ T "all_news" }}</a>
-  </aside>
 </section>
 {{ end }}
