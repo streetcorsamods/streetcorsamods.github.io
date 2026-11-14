@@ -42,6 +42,14 @@ groups:
         text: The Riviera two-door hardtop with the 364 Nailhead, 300 hp, and the horizontal speedometer. Eleven factory two-tones.
         es: { text: "El hardtop de dos puertas Riviera con el Nailhead 364, 300 hp y el velocímetro horizontal. Once bicolores de fábrica." }
         pt: { text: "O hardtop de duas portas Riviera com o Nailhead 364, 300 hp e o velocímetro horizontal. Onze saia-e-blusa de fábrica." }
+      - name: Chevrolet Impala Sedan 1960
+        id: chevrolet_impala_sedan_1960
+        url: https://sourceforge.net/projects/streetcorsa-mods/files/chevrolet-impala-sedan-1960/chevrolet_impala_sedan_1960_v1.1.zip/download
+        size: 51 MB
+        kind: AC car
+        text: The four-door Impala with the 348 Turbo-Thrust V8, 250 hp, Powerglide, X-frame and whitewalls. Twenty-four skins, the 1960 colours and two-tones, each with its houndstooth interior.
+        es: { text: "El Impala de cuatro puertas con el V8 348 Turbo-Thrust, 250 hp, Powerglide, chasis en X y bandas blancas. Veinticuatro pinturas, los colores y bicolores de 1960, cada una con su interior pied-de-poule." }
+        pt: { text: "O Impala de quatro portas com o V8 348 Turbo-Thrust, 250 hp, Powerglide, chassi em X e faixa branca. Vinte e quatro pinturas, as cores e saia-e-blusa de 1960, cada uma com o interior pied-de-poule." }
       - name: Buick Riviera 1963
         id: buick_riviera_1963
         url: https://sourceforge.net/projects/streetcorsa-mods/files/buick-riviera-1963/buick_riviera_1963_v1.1.zip/download

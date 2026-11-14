@@ -3,7 +3,7 @@
        but its download is the data/ac.yaml item whose id is front matter mod, and it installs into Assetto Corsa.
        shots: the skins' previews in static/images/assetto-corsa/<page>/ (<name>.jpg, 1022x575, and <name>-sm.jpg,
        640x360), the first one the hero. version, folder (its content/cars folder), credits, licence and licence_url:
-       front matter. source: its SVN repository's mount point on SourceForge (sourceforge.net/p/streetcorsa-mods/<source>/). */ -}}
+       front matter. skins: the pack's skin count, where not every skin has a shot (default: the shots). source: its SVN repository's mount point on SourceForge (sourceforge.net/p/streetcorsa-mods/<source>/). */ -}}
 {{ $dir := printf "/images/assetto-corsa/%s/" .File.ContentBaseName }}
 {{ $item := false }}
 {{ range hugo.Data.ac.groups }}{{ range .items }}{{ if eq .id $.Params.mod }}{{ $item = . }}{{ end }}{{ end }}{{ end }}
@@ -33,7 +33,7 @@
         <dt>Kind</dt><dd>Assetto Corsa car</dd>
         {{ with .Params.version }}<dt>Version</dt><dd>{{ . }}</dd>{{ end }}
         {{ with $item }}{{ with .size }}<dt>Size</dt><dd>{{ . }}</dd>{{ end }}{{ end }}
-        {{ with .Params.shots }}<dt>Skins</dt><dd>{{ len . }}</dd>{{ end }}
+        {{ with .Params.skins | default (len .Params.shots) }}<dt>Skins</dt><dd>{{ . }}</dd>{{ end }}
         {{ with .Params.folder }}<dt>Folder</dt><dd><code>{{ . }}</code></dd>{{ end }}
         <dt>Licence</dt><dd><a href="{{ .Params.licence_url | default "https://creativecommons.org/licenses/by-nc-sa/4.0/" }}" target="_blank" rel="noopener">{{ .Params.licence | default "CC BY-NC-SA 4.0" }}</a></dd>
         {{ with .Params.source }}<dt>Source</dt><dd><a href="https://sourceforge.net/p/streetcorsa-mods/{{ . }}/" target="_blank" rel="noopener">SourceForge</a></dd>{{ end }}
