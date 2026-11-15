@@ -1,6 +1,6 @@
 # streetcorsamods.github.io
 
-The Street Corsa website: https://streetcorsamods.github.io/
+The Street Corsa website: https://streetcorsamods.com/ (the repo name is kept: GitHub Pages serves it there and redirects the old github.io address)
 
 Built with [Hugo](https://gohugo.io/) (extended, 0.169+), published to GitHub Pages by `.github/workflows/pages.yml`
 on every push to `main`. No theme: the layouts and `assets/css/site.css` are the site's own.
