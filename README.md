@@ -21,6 +21,8 @@ hugo --minify      # build into public/
 | News | `content/news/` (one file per post, `date` in the front matter; `image`: the card thumbnail, a 640x360 `-sm` picture, else `og.jpg`) |
 | Downloads | `data/downloads.yaml` |
 | AC Mods (our Assetto Corsa cars, apart from the game) | `data/ac.yaml` (download links on SourceForge), a car's page `content/assetto-corsa/<page>.md`, its skins' previews in `static/images/assetto-corsa/<page>/` |
+| The game's page (/game/, the Downloads game card links to it) | `content/game.md` (+ `.es.md`, `.pt.md`), `layouts/game/single.html`, words `gm_...` in `i18n/` |
+| The "Open source: make it better" box (game, mods, AC cars) and the footer's line | `layouts/partials/open-source.html`, words `os_...`, `foot_open` |
 | A mod's page | `content/mods/<page>.md` (text, `mod` id, `shots`), pictures in `static/images/mods/<page>/` |
 | Tutorials | `content/tutorials/` |
 | About, credits | `content/about/` |

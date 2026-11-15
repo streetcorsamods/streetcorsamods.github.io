@@ -35,7 +35,9 @@
         {{ with $item }}{{ with .size }}<dt>Size</dt><dd>{{ . }}</dd>{{ end }}{{ end }}
         {{ with .Params.skins | default (len .Params.shots) }}<dt>Skins</dt><dd>{{ . }}</dd>{{ end }}
         <dt>Licence</dt><dd><a href="{{ .Params.licence_url | default "https://creativecommons.org/licenses/by-nc-sa/4.0/" }}" target="_blank" rel="noopener">{{ .Params.licence | default "CC BY-NC-SA 4.0" }}</a></dd>
-        {{ with .Params.source }}<dt>Source</dt><dd><a href="https://sourceforge.net/p/streetcorsa-mods/{{ . }}/" target="_blank" rel="noopener">SourceForge</a></dd>{{ end }}
+        <dt>Source</dt><dd>{{ with .Params.source }}<a href="https://sourceforge.net/p/streetcorsa-mods/{{ . }}/" target="_blank" rel="noopener">SourceForge</a>{{ else }}<a href="#open-source">Not on SourceForge yet</a>{{ end }}</dd>
+        <dt>From</dt><dd>The makers of <a href="/game/">Street Corsa</a> (<a href="{{ site.Params.repo }}" target="_blank" rel="noopener">GitHub</a>)</dd>
+        <dt>Bugs, ideas</dt><dd><a href="{{ site.Params.repo }}/issues" target="_blank" rel="noopener">GitHub issues</a></dd>
         <dt>Made by</dt><dd><a href="https://github.com/pecamardelli" target="_blank" rel="noopener">Pablo Camardelli</a></dd>
       </dl>
       {{ partial "mod-credits.html" .Params.credits }}
@@ -45,10 +47,9 @@
 
   <div class="prose">
     {{ .Content }}
-    {{ with .Params.source }}
-    <p>This car is open to anybody who wants to improve it: its <a href="https://sourceforge.net/p/streetcorsa-mods/{{ . }}/" target="_blank" rel="noopener">SVN repository on SourceForge</a> holds the installable car folder. Work directly in the KN5 model and the data files.</p>
-    {{ end }}
   </div>
+
+  {{ partial "open-source.html" (dict "kind" "ac" "source" (.Params.source | default "") "licence" (.Params.licence | default "CC BY-NC-SA 4.0")) }}
 
   {{ with after 1 .Params.shots }}
   <h2>The colours</h2>

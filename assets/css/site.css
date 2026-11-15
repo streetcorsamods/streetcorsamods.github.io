@@ -555,3 +555,11 @@ body:has(.lb[open]) { overflow: hidden; }
   .lb-nav { top: auto; bottom: 6px; transform: none; font-size: 48px; padding: 8px 18px; }
   .lb-fig img { max-height: calc(100vh - 160px); }
 }
+
+/* Open source, make it better (partials/open-source.html): the game's, a mod's and an AC car's page */
+.open-source { max-width: 760px; margin: 40px 0 8px; background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--accent); padding: 18px 22px; }
+.mod .open-source h2 { margin: 0 0 8px; }
+.open-source p { margin: 0 0 10px; }
+.os-links { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0; }
+.os-links .btn { display: inline-flex; align-items: center; gap: 8px; }
+.os-links .icon { width: 18px; height: 18px; }

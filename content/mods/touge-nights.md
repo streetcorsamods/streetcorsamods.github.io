@@ -1,6 +1,7 @@
 ---
 title: "Touge Nights"
 mod: touge_nights
+source: touge-nights
 group: settings
 weight: 2
 description: "Gunma, 2002. A tired AE86, turbo coupes on the passes after dark. Touge runs and drift battles."
