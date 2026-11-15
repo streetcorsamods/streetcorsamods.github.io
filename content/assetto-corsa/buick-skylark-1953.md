@@ -3,7 +3,7 @@ title: "Buick Roadmaster Skylark 1953"
 mod: buick_skylark_1953
 weight: 30
 description: "The 50th-anniversary convertible, 1,690 built: chopped windscreen, 322 Nailhead, Dynaflow and Kelsey-Hayes wire wheels."
-version: "1.1"
+version: "1.2"
 folder: content/cars/buick_skylark_1953
 source: buick-roadmaster-skylark-1953
 credits:

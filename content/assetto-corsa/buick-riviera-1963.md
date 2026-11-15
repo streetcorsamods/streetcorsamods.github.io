@@ -3,7 +3,7 @@ title: "Buick Riviera 1963"
 mod: buick_riviera_1963
 weight: 50
 description: "The first-year Riviera: 401 Nailhead, 325 hp, Twin Turbine, the brushed-aluminium dash and walnut console. Sixteen colours."
-version: "1.1"
+version: "1.2"
 folder: content/cars/buick_riviera_1963
 source: buick-riviera-1963
 credits:

@@ -3,7 +3,7 @@ title: "Buick Roadmaster 1957"
 mod: buick_roadmaster_1957
 weight: 40
 description: "The Roadmaster Riviera two-door hardtop with the 364 Nailhead, 300 hp, and the horizontal speedometer. Eleven factory two-tones."
-version: "1.0"
+version: "1.1"
 folder: content/cars/buick_roadmaster_1957
 source: buick-roadmaster-75-riviera-1957
 credits:

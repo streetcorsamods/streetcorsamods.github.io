@@ -3,7 +3,7 @@ title: "Plymouth Satellite Sebring 1971"
 mod: plymouth_satellite_sebring_1971
 weight: 60
 description: "The two-door hardtop with the 383 four-barrel, 300 hp, TorqueFlite and the woodgrain Rallye cluster. Sixteen 1971 colours."
-version: "1.0"
+version: "1.1"
 folder: content/cars/plymouth_satellite_sebring_1971
 source: plymouth-satellite-sebring-1971
 credits:

@@ -3,7 +3,7 @@ title: "Oldsmobile Cutlass Supreme Holiday Sedan 1971"
 mod: oldsmobile_cutlass_supreme_1971
 weight: 55
 description: "The four-door Cutlass Supreme hardtop with the Rocket 350 four-barrel: 260 hp, Turbo Hydra-matic, walnut-grain dash. Sixteen skins, each with its factory interior."
-version: "1.0"
+version: "1.1"
 folder: content/cars/oldsmobile_cutlass_supreme_1971
 source: oldsmobile-cutlass-supreme-holiday-sedan-1971
 skins: 16

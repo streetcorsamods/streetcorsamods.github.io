@@ -3,7 +3,7 @@ title: "Ford V8 Pickup 1932"
 mod: ford_v8_pickup_1932
 weight: 10
 description: "The 1932 closed-cab pickup with the 221 flathead V8: 65 hp, three-speed, transverse leaves, wire wheels and an ahooga horn."
-version: "1.2"
+version: "1.3"
 folder: content/cars/ford_v8_pickup_1932
 source: ford-v8-pickup-1932
 credits:
