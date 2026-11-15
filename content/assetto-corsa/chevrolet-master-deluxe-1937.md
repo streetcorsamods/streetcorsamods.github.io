@@ -3,7 +3,7 @@ title: "Chevrolet Master DeLuxe Coupe 1937"
 mod: chevrolet_master_deluxe_1937
 weight: 20
 description: "The 1937 business coupe with the 216 Blue Flame six: 85 hp, three-speed floor shift, Knee-Action front, eleven Duco colours."
-version: "1.0"
+version: "1.1"
 folder: content/cars/chevrolet_master_deluxe_1937
 source: chevrolet-master-deluxe-1937
 licence: "CC BY-NC-SA 4.0 (our work)"
