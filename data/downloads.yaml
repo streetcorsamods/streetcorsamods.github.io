@@ -3,7 +3,7 @@
 #       Shown as a download only once params.released is true.
 # url:  a download hosted anywhere else (wins over file).
 # Neither: listed as "Coming soon".
-# id:   the mod's id: its page (content/mods, front matter mod) links here and the card links to the page.
+# id:   the mod's id: its page (content/mods, or content/game.md for the game; front matter mod) links here and the card links to the page.
 # es:, pt: the group's or item's words in that language (title, text, name, for); what they leave out stays English.
 #       kind and badge: i18n/<lang>.toml (kind_..., badge_...).
 
@@ -15,6 +15,7 @@ groups:
     pt: { title: O jogo, text: "Instale primeiro. Sozinho, ele é a garagem e as corridas, ainda sem cidade." }
     items:
       - name: Street Corsa
+        id: streetcorsa
         file: StreetCorsa-{v}.msi
         size: 125 MB
         kind: Installer

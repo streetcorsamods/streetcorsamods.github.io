@@ -1,6 +1,7 @@
 ---
 title: "Chevrolet small block"
 mod: chevy_small_block
+source: chevy-small-block
 weight: 34
 description: "1955-70: the 265 and 283, the L79 and L76 327s, the Z/28 302, the 350 L48 and LT-1, a T56 restomod and the detailed SBC 350."
 group: engines

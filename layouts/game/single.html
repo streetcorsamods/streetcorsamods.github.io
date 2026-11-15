@@ -1,0 +1,63 @@
+{{ define "main" }}
+{{- /* The game's own page (content/game.md, /game/), the Downloads page's game card links here. Like a mod's page
+       (mods/single.html), but its download is the "game" group's item in data/downloads.yaml (front matter mod = its
+       id), its version the release in hugo.toml, and its words are translated (i18n gm_..., game.es.md, game.pt.md).
+       shots: site paths of 1600x900 pictures, each with a -sm.jpg beside it; the first one the hero. */ -}}
+{{ $item := false }}
+{{ range where hugo.Data.downloads.groups "id" "game" }}{{ range .items }}{{ if eq .id $.Params.mod }}{{ $item = . }}{{ end }}{{ end }}{{ end }}
+{{ $href := "" }}
+{{ with $item }}{{ $href = partial "dl-href.html" . }}{{ end }}
+{{ $v := site.Params.release }}
+{{ $dl := partial "link.html" "/downloads/" }}
+<div class="wrap page mod">
+  <nav class="crumbs" aria-label="{{ T "breadcrumb" }}"><a href="{{ $dl.href }}"{{ partial "hreflang.html" (dict "page" . "to" $dl.to) }}>{{ T "downloads" }}</a></nav>
+  <h1>{{ .Title }}</h1>
+  {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+
+  <div class="mod-top">
+    {{ with index .Params.shots 0 }}
+      <figure class="mod-hero">
+        <a href="{{ .img }}" data-lb target="_blank" rel="noopener"><img src="{{ .img }}" alt="{{ .caption }}" width="1600" height="900" fetchpriority="high"></a>
+        <figcaption>{{ .caption }}</figcaption>
+      </figure>
+    {{ end }}
+    <aside class="mod-get">
+      {{ if $href }}
+        <a class="btn" href="{{ $href }}"{{ if hasPrefix $href "http" }} target="_blank" rel="noopener"{{ end }}>{{ T "download" }}</a>
+      {{ else }}
+        <span class="btn off" aria-disabled="true">{{ T "coming_soon" }}</span>
+      {{ end }}
+      <dl>
+        <dt>{{ T "gm_kind" }}</dt><dd>{{ T "kind_installer" }}</dd>
+        <dt>{{ T "gm_version" }}</dt><dd>{{ $v }}{{ if site.Params.released }} · <a href="{{ site.Params.repo }}/releases/tag/v{{ $v }}" target="_blank" rel="noopener">{{ T "release_notes" }}</a>{{ end }}</dd>
+        {{ with $item }}{{ with .size }}<dt>{{ T "gm_size" }}</dt><dd>{{ . }}</dd>{{ end }}{{ end }}
+        <dt>{{ T "gm_licence" }}</dt><dd>{{ T "gm_code" }} <a href="{{ site.Params.repo }}/blob/main/LICENSE.txt" target="_blank" rel="noopener">MIT</a>, {{ T "gm_content" }} <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></dd>
+        <dt>{{ T "gm_source" }}</dt><dd><a href="{{ site.Params.repo }}" target="_blank" rel="noopener">GitHub</a></dd>
+        <dt>{{ T "gm_mods_source" }}</dt><dd><a href="https://sourceforge.net/p/streetcorsa-mods/" target="_blank" rel="noopener">SourceForge</a></dd>
+        <dt>{{ T "gm_bugs" }}</dt><dd><a href="{{ site.Params.repo }}/issues" target="_blank" rel="noopener">{{ T "gm_issues" }}</a></dd>
+        <dt>{{ T "gm_made_by" }}</dt><dd><a href="https://github.com/pecamardelli" target="_blank" rel="noopener">Pablo Camardelli</a></dd>
+      </dl>
+      {{ $in := partial "link.html" "/tutorials/playing/install/" }}
+      <p class="muted small">{{ T "gm_install" }} <a href="{{ $in.href }}"{{ partial "hreflang.html" (dict "page" . "to" $in.to) }}>{{ T "gm_full_steps" }}</a></p>
+    </aside>
+  </div>
+
+  <div class="prose">
+    {{ .Content }}
+  </div>
+
+  {{ partial "open-source.html" (dict "kind" "game") }}
+
+  {{ with after 1 .Params.shots }}
+  <h2>{{ T "gm_pictures" }}</h2>
+  <div class="gallery">
+    {{ range . }}
+      <figure>
+        <a href="{{ .img }}" data-lb target="_blank" rel="noopener"><img src="{{ replace .img ".jpg" "-sm.jpg" }}" alt="{{ .caption }}" loading="lazy" decoding="async" width="640" height="360"></a>
+        <figcaption>{{ .caption }}</figcaption>
+      </figure>
+    {{ end }}
+  </div>
+  {{ end }}
+</div>
+{{ end }}

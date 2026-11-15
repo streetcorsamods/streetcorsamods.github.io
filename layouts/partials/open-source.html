@@ -1,0 +1,33 @@
+{{- /* The "open source, make it better" box at the foot of the game's, a mod's and an AC car's page.
+       Context: dict kind ("game", "mod" or "ac"), source (the mod's SVN mount point on SourceForge,
+       sourceforge.net/p/streetcorsa-mods/<source>/; "" when its files aren't there yet), licence (its licence's name).
+       Its words: i18n os_... (the mods' and cars' pages are English only, so only the game's are translated). */ -}}
+{{- $sf := "https://sourceforge.net/p/streetcorsa-mods/" -}}
+{{- $issues := printf "%s/issues" site.Params.repo -}}
+<section class="open-source" id="open-source">
+  <h2>{{ T "os_title" }}</h2>
+  {{ if eq .kind "game" }}
+    <p>{{ T "os_game" }}</p>
+    <p>{{ T "os_game_mods" }}</p>
+  {{ else }}
+    <p>{{ T (printf "os_%s" .kind) (dict "licence" .licence) }}</p>
+    {{ if not .source }}<p class="muted">{{ T "os_no_source" (dict "href" (printf "%stickets/" $sf)) | safeHTML }}</p>{{ end }}
+  {{ end }}
+  <div class="os-links">
+    {{ if eq .kind "game" }}
+      <a class="btn" href="{{ site.Params.repo }}" target="_blank" rel="noopener">{{ partial "icon.html" "github" }} {{ T "os_github_code" }}</a>
+      <a class="btn ghost" href="{{ $sf }}" target="_blank" rel="noopener">{{ partial "icon.html" "sourceforge" }} {{ T "os_sf_all" }}</a>
+    {{ else }}
+      {{ with .source }}<a class="btn" href="{{ $sf }}{{ . }}/" target="_blank" rel="noopener">{{ partial "icon.html" "sourceforge" }} {{ T "os_sf" }}</a>{{ end }}
+      <a class="btn{{ if .source }} ghost{{ end }}" href="{{ site.Params.repo }}" target="_blank" rel="noopener">{{ partial "icon.html" "github" }} {{ T "os_github_game" }}</a>
+    {{ end }}
+    <a class="btn ghost" href="{{ $issues }}" target="_blank" rel="noopener">{{ T "os_issue" }}</a>
+  </div>
+  <p class="muted small">
+    {{- if eq .kind "game" -}}
+      {{ $l := partial "link.html" "/tutorials/modding/first-mod/" }}<a href="{{ $l.href }}">{{ T "os_first_mod" }}</a> · {{ $l = partial "link.html" "/tutorials/modding/engine-packs/" }}<a href="{{ $l.href }}">{{ T "os_join" }}</a> · <a href="{{ site.Params.repo }}/blob/main/LICENSE.txt" target="_blank" rel="noopener">MIT</a> · <a href="{{ site.Params.repo }}/blob/main/CONTENT-LICENSE.txt" target="_blank" rel="noopener">CC BY 4.0</a>
+    {{- else -}}
+      {{ $l := partial "link.html" "/tutorials/modding/engine-packs/" }}<a href="{{ $l.href }}">{{ T "os_join" }}</a> · <a href="{{ $sf }}modding-guidelines/" target="_blank" rel="noopener">{{ T "os_wiki" }}</a>{{ if eq .kind "mod" }} · {{ $l = partial "link.html" "/tutorials/modding/guide/" }}<a href="{{ $l.href }}">{{ T "os_guide" }}</a>{{ end }}
+    {{- end -}}
+  </p>
+</section>

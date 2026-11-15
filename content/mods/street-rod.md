@@ -1,6 +1,7 @@
 ---
 title: "Street Rod"
 mod: streetrod
+source: street-rod
 group: settings
 weight: 1
 description: "Los Angeles, 1970. Buy a tired old car, pull it apart, rebuild its engine on the stand and race Main Street for cash and pink slips, until the King will race you."
