@@ -37,6 +37,8 @@ disableKinds = ["taxonomy", "term"]
   donate = "https://paypal.me/streetcorsamods"
   # YouTube id of the trailer on the home page (poster: static/images/trailer.jpg). Empty hides it.
   trailer = "RplpUJnWvow"
+  # GoatCounter site code (https://<code>.goatcounter.com: visitors and downloads). Empty turns counting off.
+  goatcounter = "streetcorsamods"
 
 # Where to find us: the Contact page's cards, in this order, and the footer's icons (foot = false keeps one off the
 # footer). An empty url hides it everywhere. icon: a name in layouts/partials/icon.html. A card's words, in every
