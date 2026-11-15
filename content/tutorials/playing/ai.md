@@ -88,7 +88,7 @@ the address.
 ComfyUI portraits are a second address: each new rival's look, name, nickname, age and short story go to it. On your
 PC that stays there too.
 
-More in [Privacy](https://streetcorsamods.github.io/about/#privacy).
+More in [Privacy](/about/#privacy).
 
 ## If it goes wrong
 
