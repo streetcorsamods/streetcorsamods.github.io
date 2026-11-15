@@ -26,7 +26,7 @@
     {{ with index .Params.shots 0 }}
       {{ $full := cond (hasPrefix .img "/") .img (printf "%s%s.jpg" $dir .img) }}
       <figure class="mod-hero">
-        <a href="{{ $full }}" target="_blank" rel="noopener"><img src="{{ $full }}" alt="{{ .caption }}" width="1600" height="900" fetchpriority="high"></a>
+        <a href="{{ $full }}" data-lb target="_blank" rel="noopener"><img src="{{ $full }}" alt="{{ .caption }}" width="1600" height="900" fetchpriority="high"></a>
         <figcaption>{{ .caption }}</figcaption>
       </figure>
     {{ end }}
@@ -64,7 +64,7 @@
       {{ $full := cond (hasPrefix .img "/") .img (printf "%s%s.jpg" $dir .img) }}
       {{ $small := cond (hasPrefix .img "/") (replace .img ".jpg" "-sm.jpg") (printf "%s%s-sm.jpg" $dir .img) }}
       <figure>
-        <a href="{{ $full }}" target="_blank" rel="noopener"><img src="{{ $small }}" alt="{{ .caption }}" loading="lazy" decoding="async" width="640" height="360"></a>
+        <a href="{{ $full }}" data-lb target="_blank" rel="noopener"><img src="{{ $small }}" alt="{{ .caption }}" loading="lazy" decoding="async" width="640" height="360"></a>
         <figcaption>{{ .caption }}</figcaption>
       </figure>
     {{ end }}

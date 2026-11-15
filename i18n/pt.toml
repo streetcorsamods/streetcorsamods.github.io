@@ -82,3 +82,8 @@ kind_engine-pack = "Pacote de motores"
 kind_add-on = "Complemento"
 kind_ac-car = "Carro para AC"
 badge_default = "Padrão"
+
+# Picture viewer (lightbox.html)
+lb_close = "Fechar"
+lb_prev = "Imagem anterior"
+lb_next = "Próxima imagem"

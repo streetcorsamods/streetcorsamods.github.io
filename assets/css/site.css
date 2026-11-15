@@ -532,3 +532,26 @@ body:has(.modal[open]) { overflow: hidden; }
 .foot-social a { color: var(--muted); }
 .foot-social a:hover { color: var(--text); }
 .foot-social .icon { display: block; width: 22px; height: 22px; }
+
+/* The picture viewer (lightbox.html): a marked picture full size over the page, arrows either side */
+.lb { width: 100vw; height: 100vh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: transparent; color: var(--text); }
+.lb[open] { display: flex; align-items: center; justify-content: center; }
+.lb::backdrop { background: rgba(0, 0, 0, .92); }
+.lb-fig { margin: 0; max-width: calc(100vw - 140px); display: flex; flex-direction: column; align-items: center; }
+.lb-fig img { display: block; max-width: 100%; max-height: calc(100vh - 90px); width: auto; height: auto; border: 1px solid var(--line); border-radius: 3px; background: var(--panel); }
+.lb-fig figcaption { display: flex; gap: 16px; justify-content: space-between; width: 100%; color: var(--muted); font-size: 14px; margin-top: 8px; }
+.lb-n { flex: none; font-variant-numeric: tabular-nums; }
+.lb button { background: none; border: 0; color: var(--muted); cursor: pointer; line-height: 1; font-family: var(--body); }
+.lb button:hover, .lb button:focus-visible { color: var(--text); }
+.lb button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.lb-x { position: absolute; top: 10px; right: 14px; font-size: 40px; padding: 4px 10px; }
+.lb-nav { position: absolute; top: 50%; transform: translateY(-50%); font-size: 64px; padding: 20px 14px; }
+.lb-prev { left: 4px; }
+.lb-next { right: 4px; }
+.lb-one .lb-nav { display: none; }
+body:has(.lb[open]) { overflow: hidden; }
+@media (max-width: 700px) {
+  .lb-fig { max-width: calc(100vw - 24px); }
+  .lb-nav { top: auto; bottom: 6px; transform: none; font-size: 48px; padding: 8px 18px; }
+  .lb-fig img { max-height: calc(100vh - 160px); }
+}

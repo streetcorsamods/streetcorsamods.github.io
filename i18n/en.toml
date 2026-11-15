@@ -84,3 +84,8 @@ kind_engine-pack = "Engine pack"
 kind_add-on = "Add-on"
 kind_ac-car = "AC car"
 badge_default = "Default"
+
+# Picture viewer (lightbox.html)
+lb_close = "Close"
+lb_prev = "Previous picture"
+lb_next = "Next picture"
