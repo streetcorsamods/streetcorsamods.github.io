@@ -40,10 +40,9 @@
       {{ $in := partial "link.html" "/tutorials/playing/install/" }}
       <p class="muted small">{{ T "gm_install" }} <a href="{{ $in.href }}"{{ partial "hreflang.html" (dict "page" . "to" $in.to) }}>{{ T "gm_full_steps" }}</a></p>
     </aside>
-  </div>
-
-  <div class="prose">
-    {{ .Content }}
+    <div class="prose">
+      {{ .Content }}
+    </div>
   </div>
 
   {{ partial "open-source.html" (dict "kind" "game") }}

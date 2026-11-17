@@ -53,11 +53,10 @@
       {{ partial "mod-credits.html" $credits }}
       <p class="muted small">Install: on the main screen, <strong>Mod Manager → Install mods</strong>, pick the zip. <a href="/tutorials/playing/install/">Full steps</a></p>
     </aside>
-  </div>
-
-  <div class="prose">
-    {{ .Content }}
-    {{ if .Params.models_note }}{{ partial "models-note.html" . }}{{ end }}
+    <div class="prose">
+      {{ .Content }}
+      {{ if .Params.models_note }}{{ partial "models-note.html" . }}{{ end }}
+    </div>
   </div>
 
   {{ partial "open-source.html" (dict "kind" "mod" "source" (.Params.source | default "") "licence" (.Params.licence | default "CC BY 4.0")) }}

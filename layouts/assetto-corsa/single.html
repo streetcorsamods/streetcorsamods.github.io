@@ -43,16 +43,15 @@
       {{ partial "mod-credits.html" .Params.credits }}
       <p class="muted small">Install: drag the zip onto <a href="https://acstuff.club/app/" target="_blank" rel="noopener">Content Manager</a>, or copy its <code>content</code> folder into your Assetto Corsa folder. <a href="https://acstuff.club/patch/" target="_blank" rel="noopener">Custom Shaders Patch</a> recommended. No Street Corsa needed.</p>
     </aside>
-  </div>
-
-  <div class="prose">
-    {{ .Content }}
+    <div class="prose">
+      {{ .Content }}
+    </div>
   </div>
 
   {{ partial "open-source.html" (dict "kind" "ac" "source" (.Params.source | default "") "licence" (.Params.licence | default "CC BY-NC-SA 4.0")) }}
 
   {{ with after 1 .Params.shots }}
-  <h2>The colours</h2>
+  <h2>Pictures</h2>
   <div class="gallery">
     {{ range . }}
       <figure>

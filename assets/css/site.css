@@ -436,8 +436,13 @@ th { font-family: var(--display); font-weight: 400; text-transform: uppercase; l
 .mod h2 { font-size: 28px; margin: 40px 0 10px; }
 .lead { font-size: 19px; color: var(--muted); max-width: 760px; margin: 0 0 24px; }
 .small { font-size: 14px; }
-.mod-top { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 24px; align-items: start; margin-bottom: 24px; }
-@media (max-width: 860px) { .mod-top { grid-template-columns: minmax(0, 1fr); } }
+/* The info box is a column of its own, beside the picture and the text: a long box doesn't push the text down.
+   The text's row takes up whatever height the box needs beyond the picture's (1fr), so no gap opens under the picture. */
+.mod-top { display: grid; grid-template-columns: minmax(0, 1fr) 260px; grid-template-rows: auto 1fr; grid-template-areas: "hero get" "text get"; gap: 24px; align-items: start; margin-bottom: 24px; }
+.mod-top > .mod-hero { grid-area: hero; }
+.mod-top > .mod-get { grid-area: get; }
+.mod-top > .prose { grid-area: text; }
+@media (max-width: 860px) { .mod-top { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; grid-template-areas: "hero" "get" "text"; } }
 .mod-hero { margin: 0; }
 .mod-hero img { display: block; width: 100%; border: 1px solid var(--line); border-radius: 4px; }
 .mod-hero a:hover img { border-color: var(--accent); }
