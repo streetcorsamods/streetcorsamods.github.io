@@ -23,6 +23,8 @@ shots:
   - { img: beryl-green, caption: "Beryl Green" }
   - { img: toronto-blue, caption: "Toronto Blue" }
   - { img: brookhaven-blue, caption: "Brookhaven Blue" }
+  - { img: black-tree-bark-cord, caption: "Black, tree-bark cord trim" }
+  - { img: regent-maroon-tree-bark-cord, caption: "Regent Maroon, tree-bark cord trim" }
 ---
 
 The 1937 Chevrolet Master DeLuxe Business Coupe, series GA. The 216.5 cu in overhead-valve "Blue Flame" six: 6.25:1, a
@@ -32,6 +34,7 @@ drums, 6.00-16 tyres on body-colour steel disc wheels with chrome hubcaps, 112¼
 written from Chevrolet's 1937 engineering specifications.
 
 Inside: the body-colour dash with working gauges, the glovebox clock and radio, the banjo steering wheel, mohair and
-broadcloth trim. Eleven skins: the model's cream and the ten 1937 Duco colours, named as Chevrolet named them.
+broadcloth trim. Thirteen skins: the model's cream and the ten 1937 Duco colours, named as Chevrolet named them, and
+Black and Regent Maroon again with tree-bark cord trim.
 
 The model is Rusty Smith's, included with his permission: keep crediting him. Our work on it is CC BY-NC-SA 4.0.
