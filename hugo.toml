@@ -69,11 +69,10 @@ disableKinds = ["taxonomy", "term"]
   url = "mailto:streetcorsa.mods@gmail.com"
   icon = "mail"
   show = "streetcorsa.mods@gmail.com"
-# Still in review there; give it its url once it is up.
 [[params.social]]
   name = "Overtake"
-  url = ""
-  icon = ""
+  url = "https://www.overtake.gg/downloads/street-corsa-car-career-game-early-access.88373/"
+  icon = "download"
 
 # The names, in every language, English too: i18n/<lang>.toml, by identifier.
 [menus]
