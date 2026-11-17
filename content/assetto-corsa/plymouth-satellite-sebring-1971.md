@@ -3,7 +3,7 @@ title: "Plymouth Satellite Sebring 1971"
 mod: plymouth_satellite_sebring_1971
 weight: 60
 description: "The two-door hardtop with the 383 four-barrel, 300 hp, TorqueFlite and the woodgrain Rallye cluster. Sixteen 1971 colours."
-version: "1.1"
+version: "1.2"
 folder: content/cars/plymouth_satellite_sebring_1971
 source: plymouth-satellite-sebring-1971
 credits:
@@ -38,3 +38,8 @@ in wheelbase, about 3560 lb. The physics are written from 1971 Satellite figures
 The model was published as a GTX, but it shows a Satellite Sebring, its own scripts and plate included, so that's the
 car it is here. Black vinyl roof and buckets, the woodgrain Rallye cluster with working speedometer, fuel and
 temperature needles. Sixteen skins: the 1971 Plymouth colours, named as Plymouth named them.
+
+## What's new in 1.2
+
+- Shadows fixed: the car's shadow textures were drawn inverted, so Assetto Corsa put a hard dark slab under the
+  car. It now stands on a soft shadow, as Kunos cars do.

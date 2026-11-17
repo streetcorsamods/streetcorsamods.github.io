@@ -3,7 +3,7 @@ title: "Buick Roadmaster 1957"
 mod: buick_roadmaster_1957
 weight: 40
 description: "The Roadmaster Riviera two-door hardtop with the 364 Nailhead, 300 hp, and the horizontal speedometer. Eleven factory two-tones."
-version: "1.1"
+version: "1.2"
 folder: content/cars/buick_roadmaster_1957
 source: buick-roadmaster-75-riviera-1957
 credits:
@@ -37,3 +37,8 @@ mirrors.
 
 Eleven skins: 1957 Buick two-tones, named as Buick named the colours, each with a factory 76A interior trim (green,
 blue, black and ivory, grey, or rust and ivory).
+
+## What's new in 1.2
+
+- Shadows fixed: the car's shadow textures were drawn inverted, so Assetto Corsa put a hard dark slab under the
+  car. It now stands on a soft shadow, as Kunos cars do.

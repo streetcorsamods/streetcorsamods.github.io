@@ -3,7 +3,7 @@ title: "Buick Roadmaster Skylark 1953"
 mod: buick_skylark_1953
 weight: 30
 description: "The 50th-anniversary convertible, 1,690 built: chopped windscreen, 322 Nailhead, Dynaflow and Kelsey-Hayes wire wheels."
-version: "1.2"
+version: "1.3"
 folder: content/cars/buick_skylark_1953
 source: buick-roadmaster-skylark-1953
 credits:
@@ -33,6 +33,11 @@ factory figures.
 Inside: the maroon-hooded dash with the white Damascene panel, working gauges and clock, the gold SKYLARK horn button.
 Ten skins in 1953 Buick colours, named as Buick named them, each with the matching one of the four factory interiors:
 white leather with red, black, light blue or light green.
+
+## What's new in 1.3
+
+- Shadows fixed: the car's shadow textures were drawn inverted, so Assetto Corsa put a hard dark slab under the
+  car. It now stands on a soft shadow, as Kunos cars do.
 
 ## What's new in 1.1
 
