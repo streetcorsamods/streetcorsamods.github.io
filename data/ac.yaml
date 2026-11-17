@@ -23,9 +23,9 @@ groups:
         url: https://sourceforge.net/projects/streetcorsa-mods/files/chevrolet-master-deluxe-1937/chevrolet_master_deluxe_1937_v1.2.zip/download
         size: 28 MB
         kind: AC car
-        text: The 1937 business coupe with the Blue Flame six, floor shift and Knee-Action front end. Eleven skins in the 1937 Duco colours.
-        es: { text: "El cupé de 1937 con el seis cilindros Blue Flame, palanca al piso y suspensión delantera Knee-Action. Once pinturas en los colores Duco de 1937." }
-        pt: { text: "O cupê de 1937 com o seis cilindros Blue Flame, câmbio no assoalho e suspensão dianteira Knee-Action. Onze pinturas nas cores Duco de 1937." }
+        text: The 1937 business coupe with the Blue Flame six, floor shift and Knee-Action front end. Thirteen skins in the 1937 Duco colours.
+        es: { text: "El cupé de 1937 con el seis cilindros Blue Flame, palanca al piso y suspensión delantera Knee-Action. Trece pinturas en los colores Duco de 1937." }
+        pt: { text: "O cupê de 1937 com o seis cilindros Blue Flame, câmbio no assoalho e suspensão dianteira Knee-Action. Treze pinturas nas cores Duco de 1937." }
       - name: Buick Roadmaster Skylark 1953
         id: buick_skylark_1953
         url: https://sourceforge.net/projects/streetcorsa-mods/files/buick-roadmaster-skylark-1953/buick_skylark_1953_v1.3.zip/download

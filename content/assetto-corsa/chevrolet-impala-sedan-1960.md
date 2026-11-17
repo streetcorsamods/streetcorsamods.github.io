@@ -25,12 +25,17 @@ shots:
   - { img: fawn-beige, caption: "938 Fawn Beige" }
   - { img: sateen-silver, caption: "940 Sateen Silver" }
   - { img: shadow-gray, caption: "941 Shadow Gray" }
+  - { img: honduras-maroon, caption: "948 Honduras Maroon" }
+  - { img: ermine-white-tuxedo-black, caption: "950 Ermine White / Tuxedo Black" }
   - { img: ermine-white-cascade-green, caption: "953 Ermine White / Cascade Green" }
   - { img: cascade-green-jade-green, caption: "955 Cascade Green / Jade Green" }
   - { img: ermine-white-horizon-blue, caption: "960 Ermine White / Horizon Blue" }
+  - { img: horizon-blue-royal-blue, caption: "962 Horizon Blue / Royal Blue" }
+  - { img: ermine-white-tasco-turquoise, caption: "963 Ermine White / Tasco Turquoise" }
   - { img: fawn-beige-suntan-copper, caption: "970 Fawn Beige / Suntan Copper" }
   - { img: ermine-white-roman-red, caption: "973 Ermine White / Roman Red" }
-shots_note: "Eighteen of the twenty-four skins, in Assetto Corsa's showroom. Honduras Maroon and five of the two-tones are in the pack too."
+  - { img: ermine-white-sateen-silver, caption: "984 Ermine White / Sateen Silver" }
+  - { img: sateen-silver-shadow-gray, caption: "988 Sateen Silver / Shadow Gray" }
 ---
 
 The 1960 Chevrolet Impala four-door sedan, body style 1819, with the optional 348 cu in Turbo-Thrust V8: 9.5:1, a Carter
