@@ -3,7 +3,7 @@ title: "Chevrolet Master DeLuxe Coupe 1937"
 mod: chevrolet_master_deluxe_1937
 weight: 20
 description: "The 1937 business coupe with the 216 Blue Flame six: 85 hp, three-speed floor shift, Knee-Action front, eleven Duco colours."
-version: "1.1"
+version: "1.2"
 folder: content/cars/chevrolet_master_deluxe_1937
 source: chevrolet-master-deluxe-1937
 licence: "CC BY-NC-SA 4.0 (our work)"
@@ -35,3 +35,8 @@ Inside: the body-colour dash with working gauges, the glovebox clock and radio, 
 broadcloth trim. Eleven skins: the model's cream and the ten 1937 Duco colours, named as Chevrolet named them.
 
 The model is Rusty Smith's, included with his permission: keep crediting him. Our work on it is CC BY-NC-SA 4.0.
+
+## What's new in 1.2
+
+- Shadows fixed: the car's shadow textures were drawn inverted, so Assetto Corsa put a hard dark slab under the
+  car. It now stands on a soft shadow, as Kunos cars do.
