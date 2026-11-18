@@ -3,7 +3,7 @@ title: "Plymouth Satellite Sebring 1971"
 mod: plymouth_satellite_sebring_1971
 weight: 60
 description: "The two-door hardtop with the 383 four-barrel, 300 hp, TorqueFlite and the woodgrain Rallye cluster. Sixteen 1971 colours."
-version: "1.2"
+version: "1.3"
 folder: content/cars/plymouth_satellite_sebring_1971
 source: plymouth-satellite-sebring-1971
 credits:
@@ -38,6 +38,10 @@ in wheelbase, about 3560 lb. The physics are written from 1971 Satellite figures
 The model was published as a GTX, but it shows a Satellite Sebring, its own scripts and plate included, so that's the
 car it is here. Black vinyl roof and buckets, the woodgrain Rallye cluster with working speedometer, fuel and
 temperature needles. Sixteen skins: the 1971 Plymouth colours, named as Plymouth named them.
+
+## What's new in 1.3
+
+- Steering fixed (the front wheels didn't turn on some servers and CSP versions); CSP headlight beams, wheels and tyres split, Plymouth star badge, lighter distant models, CSP tyre type set.
 
 ## What's new in 1.2
 
