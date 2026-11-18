@@ -3,7 +3,7 @@ title: "Buick Roadmaster 1957"
 mod: buick_roadmaster_1957
 weight: 40
 description: "The Roadmaster Riviera two-door hardtop with the 364 Nailhead, 300 hp, and the horizontal speedometer. Eleven factory two-tones."
-version: "1.2"
+version: "1.3"
 folder: content/cars/buick_roadmaster_1957
 source: buick-roadmaster-75-riviera-1957
 credits:
@@ -37,6 +37,10 @@ mirrors.
 
 Eleven skins: 1957 Buick two-tones, named as Buick named the colours, each with a factory 76A interior trim (green,
 blue, black and ivory, grey, or rust and ivory).
+
+## What's new in 1.3
+
+- Steering fixed (the front wheels didn't turn on some servers and CSP versions); dimmer dial lights, CSP headlight beams, lighter distant models, CSP tyre type set.
 
 ## What's new in 1.2
 

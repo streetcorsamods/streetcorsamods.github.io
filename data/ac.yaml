@@ -12,64 +12,64 @@ groups:
     items:
       - name: Ford V8 Pickup 1932
         id: ford_v8_pickup_1932
-        url: https://sourceforge.net/projects/streetcorsa-mods/files/ford-v8-pickup-1932/ford_v8_pickup_1932_v1.4.zip/download
-        size: 102 MB
+        url: https://sourceforge.net/projects/streetcorsa-mods/files/ford-v8-pickup-1932/ford_v8_pickup_1932_v1.5.zip/download
+        size: 94 MB
         kind: AC car
         text: The 1932 closed-cab pickup with the flathead V8, three-speed, wire wheels and an ahooga horn. Seven skins.
         es: { text: "La pickup de cabina cerrada de 1932 con el V8 flathead, caja de tres marchas, ruedas de rayos y bocina ahooga. Siete pinturas." }
         pt: { text: "A picape de cabine fechada de 1932 com o V8 flathead, câmbio de três marchas, rodas raiadas e buzina ahooga. Sete pinturas." }
       - name: Chevrolet Master DeLuxe Coupe 1937
         id: chevrolet_master_deluxe_1937
-        url: https://sourceforge.net/projects/streetcorsa-mods/files/chevrolet-master-deluxe-1937/chevrolet_master_deluxe_1937_v1.2.zip/download
-        size: 28 MB
+        url: https://sourceforge.net/projects/streetcorsa-mods/files/chevrolet-master-deluxe-1937/chevrolet_master_deluxe_1937_v1.3.zip/download
+        size: 25 MB
         kind: AC car
         text: The 1937 business coupe with the Blue Flame six, floor shift and Knee-Action front end. Thirteen skins in the 1937 Duco colours.
         es: { text: "El cupé de 1937 con el seis cilindros Blue Flame, palanca al piso y suspensión delantera Knee-Action. Trece pinturas en los colores Duco de 1937." }
         pt: { text: "O cupê de 1937 com o seis cilindros Blue Flame, câmbio no assoalho e suspensão dianteira Knee-Action. Treze pinturas nas cores Duco de 1937." }
       - name: Buick Roadmaster Skylark 1953
         id: buick_skylark_1953
-        url: https://sourceforge.net/projects/streetcorsa-mods/files/buick-roadmaster-skylark-1953/buick_skylark_1953_v1.3.zip/download
-        size: 55 MB
+        url: https://sourceforge.net/projects/streetcorsa-mods/files/buick-roadmaster-skylark-1953/buick_skylark_1953_v1.4.zip/download
+        size: 53 MB
         kind: AC car
         text: The 50th-anniversary convertible, 1,690 built. Chopped windscreen, 322 Nailhead, Dynaflow, Kelsey-Hayes wire wheels. Ten skins, each with its factory interior.
         es: { text: "El convertible del 50.º aniversario, 1.690 fabricados. Parabrisas recortado, Nailhead 322, Dynaflow, ruedas de rayos Kelsey-Hayes. Diez pinturas, cada una con su interior de fábrica." }
         pt: { text: "O conversível do 50º aniversário, 1.690 fabricados. Para-brisa rebaixado, Nailhead 322, Dynaflow, rodas raiadas Kelsey-Hayes. Dez pinturas, cada uma com o interior de fábrica." }
       - name: Buick Roadmaster 1957
         id: buick_roadmaster_1957
-        url: https://sourceforge.net/projects/streetcorsa-mods/files/buick-roadmaster-75-riviera-1957/buick_roadmaster_1957_v1.2.zip/download
-        size: 38 MB
+        url: https://sourceforge.net/projects/streetcorsa-mods/files/buick-roadmaster-75-riviera-1957/buick_roadmaster_1957_v1.3.zip/download
+        size: 37 MB
         kind: AC car
         text: The Riviera two-door hardtop with the 364 Nailhead, 300 hp, and the horizontal speedometer. Eleven factory two-tones.
         es: { text: "El hardtop de dos puertas Riviera con el Nailhead 364, 300 hp y el velocímetro horizontal. Once bicolores de fábrica." }
         pt: { text: "O hardtop de duas portas Riviera com o Nailhead 364, 300 hp e o velocímetro horizontal. Onze saia-e-blusa de fábrica." }
       - name: Chevrolet Impala Sedan 1960
         id: chevrolet_impala_sedan_1960
-        url: https://sourceforge.net/projects/streetcorsa-mods/files/chevrolet-impala-sedan-1960/chevrolet_impala_sedan_1960_v1.5.zip/download
-        size: 53 MB
+        url: https://sourceforge.net/projects/streetcorsa-mods/files/chevrolet-impala-sedan-1960/chevrolet_impala_sedan_1960_v1.6.zip/download
+        size: 50 MB
         kind: AC car
         text: The four-door Impala with the 348 Turbo-Thrust V8, 250 hp, Powerglide, X-frame and whitewalls. Twenty-four skins, the 1960 colours and two-tones, each with its houndstooth interior.
         es: { text: "El Impala de cuatro puertas con el V8 348 Turbo-Thrust, 250 hp, Powerglide, chasis en X y bandas blancas. Veinticuatro pinturas, los colores y bicolores de 1960, cada una con su interior pied-de-poule." }
         pt: { text: "O Impala de quatro portas com o V8 348 Turbo-Thrust, 250 hp, Powerglide, chassi em X e faixa branca. Vinte e quatro pinturas, as cores e saia-e-blusa de 1960, cada uma com o interior pied-de-poule." }
       - name: Buick Riviera 1963
         id: buick_riviera_1963
-        url: https://sourceforge.net/projects/streetcorsa-mods/files/buick-riviera-1963/buick_riviera_1963_v1.3.zip/download
-        size: 45 MB
+        url: https://sourceforge.net/projects/streetcorsa-mods/files/buick-riviera-1963/buick_riviera_1963_v1.4.zip/download
+        size: 43 MB
         kind: AC car
         text: The first-year Riviera. 401 Nailhead, 325 hp, Twin Turbine, brushed-aluminium dash and walnut console. Sixteen skins.
         es: { text: "El Riviera del primer año. Nailhead 401, 325 hp, Twin Turbine, tablero de aluminio cepillado y consola de nogal. Dieciséis pinturas." }
         pt: { text: "O Riviera do primeiro ano. Nailhead 401, 325 hp, Twin Turbine, painel de alumínio escovado e console de nogueira. Dezesseis pinturas." }
       - name: Oldsmobile Cutlass Supreme Holiday Sedan 1971
         id: oldsmobile_cutlass_supreme_1971
-        url: https://sourceforge.net/projects/streetcorsa-mods/files/oldsmobile-cutlass-supreme-holiday-sedan-1971/oldsmobile_cutlass_supreme_1971_v1.2.zip/download
-        size: 59 MB
+        url: https://sourceforge.net/projects/streetcorsa-mods/files/oldsmobile-cutlass-supreme-holiday-sedan-1971/oldsmobile_cutlass_supreme_1971_v1.3.zip/download
+        size: 45 MB
         kind: AC car
         text: The four-door Cutlass Supreme hardtop with the Rocket 350 four-barrel, 260 hp, Turbo Hydra-matic and a walnut-grain dash. Sixteen skins, each with its factory interior.
         es: { text: "El Cutlass Supreme hardtop de cuatro puertas con el Rocket 350 de cuatro bocas, 260 hp, Turbo Hydra-matic y tablero con imitación nogal. Dieciséis pinturas, cada una con su interior de fábrica." }
         pt: { text: "O Cutlass Supreme hardtop de quatro portas com o Rocket 350 quadrijet, 260 hp, Turbo Hydra-matic e painel imitando nogueira. Dezesseis pinturas, cada uma com o interior de fábrica." }
       - name: Plymouth Satellite Sebring 1971
         id: plymouth_satellite_sebring_1971
-        url: https://sourceforge.net/projects/streetcorsa-mods/files/plymouth-satellite-sebring-1971/plymouth_satellite_sebring_1971_v1.2.zip/download
-        size: 49 MB
+        url: https://sourceforge.net/projects/streetcorsa-mods/files/plymouth-satellite-sebring-1971/plymouth_satellite_sebring_1971_v1.3.zip/download
+        size: 44 MB
         kind: AC car
         text: The two-door hardtop with the 383 four-barrel, 300 hp, TorqueFlite and the woodgrain Rallye cluster. Sixteen skins.
         es: { text: "El hardtop de dos puertas con el 383 de cuatro bocas, 300 hp, TorqueFlite y el tablero Rallye imitación madera. Dieciséis pinturas." }
