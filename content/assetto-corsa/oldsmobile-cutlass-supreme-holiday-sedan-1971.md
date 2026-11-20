@@ -3,7 +3,7 @@ title: "Oldsmobile Cutlass Supreme Holiday Sedan 1971"
 mod: oldsmobile_cutlass_supreme_1971
 weight: 55
 description: "The four-door Cutlass Supreme hardtop with the Rocket 350 four-barrel: 260 hp, Turbo Hydra-matic, walnut-grain dash. Sixteen skins, each with its factory interior."
-version: "1.3"
+version: "1.4"
 folder: content/cars/oldsmobile_cutlass_supreme_1971
 source: oldsmobile-cutlass-supreme-holiday-sedan-1971
 skins: 16
@@ -45,6 +45,10 @@ only; the buckets and the console came on the coupe and the convertible.
 Sixteen skins: the model's own blue and the fifteen colours Oldsmobile offered on the 1971 intermediates, named and
 numbered as Oldsmobile did. Each comes with the interior trim the factory recommended for that colour (black, blue,
 sienna, jade green or sandalwood), with the seats, door panels, instrument panel, carpet and headliner keyed to it.
+
+## What's new in 1.4
+
+- Windscreens no longer mirror the cabin on Custom Shaders Patch 0.3; firmer dampers (the body no longer wallows or rocks after a bump); H-pattern shifters work (it was set to paddles only); the driver's hands on the wheel rim.
 
 ## What's new in 1.3
 
