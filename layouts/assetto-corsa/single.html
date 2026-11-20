@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{- /* An Assetto Corsa mod's page (content/assetto-corsa/<page>.md). Like a Street Corsa mod's page (mods/single.html),
        but its download is the data/ac.yaml item whose id is front matter mod, and it installs into Assetto Corsa.
-       shots: the skins' previews in static/images/assetto-corsa/<page>/ (<name>.jpg, 1022x575, and <name>-sm.jpg,
+       shots: the pictures (skin previews or screenshots) in static/images/assetto-corsa/<page>/ (<name>.jpg, 1022x575, and <name>-sm.jpg,
        640x360), the first one the hero. version, credits, licence and licence_url:
        front matter. skins: the pack's skin count, where not every skin has a shot (default: the shots). source: its SVN repository's mount point on SourceForge (sourceforge.net/p/streetcorsa-mods/<source>/). */ -}}
 {{ $dir := printf "/images/assetto-corsa/%s/" .File.ContentBaseName }}
@@ -19,7 +19,7 @@
     {{ with index .Params.shots 0 }}
       {{ $full := printf "%s%s.jpg" $dir .img }}
       <figure class="mod-hero">
-        <a href="{{ $full }}" data-lb target="_blank" rel="noopener"><img src="{{ $full }}" alt="{{ $.Title }} in {{ .caption }}" width="1022" height="575" fetchpriority="high"></a>
+        <a href="{{ $full }}" data-lb target="_blank" rel="noopener"><img src="{{ $full }}" alt="{{ $.Title }}: {{ .caption }}" width="1022" height="575" fetchpriority="high"></a>
         <figcaption>{{ .caption }}</figcaption>
       </figure>
     {{ end }}
@@ -55,7 +55,7 @@
   <div class="gallery">
     {{ range . }}
       <figure>
-        <a href="{{ $dir }}{{ .img }}.jpg" data-lb target="_blank" rel="noopener"><img src="{{ $dir }}{{ .img }}-sm.jpg" alt="{{ $.Title }} in {{ .caption }}" loading="lazy" decoding="async" width="640" height="360"></a>
+        <a href="{{ $dir }}{{ .img }}.jpg" data-lb target="_blank" rel="noopener"><img src="{{ $dir }}{{ .img }}-sm.jpg" alt="{{ $.Title }}: {{ .caption }}" loading="lazy" decoding="async" width="640" height="360"></a>
         <figcaption>{{ .caption }}</figcaption>
       </figure>
     {{ end }}

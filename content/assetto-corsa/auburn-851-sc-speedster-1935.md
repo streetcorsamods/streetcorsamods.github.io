@@ -14,20 +14,14 @@ credits:
   - "Horn: \"Old Car Ahooga Horn\" by craigsmith, Freesound 480002, CC0"
   - "Engine sound banks built on Kunos Simulazioni's Assetto Corsa audio SDK; driver pose, animations and collider box from Kunos Simulazioni's Alfa Romeo GTA"
 shots:
-  - { img: vermilion, caption: "Vermilion / tan leather" }
-  - { img: cigarette-cream, caption: "Cigarette Cream / brown leather" }
-  - { img: cream-morocco-red, caption: "Cigarette Cream / Morocco red leather" }
-  - { img: cream-black-33151e, caption: "Cigarette Cream / black leather (851 SC 33151E)" }
-  - { img: black, caption: "Black / dark red leather" }
-  - { img: swiss-green, caption: "Swiss Green / Caramel Beige leather" }
-  - { img: light-ivory, caption: "Light Ivory / tan leather" }
-  - { img: rich-maroon, caption: "Rich Maroon / tan leather" }
-  - { img: neptune-blue, caption: "Neptune Blue / grey leather" }
-  - { img: powder-blue, caption: "Powder Blue / blue-grey leather" }
-  - { img: cool-orchard-green, caption: "Cool Orchard Green / beige leather" }
-  - { img: burnt-rust, caption: "Burnt Rust / Caramel Beige leather" }
-  - { img: desdemona-blue, caption: "Desdemona Blue / grey leather" }
-  - { img: redwood-beige, caption: "Redwood Beige / brown leather" }
+  - { img: shot-plaza-cream, caption: "On the plaza" }
+  - { img: shot-plaza-red, caption: "Vermilion on the plaza" }
+  - { img: shot-rear-three-quarter, caption: "The boattail and its spear" }
+  - { img: shot-side, caption: "From the side" }
+  - { img: shot-front, caption: "The V grille and the dipped bumper" }
+  - { img: shot-mascot, caption: "The Flying Goddess" }
+  - { img: shot-night-lamps, caption: "Headlamps and spot lamps lit" }
+shots_note: "In Assetto Corsa's showrooms. The pack has fourteen skins."
 ---
 
 The 1935 Auburn 851 Supercharged Boattail Speedster, Gordon Buehrig's last Auburn. Lycoming GH straight-eight, 279.9 cu
