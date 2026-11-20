@@ -23,9 +23,9 @@ groups:
         url: https://sourceforge.net/projects/streetcorsa-mods/files/auburn-851-sc-speedster-boattail-1935/auburn_851_speedster_1935_v1.0.zip/download
         size: 37 MB
         kind: AC car
-        text: Gordon Buehrig's boattail with the supercharged straight-eight, 150 bhp, and the Dual-Ratio axle on Extra A (needs CSP). Fourteen skins in the 1935-36 Auburn colours.
-        es: { text: "El boattail de Gordon Buehrig con el ocho en línea sobrealimentado, 150 bhp, y el eje Dual-Ratio en Extra A (requiere CSP). Catorce pinturas en los colores Auburn de 1935-36." }
-        pt: { text: "O boattail de Gordon Buehrig com o oito em linha sobrealimentado, 150 bhp, e o eixo Dual-Ratio no Extra A (requer CSP). Catorze pinturas nas cores Auburn de 1935-36." }
+        text: Gordon Buehrig's boattail with the supercharged straight-eight, 150 bhp, and the Dual-Ratio axle on Extra A. Works only with CSP 0.3.1. Fourteen skins in the 1935-36 Auburn colours.
+        es: { text: "El boattail de Gordon Buehrig con el ocho en línea sobrealimentado, 150 bhp, y el eje Dual-Ratio en Extra A. Funciona solo con CSP 0.3.1. Catorce pinturas en los colores Auburn de 1935-36." }
+        pt: { text: "O boattail de Gordon Buehrig com o oito em linha sobrealimentado, 150 bhp, e o eixo Dual-Ratio no Extra A. Funciona só com o CSP 0.3.1. Catorze pinturas nas cores Auburn de 1935-36." }
       - name: Chevrolet Master DeLuxe Coupe 1937
         id: chevrolet_master_deluxe_1937
         url: https://sourceforge.net/projects/streetcorsa-mods/files/chevrolet-master-deluxe-1937/chevrolet_master_deluxe_1937_v1.4.zip/download

@@ -3,7 +3,7 @@
        but its download is the data/ac.yaml item whose id is front matter mod, and it installs into Assetto Corsa.
        shots: the pictures (skin previews or screenshots) in static/images/assetto-corsa/<page>/ (<name>.jpg, 1022x575, and <name>-sm.jpg,
        640x360), the first one the hero. version, credits, licence and licence_url:
-       front matter. skins: the pack's skin count, where not every skin has a shot (default: the shots). source: its SVN repository's mount point on SourceForge (sourceforge.net/p/streetcorsa-mods/<source>/). */ -}}
+       front matter. csp: the one Custom Shaders Patch version the car works with (shown as Requires; the install note then says required). skins: the pack's skin count, where not every skin has a shot (default: the shots). source: its SVN repository's mount point on SourceForge (sourceforge.net/p/streetcorsa-mods/<source>/). */ -}}
 {{ $dir := printf "/images/assetto-corsa/%s/" .File.ContentBaseName }}
 {{ $item := false }}
 {{ range hugo.Data.ac.groups }}{{ range .items }}{{ if eq .id $.Params.mod }}{{ $item = . }}{{ end }}{{ end }}{{ end }}
@@ -31,6 +31,7 @@
       {{ end }}
       <dl>
         <dt>Kind</dt><dd>Assetto Corsa car</dd>
+        {{ with .Params.csp }}<dt>Requires</dt><dd><a href="https://acstuff.club/patch/" target="_blank" rel="noopener">Custom Shaders Patch</a> {{ . }} only</dd>{{ end }}
         {{ with .Params.version }}<dt>Version</dt><dd>{{ . }}</dd>{{ end }}
         {{ with $item }}{{ with .size }}<dt>Size</dt><dd>{{ . }}</dd>{{ end }}{{ end }}
         {{ with .Params.skins | default (len .Params.shots) }}<dt>Skins</dt><dd>{{ . }}</dd>{{ end }}
@@ -41,7 +42,7 @@
         <dt>Made by</dt><dd><a href="https://github.com/pecamardelli" target="_blank" rel="noopener">Pablo Camardelli</a></dd>
       </dl>
       {{ partial "mod-credits.html" .Params.credits }}
-      <p class="muted small">Install: drag the zip onto <a href="https://acstuff.club/app/" target="_blank" rel="noopener">Content Manager</a>, or copy its <code>content</code> folder into your Assetto Corsa folder. <a href="https://acstuff.club/patch/" target="_blank" rel="noopener">Custom Shaders Patch</a> recommended. No Street Corsa needed.</p>
+      <p class="muted small">Install: drag the zip onto <a href="https://acstuff.club/app/" target="_blank" rel="noopener">Content Manager</a>, or copy its <code>content</code> folder into your Assetto Corsa folder. {{ with .Params.csp }}It works only with <a href="https://acstuff.club/patch/" target="_blank" rel="noopener">Custom Shaders Patch</a> {{ . }}.{{ else }}<a href="https://acstuff.club/patch/" target="_blank" rel="noopener">Custom Shaders Patch</a> recommended.{{ end }} No Street Corsa needed.</p>
     </aside>
     <div class="prose">
       {{ .Content }}

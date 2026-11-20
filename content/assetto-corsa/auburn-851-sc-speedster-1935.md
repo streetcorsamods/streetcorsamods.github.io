@@ -4,6 +4,7 @@ mod: auburn_851_speedster_1935
 weight: 15
 description: "Gordon Buehrig's boattail speedster with the supercharged Lycoming straight-eight, 150 bhp, and the Columbia Dual-Ratio axle on a key. Fourteen skins in the 1935-36 Auburn colours."
 version: "1.0"
+csp: "0.3.1"
 folder: content/cars/auburn_851_speedster_1935
 source: auburn-851-sc-speedster-boattail-1935
 skins: 14
@@ -37,8 +38,8 @@ the pleated leather bench, the two-pod dash with working gauges, and a full unde
 and ahooga horn. Fourteen skins: thirteen 1935-36 Auburn colours, each with a period leather, and the cream car with
 black leather photographed at RM Sotheby's (851 SC 33151E).
 
-**Custom Shaders Patch is required** for this one (the axle runs on CSP's extended physics); the Dual-Ratio shift needs
-CSP 0.3.1 or newer.
+**It works only with Custom Shaders Patch 0.3.1.** CSP is required (the axle runs on its extended physics), and the car
+works in version 0.3.1 only, not in older or newer ones.
 
 ## The Dual-Ratio axle
 
