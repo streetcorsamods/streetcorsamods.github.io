@@ -1,0 +1,14 @@
+{{- /* A download item's version, for its card's meta line, or "": the game's is the release in hugo.toml (shown only
+       once released), a mod's is its manifest's (data/mods/<id>.json, from tools/sync.py), an AC car's is its page's
+       front matter version (content/assetto-corsa/<page>.md). Context: the item. */ -}}
+{{- $v := "" -}}
+{{- $page := partial "mod-page.html" . -}}
+{{- $mod := index hugo.Data.mods (.id | default "") -}}
+{{- if and $page (eq $page.Type "game") -}}
+  {{- if site.Params.released }}{{ $v = site.Params.release }}{{ end -}}
+{{- else if $mod -}}
+  {{- $v = $mod.version -}}
+{{- else if $page -}}
+  {{- $v = $page.Params.version | default "" -}}
+{{- end -}}
+{{- return (string $v) -}}

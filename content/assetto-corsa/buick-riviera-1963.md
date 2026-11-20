@@ -3,7 +3,7 @@ title: "Buick Riviera 1963"
 mod: buick_riviera_1963
 weight: 50
 description: "The first-year Riviera: 401 Nailhead, 325 hp, Twin Turbine, the brushed-aluminium dash and walnut console. Sixteen colours."
-version: "1.4"
+version: "1.5"
 folder: content/cars/buick_riviera_1963
 source: buick-riviera-1963
 credits:
@@ -39,6 +39,10 @@ drums, power steering, 7.10-15 whitewalls on 15 in wheels, 117 in wheelbase, 399
 The model came lowered on 18 in custom wheels: it sits at factory height here, on 15 in wheels and whitewalls. The black
 interior has the brushed-aluminium instrument panel and walnut console, working gauges and clock. Sixteen skins: the
 1963 Riviera colours, named as Buick named them.
+
+## What's new in 1.5
+
+- Windscreens no longer mirror the cabin on Custom Shaders Patch 0.3; firmer dampers (the body no longer wallows or rocks after a bump).
 
 ## What's new in 1.4
 

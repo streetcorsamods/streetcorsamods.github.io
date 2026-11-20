@@ -3,7 +3,7 @@ title: "Chevrolet Impala Sedan 1960"
 mod: chevrolet_impala_sedan_1960
 weight: 45
 description: "The four-door Impala with the 348 Turbo-Thrust V8: 250 hp, Powerglide, X-frame and whitewalls. Twenty-four skins: the fourteen 1960 colours and the ten two-tones."
-version: "1.6"
+version: "1.7"
 folder: content/cars/chevrolet_impala_sedan_1960
 source: chevrolet-impala-sedan-1960
 skins: 24
@@ -49,6 +49,10 @@ fourteen 1960 Chevrolet colours and the ten factory two-tones (roof and pillars 
 as Chevrolet did. Each has an Impala cloth-and-vinyl houndstooth interior in one of six trims: 809 black and white, 825
 green, 841 blue, 852 turquoise, 865 copper or 873 red and white. We didn't find the factory paint-to-trim chart, so each
 colour has the trim it most likely came with.
+
+## What's new in 1.7
+
+- Windscreens no longer mirror the cabin on Custom Shaders Patch 0.3; firmer dampers (the body no longer wallows or rocks after a bump).
 
 ## What's new in 1.6
 

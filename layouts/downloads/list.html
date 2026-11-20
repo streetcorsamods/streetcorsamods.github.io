@@ -58,7 +58,7 @@
             <h3><a href="{{ $page.RelPermalink }}"{{ partial "hreflang.html" (dict "page" $here "to" $page) }}>{{ .name }}</a>{{ with .badge }} <span class="badge">{{ . }}</span>{{ end }}</h3>
             {{ with .text }}<p>{{ . }}</p>{{ end }}
             <div class="dl-card-foot">
-              <p class="meta">{{ .kind }}{{ with .size }} · {{ . }}{{ end }}<br><a href="{{ $page.RelPermalink }}"{{ partial "hreflang.html" (dict "page" $here "to" $page) }}>{{ T "dl_details" }}</a></p>
+              <p class="meta">{{ .kind }}{{ with partial "dl-version.html" . }} · v{{ . }}{{ end }}{{ with .size }} · {{ . }}{{ end }}<br><a href="{{ $page.RelPermalink }}"{{ partial "hreflang.html" (dict "page" $here "to" $page) }}>{{ T "dl_details" }}</a></p>
               {{ partial "dl-button.html" . }}
             </div>
           </div>
@@ -75,7 +75,7 @@
             <div class="dl-text">
               <h3>{{ .name }}{{ with .badge }} <span class="badge">{{ . }}</span>{{ end }}</h3>
               {{ with .text }}<p>{{ . }}</p>{{ end }}
-              <p class="meta">{{ .kind }}{{ with .for }} · {{ T "dl_for" (dict "x" .) }}{{ end }}{{ with .size }} · {{ . }}{{ end }}</p>
+              <p class="meta">{{ .kind }}{{ with .for }} · {{ T "dl_for" (dict "x" .) }}{{ end }}{{ with partial "dl-version.html" . }} · v{{ . }}{{ end }}{{ with .size }} · {{ . }}{{ end }}</p>
             </div>
             {{ partial "dl-button.html" . }}
           </div>
