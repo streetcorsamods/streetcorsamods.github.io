@@ -50,7 +50,7 @@ each way. And if it still won't play along, don't worry: the car just stays in h
 Fourteen skins: thirteen of Auburn's 1935-36 colours, each with its period leather, and the cream car with black
 leather that RM Sotheby's photographed (851 SC 33151E).
 
-It works only with [Custom Shaders Patch](https://acstuff.club/patch/) 0.3.1, not older or newer versions. Download it from its page in
+It needs [Custom Shaders Patch](https://acstuff.club/patch/) 0.2.11 or newer. Download it from its page in
 [AC Mods](/assetto-corsa/auburn-851-sc-speedster-1935/). Like all our cars it's open to anybody who wants to make it
 better: its files are in an
 [SVN repository on SourceForge](https://sourceforge.net/p/streetcorsa-mods/auburn-851-sc-speedster-boattail-1935/).
