@@ -3,7 +3,7 @@ title: "Ford V8 Pickup 1932"
 mod: ford_v8_pickup_1932
 weight: 10
 description: "The 1932 closed-cab pickup with the 221 flathead V8: 65 hp, three-speed, transverse leaves, wire wheels and an ahooga horn."
-version: "1.6"
+version: "1.7"
 folder: content/cars/ford_v8_pickup_1932
 source: ford-v8-pickup-1932
 credits:
@@ -29,6 +29,19 @@ mechanical drums, 18 in wire wheels on 5.25-18 tyres, about 2476 lb. The physics
 The cab is period: gloss black dash, engine-turned cluster with working needles, tan leather. Duolamp tail lamps, and an
 ahooga horn whose release tail is played by a small Custom Shaders Patch script (without CSP the horn just stops). The
 skins: the worn sign-written truck as it was modelled, and six clean 1932 Ford colours with black fenders.
+
+## What's new in 1.7
+
+- The running gear moves with the suspension: rear axle, the halves of the transverse leaf springs, front beam, torque
+  tube and radius rods all follow the wheels. Thanks to Den_88 on OverTake for the report.
+- Opening doors (front-hinged, the window and handles go with them) and a sweeping vacuum wiper.
+- Damage and dirt: scratches on the panels you hit, cracking lamp lenses and windows, the hood halves and the tailgate
+  flap after a knock, and dust builds up when you go off the road.
+- Brighter night lights with Custom Shaders Patch: longer headlight beams and a stop-lamp glow behind. Thanks to
+  voraciousmyth on OverTake for the report.
+- Spoke motion blur on the wire wheels at speed; the tyres take dust and blur at speed.
+- Six onboard cameras, and driver and pit-crew outfits for each skin.
+- Rebuilt distant models (no more shredded body or speckled wheels) and the tyre tread no longer shows see-through slits.
 
 ## What's new in 1.6
 
