@@ -57,6 +57,7 @@ MODS = {
     "streetrod_gas_station": "addons/streetrod_gas_station",
     "streetrod_shops": "addons/streetrod_shops",
     "streetrod_main_street": "addons/streetrod_main_street",
+    "streetrod_streetkit": "addons/streetrod_streetkit",
 }
 
 # Screenshots the site adds to the synced pages (static/images/tutorials). Each goes right under a heading

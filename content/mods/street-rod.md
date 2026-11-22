@@ -63,11 +63,12 @@ plays the same, only nobody talks back.
 
 ![Cruising in town](/images/mods/street-rod/cruising.jpg "Out on the street in a '57 Bel Air")
 
-Press **Go race!** and drive to a diner. Each has its regulars and a horsepower class, and the fast ones won't race
-a slow car: pick a racer, a race and a bet. Or cruise the streets, wait at the curb, and somebody pulls up. Drag races,
+Press **Go race!** and drive to a diner. Since 0.5.0 they stand round a town of their own: the Main Street Diner
+downtown, the Hi-Way Grill out on the highway, Surfside on the beach road and the Starlite on the strip. Each has its
+regulars and a horsepower class, and the fast ones won't race a slow car: pick a racer, a race and a bet. Or cruise the streets, wait at the curb, and somebody pulls up. Drag races,
 road races and time attacks, for cash or for pink slips, and the cops come out at night. Work your way up to the King.
 
 ## Get it
 
-Install it first: it's the default setting. Its places are mods of their own since 0.4.0, and its download brings them all: the [garage](/mods/street-rod-garage/), the [gas station](/mods/street-rod-gas-station/), the [shops](/mods/street-rod-shops/) and [Main Street](/mods/street-rod-main-street/). The [engine packs](/mods/#engines) give its cars their real engines to
+Install it first: it's the default setting. Its places are mods of their own since 0.4.0, and its download brings them all: the [garage](/mods/street-rod-garage/), the [gas station](/mods/street-rod-gas-station/), the [shops](/mods/street-rod-shops/), [Main Street](/mods/street-rod-main-street/) and the [street kit](/mods/street-rod-street-kit/) they are laid out with. The [engine packs](/mods/#engines) give its cars their real engines to
 build. New to it? Start with the [Street Rod tutorials](/tutorials/street-rod/).

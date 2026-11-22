@@ -41,6 +41,7 @@ and you join the same way. Their licences: CC BY 4.0 for the settings and the pl
 | [Street Rod gas station](/mods/street-rod-gas-station/) | [street-rod-gas-station](https://sourceforge.net/p/streetcorsa-mods/street-rod-gas-station/) |
 | [Street Rod shops](/mods/street-rod-shops/) | [street-rod-shops](https://sourceforge.net/p/streetcorsa-mods/street-rod-shops/) |
 | [Street Rod Main Street](/mods/street-rod-main-street/) | [street-rod-main-street](https://sourceforge.net/p/streetcorsa-mods/street-rod-main-street/) |
+| [Street Rod street kit](/mods/street-rod-street-kit/) | [street-rod-street-kit](https://sourceforge.net/p/streetcorsa-mods/street-rod-street-kit/) |
 | [Ford V8 Pickup 1932](/assetto-corsa/ford-v8-pickup-1932/) | [ford-v8-pickup-1932](https://sourceforge.net/p/streetcorsa-mods/ford-v8-pickup-1932/) |
 | [Chevrolet Master DeLuxe 1937](/assetto-corsa/chevrolet-master-deluxe-1937/) | [chevrolet-master-deluxe-1937](https://sourceforge.net/p/streetcorsa-mods/chevrolet-master-deluxe-1937/) |
 | [Buick Roadmaster Skylark 1953](/assetto-corsa/buick-skylark-1953/) | [buick-roadmaster-skylark-1953](https://sourceforge.net/p/streetcorsa-mods/buick-roadmaster-skylark-1953/) |
