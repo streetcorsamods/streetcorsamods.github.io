@@ -1,7 +1,7 @@
 {
   "id": "streetrod_shops",
   "name": "Street Rod shops",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Street Rod's rooms: the paint booth and its painter, the part shop and the machine shop inside, and the warehouse the player's cars are kept in, with their sounds.",
   "settings": [
     "streetrod"
@@ -10,6 +10,6 @@
   "credits": [
     "Surface textures by Poly Haven (CC0): beige_wall_001, blue_metal_plate, checker, concrete_block_wall, concrete_floor_worn_001, concrete_wall_004, dark_wood, garage_floor, green_metal_rust, grey_plaster, kitchen_wood, linoleum_brown, metal_plate, old_planks_02, painted_brick, painted_metal_shutter, plastered_wall_04, plywood, raw_plank_wall, roof_planks",
     "Surface textures by Poly Haven (CC0): blue_metal_plate, box_profile_metal_sheet, concrete_block_wall, concrete_floor_worn_001, corrugated_iron_02, factory_brick, garage_floor, green_metal_rust, hangar_concrete_floor, metal_plate, painted_metal_shutter, red_brick_03, rusty_corrugated_iron, rusty_metal_shutter, rusty_painted_metal, smooth_concrete_floor, weathered_plank_siding, whitewashed_brick, wooden_garage_door, yellow_brick",
-    "Surface textures by Poly Haven (CC0): concrete_block_wall, concrete_floor_worn_001, concrete_wall_004, metal_plate, plywood"
+    "Surface textures by Poly Haven (CC0): concrete_block_wall, concrete_floor_worn_001, concrete_wall_004, metal_plate, plywood. Machines and props from Sketchfab (CC BY 4.0): bench grinder by dmytronikonov, chevy 454 by Rysky, compressor by kryik1023, crankshaft by outpiston, desk lathe by Ambiabstract, drill press by jjprietov, engine crane by AlexTSK, engine stand by santosestudiovtn, floor drill by jake.martinez, hydraulic press by Scarecrow_original, lathe by ridhobahri, oil cans by caboose3d, oil drums by OliverTriplett, pistons by JiggleSticks, surfacer by kanesk06, tool cabinet by jimbogies, tool chest by Rumdidum, v8 block by wahyu_wibowo, valve lapper by cineg (Grampian Transport Museum), vise by brian-aa, wall clock by AleixoAlonso, welding cart by Mielos3D, workbench by jjchalupnik; from Poly Haven (CC0): caged light, can rusted, overhead crane, storage cart"
   ]
 }

@@ -31,8 +31,8 @@ groups:
     items:
       - name: Street Rod
         id: streetrod
-        file: StreetCorsa-streetrod-0.5.0.zip
-        size: 288 MB
+        file: StreetCorsa-streetrod-0.5.1.zip
+        size: 298 MB
         kind: Setting
         badge: Default
         text: Los Angeles, 1970. Buy a tired old car, build its engine on the stand and race Main Street at night for cash and pink slips, until the King will race you. Its garage, gas station, shops, the town round Main Street and its street kit come with it.
