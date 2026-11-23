@@ -3,7 +3,7 @@ title: "Plymouth Satellite Sebring 1971"
 mod: plymouth_satellite_sebring_1971
 weight: 60
 description: "The two-door hardtop with the 383 four-barrel, 300 hp, TorqueFlite and the woodgrain Rallye cluster. Sixteen 1971 colours."
-version: "1.4"
+version: "1.5"
 folder: content/cars/plymouth_satellite_sebring_1971
 source: plymouth-satellite-sebring-1971
 credits:
@@ -38,6 +38,20 @@ in wheelbase, about 3560 lb. The physics are written from 1971 Satellite figures
 The model was published as a GTX, but it shows a Satellite Sebring, its own scripts and plate included, so that's the
 car it is here. Black vinyl roof and buckets, the woodgrain Rallye cluster with working speedometer, fuel and
 temperature needles. Sixteen skins: the 1971 Plymouth colours, named as Plymouth named them.
+
+## What's new in 1.5
+
+- Quad headlamps that work like the real ones on Custom Shaders Patch: low beam on the outer pair, all four on high
+  beam, and flashing the high beams lights all four, with the lights off or on low beam. Turn signals (amber parking
+  lamps, red tail lamps), a lamp on the rear plate, and the gauges stay lit when you watch the car from outside at
+  night. Thanks to voraciousmyth for the report on the headlights.
+- The doors open and the wipers work (the real car hides them under the hood's edge, so they park at the base of the
+  windscreen).
+- The rear axle and differential move with the wheels.
+- Kunos-style damage and dirt: scratches and dust on the paint, cracked windows and lamps in hard hits (set Damage
+  above 0 % in the assists), six onboard cameras, driver and pit crew matched to each skin.
+- Cleaner distant models: no blue patches in the vinyl roof, round tyres and lenses, a solid grille far away, and
+  the lamps stay lit on distant cars at night.
 
 ## What's new in 1.4
 
