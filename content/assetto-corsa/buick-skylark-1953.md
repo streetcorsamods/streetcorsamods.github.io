@@ -3,7 +3,7 @@ title: "Buick Roadmaster Skylark 1953"
 mod: buick_skylark_1953
 weight: 30
 description: "The 50th-anniversary convertible, 1,690 built: chopped windscreen, 322 Nailhead, Dynaflow and Kelsey-Hayes wire wheels."
-version: "1.5"
+version: "1.6"
 folder: content/cars/buick_skylark_1953
 source: buick-roadmaster-skylark-1953
 credits:
@@ -33,6 +33,15 @@ factory figures.
 Inside: the maroon-hooded dash with the white Damascene panel, working gauges and clock, the gold SKYLARK horn button.
 Ten skins in 1953 Buick colours, named as Buick named them, each with the matching one of the four factory interiors:
 white leather with red, black, light blue or light green.
+
+## What's new in 1.6
+
+- A rear axle and torque tube under the car (the model had none), moving with the wheels.
+- Kunos-style damage and dirt: scratches and dust on the paint, cracked windows and lamps in hard hits (set Damage above 0 % in the assists), six onboard cameras, a light copy of the cabin at a distance, and the driver and pit crew dressed to match each skin.
+- The wire wheels blur at speed.
+- Headlights with a real low and a high beam on Custom Shaders Patch and a warm filament glow, turn signals that stay visible with the brake pedal down, a lamp on the rear plate, and the gauges stay lit when you watch the car from outside at night. Lamps stay lit on distant cars too. Amber parking-lamp blinkers in front, backup lamps behind.
+- Working wipers (Custom Shaders Patch, or in the rain).
+- Cleaner distant models: the red door trim no longer shows through the wheel wells, and the grille stays whole.
 
 ## What's new in 1.5
 

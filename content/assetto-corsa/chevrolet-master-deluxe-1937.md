@@ -3,7 +3,7 @@ title: "Chevrolet Master DeLuxe Coupe 1937"
 mod: chevrolet_master_deluxe_1937
 weight: 20
 description: "The 1937 business coupe with the 216 Blue Flame six: 85 hp, three-speed floor shift, Knee-Action front, eleven Duco colours."
-version: "1.4"
+version: "1.5"
 folder: content/cars/chevrolet_master_deluxe_1937
 source: chevrolet-master-deluxe-1937
 licence: "CC BY-NC-SA 4.0 (our work)"
@@ -38,6 +38,14 @@ broadcloth trim. Thirteen skins: the model's cream and the ten 1937 Duco colours
 Black and Regent Maroon again with tree-bark cord trim.
 
 The model is Rusty Smith's, included with his permission: keep crediting him. Our work on it is CC BY-NC-SA 4.0.
+
+## What's new in 1.5
+
+- A rear axle and torque tube under the car (the model had none), moving with the wheels; the two hood halves come loose after a hard front hit.
+- Kunos-style damage and dirt: scratches and dust on the paint, cracked windows and lamps in hard hits (set Damage above 0 % in the assists), six onboard cameras, a light copy of the cabin at a distance, and the driver and pit crew dressed to match each skin.
+- Brighter 6 V headlamps with a longer low beam and a lamp on the rear plate on Custom Shaders Patch (no turn signals: it's a 1937).
+- Working wipers (Custom Shaders Patch, or in the rain).
+- Round lamps at a distance, and lit on far-away cars at night.
 
 ## What's new in 1.4
 

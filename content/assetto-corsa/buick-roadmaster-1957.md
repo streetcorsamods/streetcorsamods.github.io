@@ -3,7 +3,7 @@ title: "Buick Roadmaster 1957"
 mod: buick_roadmaster_1957
 weight: 40
 description: "The Roadmaster Riviera two-door hardtop with the 364 Nailhead, 300 hp, and the horizontal speedometer. Eleven factory two-tones."
-version: "1.4"
+version: "1.5"
 folder: content/cars/buick_roadmaster_1957
 source: buick-roadmaster-75-riviera-1957
 credits:
@@ -37,6 +37,14 @@ mirrors.
 
 Eleven skins: 1957 Buick two-tones, named as Buick named the colours, each with a factory 76A interior trim (green,
 blue, black and ivory, grey, or rust and ivory).
+
+## What's new in 1.5
+
+- The rear axle moves with the wheels (watch a replay over a kerb), and the hood comes loose and flaps after a hard front hit.
+- Kunos-style damage and dirt: scratches and dust on the paint, cracked windows and lamps in hard hits (set Damage above 0 % in the assists), six onboard cameras, a light copy of the cabin at a distance, and the driver and pit crew dressed to match each skin.
+- Headlights with a real low and a high beam on Custom Shaders Patch and a warm filament glow, turn signals that stay visible with the brake pedal down, a lamp on the rear plate, and the gauges stay lit when you watch the car from outside at night. Lamps stay lit on distant cars too. Backup lamps work.
+- Working wipers (Custom Shaders Patch, or in the rain).
+- Cleaner distant models: whole grille and bumpers, and tail lamps at every distance.
 
 ## What's new in 1.4
 
