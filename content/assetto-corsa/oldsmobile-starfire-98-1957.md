@@ -13,6 +13,10 @@ credits:
   - "Port, physics, engine sound (engine-sim, Oldsmobile Rocket V8), cabin, gauges, running gear and skins: Street Corsa Mods"
   - "Engine sound banks built on Kunos Simulazioni's Assetto Corsa audio SDK; driver pose and animations from Kunos Simulazioni's Maserati Levante, collider box from the Alfa Romeo GTA"
 shots:
+  - { img: shot-front, caption: "Festival Red in the hangar" }
+  - { img: shot-rear, caption: "The rocket tail lamps and the Starfire script" }
+  - { img: shot-top, caption: "From above: the cove, the benches and the dash" }
+  - { img: shot-night, caption: "Lamps lit" }
   - { img: festival-red, caption: "Festival Red, Alcan White cove" }
   - { img: artesian-blue, caption: "Artesian Blue, Alcan White cove" }
   - { img: alcan-white, caption: "Alcan White, Festival Red cove" }
