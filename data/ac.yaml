@@ -76,9 +76,9 @@ groups:
         pt: { text: "O Cutlass Supreme hardtop de quatro portas com o Rocket 350 quadrijet, 260 hp, Turbo Hydra-matic e painel imitando nogueira. Portas que abrem, limpadores, quatro faróis, danos e sujeira. Dezesseis pinturas, cada uma com o interior de fábrica." }
       - name: Plymouth Satellite Sebring 1971
         id: plymouth_satellite_sebring_1971
-        url: https://sourceforge.net/projects/streetcorsa-mods/files/plymouth-satellite-sebring-1971/plymouth_satellite_sebring_1971_v1.4.zip/download
-        size: 44 MB
+        url: https://sourceforge.net/projects/streetcorsa-mods/files/plymouth-satellite-sebring-1971/plymouth_satellite_sebring_1971_v1.5.zip/download
+        size: 47 MB
         kind: AC car
-        text: The two-door hardtop with the 383 four-barrel, 300 hp, TorqueFlite and the woodgrain Rallye cluster. Sixteen skins.
-        es: { text: "El hardtop de dos puertas con el 383 de cuatro bocas, 300 hp, TorqueFlite y el tablero Rallye imitación madera. Dieciséis pinturas." }
-        pt: { text: "O hardtop de duas portas com o 383 de quadrijet, 300 hp, TorqueFlite e o painel Rallye imitando madeira. Dezesseis pinturas." }
+        text: The two-door hardtop with the 383 four-barrel, 300 hp, TorqueFlite and the woodgrain Rallye cluster. Opening doors, wipers, quad headlamps, damage and dirt. Sixteen skins.
+        es: { text: "El hardtop de dos puertas con el 383 de cuatro bocas, 300 hp, TorqueFlite y el tablero Rallye imitación madera. Puertas que abren, limpiaparabrisas, cuatro faros, daños y suciedad. Dieciséis pinturas." }
+        pt: { text: "O hardtop de duas portas com o 383 de quadrijet, 300 hp, TorqueFlite e o painel Rallye imitando madeira. Portas que abrem, limpadores, quatro faróis, danos e sujeira. Dezesseis pinturas." }
