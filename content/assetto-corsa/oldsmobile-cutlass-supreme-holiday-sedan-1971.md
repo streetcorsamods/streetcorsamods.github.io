@@ -3,7 +3,7 @@ title: "Oldsmobile Cutlass Supreme Holiday Sedan 1971"
 mod: oldsmobile_cutlass_supreme_1971
 weight: 55
 description: "The four-door Cutlass Supreme hardtop with the Rocket 350 four-barrel: 260 hp, Turbo Hydra-matic, walnut-grain dash. Sixteen skins, each with its factory interior."
-version: "1.4"
+version: "1.5"
 folder: content/cars/oldsmobile_cutlass_supreme_1971
 source: oldsmobile-cutlass-supreme-holiday-sedan-1971
 skins: 16
@@ -45,6 +45,19 @@ only; the buckets and the console came on the coupe and the convertible.
 Sixteen skins: the model's own blue and the fifteen colours Oldsmobile offered on the 1971 intermediates, named and
 numbered as Oldsmobile did. Each comes with the interior trim the factory recommended for that colour (black, blue,
 sienna, jade green or sandalwood), with the seats, door panels, instrument panel, carpet and headliner keyed to it.
+
+## What's new in 1.5
+
+- The front doors open, with painted door edges, hinges, latches, lock knobs and sill plates, and the wipers work (the
+  real car hides them under the hood's edge, so they park at the base of the windscreen).
+- Lights, on Custom Shaders Patch: quad headlamps as on the real car (low beam on the outer pair, the inner pair joins
+  on high beam) that come up slowly like a filament; turn signals (amber parking lamps, red tail lamps), backup lamps,
+  side markers, lamps on the rear plate, and a dome lamp that comes on while a door is open. Thanks to voraciousmyth
+  for the report on the headlights.
+- A rear axle and prop shaft under the car (the model had none), moving with the wheels.
+- Kunos-style damage and dirt: scratches and dust on the paint, cracked windows and lamps in hard hits (set Damage
+  above 0 % in the assists), wheels that blur at speed, six onboard cameras, driver and pit crew matched to each skin.
+- Street Corsa house plates front and rear, and cleaner distant models.
 
 ## What's new in 1.4
 
