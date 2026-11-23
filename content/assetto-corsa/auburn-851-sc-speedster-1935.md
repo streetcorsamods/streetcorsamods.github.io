@@ -3,7 +3,7 @@ title: "Auburn 851 Supercharged Speedster 1935"
 mod: auburn_851_speedster_1935
 weight: 15
 description: "Gordon Buehrig's boattail speedster with the supercharged Lycoming straight-eight, 150 bhp, and the Columbia Dual-Ratio axle on a key. Fourteen skins in the 1935-36 Auburn colours."
-version: "1.1"
+version: "1.2"
 csp: "0.2.11"
 folder: content/cars/auburn_851_speedster_1935
 source: auburn-851-sc-speedster-boattail-1935
@@ -39,6 +39,21 @@ and ahooga horn. Fourteen skins: thirteen 1935-36 Auburn colours, each with a pe
 black leather photographed at RM Sotheby's (851 SC 33151E).
 
 **Custom Shaders Patch is required** for this one (the axle runs on its extended physics): version 0.2.11 or newer.
+
+## What's new in 1.2
+
+- The running gear moves with the suspension: the rear axle, the leaf springs, the front beam and the prop shaft
+  follow the wheels (watch a replay over a kerb).
+- Damage and dirt like a Kunos car: scratches on the panels you hit, the windscreen and lamps crack, the right half of
+  the hood comes loose, and dust builds up off the road (set Damage above 0 % in the assists to see it).
+- Spoke motion blur on the wire wheels at speed.
+- Brighter night lights with Custom Shaders Patch: longer headlight beams, the spot lamps light the road, a stop-lamp
+  glow behind and a plate lamp. The lamps now stay lit at every distance, and the dials glow when you see the car from
+  outside.
+- Six onboard cameras, a light copy of the cabin at a distance, and driver and pit-crew outfits for each skin.
+- Cabin: door corners and cords reworked, the dash ends run into the kick panels, and the cowl no longer lets light
+  through into the footwell.
+- The exhaust pipes run straight and evenly spaced through the fender.
 
 ## What's new in 1.1
 
