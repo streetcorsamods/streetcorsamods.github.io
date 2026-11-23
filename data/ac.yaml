@@ -68,12 +68,12 @@ groups:
         pt: { text: "O Riviera do primeiro ano. Nailhead 401, 325 hp, Twin Turbine, painel de alumínio escovado e console de nogueira. Dezesseis pinturas." }
       - name: Oldsmobile Cutlass Supreme Holiday Sedan 1971
         id: oldsmobile_cutlass_supreme_1971
-        url: https://sourceforge.net/projects/streetcorsa-mods/files/oldsmobile-cutlass-supreme-holiday-sedan-1971/oldsmobile_cutlass_supreme_1971_v1.4.zip/download
-        size: 45 MB
+        url: https://sourceforge.net/projects/streetcorsa-mods/files/oldsmobile-cutlass-supreme-holiday-sedan-1971/oldsmobile_cutlass_supreme_1971_v1.5.zip/download
+        size: 47 MB
         kind: AC car
-        text: The four-door Cutlass Supreme hardtop with the Rocket 350 four-barrel, 260 hp, Turbo Hydra-matic and a walnut-grain dash. Sixteen skins, each with its factory interior.
-        es: { text: "El Cutlass Supreme hardtop de cuatro puertas con el Rocket 350 de cuatro bocas, 260 hp, Turbo Hydra-matic y tablero con imitación nogal. Dieciséis pinturas, cada una con su interior de fábrica." }
-        pt: { text: "O Cutlass Supreme hardtop de quatro portas com o Rocket 350 quadrijet, 260 hp, Turbo Hydra-matic e painel imitando nogueira. Dezesseis pinturas, cada uma com o interior de fábrica." }
+        text: The four-door Cutlass Supreme hardtop with the Rocket 350 four-barrel, 260 hp, Turbo Hydra-matic and a walnut-grain dash. Opening doors, wipers, quad headlamps, damage and dirt. Sixteen skins, each with its factory interior.
+        es: { text: "El Cutlass Supreme hardtop de cuatro puertas con el Rocket 350 de cuatro bocas, 260 hp, Turbo Hydra-matic y tablero con imitación nogal. Puertas que abren, limpiaparabrisas, cuatro faros, daños y suciedad. Dieciséis pinturas, cada una con su interior de fábrica." }
+        pt: { text: "O Cutlass Supreme hardtop de quatro portas com o Rocket 350 quadrijet, 260 hp, Turbo Hydra-matic e painel imitando nogueira. Portas que abrem, limpadores, quatro faróis, danos e sujeira. Dezesseis pinturas, cada uma com o interior de fábrica." }
       - name: Plymouth Satellite Sebring 1971
         id: plymouth_satellite_sebring_1971
         url: https://sourceforge.net/projects/streetcorsa-mods/files/plymouth-satellite-sebring-1971/plymouth_satellite_sebring_1971_v1.4.zip/download
