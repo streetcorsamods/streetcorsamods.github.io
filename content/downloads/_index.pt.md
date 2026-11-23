@@ -3,7 +3,7 @@ title: Downloads
 description: O jogo, os cenários, pacotes de motores e complementos.
 ---
 
-**Acesso antecipado:** versão 0.1.6, com trabalho pela frente. Os saves podem não passar para versões futuras. O que mudou: o [changelog](/about/changelog/) (em inglês).
+**Acesso antecipado:** versão 0.1.7, com trabalho pela frente. Os saves podem não passar para versões futuras. O que mudou: o [changelog](/about/changelog/) (em inglês).
 
 1. Instale **o jogo**.
 2. Adicione um **cenário**: na tela principal, **Mod Manager → Install mods**, escolha o zip.

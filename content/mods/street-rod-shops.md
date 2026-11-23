@@ -10,13 +10,16 @@ shots_note: "In Street Rod, drawn by the game."
 shots:
   - { img: paint-booth, caption: "The painter at work: a '63 Galaxie going Silver Frost" }
   - { img: paint-job, caption: "The paint job: the make's colours, or one of your own, seen on the car before he sprays it" }
-  - { img: machine-shop, caption: "Gardena Machine & Engine: a block on the stand, the work on the counter" }
+  - { img: machine-shop, caption: "Gardena Machine & Engine: the boring bar, the crank grinder under the sign, the press and the engine crane" }
+  - { img: machine-shop-floor, caption: "The shop floor: the head surfacer and the head bench, the drill press, the overhead crane, the welding bottles by the hot tank" }
   - { img: warehouse, caption: "Your warehouse: a bay for each car, room for ten" }
   - { img: /images/tutorials/parts-shop.jpg, caption: "Inside a part shop: the shelves, the counter, the parts on show" }
 ---
 
 The rooms Street Rod drives you into. The part shops' inside, with its shelves and counter, where every specialist and
-speed shop in town shows its stock. The machine shop, where the blocks get bored and the heads milled. The paint booth,
+speed shop in town shows its stock. The machine shop, where the blocks get bored and the cranks ground: since 1.1.0 a
+real engine shop, with a column boring bar, a crank grinder, a press, lathes, a head surfacer, drill presses, an engine
+crane with a 454 hanging from it and an overhead crane, and round them a working shop's clutter. The paint booth,
 with the painter going round your car with his gun. And the warehouse at the car lot, a car in each bay. Each comes
 with its own air: the shop's hum, the machine shop's, the booth's fans and the gun, the warehouse's echo.
 
@@ -35,4 +38,5 @@ Their files are on [SourceForge](https://sourceforge.net/p/streetcorsa-mods/stre
 to modding? The [modding guide](/tutorials/modding/guide/) starts at the beginning.
 
 The rooms are our own, drawn by the game's scene tools, with surface textures from Poly Haven (CC0); the paint booth,
-its painter and its sounds are all ours.
+its painter and its sounds are all ours. The machine shop's boring bar and crank grinder are ours too; its other
+machines and props are models from Sketchfab (CC BY 4.0) and Poly Haven (CC0), their makers listed below.
