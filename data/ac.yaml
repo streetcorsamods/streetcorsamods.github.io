@@ -28,36 +28,44 @@ groups:
         pt: { text: "O boattail de Gordon Buehrig com o oito em linha sobrealimentado, 150 bhp, e o eixo Dual-Ratio no Extra A (requer o CSP 0.2.11 ou mais recente). Eixo que se move, danos e sujeira. Catorze pinturas nas cores Auburn de 1935-36." }
       - name: Chevrolet Master DeLuxe Coupe 1937
         id: chevrolet_master_deluxe_1937
-        url: https://sourceforge.net/projects/streetcorsa-mods/files/chevrolet-master-deluxe-1937/chevrolet_master_deluxe_1937_v1.4.zip/download
-        size: 25 MB
+        url: https://sourceforge.net/projects/streetcorsa-mods/files/chevrolet-master-deluxe-1937/chevrolet_master_deluxe_1937_v1.5.zip/download
+        size: 26 MB
         kind: AC car
-        text: The 1937 business coupe with the Blue Flame six, floor shift and Knee-Action front end. Thirteen skins in the 1937 Duco colours.
-        es: { text: "El cupé de 1937 con el seis cilindros Blue Flame, palanca al piso y suspensión delantera Knee-Action. Trece pinturas en los colores Duco de 1937." }
-        pt: { text: "O cupê de 1937 com o seis cilindros Blue Flame, câmbio no assoalho e suspensão dianteira Knee-Action. Treze pinturas nas cores Duco de 1937." }
+        text: The 1937 business coupe with the Blue Flame six, floor shift and Knee-Action front end. Moving axle, wipers, damage and dirt. Thirteen skins in the 1937 Duco colours.
+        es: { text: "El cupé de 1937 con el seis cilindros Blue Flame, palanca al piso y suspensión delantera Knee-Action. Eje que se mueve, limpiaparabrisas, daños y suciedad. Trece pinturas en los colores Duco de 1937." }
+        pt: { text: "O cupê de 1937 com o seis cilindros Blue Flame, câmbio no assoalho e suspensão dianteira Knee-Action. Eixo que se move, limpadores, danos e sujeira. Treze pinturas nas cores Duco de 1937." }
       - name: Buick Roadmaster Skylark 1953
         id: buick_skylark_1953
-        url: https://sourceforge.net/projects/streetcorsa-mods/files/buick-roadmaster-skylark-1953/buick_skylark_1953_v1.5.zip/download
-        size: 53 MB
+        url: https://sourceforge.net/projects/streetcorsa-mods/files/buick-roadmaster-skylark-1953/buick_skylark_1953_v1.6.zip/download
+        size: 55 MB
         kind: AC car
-        text: The 50th-anniversary convertible, 1,690 built. Chopped windscreen, 322 Nailhead, Dynaflow, Kelsey-Hayes wire wheels. Ten skins, each with its factory interior.
-        es: { text: "El convertible del 50.º aniversario, 1.690 fabricados. Parabrisas recortado, Nailhead 322, Dynaflow, ruedas de rayos Kelsey-Hayes. Diez pinturas, cada una con su interior de fábrica." }
-        pt: { text: "O conversível do 50º aniversário, 1.690 fabricados. Para-brisa rebaixado, Nailhead 322, Dynaflow, rodas raiadas Kelsey-Hayes. Dez pinturas, cada uma com o interior de fábrica." }
+        text: The 50th-anniversary convertible, 1,690 built. Chopped windscreen, 322 Nailhead, Dynaflow, Kelsey-Hayes wire wheels. Moving axle, wipers, damage and dirt. Ten skins, each with its factory interior.
+        es: { text: "El convertible del 50.º aniversario, 1.690 fabricados. Parabrisas recortado, Nailhead 322, Dynaflow, ruedas de rayos Kelsey-Hayes. Eje que se mueve, limpiaparabrisas, daños y suciedad. Diez pinturas, cada una con su interior de fábrica." }
+        pt: { text: "O conversível do 50º aniversário, 1.690 fabricados. Para-brisa rebaixado, Nailhead 322, Dynaflow, rodas raiadas Kelsey-Hayes. Eixo que se move, limpadores, danos e sujeira. Dez pinturas, cada uma com o interior de fábrica." }
       - name: Buick Roadmaster 1957
         id: buick_roadmaster_1957
-        url: https://sourceforge.net/projects/streetcorsa-mods/files/buick-roadmaster-75-riviera-1957/buick_roadmaster_1957_v1.4.zip/download
-        size: 37 MB
+        url: https://sourceforge.net/projects/streetcorsa-mods/files/buick-roadmaster-75-riviera-1957/buick_roadmaster_1957_v1.5.zip/download
+        size: 39 MB
         kind: AC car
-        text: The Riviera two-door hardtop with the 364 Nailhead, 300 hp, and the horizontal speedometer. Eleven factory two-tones.
-        es: { text: "El hardtop de dos puertas Riviera con el Nailhead 364, 300 hp y el velocímetro horizontal. Once bicolores de fábrica." }
-        pt: { text: "O hardtop de duas portas Riviera com o Nailhead 364, 300 hp e o velocímetro horizontal. Onze saia-e-blusa de fábrica." }
+        text: The Riviera two-door hardtop with the 364 Nailhead, 300 hp, and the horizontal speedometer. Moving axle, wipers, damage and dirt. Eleven factory two-tones.
+        es: { text: "El hardtop de dos puertas Riviera con el Nailhead 364, 300 hp y el velocímetro horizontal. Eje que se mueve, limpiaparabrisas, daños y suciedad. Once bicolores de fábrica." }
+        pt: { text: "O hardtop de duas portas Riviera com o Nailhead 364, 300 hp e o velocímetro horizontal. Eixo que se move, limpadores, danos e sujeira. Onze saia-e-blusa de fábrica." }
+      - name: Oldsmobile Starfire 98 1957
+        id: oldsmobile_starfire_98_1957
+        url: https://sourceforge.net/projects/streetcorsa-mods/files/oldsmobile-starfire-98-1957/oldsmobile_starfire_98_1957_v1.0.zip/download
+        size: 38 MB
+        kind: AC car
+        text: The 1957 Ninety-Eight convertible with the 371 Rocket T-400 V8, 277 bhp, Jetaway Hydra-Matic and the two-tone cove. Wipers, moving axle, damage and dirt. Twelve 1957 colours, each with its two-tone leather.
+        es: { text: "El convertible Ninety-Eight de 1957 con el V8 Rocket T-400 de 371, 277 bhp, Jetaway Hydra-Matic y la moldura lateral bicolor. Limpiaparabrisas, eje que se mueve, daños y suciedad. Doce colores de 1957, cada uno con su cuero bicolor." }
+        pt: { text: "O conversível Ninety-Eight de 1957 com o V8 Rocket T-400 de 371, 277 bhp, Jetaway Hydra-Matic e a faixa lateral em duas cores. Limpadores, eixo que se move, danos e sujeira. Doze cores de 1957, cada uma com o couro em duas cores." }
       - name: Chevrolet Impala Sedan 1960
         id: chevrolet_impala_sedan_1960
-        url: https://sourceforge.net/projects/streetcorsa-mods/files/chevrolet-impala-sedan-1960/chevrolet_impala_sedan_1960_v1.7.zip/download
-        size: 50 MB
+        url: https://sourceforge.net/projects/streetcorsa-mods/files/chevrolet-impala-sedan-1960/chevrolet_impala_sedan_1960_v1.8.zip/download
+        size: 52 MB
         kind: AC car
-        text: The four-door Impala with the 348 Turbo-Thrust V8, 250 hp, Powerglide, X-frame and whitewalls. Twenty-four skins, the 1960 colours and two-tones, each with its houndstooth interior.
-        es: { text: "El Impala de cuatro puertas con el V8 348 Turbo-Thrust, 250 hp, Powerglide, chasis en X y bandas blancas. Veinticuatro pinturas, los colores y bicolores de 1960, cada una con su interior pied-de-poule." }
-        pt: { text: "O Impala de quatro portas com o V8 348 Turbo-Thrust, 250 hp, Powerglide, chassi em X e faixa branca. Vinte e quatro pinturas, as cores e saia-e-blusa de 1960, cada uma com o interior pied-de-poule." }
+        text: The four-door Impala with the 348 Turbo-Thrust V8, 250 hp, Powerglide, X-frame and whitewalls. Quad headlamps, wipers, moving axle, damage and dirt. Twenty-four skins, the 1960 colours and two-tones, each with its houndstooth interior.
+        es: { text: "El Impala de cuatro puertas con el V8 348 Turbo-Thrust, 250 hp, Powerglide, chasis en X y bandas blancas. Cuatro faros, limpiaparabrisas, eje que se mueve, daños y suciedad. Veinticuatro pinturas, los colores y bicolores de 1960, cada una con su interior pied-de-poule." }
+        pt: { text: "O Impala de quatro portas com o V8 348 Turbo-Thrust, 250 hp, Powerglide, chassi em X e faixa branca. Quatro faróis, limpadores, eixo que se move, danos e sujeira. Vinte e quatro pinturas, as cores e saia-e-blusa de 1960, cada uma com o interior pied-de-poule." }
       - name: Buick Riviera 1963
         id: buick_riviera_1963
         url: https://sourceforge.net/projects/streetcorsa-mods/files/buick-riviera-1963/buick_riviera_1963_v1.5.zip/download

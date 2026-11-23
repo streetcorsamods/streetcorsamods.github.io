@@ -3,7 +3,7 @@ title: "Chevrolet Impala Sedan 1960"
 mod: chevrolet_impala_sedan_1960
 weight: 45
 description: "The four-door Impala with the 348 Turbo-Thrust V8: 250 hp, Powerglide, X-frame and whitewalls. Twenty-four skins: the fourteen 1960 colours and the ten two-tones."
-version: "1.7"
+version: "1.8"
 folder: content/cars/chevrolet_impala_sedan_1960
 source: chevrolet-impala-sedan-1960
 skins: 24
@@ -49,6 +49,15 @@ fourteen 1960 Chevrolet colours and the ten factory two-tones (roof and pillars 
 as Chevrolet did. Each has an Impala cloth-and-vinyl houndstooth interior in one of six trims: 809 black and white, 825
 green, 841 blue, 852 turquoise, 865 copper or 873 red and white. We didn't find the factory paint-to-trim chart, so each
 colour has the trim it most likely came with.
+
+## What's new in 1.8
+
+- A rear axle and prop shaft under the car (the model had none), moving with the wheels; the trunk lid comes loose after a hard rear hit.
+- Kunos-style damage and dirt: scratches and dust on the paint, cracked windows and lamps in hard hits (set Damage above 0 % in the assists), six onboard cameras, a light copy of the cabin at a distance, and the driver and pit crew dressed to match each skin.
+- Quad headlamps that work like the real ones on Custom Shaders Patch: low beam on the outer pair, all four on high beam, with a warm filament glow. Amber parking-lamp blinkers, red tail-lamp blinkers that stay visible with the brake pedal down, a rear plate lamp, and the gauges lit from outside at night. Thanks to voraciousmyth for the report on the headlights.
+- Working wipers (Custom Shaders Patch, or in the rain).
+- A new driver's eye position: higher and further back.
+- The quad lamps stay lit on distant cars at night.
 
 ## What's new in 1.7
 
