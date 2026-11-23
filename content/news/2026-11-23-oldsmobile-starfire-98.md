@@ -29,7 +29,7 @@ suspension. There's Kunos-style damage and dirt, glass and lamps that crack in a
 Custom Shaders Patch real low and high beams, turn signals and backup lamps. You get six onboard cameras, and the
 driver and the pit crew dress to match each colour.
 
-![The rocket tail lamps](/images/assetto-corsa/oldsmobile-starfire-98-1957/shot-rear.jpg "From behind")
+![The Starfire 98 from behind](/images/assetto-corsa/oldsmobile-starfire-98-1957/shot-rear.jpg "From behind")
 
 ![Lamps lit](/images/assetto-corsa/oldsmobile-starfire-98-1957/shot-night.jpg "Lamps on")
 
