@@ -34,6 +34,14 @@ groups:
         text: The 1937 business coupe with the Blue Flame six, floor shift and Knee-Action front end. Moving axle, wipers, damage and dirt. Thirteen skins in the 1937 Duco colours.
         es: { text: "El cupé de 1937 con el seis cilindros Blue Flame, palanca al piso y suspensión delantera Knee-Action. Eje que se mueve, limpiaparabrisas, daños y suciedad. Trece pinturas en los colores Duco de 1937." }
         pt: { text: "O cupê de 1937 com o seis cilindros Blue Flame, câmbio no assoalho e suspensão dianteira Knee-Action. Eixo que se move, limpadores, danos e sujeira. Treze pinturas nas cores Duco de 1937." }
+      - name: Chevrolet 3100 Pickup 1950
+        id: chevrolet_3100_pickup_1950
+        url: https://sourceforge.net/projects/streetcorsa-mods/files/chevrolet-3100-pickup-1950/chevrolet_3100_pickup_1950_v1.0.zip/download
+        size: 37 MB
+        kind: AC car
+        text: The Advance-Design half-ton with the 216 Thriftmaster six, column shift, five-window cab, oak stake racks and wide whitewalls. Opening doors, wipers, moving axle, damage and dirt. Twelve 1950 truck colours.
+        es: { text: "La pickup Advance-Design de media tonelada con el seis cilindros Thriftmaster 216, palanca en la columna, cabina de cinco ventanillas, barandas de roble y bandas blancas anchas. Puertas que abren, limpiaparabrisas, eje que se mueve, daños y suciedad. Doce colores de camioneta de 1950." }
+        pt: { text: "A picape Advance-Design de meia tonelada com o seis cilindros Thriftmaster 216, câmbio na coluna, cabine de cinco janelas, grades de carvalho e faixa branca larga. Portas que abrem, limpadores, eixo que se move, danos e sujeira. Doze cores de picape de 1950." }
       - name: Buick Roadmaster Skylark 1953
         id: buick_skylark_1953
         url: https://sourceforge.net/projects/streetcorsa-mods/files/buick-roadmaster-skylark-1953/buick_skylark_1953_v1.6.zip/download
