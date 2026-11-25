@@ -10,6 +10,14 @@ groups:
     es: { title: Autos, text: "Autos para Assetto Corsa solo, sin Street Corsa. Arrastra el zip a Content Manager, o copia su carpeta content en la carpeta de Assetto Corsa. Se recomienda Custom Shaders Patch." }
     pt: { title: Carros, text: "Carros para o Assetto Corsa sozinho, sem o Street Corsa. Arraste o zip para o Content Manager, ou copie a pasta content dele para a pasta do Assetto Corsa. Custom Shaders Patch recomendado." }
     items:
+      - name: Bentley Speed Six "Blue Train" 1930
+        id: bentley_speed_six_blue_train_1930
+        url: https://sourceforge.net/projects/streetcorsa-mods/files/bentley-speed-six-blue-train-1930/bentley_speed_six_blue_train_1930_v1.0.zip/download
+        size: 30 MB
+        kind: AC car
+        text: "Woolf Barnato's Speed Six with the low Gurney Nutting coupé body, the car of the Blue Train legend. 6.6 litre six, 180 bhp, a motor Klaxon. Dials redrawn from the real dash, opening doors, wipers, working lamps, moving axles, damage and dirt. Six skins."
+        es: { text: "El Speed Six de Woolf Barnato con la baja carrocería coupé de Gurney Nutting, el auto de la leyenda del Tren Azul. Seis cilindros de 6,6 litros, 180 bhp, bocina Klaxon. Relojes redibujados del tablero real, puertas que abren, limpiaparabrisas, luces que funcionan, ejes que se mueven, daños y suciedad. Seis pinturas." }
+        pt: { text: "O Speed Six de Woolf Barnato com a baixa carroceria cupê da Gurney Nutting, o carro da lenda do Trem Azul. Seis cilindros de 6,6 litros, 180 bhp, buzina Klaxon. Mostradores redesenhados do painel real, portas que abrem, limpadores, faróis que funcionam, eixos que se movem, danos e sujeira. Seis pinturas." }
       - name: Mercedes-Benz SS Erdmann & Rossi 1930
         id: mercedes_benz_ss_er_1930
         url: https://sourceforge.net/projects/streetcorsa-mods/files/mercedes-benz-ss-erdman-rossi-1930/mercedes_benz_ss_er_1930_v1.0.zip/download
