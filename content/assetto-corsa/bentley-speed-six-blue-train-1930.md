@@ -18,12 +18,6 @@ shots:
   - { img: shot-side, caption: "Dove grey: the long bonnet and the low fastback" }
   - { img: shot-rear, caption: "Royal blue, the trunk and the 30 BTB plate" }
   - { img: shot-night, caption: "Lamps lit in the showroom" }
-  - { img: black, caption: "Black, blue leather (the 3D model's scheme)" }
-  - { img: dark-green, caption: "Very dark green (HM2855 as reported)" }
-  - { img: bentley-green, caption: "Bentley racing green" }
-  - { img: royal-blue, caption: "Royal blue" }
-  - { img: maroon, caption: "Maroon" }
-  - { img: dove-grey, caption: "Dove grey" }
 shots_note: "In Assetto Corsa. Six skins."
 ---
 
