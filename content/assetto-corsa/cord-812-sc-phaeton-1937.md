@@ -14,6 +14,11 @@ credits:
   - "Horn recording: craigsmith (Freesound 438617), CC0"
   - "Engine sound banks built on Kunos Simulazioni's Assetto Corsa audio SDK; driver pose, animations and collider box from Kunos Simulazioni's Alfa Romeo GTA"
 shots:
+  - { img: shot-lamps, caption: "Rich Maroon, headlamps up" }
+  - { img: shot-front, caption: "Palm Beach Tan: the coffin nose with the lamps tucked away" }
+  - { img: shot-dash, caption: "The engine-turned dash, rebuilt from photos" }
+  - { img: shot-rear, caption: "The tail, the trunk lid and the 37 CRD plate" }
+  - { img: shot-top, caption: "From above: red-brown leather and the top well" }
   - { img: dark-blue-red, caption: "Dark blue with red leather (the 3D model's colours)" }
   - { img: palm-beach-tan, caption: "Palm Beach Tan, maroon leather" }
   - { img: black, caption: "Black, maroon leather" }
@@ -26,7 +31,7 @@ shots:
   - { img: cigarette-cream, caption: "Cigarette Cream" }
   - { img: ivory, caption: "Ivory, black leather" }
   - { img: ganges-green, caption: "Ganges Green" }
-shots_note: "In Assetto Corsa. Twelve skins in the 1936-37 Cord colours."
+shots_note: "In Assetto Corsa. Five showroom shots, then the twelve skins in the 1936-37 Cord colours."
 ---
 
 Cord 812 Supercharged Phaeton, 1937: Gordon Buehrig's "coffin nose", the front-wheel-drive Cord that stopped the
