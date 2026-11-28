@@ -19,19 +19,7 @@ shots:
   - { img: shot-dash, caption: "The engine-turned dash, rebuilt from photos" }
   - { img: shot-rear, caption: "The tail, the trunk lid and the 37 CRD plate" }
   - { img: shot-top, caption: "From above: red-brown leather and the top well" }
-  - { img: dark-blue-red, caption: "Dark blue with red leather (the 3D model's colours)" }
-  - { img: palm-beach-tan, caption: "Palm Beach Tan, maroon leather" }
-  - { img: black, caption: "Black, maroon leather" }
-  - { img: thrush-brown, caption: "Thrush Brown" }
-  - { img: geneva-blue, caption: "Geneva Blue" }
-  - { img: cool-orchard-green, caption: "Cool Orchard Green" }
-  - { img: cadet-grey, caption: "Cadet Grey" }
-  - { img: rich-maroon, caption: "Rich Maroon" }
-  - { img: clay-rust, caption: "Clay Rust" }
-  - { img: cigarette-cream, caption: "Cigarette Cream" }
-  - { img: ivory, caption: "Ivory, black leather" }
-  - { img: ganges-green, caption: "Ganges Green" }
-shots_note: "In Assetto Corsa. Five showroom shots, then the twelve skins in the 1936-37 Cord colours."
+shots_note: "In Assetto Corsa. Twelve skins in the 1936-37 Cord colours."
 ---
 
 Cord 812 Supercharged Phaeton, 1937: Gordon Buehrig's "coffin nose", the front-wheel-drive Cord that stopped the
