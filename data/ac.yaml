@@ -10,6 +10,14 @@ groups:
     es: { title: Autos, text: "Autos para Assetto Corsa solo, sin Street Corsa. Arrastra el zip a Content Manager, o copia su carpeta content en la carpeta de Assetto Corsa. Se recomienda Custom Shaders Patch." }
     pt: { title: Carros, text: "Carros para o Assetto Corsa sozinho, sem o Street Corsa. Arraste o zip para o Content Manager, ou copie a pasta content dele para a pasta do Assetto Corsa. Custom Shaders Patch recomendado." }
     items:
+      - name: Cord 812 SC Phaeton 1937
+        id: cord_812_phaeton_1937
+        url: https://sourceforge.net/projects/streetcorsa-mods/files/cord-812-sc-phaeton-1937/cord_812_phaeton_1937_v1.0.zip/download
+        size: 28 MB
+        kind: AC car
+        text: "Gordon Buehrig's coffin-nose Cord: front-wheel drive, a supercharged Lycoming V8 with its whine, and headlamps that rise out of the fenders. Dash rebuilt from photos, real opening panels, CSP gauges and extras, doors, wipers, moving suspension, damage and dirt. Twelve skins."
+        es: { text: "El Cord \"coffin nose\" de Gordon Buehrig: tracción delantera, un V8 Lycoming sobrealimentado con su silbido, y faros que salen de los guardabarros. Tablero rehecho de fotos, paneles que abren, relojes y extras CSP, puertas, limpiaparabrisas, suspensión que se mueve, daños y suciedad. Doce pinturas." }
+        pt: { text: "O Cord \"coffin nose\" de Gordon Buehrig: tração dianteira, um V8 Lycoming com compressor e seu assobio, e faróis que saem dos para-lamas. Painel refeito a partir de fotos, painéis que abrem, mostradores e extras CSP, portas, limpadores, suspensão que se move, danos e sujeira. Doze pinturas." }
       - name: Bentley Speed Six "Blue Train" 1930
         id: bentley_speed_six_blue_train_1930
         url: https://sourceforge.net/projects/streetcorsa-mods/files/bentley-speed-six-blue-train-1930/bentley_speed_six_blue_train_1930_v1.0.zip/download
